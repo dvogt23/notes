@@ -13,14 +13,14 @@ cache:
     - node_modules # NPM packages
 
 before_install:
-  - sudo apt-get -qq update
+  - rm -rf node_modules && npm install
 
 install:
   - npm install -g gitbook-summary
   - npm install -g gitbook-cli
 
 script:
-  - book sm -r Notes/
+  - cd Notes && book sm -t 'Notes'
   - gitbook fetch latest
   - gitbook install
   - gitbook build

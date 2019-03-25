@@ -23,19 +23,17 @@
             "vk":         false,
             "all": ["twitter", "facebook", "google"]
         },
-        "theme-default": {
-        },
         "toolbar": {
             "buttons": [
                 {
                     "label": "GitHub",
                     "icon": "fa fa-github",
-                    "url": "https://github.com/KevinAst/feature-u"
+                    "url": "https://github.com/dvogt23"
                 },
                 {
-                    "label": "NPM",
-                    "icon": "fa fa-bullseye",
-                    "url": "https://www.npmjs.com/package/feature-u"
+                    "label": "Web",
+                    "icon": "fa fa-globe",
+                    "url": "https://dima23.de"
                 }
             ]
         }
