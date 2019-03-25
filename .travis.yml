@@ -1,0 +1,41 @@
+language: node_js
+dist: trusty
+sudo: required
+
+node_js:
+  - "stable"
+
+notifications:
+  email: false
+
+cache:
+  directories:
+    - node_modules # NPM packages
+
+before_install:
+  - sudo apt-get -qq update
+
+install:
+  - npm install -g gitbook-summary
+  - npm install -g gitbook-cli
+
+script:
+  - book sm -r Notes/
+  - gitbook fetch latest
+  - gitbook install
+  - gitbook build
+
+before_deploy:
+  #Ensure we are in the right dir
+  - cd ${TRAVIS_BUILD_DIR}
+
+deploy:
+  local_dir: public
+  target_branch: gh-pages
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _book
+  target_branch: gh-pages
+  on:
+    branch: master
