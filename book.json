@@ -1,8 +1,8 @@
 { 
     "gitbook":     "3.2.3",
     "root":        "./Notes",
-    "title":       "Knowledge wiki",
-    "description": "Fixable notes of my life and exerience",
+    "title":       "Knowledge book",
+    "description": "Fixable notes of my life and experience",
     "author":      "Dmitrij Vogt <divogt@dima23.de> (https://dima23.de)",
     "structure": { 
         "readme": "README.md",

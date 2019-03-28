@@ -1,29 +1,32 @@
-language: node_js
-dist: trusty
-sudo: required
-
-node_js:
-  - "stable"
+language: generic
+dist: xenial
 
 notifications:
   email: false
 
+env:
+  - GITBOOK_VERSION=3.2.3
+
 cache:
+  ccache: true
   directories:
-    - node_modules # NPM packages
+    - $HOME/.npm
+    - $TRAVIS_BUILD_DIR/.cache
+    - $TRAVIS_BUILD_DIR/node_modules
 
 before_install:
-  - rm -rf node_modules && npm install
+  - nvm install node
+  - node --version
 
 install:
   - npm install -g gitbook-summary
   - npm install -g gitbook-cli
 
 script:
-  - cd Notes && book sm -t 'Notes'
+  - cd Notes && book sm -t 'Notes' && cd -
   - gitbook fetch latest
-  - gitbook install
-  - gitbook build
+  - gitbook -v $GITBOOK_VERSION install
+  - gitbook -v $GITBOOK_VERSION build
 
 before_deploy:
   #Ensure we are in the right dir
