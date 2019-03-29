@@ -1,3 +1,5 @@
+# Uwe
+
 Ein Mann kommt in ein kleines Lokal und fragt: "Habt ihr hier auch Nutten?"
 Sagt der Wirt: "Nee, wir haben nur unseren Uwe."
 Guckt der Mann etwas verwirrt und meint dann: "Egal, ich bin so geil, ich brauche jetzt unbedingt Sex. Was kostet das denn?"
@@ -8,4 +10,4 @@ Guckt der Mann etwas verwirrt und meint dann: "Egal, ich bin so geil, ich brauch
 "Auch nicht", sagt der Wirt. 20 € bekomme ich. Das hier ist mein Gasthaus und ich hab das auch nicht so gerne."
 "Soll mir auch recht sein", sagt der Mann. "Bekommt der Uwe eben nur 20€."
 "Auch falsch," sagt der Wirt. "Die letzten 20€ teilen sich Michael und Rainer. Die halten Uwe fest. Der hat das nämlich auch nicht so gerne."
-​
+

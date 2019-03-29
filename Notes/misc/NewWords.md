@@ -1,3 +1,7 @@
+# New words (german)
+Here I note all the unknown words, that I found while reading.
+
+```
 Präses - leitende Person kirchlicher Gremien
 Synode - Kirhcenmitglider
 Kimono - jap. Kleidungsstück
@@ -35,4 +39,4 @@ Kalesche
 Tuell
 Pein
 Dezennien
-​
+```
