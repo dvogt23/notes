@@ -1,3 +1,3 @@
 # Knowledge
 
-Some notes in tech, life, travel... .
+Some notes in tech, life, travel...
