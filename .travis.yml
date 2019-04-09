@@ -24,21 +24,22 @@ install:
 
 script:
   - cd Notes && book sm -t 'Notes' && cd -
+  - mv assets Notes
+  - mv styles Notes
   - gitbook fetch latest
   - gitbook -v $GITBOOK_VERSION install
   - gitbook -v $GITBOOK_VERSION build
+  - cp Notes/assets/CNAME _book
 
 before_deploy:
   #Ensure we are in the right dir
   - cd ${TRAVIS_BUILD_DIR}
 
 deploy:
-  local_dir: public
+  local_dir: _book
   target_branch: gh-pages
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: _book
-  target_branch: gh-pages
   on:
     branch: master
