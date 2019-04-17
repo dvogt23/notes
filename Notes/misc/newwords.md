@@ -39,4 +39,7 @@ Kalesche
 Tuell
 Pein
 Dezennien
+Pelonken
+Diabas
+Kiepe
 ```
