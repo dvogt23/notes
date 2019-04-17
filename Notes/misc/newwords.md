@@ -2,44 +2,44 @@
 Here I note all the unknown words, that I found while reading.
 
 ```
-Präses - leitende Person kirchlicher Gremien
-Synode - Kirhcenmitglider
-Kimono - jap. Kleidungsstück
-Askese - grichische Büste
-Sublimiert - durch Veredelung auf eine höhere Stufe gebracht
-Jovial - wohlwollendes herablassendes Verhalten
-Denunziation - Androhung/ öffentliche Beschuldigung
-Livree - Uniform der Dienerschaft
-Permutation - Anordnung von Objekten
-Hermaphrodit - Zwitter
-Percheron - Kaltblut Pferderasse
-Flakon -  Glasgefäss
-Fehdehandschuh - Streit beginnen/annehmen
-Ethnographisch - 
 Amme
+Askese - grichische Büste
+Denunziation - Androhung/ öffentliche Beschuldigung
 Desjatine
-Leuzismus
-Eloxiert - Oberflächentechnik einer oxidischen Schutzschicht
-Konvolut - lat. zusammengerollt, Verwachsung
-Nomenklatur - Namesverzeichnis/Sammlung von Benennungen
-Pekuniär - Geld Finanzielle Basis
-Goutiert - Gefallen haben/ jemand,etwas schätzen
-Dschunke - ein oder mehrmstiger Segelschiff
+Dezennien
+Diabas
 Dossier - Sammlung von Dokumenten zu einem Thema
+Dschunke - ein oder mehrmstiger Segelschiff
+Elliptisch
+Eloxiert - Oberflächentechnik einer oxidischen Schutzschicht
 Entgraten -
-Praeludium - Eröffnungsinstrumental = Prä
-Nuancen - feine Optimierung
 Epauletten - Schulterstück einer Uniform
 Equipagen
+Ethnographisch - 
+Fehdehandschuh - Streit beginnen/annehmen
+Flakon -  Glasgefäss
+Gestuet
+Goutiert - Gefallen haben/ jemand,etwas schätzen
+Hermaphrodit - Zwitter
+Jovial - wohlwollendes herablassendes Verhalten
+Kalesche
+Kiepe
+Kimono - jap. Kleidungsstück
+Konvolut - lat. zusammengerollt, Verwachsung
+Leuzismus
+Livree - Uniform der Dienerschaft
+Nomenklatur - Namesverzeichnis/Sammlung von Benennungen
+Nuancen - feine Optimierung
+Pein
+Pekuniär - Geld Finanzielle Basis
+Pelonken
+Percheron - Kaltblut Pferderasse
+Permutation - Anordnung von Objekten
+Praeludium - Eröffnungsinstrumental = Prä
+Präses - leitende Person kirchlicher Gremien
+Sublimiert - durch Veredelung auf eine höhere Stufe gebracht
+Synode - Kirhcenmitglider
 Teint
 Trunk
-Gestuet
-Elliptisch
-Kalesche
 Tuell
-Pein
-Dezennien
-Pelonken
-Diabas
-Kiepe
 ```
