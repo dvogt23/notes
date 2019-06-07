@@ -6,6 +6,14 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 
 ### 2019
 
+**GRM - Brainfuck** by Sibylle Berg  
+ISBN: 978-3462051438 ⭐⭐⭐⭐⭐  
+ - review
+
+**Blechtrommel** by Güter Grass  
+ISBN: 978-3423118217 ⭐⭐⭐  
+ - review
+
 **Auf die Bäume ihr Affen** by Hans A. Pestalozzi  
 ISBN: 978-3729603134 ⭐⭐⭐⭐⭐  
 This book is the best retrospective view of the last few years in a political and social point of view. The author is so clear and straight forward in pointing to the causes of our all prblem situations in the current time of life.
