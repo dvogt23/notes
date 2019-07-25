@@ -1,7 +1,8 @@
 # 10things arch
+Source: [Average Linux User](https://www.youtube.com/watch?v=jW4GFGOIUjc)
 
 Check your current kernel:
-uname -r
+    uname -r
 
 # 1. Install an LTS kernel and reconfigure grub:
     sudo pacman -S linux-lts
@@ -26,7 +27,7 @@ For AMD processors install linux-firmware package.
 
 Add the following to /etc/default/grub:
 achieve the fastest possible boot:
-GRUB_FORCE_HIDDEN_MENU="true"
+    GRUB_FORCE_HIDDEN_MENU="true"
 
 Then put file 31_hold_shift to /etc/grub.d/.
 Download 31_hold_shift https://goo.gl/nac6Kp
@@ -41,39 +42,39 @@ Make it executable, and regenerate the grub configuration:
 
 # 5. Set up firewall
 
-Install ufw:
+Install ufw:  
     sudo pacman -S ufw
 
-Enable it.
+Enable it.  
     sudo ufw enable 
 
-Check its status:
+Check its status:  
     sudo ufw status verbose
 
-Enable the start-up with the system:
+Enable the start-up with the system:  
     sudo systemctl enable ufw.service
 
-Reboot and check the status again. It should be active.
+Reboot and check the status again. It should be active.  
 
 # 6. Encrypt your home directory
 
-Logged out. Switch to a console with Ctrl+Alt+F2. Login as a root and check that your user own no processes:
+Logged out. Switch to a console with Ctrl+Alt+F2. Login as a root and check that your user own no processes:  
     ps -U username 
 
-Install the necessary applications: 
+Install the necessary applications:   
     sudo pacman -S rsync lsof ecryptfs-utils
 
-Then encrypt your home directory: 
+Then encrypt your home directory:   
     modprobe ecryptfs
     ecryptfs-migrate-home -u username
 
-Mount your encrypted home.
+Mount your encrypted home.  
     ecryptfs-mount-private
 
-Unwrap the passphrase and save it somewhere where only you can access it.
+Unwrap the passphrase and save it somewhere where only you can access it.  
     ecryptfs-unwrap-passphrase
 
-Run
+Run  
     ls .ecryptfs
 
 Edit /etc/pam.d/system-auth:
@@ -81,11 +82,11 @@ Edit /etc/pam.d/system-auth:
 After the line "auth required pam_unix.so" add: 
 auth required pam_ecryptfs.so unwrap
 
-Above the line "password required pam_unix.so" insert: 
-password optional pam_ecryptfs.so
+Above the line "password required pam_unix.so" insert:   
+    password optional pam_ecryptfs.so
 
 After the line "session required pam_unix.so" add: 
-session optional pam_ecryptfs.so unwrap
+    session optional pam_ecryptfs.so unwrap
 
 Reboot and make sure that you can login to your desktop
 
