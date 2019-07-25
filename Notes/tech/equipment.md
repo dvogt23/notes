@@ -1,4 +1,4 @@
-# Tech
+# Equipment
 
 Here are a collection of my most favorite technical apps/devices/configuartions.
 
