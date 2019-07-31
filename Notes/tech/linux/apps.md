@@ -30,10 +30,14 @@
     HackerOne/BugCrowd/Mutilledae -Security Spiel
     scoop - windows shell
     tls.imirhil.fr - Cryptocheck
-    bulma.io
+    bulma.io - css framework
     Zazu - launcher
     curl -Ss icanhazip.com - IP Adresse
     Mango - markdown editor
     Desmos/calculator - graphen
     Etcher.io - Bootable Usb
-​
+    tyyd - share terminal via http
+    reptyr - transfer process to tmux
+    wtfutil - personal site in terminal
+    ulauncher - app launcher
+
