@@ -5,6 +5,9 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - ?
 
 ### 2019
+**The big five for life** by John Strelecky  
+ISBN: 978-3423345286 ⭐⭐⭐  
+ - review
 
 **GRM - Brainfuck** by Sibylle Berg  
 ISBN: 978-3462051438 ⭐⭐⭐⭐⭐  
