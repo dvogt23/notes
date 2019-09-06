@@ -1,5 +1,11 @@
 # Quotes
 
+Pablo Picasso
+> Others have seen what is and asked why. I have seen what could be and asked why not.
+
+Goran Kikic(?)
+> Alle sagten: Das geht nicht. Dann kam einer, der wusste das nicht und hat's gemacht.
+
 Leo Tolstoi (Lew Nikolajewitsch Tolstoi)
 > Es gibt Menschen, die ein Stück Land ‚Mein‘ nennen, und dieses Land nie gesehen und betreten haben. Die Menschen trachten im Leben nicht danach zu tun, was sie für gut halten, sondern danach, möglichst viele Dinge ‚Mein‘ zu nennen.
 

@@ -1,3 +1,6 @@
+# 3 Mäuse
+Drei Mäuse sitzen an der Bar und protzen damit, wer von ihnen die coolste ist. Die Erste sagt: "Wenn ich eine Mausefalle sehe, nehme ich mit der linken Hand den Käse raus. Mit der rechten fange ich den Bügel ab und mache vor dem Essen noch etwas Krafttraining". Die Zweite: "Wenn bei uns Rattengift gestreut wird, nehme ich mir eine Rasierklinge, hacke den Stoff klein, lege eine Linie und zieh mir das Zeug durch die Nase." Die dritte Maus steht auf und geht. "Hat's Dir die Sprache verschlagen?" fragen die Mäuse. "Ihr langweilt mich", sagt die Dritte. "Ich geh nach Hause, die Katze ficken."
+
 # Uwe
 
 Ein Mann kommt in ein kleines Lokal und fragt: "Habt ihr hier auch Nutten?"
