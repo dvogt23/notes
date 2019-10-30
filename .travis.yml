@@ -5,25 +5,32 @@ notifications:
   email: false
 
 env:
-  - GITBOOK_VERSION=3.2.3
+  global:
+    - RUST_TEST_NOCAPTURE=1
+    - RUST_BACKTRACE=1
+    - GITBOOK_VERSION=3.2.3
 
 cache:
   ccache: true
   directories:
-    - $HOME/.npm
     - $TRAVIS_BUILD_DIR/.cache
-    - $TRAVIS_BUILD_DIR/node_modules
+    - $HOME/.cargo
+    - $HOME/.rustup
 
-before_install:
+before_script:
   - nvm install node
   - node --version
-
-install:
-  - npm install -g gitbook-summary
+  - curl https://build.travis-ci.org/files/rustup-init.sh -sSf | sh -s -- -y --default-toolchain stable --profile minimal
+  - export PATH=$HOME/.cargo/bin:$PATH
+  - rustup default stable
+  - cargo install cargo-update || echo "cargo update exists!"
+  - cargo install book-summary || echo "book-summary exists!"
+  - cargo install-update -a
   - npm install -g gitbook-cli
 
 script:
-  - cd Notes && book sm -t 'Notes' && cd -
+  - book-summary -n Notes -f git -y -s tech personal travel
+  - cat Notes/SUMMARY.md
   - mv assets Notes
   - mv styles Notes
   - gitbook fetch latest
