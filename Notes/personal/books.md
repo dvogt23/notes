@@ -5,6 +5,14 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - ?
 
 ### 2019
+**Schlaf nicht wenn es dunkel wird** by Joy Fielding  
+ISBN: 978-3-442-46173-8 ⭐⭐⭐  
+ - review
+
+**Gespräch mit Freunden** by Sally Rooney  
+ISBN: 978-3-630-87541-5 ⭐⭐  
+ - review
+
 **The big five for life** by John Strelecky  
 ISBN: 978-3423345286 ⭐⭐⭐  
  - review
