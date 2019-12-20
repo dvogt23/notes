@@ -2,6 +2,14 @@
 
 @linux @bash
 
+### A one-liner version incrementer
+```bash
+inc_version() {
+    awk -F. -vOFS=. '{ $ver++; while(ver++<NF) $ver=0; print $0 }' ver=$1
+}
+```
+Source: https://gir.st/blog/inc-version.htm
+
 ### Reset efivars in bootmenu (bootctl)
 To remove LoaderEntryDefault-[...] variable it was enough to press d key twice 
 in the boot menu: to set and unset a new value.
