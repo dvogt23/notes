@@ -9,3 +9,6 @@ Favorite artists:
 ## Leon Löwentraut
 
 ## Ivan Aivazovsky
+
+## Heinz Henschel
+https://www.verlag-david.de
