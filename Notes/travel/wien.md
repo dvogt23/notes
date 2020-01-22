@@ -1,2 +1,0 @@
-Cafe Sperl - Kapuziner/Melonch
-
