@@ -2,5 +2,4 @@
 
 Some notes in tech, life, travel...
 
--------
-
+---
