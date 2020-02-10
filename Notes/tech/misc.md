@@ -5,6 +5,7 @@
  * https://github.com:frank604/scripts.git
  * https://github.com/Northcode/dotfiles.git
  * https://github.com:rcr/dotfiles.git
+ * https://github.com/ReekyMarko/dotfiles
 
 ### Create QR-Code for your wifi
 [Source](https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/)
