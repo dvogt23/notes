@@ -1,0 +1,25 @@
+[book]
+title = "Knowledge book"
+description = "Fixable notes of my life and experience"
+authors = ["Dmitrij Vogt <divogt@vogt.dev>"]
+language = "en"
+
+[rust]
+edition = "2018"
+
+[output.html]
+mathjax-support = true
+site-url = "/mdBook/"
+
+[output.html.playground]
+editable = true
+line-numbers = true
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2

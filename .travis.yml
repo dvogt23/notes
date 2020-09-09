@@ -8,7 +8,6 @@ env:
   global:
     - RUST_TEST_NOCAPTURE=1
     - RUST_BACKTRACE=1
-    - GITBOOK_VERSION=3.2.3
 
 cache:
   ccache: true
@@ -18,32 +17,27 @@ cache:
     - $HOME/.rustup
 
 before_script:
-  - nvm install node
-  - node --version
   - curl https://build.travis-ci.org/files/rustup-init.sh -sSf | sh -s -- -y --default-toolchain stable --profile minimal
   - export PATH=$HOME/.cargo/bin:$PATH
   - rustup default stable
   - cargo install cargo-update || echo "cargo update exists!"
   - cargo install book-summary || echo "book-summary exists!"
+  - cargo install mdbook || echo "mdbook exists!"
   - cargo install-update -a
-  - npm install -g gitbook-cli
 
 script:
-  - book-summary -n Notes -f git -y -s tech personal travel
+  - ln -s Notes src
+  - book-summary -n Notes -y -s tech personal travel
   - cat Notes/SUMMARY.md
-  - mv assets Notes
-  - mv styles Notes
-  - gitbook fetch latest
-  - gitbook -v $GITBOOK_VERSION install
-  - gitbook -v $GITBOOK_VERSION build
-  - cp Notes/assets/CNAME _book
+  - mdbook build
+  - cp assets/CNAME book
 
 before_deploy:
   #Ensure we are in the right dir
   - cd ${TRAVIS_BUILD_DIR}
 
 deploy:
-  local_dir: _book
+  local_dir: book
   target_branch: gh-pages
   provider: pages
   skip_cleanup: true
