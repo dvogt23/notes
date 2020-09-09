@@ -4,7 +4,11 @@ Table of content
 
 ### Personal
 
-- [Books](personal/books.md)
+- Input
+    - [Books](personal/input/books.md)
+    - [Podcasts](personal/input/podcasts.md)
+    - [Series](personal/input/series.md)
+    - [Movies](personal/input/movies.md)
 - [Misc](personal/misc.md)
 
 ### Tech

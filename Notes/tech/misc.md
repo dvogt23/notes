@@ -10,3 +10,6 @@
 ### Create QR-Code for your wifi
 [Source](https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/)
 `qrencode -o wifi.png "WIFI:T:WPA;S:<SSID>;P:<PASSWORD>;;"`
+
+### Firefox connect localsubdomain
+Go to `about:config` and search for `network.dns.localDomains` and add the entries (comma separated)
