@@ -4,6 +4,11 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 ### Wishlist
  - ?
 
+### 2020
+*** In guten wie in schlechten Tagen*** by Tayari Jones
+ISBN: 978-3716040256 ⭐⭐⭐
+ - review
+
 ### 2019
 **Schlaf nicht wenn es dunkel wird** by Joy Fielding  
 ISBN: 978-3-442-46173-8 ⭐⭐⭐  
