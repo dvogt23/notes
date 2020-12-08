@@ -1,6 +1,26 @@
-# VIM/NEOVIM 💓
+[#](#) VIM/NEOVIM 💓
 
 Some useful keybindings and many more for my favorite editor.
+
+### Vim and shell
+Run command from vim
+
+    :!{cmd}
+
+Read output form command
+
+    :r !{cmd}
+
+insert output on line 3:
+
+    :3read !curl --silent ifconfig.me
+
+write as input to command
+
+    :[range]write !{cmd}
+    :'<,'>write !python
+
+Source: [vim and the shell](https://vimways.org/2019/vim-and-the-shell/)
 
 ## Splits
 Splits are very useful i.e. in vimdiff. So here some keybindings.  
