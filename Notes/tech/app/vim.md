@@ -2,6 +2,19 @@
 
 Some useful keybindings and many more for my favorite editor.
 
+### Commands in insert mode
+
+    Ctrl-h - delete back one character (just like Backspace)
+    Ctrl-w - delete back one word
+    Ctrl-u - delete back to the start of line or the start of current insert
+    
+Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode? 
+You can do that with 
+
+    Ctrl-r 0
+
+Source: [Jovica - Mastering Vim Quickly #127]
+
 ### Vim and shell
 Run command from vim
 
