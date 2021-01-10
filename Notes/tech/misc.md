@@ -17,6 +17,10 @@ Go to `about:config` and search for `network.dns.localDomains` and add the entri
 ### Security book
 A most recommended it security book: [Book](https://www.cl.cam.ac.uk/~rja14/book.html)
 
+### Linux hardening book
+How to harden alinux system guide:
+[Book](https://madaidans-insecurities.github.io/guides/linux-hardening.html)
+
 ### Custom sortation of database entries
 Found an good article about, how handle the custom sortation of entires in sql database. TL;DR just add an column `pos` to the table and auto-increment this value. If insert an entry between of some rows, just calculate the new position for this entry like: ((pos n-1 + pos n+1) / 2
 
