@@ -9,19 +9,16 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 ### 2020
 
 **21 Lektionen** by Yuval Noah Harari
-
 ISBN: 978-3406739682 ⭐ ⭐ ⭐ ⭐
 
 * review
 
 **Ein Gentleman in Moskau** by Amor Towles 
-
 ISBN: 978-3548290720 ⭐ ⭐ ⭐ ⭐
 
 * review
 
 **In guten wie in schlechten Tagen** by Tayari Jones 
-
 ISBN: 978-3716040256 ⭐⭐⭐
 
 * review

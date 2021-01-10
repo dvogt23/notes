@@ -21,14 +21,11 @@ before_script:
   - export PATH=$HOME/.cargo/bin:$PATH
   - rustup default stable
   - cargo install cargo-update || echo "cargo update exists!"
-  - cargo install book-summary || echo "book-summary exists!"
   - cargo install mdbook || echo "mdbook exists!"
   - cargo install-update -a
 
 script:
   - ln -s Notes src
-  - book-summary -n Notes -y -s tech personal travel
-  - cat Notes/SUMMARY.md
   - mdbook build
   - cp assets/CNAME book
 

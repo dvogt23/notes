@@ -1,6 +1,8 @@
 # Created by https://www.gitignore.io/api/vim,node,linux,gitbook,archlinuxpackages
 # Edit at https://www.gitignore.io/?templates=vim,node,linux,gitbook,archlinuxpackages
 
+Notes/diary
+book
 ### ArchLinuxPackages ###
 *.tar
 *.tar.*
