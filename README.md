@@ -3,6 +3,7 @@
 Some notes of my life managed with nvim and some plugins:
 
 - [vimwiki](https://github.com/vimwiki/vimwiki)
+- [vimwiki-sync](https://github.com/icalvin102/vimwiki-sync)
 - [vim-zettel](https://github.com/michal-h21/vim-zettel)
 
 And generate the webview with [mdBook](https://github.com/rust-lang/mdBook) for

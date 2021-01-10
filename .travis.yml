@@ -25,7 +25,6 @@ before_script:
   - cargo install-update -a
 
 script:
-  - ln -s Notes src
   - mdbook build
   - cp assets/CNAME book
 
