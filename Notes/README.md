@@ -6,3 +6,4 @@ workflow is dead simple with a vim plugin (vimwiki/vim-zettel) and a
 synchronised folder to my private nextcloud and a github repository for
 converting all the notes to a mdbook. 
 
+🤓
