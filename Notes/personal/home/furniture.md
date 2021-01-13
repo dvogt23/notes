@@ -7,6 +7,10 @@
   - Turntable
     - marley [Marley stir up wireless 249,99E](https://www.thehouseofmarley.de/stir-it-up-wireless-1.html)
 
+## Kitchen
+  - Coffee
+    [rommelsbacher](https://www.rommelsbacher.de/de/kaffee-espresso-center-eks-3010.html)
+
 ## Interesting
   - Design [torquato](https://www.torquato.de/)
 

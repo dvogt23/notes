@@ -23,3 +23,6 @@ Savas Yurderi
 
 Carl Josef »Necko« Neckermann. (1912 - 1992)
 > Wer nicht mit der Zeit geht, geht mit der Zeit.
+
+Muhammad Ali
+> If it doesn’t challenge you, it doesn’t change you
