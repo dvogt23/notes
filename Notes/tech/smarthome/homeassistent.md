@@ -24,6 +24,28 @@ A definition for slider from [community/florian](https://community.home-assistan
   optimistic: false
 ```
 
+another one
+
+```yml
+  - platform: mqtt
+    name: living_room_shutter
+    availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+    state_topic: "tele/persiana_dormitorio/RESULT"
+    command_topic: "Smarthome/jalosien/wohnzimmer/cmnd"
+    set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/shutterposition"
+    value_template: "{{ value_json['SHUTTER-1'] }}"
+    qos: 1
+    retain: true
+    payload_open: "SHUTTEROPEN"
+    payload_close: "SHUTTERCLOSE"
+    payload_stop: "SHUTTERSTOP"
+    state_open: "ON"
+    state_closed: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    optimistic: true
+```
+
 ### Automation
 
 Just an example from: [community/florian](https://community.home-assistant.io/t/shelly-2-as-roller-shutter-with-percentage/85817/22)
