@@ -21,6 +21,8 @@
     - [Linux commands](tech/linux/linux_commands.md)
   - [Self-hosting]()
     - [Ideas](tech/selfhosting/ideas.md)
+  - [Smart-Home]()
+    - [Home-Assistent](tech/smarthome/homeassistent.md)
   - [Misc](tech/misc.md)
 
 - [Travel]()

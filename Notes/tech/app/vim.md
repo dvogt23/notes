@@ -2,6 +2,40 @@
 
 Some useful keybindings and many more for my favorite editor.
 
+### Visual mode
+
+Selects the previous visual
+
+  gv
+
+Go to other end of visual block
+
+  v_o/v_0
+
+Increment numbers
+
+  CTRL-A    inc by one
+  g CTRL-A  inc by sequence
+  2g CTRL-A inc two by sequence
+
+Blockwise motion
+
+  d2j         delete 2 lines
+  d<CRL-V>2j  delete 2 chars in that column
+
+## Ex commands
+
+Run command for regex
+
+  :g/regex/ex
+
+Run comman in norm mode
+
+  :g/regex/norm f dw
+
+Source:
+[hillelwayne/intermediate-vim](https://www.hillelwayne.com/post/intermediate-vim/)
+
 ### Commands in insert mode
 
     Ctrl-h - delete back one character (just like Backspace)

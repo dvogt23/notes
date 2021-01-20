@@ -12,13 +12,7 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 ISBN: 978-3406739682 ⭐ ⭐ ⭐ ⭐
 
 * Ein gutes Buch über die aktuellen Gegebenheiten in der Welt. 
-> Was also sollten wir unterrichten?
-Zahlreiche Fachpädao.
-behaupten, Schulen sollten sich aut die Vermittlung der vieKs verlegen kritisches Denken, Kommunikation, Kollaboratin.
-und Kreativität Allgemeiner sollten Schulen weniger Wert auf technisches Können legen und stattdessen universell anwendbare
-Lebensfertigkeiten in den Mittelpunkt rücken. Am allerwichtigsten wird die Fähigkeit sein, mit Veränderung umzugehen, neue Dinge zu lernen und in unvertrauten Situationen das seelische
-Gleichgewicht zu wahren. Wollen wir mit der Welt des Jahres 2050 Schritt halten, müssen wir nicht nur neue Ideen und Produkte
-erfinden wir müssen vor allem uns selbst immer wieder neu erfinden.“
+> Was also sollten wir unterrichten?  Zahlreiche Fachpädagogen behaupten, Schulen sollten sich auf die Vermittlung der vier Ks verlegen kritisches Denken, Kommunikation, Kollaboration und Kreativität. Allgemeiner sollten Schulen weniger Wert auf technisches Können legen und stattdessen universell anwendbare Lebensfertigkeiten in den Mittelpunkt rücken. Am allerwichtigsten wird die Fähigkeit sein, mit Veränderung umzugehen, neue Dinge zu lernen und in unvertrauten Situationen das seelische Gleichgewicht zu wahren. Wollen wir mit der Welt des Jahres 2050 Schritt halten, müssen wir nicht nur neue Ideen und Produkte erfinden wir müssen vor allem uns selbst immer wieder neu erfinden.“
 
 **Ein Gentleman in Moskau** by Amor Towles 
 ISBN: 978-3548290720 ⭐ ⭐ ⭐ ⭐
