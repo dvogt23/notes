@@ -21,8 +21,6 @@
     - [Linux commands](tech/linux/linux_commands.md)
   - [Self-hosting]()
     - [Ideas](tech/selfhosting/ideas.md)
-  - [Smart-Home]()
-    - [Home-Assistent](tech/smarthome/homeassistent.md)
   - [Misc](tech/misc.md)
 
 - [Travel]()
@@ -48,6 +46,8 @@
   - [Home]()
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)
+  - [Learning](personal/learning/README.md)
+    - [Rails](personal/learning/rails.md)
   - [Misc](personal/misc.md)
 
 - [Misc]()
@@ -58,4 +58,3 @@
   - [Quotes](misc/quotes.md)
   - [Wie man gut schreibt?](misc/wie_man_gut_Schreibt.md)
   - [29 ways to stay creative](misc/29ways_to_stay_creative.md)
-
