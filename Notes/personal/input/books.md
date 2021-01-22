@@ -14,6 +14,8 @@ ISBN: 978-3406739682 ⭐ ⭐ ⭐ ⭐
 * Ein gutes Buch über die aktuellen Gegebenheiten in der Welt. 
 > Was also sollten wir unterrichten?  Zahlreiche Fachpädagogen behaupten, Schulen sollten sich auf die Vermittlung der vier Ks verlegen kritisches Denken, Kommunikation, Kollaboration und Kreativität. Allgemeiner sollten Schulen weniger Wert auf technisches Können legen und stattdessen universell anwendbare Lebensfertigkeiten in den Mittelpunkt rücken. Am allerwichtigsten wird die Fähigkeit sein, mit Veränderung umzugehen, neue Dinge zu lernen und in unvertrauten Situationen das seelische Gleichgewicht zu wahren. Wollen wir mit der Welt des Jahres 2050 Schritt halten, müssen wir nicht nur neue Ideen und Produkte erfinden wir müssen vor allem uns selbst immer wieder neu erfinden.“
 
+> Den Menschen wurde von frühester Kindheit an beigebracht, an die Erzählung zu glauben. Sie hören sie von ihren Eltern, ihren Lehrern, ihren Nachbarn und der allgemeinen Kultur lange, bevor sie die geistige und emotionale Unabhängigkeit entwickeln, die notwendig ist, um solche Geschichten zu hinterfragen und auf ihren Wahrheitsgehalt zu überprüfen. Zu der Zeit, da ihr Intellekt heranreift, sind sie so sehr in diese Erzählung eingebunden, dass sie ihren Verstand eher dazu nutzen, sie rational zu begründen als sie anzuzweifeln. Die meisten Menschen, die auf ldentitätssuche gehen, sind wie Kinder, die sich auf Schatzsuche begeben. Sie finden nur, was ihre Eltern zuvor für sie versteckt haben.
+
 **Ein Gentleman in Moskau** by Amor Towles 
 ISBN: 978-3548290720 ⭐ ⭐ ⭐ ⭐
 
