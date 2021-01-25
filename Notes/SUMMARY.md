@@ -34,6 +34,7 @@
   - [Home]()
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)
+    - [Cooking](personal/home/cooking.md)
   - [Learning](personal/learning/README.md)
     - [Rails](personal/learning/rails.md)
   - [Misc](personal/misc.md)
