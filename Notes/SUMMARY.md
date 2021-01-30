@@ -37,6 +37,8 @@
     - [Cooking](personal/home/cooking.md)
   - [Learning](personal/learning/README.md)
     - [Rails](personal/learning/rails.md)
+  - [Sport]()
+    - [Cycling](personal/sport/cycling.md)
   - [Misc](personal/misc.md)
 
 - [Travel]()
@@ -52,6 +54,7 @@
   - [Portugal](travel/portugal.md)
   - [Tel aviv](travel/telaviv.md)
   - [Wien](travel/wien.md)
+  - [Kroatia](travel/kroatia.md)
 
 - [Misc]()
   - [Arts](misc/arts.md)
