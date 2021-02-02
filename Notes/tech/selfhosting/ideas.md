@@ -19,5 +19,6 @@
 
     Launch Postfix. sudo /etc/init.d/postfix start
 
- - TODO Web IRC Client the-lounge
+ - TODO Web IRC Client [the-lounge](https://github.com/thelounge/thelounge)
  - TODO IT Hardware Management Snap-IT
+ - TODO Media Server [JellyFin](https://jellyfin.org)
