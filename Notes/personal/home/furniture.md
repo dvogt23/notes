@@ -6,6 +6,8 @@
     - Masie [Link](https://www.themasie.com/de/)
   - Turntable
     - marley [Marley stir up wireless 249,99E](https://www.thehouseofmarley.de/stir-it-up-wireless-1.html)
+  - Plants
+    - [plantsome](https://www.plantsome.de/)
 
 ## Kitchen
   - Coffee [rommelsbacher](https://www.rommelsbacher.de/de/kaffee-espresso-center-eks-3010.html)
