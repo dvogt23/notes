@@ -27,6 +27,7 @@
 
 - [Personal]()
   - [Input]()
+    - [Music](personal/input/music.md)
     - [Books](personal/input/books.md)
     - [Podcasts](personal/input/podcasts.md)
     - [Series](personal/input/series.md)
@@ -35,6 +36,8 @@
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)
     - [Cooking](personal/home/cooking.md)
+    - [Pharmacy](personal/home/pharmacy.md)
+    - [Bucketlist](personal/home/bucketlist.md)
   - [Learning](personal/learning/README.md)
     - [Rails](personal/learning/rails.md)
   - [Sport]()
