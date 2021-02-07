@@ -16,7 +16,7 @@ Out home pharmcy list should always be present:
  - Erbrechen Vomex
  - Schmerz-/Fieber Ibuprofen 400
 
-*Kids*:
+**Kids**:
  - Schmerz Voltaren
  - Verstopfung Movicol
  - Schnupfen Nasivin für Babys (Kochsalz nicht hilft)

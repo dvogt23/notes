@@ -1,6 +1,6 @@
 # Bucketlist
 
-A list from our bucketlist book where we document our events:
+A list of our bucketlist book where we document our events:
 
  - Heißluftballon fliegen
  - Tag zu zweit für einen guten Zweck arbeiten
