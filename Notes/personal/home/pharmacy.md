@@ -1,6 +1,6 @@
 # Pharmacy
 
-Out home pharmcy list should always be present:
+Our home pharmcy list should always be present:
 
  - Kopfschmerzen Paracetamol
  - Orthomol Immun
@@ -17,6 +17,7 @@ Out home pharmcy list should always be present:
  - Schmerz-/Fieber Ibuprofen 400
 
 **Kids**:
+
  - Schmerz Voltaren
  - Verstopfung Movicol
  - Schnupfen Nasivin für Babys (Kochsalz nicht hilft)
