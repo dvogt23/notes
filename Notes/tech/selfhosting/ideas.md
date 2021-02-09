@@ -1,5 +1,7 @@
 # Ideas
 
+ - TODO Host my own signal proxy
+   [Help iran to connect signal](https://signal.org/blog/help-iran-reconnect/)
  - TODO Treafik Wildcard Zertifikat konfigurieren
     Ultimate docker home server with traefik smarthomebeginner blogpost
 
