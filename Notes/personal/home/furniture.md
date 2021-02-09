@@ -21,4 +21,4 @@
 ## Indoor gardening
 
   - [Indoor-Jungle
-    OBI](https://www.obi.de/magazin/indoor-jungle?wt_mc=fb.2021_cc01_indoorjungle_awareness.int_.sa.&wt_cc6=awareness&fbclid=PAAabjK8L_fw5NXflVQCqvNT9rGLPAXTMqgPAi1ir0-2aqrCfUgPfzvMOV2kk_aem_Ae_2Qun3PLj9O636QBYclQYIzERDpGKhLZ42RnFF5oF_8wMb1uqHJqCIzI6FKtaETBR98ZYvNH-EYreaLsw3vQ9b0JlTodKpDyA9ULNK1r7SGA)
+    OBI](https://www.obi.de/magazin/indoor-jungle)
