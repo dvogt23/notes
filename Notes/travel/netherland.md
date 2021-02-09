@@ -6,3 +6,5 @@
  - Giethorn
    Is called the dutch venice
 
+ - Camping in castricum (Gemüsehaus)
+   [Geversduin](https://www.campinggeversduin.de/mieten)

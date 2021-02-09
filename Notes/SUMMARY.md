@@ -21,7 +21,7 @@
     - [Linux commands](tech/linux/linux_commands.md)
   - [Self-hosting]()
     - [Ideas](tech/selfhosting/ideas.md)
-  - [Smart-Home]()
+  - [Smart-Home](.md)
     - [Home-Assistent](tech/smarthome/homeassistent.md)
   - [Misc](tech/misc.md)
 
@@ -36,6 +36,7 @@
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)
     - [Cooking](personal/home/cooking.md)
+    - [Garden](personal/home/garden.md)
     - [Pharmacy](personal/home/pharmacy.md)
     - [Bucketlist](personal/home/bucketlist.md)
   - [Learning](personal/learning/README.md)
