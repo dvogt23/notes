@@ -2,7 +2,7 @@
 
 ## Basic
 
-- Some gardening stuff from [Indoor gardening](../home/furniture.md#indoor-gardening)
+- Some basic garden [Indoor gardening](../home/furniture.md#indoor-gardening)
 
 ## Teracce
 
