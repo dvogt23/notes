@@ -1,5 +1,9 @@
 # Home-Assistent
 
+## Cool stuff
+
+ - awesome [ha](https://www.awesome-ha.com/)
+
 ## Shutter control
 
 ### MQTT Slider

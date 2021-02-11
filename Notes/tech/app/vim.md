@@ -2,6 +2,14 @@
 
 Some useful keybindings and many more for my favorite editor.
 
+### Completion
+
+In insert mode:
+
+    ctrl+x ctrl+f     complete filenames
+    ctrl+x ctrl+l     complete lines
+    ctrl+r <register> insert text from register (i.e.: . for last text [ctrl+a])
+
 ### Visual mode
 
 Selects the previous visual
