@@ -9,6 +9,15 @@ Learning from some youtube guys:
  - [Video](https://www.youtube.com/watch?v=u2o_new-T0o&t=555s) Source:
    [simple-pm](https://github.com/StephenFiser/simple-pm/tree/episode-1)
 
+## Ruby
+
+Some `ruby` notes:
+
+```ruby
+truncate(recipe.description, length: 150)   # truncate
+time_ago_in_words(recipe.created_at)        # date
+
+```
 
 ## Professional Ruby on Rails Developer with Rails 5
 
@@ -98,7 +107,6 @@ validates :name, presence: true
 validates :description, presence: true, length: { minimum: 5, maximum: 500 }
 ```
 
-
 ## Routes
 
 Set root route:
@@ -114,13 +122,12 @@ Specific route to controller#method:
 get '/about', to: 'pages#about'
 ```
 
-
 ## Links
 
 Create links in views:
 
 ```ruby
-<%= link_to "Edit this todo", edit_todo_path(@todo) %> |
+<%= link_to "Edit this todo", edit_todo_path(@todo) %>
 <%= link_to "Back to todos listing", todos_path %>
 <td><%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: "Are you sure?"} %></td>
 <%= link_to "MyRecipes", root_path, class: "navbar-brand", id: "logo" %>
@@ -128,6 +135,12 @@ Create links in views:
 ```
 
 ## Tests
+
+Create integration test for model:
+
+```ruby
+rails generate integration_test recipes
+```
 
 Simple test root path:
 
@@ -261,6 +274,46 @@ class Chef < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   
+end
+```
+
+Downcase before save with test:
+
+```ruby
+before_save { self.email = email.downcase }
+
+# And then test it with:
+
+test "email should be lower case before hitting db" do
+  mixed_email = "JohN@ExampLe.com"
+  @chef.email = mixed_email
+  @chef.save
+  assert_equal mixed_email.downcase, @chef.reload.email 
+end
+```
+
+Create a association and test it:
+
+Association
+```ruby
+# chef model
+validates :chef_id, presence: true
+has_many :recipes
+
+# recipe model
+belongs_to :chef
+```
+
+Test
+```ruby
+def setup
+  @chef = Chef.create!(chefname: "mashrur", email: "mashrur@example.com")
+  @recipe = @chef.recipes.build(name: "vegetable", description: "great vegetable recipe")  
+end
+
+test "recipe without chef should be invalid" do
+  @recipe.chef_id = nil
+  assert_not @recipe.valid?
 end
 ```
 
