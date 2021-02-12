@@ -38,6 +38,7 @@
     - [Clothing](personal/home/clothing.md)
     - [Cooking](personal/home/cooking.md)
     - [Garden](personal/home/garden.md)
+    - [Garage](personal/home/garage.md)
     - [Pharmacy](personal/home/pharmacy.md)
     - [Bucketlist](personal/home/bucketlist.md)
   - [Learning](personal/learning/README.md)
