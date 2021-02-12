@@ -266,7 +266,7 @@ end
 
 ##  Styling
 
-Add `bootstrap` to project (good html/css tutorial [link](learn.shayhowe.com/html-css/)):
+Add `bootstrap` to project (good html/css tutorial [link](https://learn.shayhowe.com/html-css/)):
 
 ```ruby
 gem 'bootstrap-sass', '~> 3.3.7'
