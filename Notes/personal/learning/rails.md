@@ -8,3 +8,294 @@ Learning from some youtube guys:
  - [Video](https://www.youtube.com/watch?v=8i5JFLfbWkE) Source: [Projekt](https://github.com/justalever/projekt)
  - [Video](https://www.youtube.com/watch?v=u2o_new-T0o&t=555s) Source:
    [simple-pm](https://github.com/StephenFiser/simple-pm/tree/episode-1)
+
+
+## Professional Ruby on Rails Developer with Rails 5
+
+Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/):
+
+## Basics
+
+Render plain text:
+```ruby
+def hello
+  render plain: "hello world!"
+end
+```
+
+Create a controller with a method and use a object in view:
+
+```ruby
+# controller
+class TodosController < ApplicationController
+
+  def new
+   @todo = Todo.new 
+  end
+
+end
+
+# view
+<%= form_for @todo do |f| %>
+
+<% end %>
+```
+
+Use `flash` for notifications:
+
+```ruby
+#controller
+@todo.save
+flash[:notice] = "Todo was created successfully"
+
+# view
+<% flash.each do |name, msg| %>
+  <ul>
+    <li><%= msg %></li>
+  </ul>
+<% end %>
+```
+
+Render partials in view ie a file `views/layouts/_messages.html.erb`:
+
+```ruby
+<%= render 'layouts/messages' %>
+```
+
+Before run a method do action:
+
+```ruby
+# controller
+before_action :set_todo, only: [:edit, :update, :show, :destroy]
+
+private
+
+  def set_todo
+    @todo = Todo.find(params[:id])
+  end
+
+  def todo_params
+    params.require(:todo).permit(:name, :description)
+  end
+
+end
+```
+
+Add pg to production for ie. heroku deployment:
+
+```ruby
+group :production do
+  gem 'pg'
+end
+
+bundle install --without production
+```
+
+Some simple validations:
+
+```ruby
+validates :name, presence: true
+validates :description, presence: true, length: { minimum: 5, maximum: 500 }
+```
+
+
+## Routes
+
+Set root route:
+
+```ruby
+# router.rb
+root "pages#home"
+```
+
+Specific route to controller#method:
+
+```ruby
+get '/about', to: 'pages#about'
+```
+
+
+## Links
+
+Create links in views:
+
+```ruby
+<%= link_to "Edit this todo", edit_todo_path(@todo) %> |
+<%= link_to "Back to todos listing", todos_path %>
+<td><%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: "Are you sure?"} %></td>
+<%= link_to "MyRecipes", root_path, class: "navbar-brand", id: "logo" %>
+<%= link_to "Sign up or log in", "#" class: "btn btn-danger btn-lg" %>
+```
+
+## Tests
+
+Simple test root path:
+
+```ruby
+test "should get home" do
+  get pages_home_url
+  assert_response :success
+end
+
+test "should get root" do
+  get root_url
+  assert_response :success
+end
+```
+
+to fix this tests, do:
+
+```ruby
+root "pages#home"
+get 'pages/home', to: 'pages#home'
+
+# controller
+class PagesController < ApplicationController
+  def home
+  end
+end
+```
+
+Test a simple validation:
+
+```ruby
+require 'test_helper'
+
+class RecipeTest < ActiveSupport::TestCase
+  
+  def setup
+    @recipe = Recipe.new(name: "vegetable", description: "great vegetable recipe")  
+  end
+  
+  test "recipe should be valid" do
+    assert @recipe.valid?
+  end  
+  
+  test "name should be present" do
+    @recipe.name = " "
+    assert_not @recipe.valid?
+  end
+  
+  test "description should be present" do
+    @recipe.description = " "
+    assert_not @recipe.valid?
+  end
+  
+  test "description shouldn't be less than 5 characters" do
+    @recipe.description = "a" * 3
+    assert_not @recipe.valid?
+  end
+  
+  test "description shouldn't be more than 500 characters" do
+    @recipe.description = "a" * 501
+    assert_not @recipe.valid?
+  end
+end
+```
+
+Test a email validation:
+
+```ruby
+require 'test_helper'
+
+class ChefTest < ActiveSupport::TestCase
+  
+  def setup
+    @chef = Chef.new(chefname: "mashrur", email: "mashrur@example.com")
+  end
+  
+  test "should be valid" do
+    assert @chef.valid?
+  end
+  
+  test "name should be present" do
+    @chef.chefname = " "
+    assert_not @chef.valid?
+  end
+  
+  test "name should be less than 30 characters" do
+    @chef.chefname = "a" * 31
+    assert_not @chef.valid?
+  end
+  
+  test "email should be present" do
+    @chef.email = " "
+    assert_not @chef.valid?
+  end
+  
+  test "email should not be too long" do
+    @chef.email = "a" * 245 + "@example.com"
+    assert_not @chef.valid?
+  end
+  
+  test "email should accept correct format" do
+    valid_emails = %w[user@example.com MASHRUR@gmail.com M.first@yahoo.ca john+smith@co.uk.org]
+    valid_emails.each do |valids|
+      @chef.email = valids
+      assert @chef.valid?, "#{valids.inspect} should be valid"
+    end
+  end
+  
+  test "should reject invalid addresses" do
+    invalid_emails = %w[mashrur@example mashrur@example,com mashrur.name@gmail. joe@bar+foo.com]
+    invalid_emails.each do |invalids|
+      @chef.email = invalids
+      assert_not @chef.valid?, "#{invalids.inspect} should be invalid"
+    end
+  end 
+  
+  test "email should be unique and case insensitive" do
+    duplicate_chef = @chef.dup
+    duplicate_chef.email = @chef.email.upcase
+    @chef.save
+    assert_not duplicate_chef.valid?
+  end
+  
+end
+
+# controller
+class Chef < ApplicationRecord
+  validates :chefname, presence: true, length: { maximum: 30 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+  
+end
+```
+
+##  Styling
+
+Add `bootstrap` to project (good html/css tutorial [link](learn.shayhowe.com/html-css/)):
+
+```ruby
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails'
+
+# app/assets/javascripts/application.js
+//= require bootstrap-sprockets
+
+# app/assets/stylesheets/custom.css.scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
+```
+
+## Database
+  
+Create migration:
+  
+```ruby
+rails generate migration create_recipes
+
+# modify the migration file
+
+rails db:migrate
+```
+
+Rename column:
+
+```ruby
+rename_column :recipes, :email, :description
+rails db:migrate
+```
+
