@@ -65,6 +65,21 @@ flash[:notice] = "Todo was created successfully"
 <% end %>
 ```
 
+A bootstrap styled flash messages:
+
+```ruby
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name %>">
+        <a href="#" class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
+  </div>
+</div>
+```
+
 Render partials in view ie a file `views/layouts/_messages.html.erb`:
 
 ```ruby
