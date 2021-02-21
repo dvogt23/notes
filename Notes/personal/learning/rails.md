@@ -16,6 +16,7 @@ Some `ruby` notes:
 ```ruby
 truncate(recipe.description, length: 150)   # truncate
 time_ago_in_words(recipe.created_at)        # date
+pluralize(count, "apple")                   # pluralize if count > 1 to apples
 
 ```
 
@@ -120,6 +121,36 @@ Some simple validations:
 ```ruby
 validates :name, presence: true
 validates :description, presence: true, length: { minimum: 5, maximum: 500 }
+```
+
+Aplication helpers:
+
+```ruby
+helper_method :current_chef, :logged_in?
+
+def current_chef
+  @current_chef ||= Chef.find(session[:chef_id]) if session[:chef_id]
+end
+
+def logged_in?
+  !!current_chef
+end
+
+def require_user
+  if !logged_in?
+    flash[:danger] = "You must be logged in to perform that action"
+    redirect_to root_path
+  end
+end
+```
+
+## Model
+
+Order models by column:
+
+```ruby
+# order by updated_at -> top of model
+default_scope -> { order(updated_at: :desc) }
 ```
 
 ## Routes
@@ -356,6 +387,9 @@ has_many :recipes
 
 # recipe model
 belongs_to :chef
+
+# destroy with dependent
+has_many :recipes, dependent: :destroy
 ```
 
 Test
@@ -395,7 +429,6 @@ Create migration:
 rails generate migration create_recipes
 
 # modify the migration file
-
 rails db:migrate
 ```
 
