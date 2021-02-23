@@ -43,6 +43,7 @@
     - [Bucketlist](personal/home/bucketlist.md)
   - [Learning](personal/learning/README.md)
     - [Rails](personal/learning/rails.md)
+    - [Ruby](personal/learning/ruby.md)
   - [Sport]()
     - [Cycling](personal/sport/cycling.md)
   - [Misc](personal/misc.md)
