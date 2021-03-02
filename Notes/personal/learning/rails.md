@@ -9,22 +9,11 @@ Learning from some youtube guys:
  - [Video](https://www.youtube.com/watch?v=u2o_new-T0o&t=555s) Source:
    [simple-pm](https://github.com/StephenFiser/simple-pm/tree/episode-1)
 
-## Ruby
-
-Some `ruby` notes:
-
-```ruby
-truncate(recipe.description, length: 150)   # truncate
-time_ago_in_words(recipe.created_at)        # date
-pluralize(count, "apple")                   # pluralize if count > 1 to apples
-
-```
-
 ## Professional Ruby on Rails Developer with Rails 5
 
-Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/):
+Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [[ruby]] notes:
 
-## Basics
+### Basics
 
 Render plain text:
 ```ruby
@@ -103,6 +92,11 @@ private
     params.require(:todo).permit(:name, :description)
   end
 
+  # permit has_many list
+  def recipe_params  
+    params.require(:recipe).permit(:name, :description, ingredient_ids: [])  
+  end
+
 end
 ```
 
@@ -123,7 +117,7 @@ validates :name, presence: true
 validates :description, presence: true, length: { minimum: 5, maximum: 500 }
 ```
 
-Aplication helpers:
+Application helpers:
 
 ```ruby
 helper_method :current_chef, :logged_in?
@@ -140,11 +134,27 @@ def require_user
   if !logged_in?
     flash[:danger] = "You must be logged in to perform that action"
     redirect_to root_path
+	# also possible
+	redirect_to :back
   end
 end
 ```
 
-## Model
+Render partial for model:
+
+```ruby
+# View
+<% if recipe.ingredients.any? %>  
+  <p>Ingredients: <%= render recipe.ingredients %></p>  
+<% end %>
+
+# Now create a new partial _ingredient.html.erb under the app/views/ingredients folder for this to work
+
+<span class="badge"><%= link_to ingredient.name,   
+                      ingredient_path(ingredient) %>   </span>
+````
+
+### Model
 
 Order models by column:
 
@@ -153,7 +163,7 @@ Order models by column:
 default_scope -> { order(updated_at: :desc) }
 ```
 
-## Routes
+### Routes
 
 Set root route:
 
@@ -168,7 +178,19 @@ Specific route to controller#method:
 get '/about', to: 'pages#about'
 ```
 
-## Links
+Nested routes:
+
+```ruby
+resources :recipes do  
+  resources :comments, only: [:create]  
+end
+
+# Form in view
+<%= form\_for(\[@recipe, @comment\], :html => {class: "form-horizontal",   
+                                                role: "form"}) do |f| %>
+````
+
+### Links
 
 Create links in views:
 
@@ -180,7 +202,7 @@ Create links in views:
 <%= link_to "Sign up or log in", "#" class: "btn btn-danger btn-lg" %>
 ```
 
-## Tests
+### Tests
 
 Create integration test for model:
 
@@ -405,7 +427,7 @@ test "recipe without chef should be invalid" do
 end
 ```
 
-##  Styling
+###  Styling
 
 Add `bootstrap` to project (good html/css tutorial [link](https://learn.shayhowe.com/html-css/)):
 
@@ -421,7 +443,17 @@ gem 'jquery-rails'
 @import "bootstrap";
 ```
 
-## Database
+### Views
+Render html for each data:
+
+```ruby
+<%= f.collection_check_boxes :ingredient_ids,   
+                                    Ingredient.all, :id, :name do |cb| %>  
+<% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>  
+      <% end %>
+````
+
+### Database
   
 Create migration:
   
@@ -439,3 +471,10 @@ rename_column :recipes, :email, :description
 rails db:migrate
 ```
 
+Many to many association:
+
+```ruby
+# Model
+has_many :recipe_ingredients  
+has_many :recipes, through: :recipe_ingredients
+````
