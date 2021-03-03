@@ -11,7 +11,7 @@ Learning from some youtube guys:
 
 ## Professional Ruby on Rails Developer with Rails 5
 
-Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [[ruby]] notes:
+Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [ruby](./ruby.md) notes:
 
 ### Basics
 
@@ -161,6 +161,14 @@ Order models by column:
 ```ruby
 # order by updated_at -> top of model
 default_scope -> { order(updated_at: :desc) }
+```
+
+Get just the last 20 entries of a model
+
+```ruby
+def self.most_recent  
+  order(:created_at).last(20)  
+end
 ```
 
 ### Routes

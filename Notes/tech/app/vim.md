@@ -2,6 +2,32 @@
 
 Some useful keybindings and many more for my favorite editor.
 
+### Macro
+
+If you record a macro with `qa` and forget something, just with `qA` you could append some keystrokes to your macro.
+
+Source: [A vim guide for advanced user](https://thevaluable.dev/vim-advanced/)
+
+### Registers
+
+To put a register in insert mode, just do `CTRL+R <register>`
+
+Source: [A vim guide for advanced user](https://thevaluable.dev/vim-advanced/)
+
+### Global command
+
+To delete lines with a pattern:
+
+```vim
+" delete line
+:g/useless/d
+
+" make line lowercase
+:g/useless/norm gu$
+````
+
+Source: [A vim guide for advanced user](https://thevaluable.dev/vim-advanced/)
+
 ### Completion
 
 In insert mode:
