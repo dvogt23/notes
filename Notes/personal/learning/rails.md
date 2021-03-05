@@ -8,8 +8,8 @@ Learning from some youtube guys:
  - [Video](https://www.youtube.com/watch?v=8i5JFLfbWkE) Source: [Projekt](https://github.com/justalever/projekt)
  - [Video](https://www.youtube.com/watch?v=u2o_new-T0o&t=555s) Source:
    [simple-pm](https://github.com/StephenFiser/simple-pm/tree/episode-1)
- - Best practises [Semicolon&Sons - Best practises
-   I](https://youtu.be/vw7PlBvLq9k)
+ - Best practises [Semicolon&Sons - Best practises I](https://youtu.be/vw7PlBvLq9k)
+   Passing ruby data to javaScript
 
 ## Professional Ruby on Rails Developer with Rails 5
 
@@ -136,8 +136,8 @@ def require_user
   if !logged_in?
     flash[:danger] = "You must be logged in to perform that action"
     redirect_to root_path
-  # also possible
-  redirect_to :back
+    # also possible
+    redirect_to :back
   end
 end
 ```
