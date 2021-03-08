@@ -40,6 +40,8 @@
     - [Garden](personal/home/garden.md)
     - [Garage](personal/home/garage.md)
     - [Pharmacy](personal/home/pharmacy.md)
+    - [Homestead](personal/home/homestead.md)
+    - [Kids](personal/home/kids.md)
     - [Bucketlist](personal/home/bucketlist.md)
   - [Learning](personal/learning/README.md)
     - [Rails](personal/learning/rails.md)
