@@ -26,3 +26,7 @@ Carl Josef »Necko« Neckermann. (1912 - 1992)
 
 Muhammad Ali
 > If it doesn’t challenge you, it doesn’t change you
+
+Karl Stojka, Auschwitzüberlebender
+> Es waren nicht Hitler oder Himmler, die mich verschleppt, geschlagen & meine Familie erschossen haben.
+Es waren der Schuster, der Milchmann, der Nachbar, die eine Uniform bekamen und dann glaubten, sie seien die Herrenrasse.

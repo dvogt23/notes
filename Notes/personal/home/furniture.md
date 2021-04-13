@@ -1,4 +1,4 @@
-# Furniture
+[#](#) Furniture
 
 ## Livingroom
   - Dinner table
@@ -8,6 +8,8 @@
     - marley [Marley stir up wireless 249,99E](https://www.thehouseofmarley.de/stir-it-up-wireless-1.html)
   - Plants
     - [plantsome](https://www.plantsome.de/)
+  - Seats
+    - [Selia](https://kavehome.com/de/de/p/selia-stuhl-mit-antikem-nussbaumfinish)
 
 ## Kitchen
   - Esspresso machine [rommelsbacher](https://www.rommelsbacher.de/de/kaffee-espresso-center-eks-3010.html)

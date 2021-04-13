@@ -1,4 +1,4 @@
-# Misc
+[#](#) Misc
 
 ### Some interesting dotfiles:
  * https://github.com/webgefrickel/dotfiles #mutt
@@ -6,6 +6,7 @@
  * https://github.com/Northcode/dotfiles.git
  * https://github.com:rcr/dotfiles.git
  * https://github.com/ReekyMarko/dotfiles
+ * [ishchow - lua](https://github.com/ishchow/dotfiles/blob/master/.config/nvim/lua/diary.lua)
 
 ### Create QR-Code for your wifi
 [Source](https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/)

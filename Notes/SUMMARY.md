@@ -7,6 +7,7 @@
     - [Vim](tech/app/vim.md)
   - [Bash](tech/bash.md)
   - [Coding]()
+    - [Environment](tech/coding/environment.md)
     - [Git](tech/coding/git.md)
     - [Kotlin](tech/coding/kotlin.md)
     - [Make](tech/coding/make.md)

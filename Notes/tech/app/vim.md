@@ -2,6 +2,13 @@
 
 Some useful keybindings and many more for my favorite editor.
 
+### Settings
+
+ - TypeScript environment
+   Great article to this topic from [Jose Alvarez | medium](https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c)
+ - Lua config
+   Different stuff from [oroques](https://oroques.dev/notes/neovim-init/) [icyphox](https://icyphox.sh/blog/nvim-lua/)
+
 ### Macro
 
 If you record a macro with `qa` and forget something, just with `qA` you could append some keystrokes to your macro.

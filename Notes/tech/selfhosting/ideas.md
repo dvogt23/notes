@@ -1,5 +1,6 @@
 # Ideas
 
+ - TODO Create own wireguard pihole on vs: [wirehole](https://github.com/IAmStoxe/wirehole)
  - TODO Host my own signal proxy
    [Help iran to connect signal](https://signal.org/blog/help-iran-reconnect/)
  - TODO Treafik Wildcard Zertifikat konfigurieren
