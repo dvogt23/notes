@@ -1,6 +1,10 @@
 # GIT Versioning tool for developers
 > my daily most used commands
 
+## Highly recommended
+
+The usage of aliases from git plugin/oh-my-zsh: [git-plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh) zsh-load: [zinit](https://github.com/dvogt23/dotfiles/blob/master/zsh/.zshrc#L40)
+
 Here are some git commands, that I NOT used daily. Mainly i use the zsh git plugin with all the useful short commands
 (alias) like `gs # git status` and `gcd # git checkout develop`. It is really handy and i love it.  
 

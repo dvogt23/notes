@@ -13,6 +13,7 @@
     - [Make](tech/coding/make.md)
     - [Maven](tech/coding/maven.md)
     - [Rust](tech/coding/rust.md)
+    - [Javascript](tech/coding/javascript.md)
   - [Equipment](tech/equipment.md)
   - [Linux]()
     - [10 Things after installing arch](tech/linux/10things_arch.md)
