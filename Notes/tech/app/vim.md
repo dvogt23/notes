@@ -9,6 +9,10 @@ Some useful keybindings and many more for my favorite editor.
  - Lua config
    Different stuff from [oroques](https://oroques.dev/notes/neovim-init/) [icyphox](https://icyphox.sh/blog/nvim-lua/)
 
+### Format json
+
+Reformat json with `:%!jq .`
+
 ### Macro
 
 If you record a macro with `qa` and forget something, just with `qA` you could append some keystrokes to your macro.
