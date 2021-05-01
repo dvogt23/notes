@@ -5,6 +5,7 @@
   - [Apps]()
     - [Pass](tech/app/pass.md)
     - [Vim](tech/app/vim.md)
+    - [Firefox](tech/app/firefox.md)
   - [Bash](tech/bash.md)
   - [Coding]()
     - [Environment](tech/coding/environment.md)
