@@ -4,7 +4,7 @@
 
 Different type to print to console:
 
-````javascript
+```javascript
 console.log() – For general output of logging information.
 console.info() – Informative logging of information.
 console.debug() – Outputs a message to the console with the log level debug.

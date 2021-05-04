@@ -1,4 +1,4 @@
-[#](#) Misc
+# Misc
 
 ### Some interesting dotfiles:
  * https://github.com/webgefrickel/dotfiles #mutt
@@ -11,9 +11,6 @@
 ### Create QR-Code for your wifi
 [Source](https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/)
 `qrencode -o wifi.png "WIFI:T:WPA;S:<SSID>;P:<PASSWORD>;;"`
-
-### Firefox connect localsubdomain
-Go to `about:config` and search for `network.dns.localDomains` and add the entries (comma separated)
 
 ### Security book
 A most recommended it security book: [Book](https://www.cl.cam.ac.uk/~rja14/book.html)
@@ -33,4 +30,4 @@ Found an good article about, how handle the custom sortation of entires in sql d
 | harry | 2.5 |
 | ben   | 3   |
 
-[begirffs.com - User defined order](https://begriffs.com/posts/2018-03-20-user-defined-order.html)
+[begriffs.com - User defined order](https://begriffs.com/posts/2018-03-20-user-defined-order.html)

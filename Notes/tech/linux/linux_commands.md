@@ -2,6 +2,10 @@
 
 @linux @bash
 
+### Useful oneliners
+
+Show dir sizes: `du -hs */ | sort -hr | head`
+
 ### A one-liner version incrementer
 ```bash
 inc_version() {

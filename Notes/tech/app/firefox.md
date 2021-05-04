@@ -6,6 +6,7 @@ Make changes in `about:config`:
 
  - Deactivate js for pdf preview: `pdfjs.enableScripting = false`
  - Show tab close button `browser.tabs.tabClipWidth = 1`
+ - Localhost subdomain `network.dns.localDomains` and add the entries (comma separated)
 
 ## Extensions
 
