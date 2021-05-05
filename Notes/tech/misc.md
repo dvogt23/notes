@@ -31,3 +31,21 @@ Found an good article about, how handle the custom sortation of entires in sql d
 | ben   | 3   |
 
 [begriffs.com - User defined order](https://begriffs.com/posts/2018-03-20-user-defined-order.html)
+
+### OWASP 10 most critical security issues for web applications
+
+Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html) from Tobias Glemser
+
+*Content:*
+
+ - Einführung in relevante Organisationen
+ - Beispiele in der öffentlichen Wahrnehmung
+ - Die zehn häufigsten Sicherheitsrisiken bei Webanwendungen – OWASP Top 10 (u. a. SQLInjection, Cross-Site-Scripting, CSRF, Denial-of-Service)
+ - Interaktive Demonstrationen zu allen Risiken
+ - Aufzeigen der Auswirkungen
+ - Passende Beispiele mit realem Bezug
+ - Vorstellung von Prüfwerkzeugen und Methoden bei der Prüfung in Form von Penetrationstests
+
+*Notes:*
+
+ - 
