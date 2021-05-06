@@ -48,4 +48,12 @@ Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-
 
 *Notes:*
 
- - 
+ - XSS bei eBay -> Haftung? Gesetzt sagt: Stand der Technik einhalten!
+ - OWASP SAMM/Cheat Sheet anschauen
+ - Pentest sicher/unsicher? Keine eindeutige Aussage, da Momentaufnahme!
+ - Security Beauftragter muss Fragen stellen um die Kommunikation anzuregen
+   - Entwickler tragen keine Verantwortung, wenn Sicherheitsaspekte nicht berücksichtigt werden
+ - Masche aus Maßnahmen zur Bekämpfung von Risiken schmählern die Gefahr
+ - Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest
+ - Angriffe: [OWASP-BWA](https://hub.docker.com/r/vulnerables/web-dvwa) - Test machine
+   - Injection
