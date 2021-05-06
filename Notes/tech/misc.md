@@ -57,3 +57,31 @@ Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-
  - Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest
  - Angriffe: [OWASP-BWA](https://hub.docker.com/r/vulnerables/web-dvwa) - Test machine
    - Injection
+     - SQL, LDAP, OS-commands -> backend
+     - XSS -> frontend
+     - sqlmap / `Mc O'Caml` test
+   - Broken Authentication
+     - sessionId in GET
+     - nur sessionId als Authorisierung
+     - login brute-force verhindern
+   - Sesitive data sxposure
+     - backup files im www dir
+     - keine durchgängige Verschlüsslung
+   - XML External Entities (XXE)
+     - SOAP API
+   - Broken access control
+     - Zugriff auf Dateien `?page=/etc/passwd`
+     - per ID auf Daten dritter zugreifen
+   - Security misconfiguration
+     - Härtung der Infrastruktur
+     - update von 3rd party libs
+     - default accounts beachten
+   - XSS Cross-site-scriting
+     - js injection auf website
+   - Insecure deserialization
+     - parser libs updaten!
+   - Insufficient logging & monitoring
+     - fehlerhafte login Versuche
+     - Transaktionen protokollieren
+
+**Eingabe im frontend & backend! validieren vor API Aufruf!**
