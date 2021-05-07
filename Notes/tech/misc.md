@@ -34,9 +34,9 @@ Found an good article about, how handle the custom sortation of entires in sql d
 
 ### OWASP 10 most critical security issues for web applications
 
-Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html) from Tobias Glemser
+Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html) from [Tobias Glemser](https://owasp.org/www-project-juice-shop/)
 
-*Content:*
+**Content:**
 
  - Einführung in relevante Organisationen
  - Beispiele in der öffentlichen Wahrnehmung
@@ -46,7 +46,7 @@ Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-
  - Passende Beispiele mit realem Bezug
  - Vorstellung von Prüfwerkzeugen und Methoden bei der Prüfung in Form von Penetrationstests
 
-*Notes:*
+**Notes:**
 
  - XSS bei eBay -> Haftung? Gesetzt sagt: Stand der Technik einhalten!
  - OWASP SAMM/Cheat Sheet anschauen
@@ -55,7 +55,8 @@ Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-
    - Entwickler tragen keine Verantwortung, wenn Sicherheitsaspekte nicht berücksichtigt werden
  - Masche aus Maßnahmen zur Bekämpfung von Risiken schmählern die Gefahr
  - Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest
- - Angriffe: [OWASP-BWA](https://hub.docker.com/r/vulnerables/web-dvwa) - Test machine
+ - OWASP Ressourcen: [Web security testing guide](https://owasp.org/www-project-web-security-testing-guide/), [OWASP-BWA](https://hub.docker.com/r/vulnerables/web-dvwa) - Test machine, [ZAP](https://www.zaproxy.org/docs/docker/baseline-scan/), [Juice-Shop](https://owasp.org/www-project-juice-shop/) 
+ - Angriffe: 
    - Injection
      - SQL, LDAP, OS-commands -> backend
      - XSS -> frontend
@@ -85,3 +86,10 @@ Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-
      - Transaktionen protokollieren
 
 **Eingabe im frontend & backend! validieren vor API Aufruf!**
+
+**Trivia:**
+
+ - Geheime Botschaften by Simon Singh (Buch)
+ - Mr. Robot (Serie)
+ - Hackers (Film)
+ - Iron Sky (Film)
