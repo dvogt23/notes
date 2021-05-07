@@ -10,10 +10,14 @@ edition = "2018"
 [output.html]
 mathjax-support = true
 site-url = "/mdBook/"
+curly-quotes = true
 
-[output.html.playground]
-editable = true
-line-numbers = true
+[output.html.fold]
+enable = true
+level = 3
+
+[output.html.print]
+enable = true
 
 [output.html.search]
 limit-results = 20
