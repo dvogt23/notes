@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vim - Knowledge book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Fixable notes of my life and experience">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../productivity.html"><strong aria-hidden="true">1.1.</strong> Productivity</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Tech</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Apps</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/app/pass.html"><strong aria-hidden="true">2.1.1.</strong> Pass</a></li><li class="chapter-item expanded "><a href="../../tech/app/vim.html" class="active"><strong aria-hidden="true">2.1.2.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../tech/app/firefox.html"><strong aria-hidden="true">2.1.3.</strong> Firefox</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/bash.html"><strong aria-hidden="true">2.2.</strong> Bash</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.</strong> Coding</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/coding/environment.html"><strong aria-hidden="true">2.3.1.</strong> Environment</a></li><li class="chapter-item expanded "><a href="../../tech/coding/git.html"><strong aria-hidden="true">2.3.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../../tech/coding/kotlin.html"><strong aria-hidden="true">2.3.3.</strong> Kotlin</a></li><li class="chapter-item expanded "><a href="../../tech/coding/make.html"><strong aria-hidden="true">2.3.4.</strong> Make</a></li><li class="chapter-item expanded "><a href="../../tech/coding/maven.html"><strong aria-hidden="true">2.3.5.</strong> Maven</a></li><li class="chapter-item expanded "><a href="../../tech/coding/rust.html"><strong aria-hidden="true">2.3.6.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../../tech/coding/javascript.html"><strong aria-hidden="true">2.3.7.</strong> Javascript</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/equipment.html"><strong aria-hidden="true">2.4.</strong> Equipment</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.5.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/linux/apps.html"><strong aria-hidden="true">2.5.1.</strong> Apps</a></li><li class="chapter-item expanded "><a href="../../tech/linux/arch.html"><strong aria-hidden="true">2.5.2.</strong> Arch linux</a></li><li class="chapter-item expanded "><a href="../../tech/linux/linux_commands.html"><strong aria-hidden="true">2.5.3.</strong> Linux commands</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.6.</strong> Self-hosting</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/selfhosting/ideas.html"><strong aria-hidden="true">2.6.1.</strong> Ideas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.7.</strong> Smart-Home</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/smarthome/knx.html"><strong aria-hidden="true">2.7.1.</strong> KNX</a></li><li class="chapter-item expanded "><a href="../../tech/smarthome/homeassistent.html"><strong aria-hidden="true">2.7.2.</strong> Home-Assistent</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/misc.html"><strong aria-hidden="true">2.8.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Personal</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Input</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/input/music.html"><strong aria-hidden="true">3.1.1.</strong> Music</a></li><li class="chapter-item expanded "><a href="../../personal/input/books.html"><strong aria-hidden="true">3.1.2.</strong> Books</a></li><li class="chapter-item expanded "><a href="../../personal/input/podcasts.html"><strong aria-hidden="true">3.1.3.</strong> Podcasts</a></li><li class="chapter-item expanded "><a href="../../personal/input/series.html"><strong aria-hidden="true">3.1.4.</strong> Series</a></li><li class="chapter-item expanded "><a href="../../personal/input/movies.html"><strong aria-hidden="true">3.1.5.</strong> Movies</a></li><li class="chapter-item expanded "><a href="../../personal/input/videos.html"><strong aria-hidden="true">3.1.6.</strong> Videos</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Home</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/home/furniture.html"><strong aria-hidden="true">3.2.1.</strong> Furniture</a></li><li class="chapter-item expanded "><a href="../../personal/home/clothing.html"><strong aria-hidden="true">3.2.2.</strong> Clothing</a></li><li class="chapter-item expanded "><a href="../../personal/home/cooking.html"><strong aria-hidden="true">3.2.3.</strong> Cooking</a></li><li class="chapter-item expanded "><a href="../../personal/home/garden.html"><strong aria-hidden="true">3.2.4.</strong> Garden</a></li><li class="chapter-item expanded "><a href="../../personal/home/garage.html"><strong aria-hidden="true">3.2.5.</strong> Garage</a></li><li class="chapter-item expanded "><a href="../../personal/home/pharmacy.html"><strong aria-hidden="true">3.2.6.</strong> Pharmacy</a></li><li class="chapter-item expanded "><a href="../../personal/home/homestead.html"><strong aria-hidden="true">3.2.7.</strong> Homestead</a></li><li class="chapter-item expanded "><a href="../../personal/home/kids.html"><strong aria-hidden="true">3.2.8.</strong> Kids</a></li><li class="chapter-item expanded "><a href="../../personal/home/bucketlist.html"><strong aria-hidden="true">3.2.9.</strong> Bucketlist</a></li></ol></li><li class="chapter-item expanded "><a href="../../personal/learning/index.html"><strong aria-hidden="true">3.3.</strong> Learning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/learning/rails.html"><strong aria-hidden="true">3.3.1.</strong> Rails</a></li><li class="chapter-item expanded "><a href="../../personal/learning/ruby.html"><strong aria-hidden="true">3.3.2.</strong> Ruby</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> Sport</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/sport/cycling.html"><strong aria-hidden="true">3.4.1.</strong> Cycling</a></li></ol></li><li class="chapter-item expanded "><a href="../../personal/misc.html"><strong aria-hidden="true">3.5.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Travel</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> France</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../travel/france/provence.html"><strong aria-hidden="true">4.1.1.</strong> Provence</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Germany</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../travel/germany/berlin.html"><strong aria-hidden="true">4.2.1.</strong> Berlin</a></li><li class="chapter-item expanded "><a href="../../travel/germany/duesseldorf.html"><strong aria-hidden="true">4.2.2.</strong> Düsseldorf</a></li><li class="chapter-item expanded "><a href="../../travel/germany/hamburg.html"><strong aria-hidden="true">4.2.3.</strong> Hamburg</a></li></ol></li><li class="chapter-item expanded "><a href="../../travel/london.html"><strong aria-hidden="true">4.3.</strong> London</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Marokko</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../travel/marokko/marrakesch.html"><strong aria-hidden="true">4.4.1.</strong> Marrakesh</a></li></ol></li><li class="chapter-item expanded "><a href="../../travel/portugal.html"><strong aria-hidden="true">4.5.</strong> Portugal</a></li><li class="chapter-item expanded "><a href="../../travel/telaviv.html"><strong aria-hidden="true">4.6.</strong> Tel aviv</a></li><li class="chapter-item expanded "><a href="../../travel/wien.html"><strong aria-hidden="true">4.7.</strong> Wien </a></li><li class="chapter-item expanded "><a href="../../travel/kroatia.html"><strong aria-hidden="true">4.8.</strong> Kroatia</a></li><li class="chapter-item expanded "><a href="../../travel/netherland.html"><strong aria-hidden="true">4.9.</strong> Netherland</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Misc</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../misc/arts.html"><strong aria-hidden="true">5.1.</strong> Arts</a></li><li class="chapter-item expanded "><a href="../../misc/jokes.html"><strong aria-hidden="true">5.2.</strong> Jokes</a></li><li class="chapter-item expanded "><a href="../../misc/newwords.html"><strong aria-hidden="true">5.3.</strong> New words</a></li><li class="chapter-item expanded "><a href="../../misc/poems.html"><strong aria-hidden="true">5.4.</strong> Poems</a></li><li class="chapter-item expanded "><a href="../../misc/quotes.html"><strong aria-hidden="true">5.5.</strong> Quotes</a></li><li class="chapter-item expanded "><a href="../../misc/wie_man_gut_Schreibt.html"><strong aria-hidden="true">5.6.</strong> Wie man gut schreibt?</a></li><li class="chapter-item expanded "><a href="../../misc/29ways_to_stay_creative.html"><strong aria-hidden="true">5.7.</strong> 29 ways to stay creative</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Knowledge book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a href="#">#</a> VIM/NEOVIM 💓</p>
+<p>Some useful keybindings and many more for my favorite editor.</p>
+<h3 id="settings"><a class="header" href="#settings">Settings</a></h3>
+<ul>
+<li>TypeScript environment
+Great article to this topic from <a href="https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c">Jose Alvarez | medium</a></li>
+<li>Lua config
+Different stuff from <a href="https://oroques.dev/notes/neovim-init/">oroques</a> <a href="https://icyphox.sh/blog/nvim-lua/">icyphox</a></li>
+</ul>
+<h3 id="format-json"><a class="header" href="#format-json">Format json</a></h3>
+<p>Reformat json with <code>:%!jq .</code></p>
+<h3 id="macro"><a class="header" href="#macro">Macro</a></h3>
+<p>If you record a macro with <code>qa</code> and forget something, just with <code>qA</code> you could append some keystrokes to your macro.</p>
+<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
+<h3 id="registers"><a class="header" href="#registers">Registers</a></h3>
+<p>To put a register in insert mode, just do <code>CTRL+R &lt;register&gt;</code></p>
+<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
+<h3 id="global-command"><a class="header" href="#global-command">Global command</a></h3>
+<p>To delete lines with a pattern:</p>
+<pre><code class="language-vim">&quot; delete line
+:g/useless/d
+
+&quot; make line lowercase
+:g/useless/norm gu$
+</code></pre>
+<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
+<h3 id="completion"><a class="header" href="#completion">Completion</a></h3>
+<p>In insert mode:</p>
+<pre><code>ctrl+x ctrl+f     complete filenames
+ctrl+x ctrl+l     complete lines
+ctrl+r &lt;register&gt; insert text from register (i.e.: . for last text [ctrl+a])
+</code></pre>
+<h3 id="visual-mode"><a class="header" href="#visual-mode">Visual mode</a></h3>
+<p>Selects the previous visual</p>
+<pre><code>gv
+</code></pre>
+<p>Go to other end of visual block</p>
+<pre><code>v_o/v_0
+</code></pre>
+<p>Increment numbers</p>
+<pre><code>CTRL-A    inc by one
+g CTRL-A  inc by sequence
+2g CTRL-A inc two by sequence
+</code></pre>
+<p>Blockwise motion</p>
+<pre><code>d2j         delete 2 lines
+d&lt;CRL-V&gt;2j  delete 2 chars in that column
+</code></pre>
+<h2 id="ex-commands"><a class="header" href="#ex-commands">Ex commands</a></h2>
+<p>Run command for regex</p>
+<pre><code>:g/regex/ex
+</code></pre>
+<p>Run comman in norm mode</p>
+<pre><code>:g/regex/norm f dw
+</code></pre>
+<p>Source:
+<a href="https://www.hillelwayne.com/post/intermediate-vim/">hillelwayne/intermediate-vim</a></p>
+<h3 id="commands-in-insert-mode"><a class="header" href="#commands-in-insert-mode">Commands in insert mode</a></h3>
+<pre><code>Ctrl-h - delete back one character (just like Backspace)
+Ctrl-w - delete back one word
+Ctrl-u - delete back to the start of line or the start of current insert
+</code></pre>
+<p>Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode? 
+You can do that with </p>
+<pre><code>Ctrl-r 0
+</code></pre>
+<p>Source: [Jovica - Mastering Vim Quickly #127]</p>
+<h3 id="vim-and-shell"><a class="header" href="#vim-and-shell">Vim and shell</a></h3>
+<p>Run command from vim</p>
+<pre><code>:!{cmd}
+</code></pre>
+<p>Read output form command</p>
+<pre><code>:r !{cmd}
+</code></pre>
+<p>insert output on line 3:</p>
+<pre><code>:3read !curl --silent ifconfig.me
+</code></pre>
+<p>write as input to command</p>
+<pre><code>:[range]write !{cmd}
+:'&lt;,'&gt;write !python
+</code></pre>
+<p>Source: <a href="https://vimways.org/2019/vim-and-the-shell/">vim and the shell</a></p>
+<h2 id="splits"><a class="header" href="#splits">Splits</a></h2>
+<p>Splits are very useful i.e. in vimdiff. So here some keybindings.<br />
+Source: <a href="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally">thoughbot.com</a><br />
+Help: <code>:help splits</code> &amp; <code>:help CRTL-W</code></p>
+<h3 id="more-natural-splits-opening"><a class="header" href="#more-natural-splits-opening">More natural splits opening</a></h3>
+<p>Open new split panes to right and bottom, which feels more natural than Vim’s default:</p>
+<pre><code>set splitbelow
+set splitright
+</code></pre>
+<h3 id="resizing-splits"><a class="header" href="#resizing-splits">Resizing splits</a></h3>
+<p>Vim’s defaults are useful for changing split shapes:</p>
+<pre><code>&quot;Max out the height of the current split
+ctrl + w _
+
+&quot;Max out the width of the current split
+ctrl + w |
+
+&quot;Normalize all split sizes, which is very handy when resizing terminal
+ctrl + w =
+</code></pre>
+<h3 id="more-split-manipulation"><a class="header" href="#more-split-manipulation">More split manipulation</a></h3>
+<pre><code>&quot;Swap top/bottom or left/right split
+Ctrl+W R
+
+&quot;Break out current window into a new tabview
+Ctrl+W T
+
+&quot;Close every window in the current tabview but the current one
+Ctrl+W o
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../tech/app/pass.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../tech/app/firefox.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../tech/app/pass.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../tech/app/firefox.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+        <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

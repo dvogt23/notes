@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Books - Knowledge book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Fixable notes of my life and experience">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../productivity.html"><strong aria-hidden="true">1.1.</strong> Productivity</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Tech</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Apps</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/app/pass.html"><strong aria-hidden="true">2.1.1.</strong> Pass</a></li><li class="chapter-item expanded "><a href="../../tech/app/vim.html"><strong aria-hidden="true">2.1.2.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../tech/app/firefox.html"><strong aria-hidden="true">2.1.3.</strong> Firefox</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/bash.html"><strong aria-hidden="true">2.2.</strong> Bash</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.</strong> Coding</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/coding/environment.html"><strong aria-hidden="true">2.3.1.</strong> Environment</a></li><li class="chapter-item expanded "><a href="../../tech/coding/git.html"><strong aria-hidden="true">2.3.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../../tech/coding/kotlin.html"><strong aria-hidden="true">2.3.3.</strong> Kotlin</a></li><li class="chapter-item expanded "><a href="../../tech/coding/make.html"><strong aria-hidden="true">2.3.4.</strong> Make</a></li><li class="chapter-item expanded "><a href="../../tech/coding/maven.html"><strong aria-hidden="true">2.3.5.</strong> Maven</a></li><li class="chapter-item expanded "><a href="../../tech/coding/rust.html"><strong aria-hidden="true">2.3.6.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../../tech/coding/javascript.html"><strong aria-hidden="true">2.3.7.</strong> Javascript</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/equipment.html"><strong aria-hidden="true">2.4.</strong> Equipment</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.5.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/linux/apps.html"><strong aria-hidden="true">2.5.1.</strong> Apps</a></li><li class="chapter-item expanded "><a href="../../tech/linux/arch.html"><strong aria-hidden="true">2.5.2.</strong> Arch linux</a></li><li class="chapter-item expanded "><a href="../../tech/linux/linux_commands.html"><strong aria-hidden="true">2.5.3.</strong> Linux commands</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.6.</strong> Self-hosting</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/selfhosting/ideas.html"><strong aria-hidden="true">2.6.1.</strong> Ideas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.7.</strong> Smart-Home</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tech/smarthome/knx.html"><strong aria-hidden="true">2.7.1.</strong> KNX</a></li><li class="chapter-item expanded "><a href="../../tech/smarthome/homeassistent.html"><strong aria-hidden="true">2.7.2.</strong> Home-Assistent</a></li></ol></li><li class="chapter-item expanded "><a href="../../tech/misc.html"><strong aria-hidden="true">2.8.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Personal</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Input</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/input/music.html"><strong aria-hidden="true">3.1.1.</strong> Music</a></li><li class="chapter-item expanded "><a href="../../personal/input/books.html" class="active"><strong aria-hidden="true">3.1.2.</strong> Books</a></li><li class="chapter-item expanded "><a href="../../personal/input/podcasts.html"><strong aria-hidden="true">3.1.3.</strong> Podcasts</a></li><li class="chapter-item expanded "><a href="../../personal/input/series.html"><strong aria-hidden="true">3.1.4.</strong> Series</a></li><li class="chapter-item expanded "><a href="../../personal/input/movies.html"><strong aria-hidden="true">3.1.5.</strong> Movies</a></li><li class="chapter-item expanded "><a href="../../personal/input/videos.html"><strong aria-hidden="true">3.1.6.</strong> Videos</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Home</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/home/furniture.html"><strong aria-hidden="true">3.2.1.</strong> Furniture</a></li><li class="chapter-item expanded "><a href="../../personal/home/clothing.html"><strong aria-hidden="true">3.2.2.</strong> Clothing</a></li><li class="chapter-item expanded "><a href="../../personal/home/cooking.html"><strong aria-hidden="true">3.2.3.</strong> Cooking</a></li><li class="chapter-item expanded "><a href="../../personal/home/garden.html"><strong aria-hidden="true">3.2.4.</strong> Garden</a></li><li class="chapter-item expanded "><a href="../../personal/home/garage.html"><strong aria-hidden="true">3.2.5.</strong> Garage</a></li><li class="chapter-item expanded "><a href="../../personal/home/pharmacy.html"><strong aria-hidden="true">3.2.6.</strong> Pharmacy</a></li><li class="chapter-item expanded "><a href="../../personal/home/homestead.html"><strong aria-hidden="true">3.2.7.</strong> Homestead</a></li><li class="chapter-item expanded "><a href="../../personal/home/kids.html"><strong aria-hidden="true">3.2.8.</strong> Kids</a></li><li class="chapter-item expanded "><a href="../../personal/home/bucketlist.html"><strong aria-hidden="true">3.2.9.</strong> Bucketlist</a></li></ol></li><li class="chapter-item expanded "><a href="../../personal/learning/index.html"><strong aria-hidden="true">3.3.</strong> Learning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/learning/rails.html"><strong aria-hidden="true">3.3.1.</strong> Rails</a></li><li class="chapter-item expanded "><a href="../../personal/learning/ruby.html"><strong aria-hidden="true">3.3.2.</strong> Ruby</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> Sport</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../personal/sport/cycling.html"><strong aria-hidden="true">3.4.1.</strong> Cycling</a></li></ol></li><li class="chapter-item expanded "><a href="../../personal/misc.html"><strong aria-hidden="true">3.5.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Travel</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> France</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../travel/france/provence.html"><strong aria-hidden="true">4.1.1.</strong> Provence</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Germany</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../travel/germany/berlin.html"><strong aria-hidden="true">4.2.1.</strong> Berlin</a></li><li class="chapter-item expanded "><a href="../../travel/germany/duesseldorf.html"><strong aria-hidden="true">4.2.2.</strong> Düsseldorf</a></li><li class="chapter-item expanded "><a href="../../travel/germany/hamburg.html"><strong aria-hidden="true">4.2.3.</strong> Hamburg</a></li></ol></li><li class="chapter-item expanded "><a href="../../travel/london.html"><strong aria-hidden="true">4.3.</strong> London</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Marokko</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../travel/marokko/marrakesch.html"><strong aria-hidden="true">4.4.1.</strong> Marrakesh</a></li></ol></li><li class="chapter-item expanded "><a href="../../travel/portugal.html"><strong aria-hidden="true">4.5.</strong> Portugal</a></li><li class="chapter-item expanded "><a href="../../travel/telaviv.html"><strong aria-hidden="true">4.6.</strong> Tel aviv</a></li><li class="chapter-item expanded "><a href="../../travel/wien.html"><strong aria-hidden="true">4.7.</strong> Wien </a></li><li class="chapter-item expanded "><a href="../../travel/kroatia.html"><strong aria-hidden="true">4.8.</strong> Kroatia</a></li><li class="chapter-item expanded "><a href="../../travel/netherland.html"><strong aria-hidden="true">4.9.</strong> Netherland</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Misc</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../misc/arts.html"><strong aria-hidden="true">5.1.</strong> Arts</a></li><li class="chapter-item expanded "><a href="../../misc/jokes.html"><strong aria-hidden="true">5.2.</strong> Jokes</a></li><li class="chapter-item expanded "><a href="../../misc/newwords.html"><strong aria-hidden="true">5.3.</strong> New words</a></li><li class="chapter-item expanded "><a href="../../misc/poems.html"><strong aria-hidden="true">5.4.</strong> Poems</a></li><li class="chapter-item expanded "><a href="../../misc/quotes.html"><strong aria-hidden="true">5.5.</strong> Quotes</a></li><li class="chapter-item expanded "><a href="../../misc/wie_man_gut_Schreibt.html"><strong aria-hidden="true">5.6.</strong> Wie man gut schreibt?</a></li><li class="chapter-item expanded "><a href="../../misc/29ways_to_stay_creative.html"><strong aria-hidden="true">5.7.</strong> 29 ways to stay creative</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Knowledge book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="books"><a class="header" href="#books">Books</a></h1>
+<p>Here is a list of books I read in the past, after school. My favorit genre are non-fiction books and biographies.</p>
+<h3 id="wishlist"><a class="header" href="#wishlist">Wishlist</a></h3>
+<ul>
+<li>?</li>
+</ul>
+<h3 id="2020"><a class="header" href="#2020">2020</a></h3>
+<p><strong>21 Lektionen</strong> by Yuval Noah Harari
+ISBN: 978-3406739682 ⭐ ⭐ ⭐ ⭐</p>
+<ul>
+<li>
+<p>Ein gutes Buch über die aktuellen Gegebenheiten in der Welt. Und sehr viel pro westl. Politik ohne Reflektion.</p>
+<blockquote>
+<p>Was also sollten wir unterrichten?  Zahlreiche Fachpädagogen behaupten, Schulen sollten sich auf die Vermittlung der vier Ks verlegen kritisches Denken, Kommunikation, Kollaboration und Kreativität. Allgemeiner sollten Schulen weniger Wert auf technisches Können legen und stattdessen universell anwendbare Lebensfertigkeiten in den Mittelpunkt rücken. Am allerwichtigsten wird die Fähigkeit sein, mit Veränderung umzugehen, neue Dinge zu lernen und in unvertrauten Situationen das seelische Gleichgewicht zu wahren. Wollen wir mit der Welt des Jahres 2050 Schritt halten, müssen wir nicht nur neue Ideen und Produkte erfinden wir müssen vor allem uns selbst immer wieder neu erfinden.“</p>
+</blockquote>
+<blockquote>
+<p>Den Menschen wurde von frühester Kindheit an beigebracht, an die Erzählung zu glauben. Sie hören sie von ihren Eltern, ihren Lehrern, ihren Nachbarn und der allgemeinen Kultur lange, bevor sie die geistige und emotionale Unabhängigkeit entwickeln, die notwendig ist, um solche Geschichten zu hinterfragen und auf ihren Wahrheitsgehalt zu überprüfen. Zu der Zeit, da ihr Intellekt heranreift, sind sie so sehr in diese Erzählung eingebunden, dass sie ihren Verstand eher dazu nutzen, sie rational zu begründen als sie anzuzweifeln. Die meisten Menschen, die auf ldentitätssuche gehen, sind wie Kinder, die sich auf Schatzsuche begeben. Sie finden nur, was ihre Eltern zuvor für sie versteckt haben.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Ein Gentleman in Moskau</strong> by Amor Towles 
+ISBN: 978-3548290720 ⭐ ⭐ ⭐ ⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>In guten wie in schlechten Tagen</strong> by Tayari Jones 
+ISBN: 978-3716040256 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<h3 id="2019"><a class="header" href="#2019">2019</a></h3>
+<p><strong>Schlaf nicht wenn es dunkel wird</strong> by Joy Fielding<br />
+ISBN: 978-3-442-46173-8 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Gespräch mit Freunden</strong> by Sally Rooney<br />
+ISBN: 978-3-630-87541-5 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>The big five for life</strong> by John Strelecky<br />
+ISBN: 978-3423345286 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>GRM - Brainfuck</strong> by Sibylle Berg<br />
+ISBN: 978-3462051438 ⭐⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Blechtrommel</strong> by Güter Grass<br />
+ISBN: 978-3423118217 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Auf die Bäume ihr Affen</strong> by Hans A. Pestalozzi<br />
+ISBN: 978-3729603134 ⭐⭐⭐⭐⭐<br />
+This book is the best retrospective view of the last few years in a political and social point of view. The author is so clear and straight forward in pointing to the causes of our all prblem situations in the current time of life.</p>
+<p><strong>Jäger, Hirten, Kritiker</strong> by Richard David Precht<br />
+ISBN: 978-3442315017 ⭐⭐⭐<br />
+A very good insight into the future problems and obstacles of today's society and possible solutions to counter them. Somewhat too superficial and predictable.</p>
+<h3 id="2018"><a class="header" href="#2018">2018</a></h3>
+<p><strong>Warum dänische Kinder glücklicher und ausgeglichener sind: Die Erziehungsgeheimnisse des glücklichsten Volks der Welt</strong> by Jessica Joelle Alexander (Autor), Iben Dissing Sandahl (Autor), Karin Wirth (Übersetzer) ISBN:978-3442393213 ⭐⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Just for fun (Linus Torvalds)</strong> by David Diamond<br />
+ISBN: 978-3423362993 ⭐⭐⭐⭐<br />
+A really good book in an interview perspective. Linus Torvals tells how he was creating Linux with some nerdy details and how her workflow was/is in maintaining the best operating system in this world.</p>
+<p><strong>Neustart</strong> by Stephan Urbach<br />
+ISBN: 978-3426787298 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Eine Einführung - Einflüsse, Machtstrukturen und Selbstheilung im 21. Jahrhundert</strong> by Vinoth Müller<br />
+ISBN: 978-3741877537 ⭐⭐<br />
+This book written by a &quot;hobby&quot; author who is burning for this topic and all that goes with it. It was really hard read it, cause it seems to be very unstructured and the inexperience of the author makes it difficult to read it as well.</p>
+<p><strong>The great Gatsby</strong> by F. Scott Fitzgerald<br />
+ISBN: 978-3150092422 ⭐⭐⭐<br />
+Really good written old love story.</p>
+<h3 id="2017"><a class="header" href="#2017">2017</a></h3>
+<p><strong>Psychologie der Massen</strong> by Gustave Le Bon<br />
+ISBN: 978-3868200263 ⭐⭐⭐⭐<br />
+Very good and concise book about the psychology of people who are influenced by the masses.</p>
+<p><strong>Ansichten eines Clowns</strong> by Heinrich Böll<br />
+ISBN: 978-3423004008 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Hundsköpfe</strong> by Morten Ramsland<br />
+ISBN: 978-3442736294 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Deutsch sein und schwarz dazu</strong> by Theodor Michael<br />
+ISBN: 978-3423348577 ⭐⭐⭐⭐<br />
+A really good biogrophie of a african migrant at the beginning of the 19 century in germany and his experiences with racism in the epoch.</p>
+<p><strong>Elon Musk</strong> by Ashlee Vance &amp; Elon Musk<br />
+ISBN: 978-3898799065 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>1984</strong> by George Orwell<br />
+ISBN: 978-3548225623 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<h3 id="past"><a class="header" href="#past">Past</a></h3>
+<p><strong>Anna Karenina</strong> by Tolstoi<br />
+ISBN: 978-3491961968 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Das glücklichste Volk - Sieben Jahre bei den Pirahã-Indianern am Amazonas</strong> by Daniel Everett<br />
+ISBN: 978-3421043078 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Das Tahiti Projekt</strong> by Dirk C. Fleck<br />
+ISBN: 978-3492253628 ⭐⭐⭐<br />
+A futuristic utopia of a society in the future simulated on an island.</p>
+<p><strong>Kopf schlägt Kapital</strong> by Günter Faltin<br />
+ISBN: 978-3423347570 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Die Google Falle</strong> by Gerald Reischl<br />
+ISBN: 978-3800073238 ⭐⭐⭐<br />
+Very superficial development history of google and the processes of a powerful software group.</p>
+<p><strong>Glück</strong> by Eckart von Hirschhausen<br />
+ISBN: 978-3499623554 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../personal/input/music.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../personal/input/podcasts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../personal/input/music.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../personal/input/podcasts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+        <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

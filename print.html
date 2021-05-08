@@ -1,0 +1,2724 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Knowledge book</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Fixable notes of my life and experience">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Knowledge</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="productivity.html"><strong aria-hidden="true">1.1.</strong> Productivity</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Tech</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Apps</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/app/pass.html"><strong aria-hidden="true">2.1.1.</strong> Pass</a></li><li class="chapter-item expanded "><a href="tech/app/vim.html"><strong aria-hidden="true">2.1.2.</strong> Vim</a></li><li class="chapter-item expanded "><a href="tech/app/firefox.html"><strong aria-hidden="true">2.1.3.</strong> Firefox</a></li></ol></li><li class="chapter-item expanded "><a href="tech/bash.html"><strong aria-hidden="true">2.2.</strong> Bash</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.3.</strong> Coding</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/coding/environment.html"><strong aria-hidden="true">2.3.1.</strong> Environment</a></li><li class="chapter-item expanded "><a href="tech/coding/git.html"><strong aria-hidden="true">2.3.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="tech/coding/kotlin.html"><strong aria-hidden="true">2.3.3.</strong> Kotlin</a></li><li class="chapter-item expanded "><a href="tech/coding/make.html"><strong aria-hidden="true">2.3.4.</strong> Make</a></li><li class="chapter-item expanded "><a href="tech/coding/maven.html"><strong aria-hidden="true">2.3.5.</strong> Maven</a></li><li class="chapter-item expanded "><a href="tech/coding/rust.html"><strong aria-hidden="true">2.3.6.</strong> Rust</a></li><li class="chapter-item expanded "><a href="tech/coding/javascript.html"><strong aria-hidden="true">2.3.7.</strong> Javascript</a></li></ol></li><li class="chapter-item expanded "><a href="tech/equipment.html"><strong aria-hidden="true">2.4.</strong> Equipment</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.5.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/linux/apps.html"><strong aria-hidden="true">2.5.1.</strong> Apps</a></li><li class="chapter-item expanded "><a href="tech/linux/arch.html"><strong aria-hidden="true">2.5.2.</strong> Arch linux</a></li><li class="chapter-item expanded "><a href="tech/linux/linux_commands.html"><strong aria-hidden="true">2.5.3.</strong> Linux commands</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.6.</strong> Self-hosting</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/selfhosting/ideas.html"><strong aria-hidden="true">2.6.1.</strong> Ideas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.7.</strong> Smart-Home</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech/smarthome/knx.html"><strong aria-hidden="true">2.7.1.</strong> KNX</a></li><li class="chapter-item expanded "><a href="tech/smarthome/homeassistent.html"><strong aria-hidden="true">2.7.2.</strong> Home-Assistent</a></li></ol></li><li class="chapter-item expanded "><a href="tech/misc.html"><strong aria-hidden="true">2.8.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Personal</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Input</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="personal/input/music.html"><strong aria-hidden="true">3.1.1.</strong> Music</a></li><li class="chapter-item expanded "><a href="personal/input/books.html"><strong aria-hidden="true">3.1.2.</strong> Books</a></li><li class="chapter-item expanded "><a href="personal/input/podcasts.html"><strong aria-hidden="true">3.1.3.</strong> Podcasts</a></li><li class="chapter-item expanded "><a href="personal/input/series.html"><strong aria-hidden="true">3.1.4.</strong> Series</a></li><li class="chapter-item expanded "><a href="personal/input/movies.html"><strong aria-hidden="true">3.1.5.</strong> Movies</a></li><li class="chapter-item expanded "><a href="personal/input/videos.html"><strong aria-hidden="true">3.1.6.</strong> Videos</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Home</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="personal/home/furniture.html"><strong aria-hidden="true">3.2.1.</strong> Furniture</a></li><li class="chapter-item expanded "><a href="personal/home/clothing.html"><strong aria-hidden="true">3.2.2.</strong> Clothing</a></li><li class="chapter-item expanded "><a href="personal/home/cooking.html"><strong aria-hidden="true">3.2.3.</strong> Cooking</a></li><li class="chapter-item expanded "><a href="personal/home/garden.html"><strong aria-hidden="true">3.2.4.</strong> Garden</a></li><li class="chapter-item expanded "><a href="personal/home/garage.html"><strong aria-hidden="true">3.2.5.</strong> Garage</a></li><li class="chapter-item expanded "><a href="personal/home/pharmacy.html"><strong aria-hidden="true">3.2.6.</strong> Pharmacy</a></li><li class="chapter-item expanded "><a href="personal/home/homestead.html"><strong aria-hidden="true">3.2.7.</strong> Homestead</a></li><li class="chapter-item expanded "><a href="personal/home/kids.html"><strong aria-hidden="true">3.2.8.</strong> Kids</a></li><li class="chapter-item expanded "><a href="personal/home/bucketlist.html"><strong aria-hidden="true">3.2.9.</strong> Bucketlist</a></li></ol></li><li class="chapter-item expanded "><a href="personal/learning/index.html"><strong aria-hidden="true">3.3.</strong> Learning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="personal/learning/rails.html"><strong aria-hidden="true">3.3.1.</strong> Rails</a></li><li class="chapter-item expanded "><a href="personal/learning/ruby.html"><strong aria-hidden="true">3.3.2.</strong> Ruby</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> Sport</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="personal/sport/cycling.html"><strong aria-hidden="true">3.4.1.</strong> Cycling</a></li></ol></li><li class="chapter-item expanded "><a href="personal/misc.html"><strong aria-hidden="true">3.5.</strong> Misc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Travel</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> France</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="travel/france/provence.html"><strong aria-hidden="true">4.1.1.</strong> Provence</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Germany</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="travel/germany/berlin.html"><strong aria-hidden="true">4.2.1.</strong> Berlin</a></li><li class="chapter-item expanded "><a href="travel/germany/duesseldorf.html"><strong aria-hidden="true">4.2.2.</strong> Düsseldorf</a></li><li class="chapter-item expanded "><a href="travel/germany/hamburg.html"><strong aria-hidden="true">4.2.3.</strong> Hamburg</a></li></ol></li><li class="chapter-item expanded "><a href="travel/london.html"><strong aria-hidden="true">4.3.</strong> London</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Marokko</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="travel/marokko/marrakesch.html"><strong aria-hidden="true">4.4.1.</strong> Marrakesh</a></li></ol></li><li class="chapter-item expanded "><a href="travel/portugal.html"><strong aria-hidden="true">4.5.</strong> Portugal</a></li><li class="chapter-item expanded "><a href="travel/telaviv.html"><strong aria-hidden="true">4.6.</strong> Tel aviv</a></li><li class="chapter-item expanded "><a href="travel/wien.html"><strong aria-hidden="true">4.7.</strong> Wien </a></li><li class="chapter-item expanded "><a href="travel/kroatia.html"><strong aria-hidden="true">4.8.</strong> Kroatia</a></li><li class="chapter-item expanded "><a href="travel/netherland.html"><strong aria-hidden="true">4.9.</strong> Netherland</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Misc</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="misc/arts.html"><strong aria-hidden="true">5.1.</strong> Arts</a></li><li class="chapter-item expanded "><a href="misc/jokes.html"><strong aria-hidden="true">5.2.</strong> Jokes</a></li><li class="chapter-item expanded "><a href="misc/newwords.html"><strong aria-hidden="true">5.3.</strong> New words</a></li><li class="chapter-item expanded "><a href="misc/poems.html"><strong aria-hidden="true">5.4.</strong> Poems</a></li><li class="chapter-item expanded "><a href="misc/quotes.html"><strong aria-hidden="true">5.5.</strong> Quotes</a></li><li class="chapter-item expanded "><a href="misc/wie_man_gut_Schreibt.html"><strong aria-hidden="true">5.6.</strong> Wie man gut schreibt?</a></li><li class="chapter-item expanded "><a href="misc/29ways_to_stay_creative.html"><strong aria-hidden="true">5.7.</strong> 29 ways to stay creative</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Knowledge book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="knowledge"><a class="header" href="#knowledge">Knowledge</a></h1>
+<p>This is a place for some personal notes. I try to use the zettelkasten method.
+Thats should help me to summarize all the input that I'm reading day by day. My
+workflow is dead simple with a vim plugin (vimwiki/vim-zettel) and a
+synchronised folder to my private nextcloud and a github repository for
+converting all the notes to a mdbook. On my mobile (iPhone) actually I prefer to use <a href="https://apps.apple.com/de/app/1writer-markdown-text-editor/id680469088">1writer</a> for editing my markdown files and sync these via WebDAV on my Nextcloud. </p>
+<p>Interesting knowledges:</p>
+<ul>
+<li><a href="https://github.com/nikitavoloboev/knowledge">Nikita</a></li>
+<li><a href="https://github.com/yoshuawuyts/notes">Yoshua</a></li>
+<li><a href="https://notes.andymatuschak.org/About_these_notes">Andy</a></li>
+</ul>
+<h1 id="productivity"><a class="header" href="#productivity">Productivity</a></h1>
+<h2 id="7-productivity-recommendations-by-elonmusk-confirmed"><a class="header" href="#7-productivity-recommendations-by-elonmusk-confirmed">7 productivity recommendations by @elonmusk (confirmed)</a></h2>
+<ol>
+<li>Excessive meetings are the blight of big companies and almost always get worse over time. Please get of all large meetings, unless you’re certain they are providing value to the whole audience in which case keep them very short.</li>
+<li>Also get rid of frequent meetings, unless you are dealing with an extremely urgent matter. Meeting frequency should drop rapidly once the urgent matter is resolved.</li>
+<li>Walk out of a meeting or drop off a call as soon as it is obvious you aren’t adding value. It is not rude to leave, it is rude to make someone stay and waste their time.</li>
+<li>Don’t use acronyms or nonsense words for objects, software or processes at Tesla. In general, anything that requires an explanation inhibits communication. We don’t want people to have to memorize a glossary just to function at Tesla.</li>
+<li>Communication should travel via the shortest path necessary to get the job done, not through the “chain of command”. Any manager who attempts to enforce chain of command communication will soon find themselves working elsewhere.</li>
+<li>A major source of issues is poor communication between depts. The way to solve this is allow free flow of information between all levels. If, in order to get something done between depts, an individual contributor has to talk to their manager, who talks to a director who talks to a VP, who talks to another VP, who talks to a director, who talks to a manager, who talks to someone doing the actual work, then super dumb things will happen. It must be ok for people to talk directly and just make the right thing happen.</li>
+<li>In general, always pick common sense as your guide. If following a “company rule” is obviously ridiculous in a particular situation, such that it would make for a great Dilbert cartoon, then the rule should change.</li>
+</ol>
+<p>Source: <a href="https://twitter.com/GabrielGruber/status/1390332933467160576">twitter@GrabrielGruber</a></p>
+<h2 id="email-from-elon"><a class="header" href="#email-from-elon">Email from Elon</a></h2>
+<blockquote>
+<p>Progress, Precision and Profit</p>
+<p>Everybody</p>
+<p>Progress</p>
+<p>First, congratulations are in order! We have now completed our third full week of producing over 2000 Model 3 vehicles. The first week was 2020, the second was 2070 and we just completed 2250 last week, along with 2000 Model S/X vehicles.</p>
+<p>This is more than double Tesla’s weekly production rate last year and an amazing feat in the face of many challenges! It is extremely rare for an automotive company to grow the production rate by over 100% from one year to the next. Moreover, there has simultaneously been a significant improvement in quality and build accuracy, which is reflected in positive owner feedback.</p>
+<p>Starting today at Giga and tomorrow at Fremont, we will be stopping for three to five days to do a comprehensive set of upgrades. This should set us up for Model 3 production of 3000 to 4000 per week next month.</p>
+<p>Another set of upgrades starting in late May should be enough to unlock production capacity of 6000 Model 3 vehicles per week by the end of June. Please note that all areas of Tesla and our suppliers will be required to demonstrate a Model 3 capacity of ~6000/week by building 850 sets of car parts in 24 hours no later than June 30th.</p>
+<p>Any Tesla department or supplier that is unable to do this will need to have a very good explanation why not, along with a plan for fixing the problem and present that to me directly. If anyone needs help achieving this, please let me know as soon as possible. We are going to find a way or make a way to get there.</p>
+<p>The reason that the burst-build target rate is 6000 and not 5000 per week in June is that we cannot have a number with no margin for error across thousands of internally and externally produced parts and processes, amplified by a complex global logistics chain. Actual production will move as fast as the least lucky and least well-executed part of the entire Tesla production/supply chain system.</p>
+<p>By having a Model 3 subsystem burst-build requirement of 6k by the end of June, we will lay the groundwork for achieving a steady 6k/week across the whole Model 3 system a few months later.</p>
+<p>As part of the drive towards 6k, all Model 3 production at Fremont will move to 24/7operations. This means that we will be adding another shift to general assembly, body and paint. Please refer anyone you know who you think meets the Tesla bar for talent, drive and trust. Between Fremont and Giga, Tesla will be adding about 400 people per week for several weeks.</p>
+<p>Precision</p>
+<p>Most of the design tolerances of the Model 3 are already better than any other car in the world. Soon, they will all be better. This is not enough. We will keep going until the Model 3 build precision is a factor of ten better than any other car in the world. I am not kidding.</p>
+<p>Our car needs to be designed and built with such accuracy and precision that, if an owner measures dimensions, panel gaps and flushness, and their measurements don’t match the Model 3 specs, it just means that their measuring tape is wrong.</p>
+<p>Some parts suppliers will be unwilling or unable to achieve this level of precision. I understand that this will be considered an unreasonable request by some. That’s ok, there are lots of other car companies with much lower standards. They just can’t work with Tesla.</p>
+<p>Profit</p>
+<p>A fair criticism leveled at Tesla by outside critics is that you’re not a real company unless you generate a profit, meaning simply that revenue exceeds costs. It didn’t make sense to do that until reaching economies of scale, but now we are there.</p>
+<p>Going forward, we will be far more rigorous about expenditures. I have asked the Tesla finance team to comb through every expense worldwide, no matter how small, and cut everything that doesn’t have a strong value justification.</p>
+<p>All capital or other expenditures above a million dollars, or where a set of related expenses may accumulate to a million dollars over the next 12 months, should be considered on hold until explicitly approved by me. If you are the manager responsible, please make sure you have a detailed, first principles understanding of the supplier quote, including every line item of parts &amp; labor, before we meet.</p>
+<p>I have been disappointed to discover how many contractor companies are interwoven throughout Tesla. Often, it is like a Russian nesting doll of contractor, subcontractor, sub-subcontractor, etc. before you finally find someone doing actual work. This means a lot of middle-managers adding cost but not doing anything obviously useful. Also, many contracts are essentially open time &amp; materials, not fixed price and duration, which creates an incentive to turn molehills into mountains, as they never want to end the money train.</p>
+<p>There is a very wide range of contractor performance, from excellent to worse than a drunken sloth. All contracting companies should consider the coming week to be a final opportunity to demonstrate excellence. Any that fail to meet the Tesla standard of excellence will have their contracts ended on Monday.</p>
+<p>Btw, here are a few productivity recommendations:</p>
+<p>– Excessive meetings are the blight of big companies and almost always get worse over time. Please get of all large meetings, unless you’re certain they are providing value to the whole audience, in which case keep them very short.</p>
+<p>– Also get rid of frequent meetings, unless you are dealing with an extremely urgent matter. Meeting frequency should drop rapidly once the urgent matter is resolved.</p>
+<p>– Walk out of a meeting or drop off a call as soon as it is obvious you aren’t adding value. It is not rude to leave, it is rude to make someone stay and waste their time.</p>
+<p>– Don’t use acronyms or nonsense words for objects, software or processes at Tesla. In general, anything that requires an explanation inhibits communication. We don’t want people to have to memorize a glossary just to function at Tesla.</p>
+<p>– Communication should travel via the shortest path necessary to get the job done, not through the “chain of command”. Any manager who attempts to enforce chain of command communication will soon find themselves working elsewhere.</p>
+<p>– A major source of issues is poor communication between depts. The way to solve this is allow free flow of information between all levels. If, in order to get something done between depts, an individual contributor has to talk to their manager, who talks to a director, who talks to a VP, who talks to another VP, who talks to a director, who talks to a manager, who talks to someone doing the actual work, then super dumb things will happen. It must be ok for people to talk directly and just make the right thing happen.</p>
+<p>– In general, always pick common sense as your guide. If following a “company rule” is obviously ridiculous in a particular situation, such that it would make for a great Dilbert cartoon, then the rule should change.</p>
+<p>If there is something you think should be done to make Tesla execute better or allow you to look forward to coming to work more (same thing in the long term), please send a note to [redacted]</p>
+<p>Thanks for being such a kickass team and accomplishing miracles every day. It matters. We are burning the midnight oil to burn the midnight oil.</p>
+<p>Elon</p>
+</blockquote>
+<p>Source: <a href="https://medium.com/drury/the-elon-musk-productivity-email-ad84fc2426cd">medium@drury</a></p>
+<h1 id="pass-"><a class="header" href="#pass-">Pass 🔐</a></h1>
+<p>Favorite app on phone, also on terminal is <a href="https://www.passwordstore.org/">pass</a>.</p>
+<h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
+<p><strong>SSH key import on iPhone fails</strong> <a href="https://github.com/mssun/passforios/issues/218">issue</a>	
+Generate your ssh key without following command:</p>
+<pre><code>	ssh-keygen -t rsa -b 2046 -m PEM -f ./secret.key
+</code></pre>
+<p><a href="tech/app/vim.html#">#</a> VIM/NEOVIM 💓</p>
+<p>Some useful keybindings and many more for my favorite editor.</p>
+<h3 id="settings"><a class="header" href="#settings">Settings</a></h3>
+<ul>
+<li>TypeScript environment
+Great article to this topic from <a href="https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c">Jose Alvarez | medium</a></li>
+<li>Lua config
+Different stuff from <a href="https://oroques.dev/notes/neovim-init/">oroques</a> <a href="https://icyphox.sh/blog/nvim-lua/">icyphox</a></li>
+</ul>
+<h3 id="format-json"><a class="header" href="#format-json">Format json</a></h3>
+<p>Reformat json with <code>:%!jq .</code></p>
+<h3 id="macro"><a class="header" href="#macro">Macro</a></h3>
+<p>If you record a macro with <code>qa</code> and forget something, just with <code>qA</code> you could append some keystrokes to your macro.</p>
+<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
+<h3 id="registers"><a class="header" href="#registers">Registers</a></h3>
+<p>To put a register in insert mode, just do <code>CTRL+R &lt;register&gt;</code></p>
+<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
+<h3 id="global-command"><a class="header" href="#global-command">Global command</a></h3>
+<p>To delete lines with a pattern:</p>
+<pre><code class="language-vim">&quot; delete line
+:g/useless/d
+
+&quot; make line lowercase
+:g/useless/norm gu$
+</code></pre>
+<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
+<h3 id="completion"><a class="header" href="#completion">Completion</a></h3>
+<p>In insert mode:</p>
+<pre><code>ctrl+x ctrl+f     complete filenames
+ctrl+x ctrl+l     complete lines
+ctrl+r &lt;register&gt; insert text from register (i.e.: . for last text [ctrl+a])
+</code></pre>
+<h3 id="visual-mode"><a class="header" href="#visual-mode">Visual mode</a></h3>
+<p>Selects the previous visual</p>
+<pre><code>gv
+</code></pre>
+<p>Go to other end of visual block</p>
+<pre><code>v_o/v_0
+</code></pre>
+<p>Increment numbers</p>
+<pre><code>CTRL-A    inc by one
+g CTRL-A  inc by sequence
+2g CTRL-A inc two by sequence
+</code></pre>
+<p>Blockwise motion</p>
+<pre><code>d2j         delete 2 lines
+d&lt;CRL-V&gt;2j  delete 2 chars in that column
+</code></pre>
+<h2 id="ex-commands"><a class="header" href="#ex-commands">Ex commands</a></h2>
+<p>Run command for regex</p>
+<pre><code>:g/regex/ex
+</code></pre>
+<p>Run comman in norm mode</p>
+<pre><code>:g/regex/norm f dw
+</code></pre>
+<p>Source:
+<a href="https://www.hillelwayne.com/post/intermediate-vim/">hillelwayne/intermediate-vim</a></p>
+<h3 id="commands-in-insert-mode"><a class="header" href="#commands-in-insert-mode">Commands in insert mode</a></h3>
+<pre><code>Ctrl-h - delete back one character (just like Backspace)
+Ctrl-w - delete back one word
+Ctrl-u - delete back to the start of line or the start of current insert
+</code></pre>
+<p>Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode? 
+You can do that with </p>
+<pre><code>Ctrl-r 0
+</code></pre>
+<p>Source: [Jovica - Mastering Vim Quickly #127]</p>
+<h3 id="vim-and-shell"><a class="header" href="#vim-and-shell">Vim and shell</a></h3>
+<p>Run command from vim</p>
+<pre><code>:!{cmd}
+</code></pre>
+<p>Read output form command</p>
+<pre><code>:r !{cmd}
+</code></pre>
+<p>insert output on line 3:</p>
+<pre><code>:3read !curl --silent ifconfig.me
+</code></pre>
+<p>write as input to command</p>
+<pre><code>:[range]write !{cmd}
+:'&lt;,'&gt;write !python
+</code></pre>
+<p>Source: <a href="https://vimways.org/2019/vim-and-the-shell/">vim and the shell</a></p>
+<h2 id="splits"><a class="header" href="#splits">Splits</a></h2>
+<p>Splits are very useful i.e. in vimdiff. So here some keybindings.<br />
+Source: <a href="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally">thoughbot.com</a><br />
+Help: <code>:help splits</code> &amp; <code>:help CRTL-W</code></p>
+<h3 id="more-natural-splits-opening"><a class="header" href="#more-natural-splits-opening">More natural splits opening</a></h3>
+<p>Open new split panes to right and bottom, which feels more natural than Vim’s default:</p>
+<pre><code>set splitbelow
+set splitright
+</code></pre>
+<h3 id="resizing-splits"><a class="header" href="#resizing-splits">Resizing splits</a></h3>
+<p>Vim’s defaults are useful for changing split shapes:</p>
+<pre><code>&quot;Max out the height of the current split
+ctrl + w _
+
+&quot;Max out the width of the current split
+ctrl + w |
+
+&quot;Normalize all split sizes, which is very handy when resizing terminal
+ctrl + w =
+</code></pre>
+<h3 id="more-split-manipulation"><a class="header" href="#more-split-manipulation">More split manipulation</a></h3>
+<pre><code>&quot;Swap top/bottom or left/right split
+Ctrl+W R
+
+&quot;Break out current window into a new tabview
+Ctrl+W T
+
+&quot;Close every window in the current tabview but the current one
+Ctrl+W o
+</code></pre>
+<h1 id="firefox"><a class="header" href="#firefox">Firefox</a></h1>
+<h2 id="settings-1"><a class="header" href="#settings-1">Settings</a></h2>
+<p>Make changes in <code>about:config</code>:</p>
+<ul>
+<li>Deactivate js for pdf preview: <code>pdfjs.enableScripting = false</code></li>
+<li>Show tab close button <code>browser.tabs.tabClipWidth = 1</code></li>
+<li>Localhost subdomain <code>network.dns.localDomains</code> and add the entries (comma separated)</li>
+</ul>
+<h2 id="extensions"><a class="header" href="#extensions">Extensions</a></h2>
+<ul>
+<li><a href="https://addons.mozilla.org/de/firefox/addon/vimium-ff/">Vimium</a>: vim motion</li>
+<li><a href="https://addons.mozilla.org/de/firefox/addon/ublock-origin/">uBlock</a>: block ads</li>
+<li><a href="https://addons.mozilla.org/de/firefox/addon/reedy-for-forefox/">Reedy</a>: read faster</li>
+<li><a href="https://addons.mozilla.org/de/firefox/addon/instant-translate/">Mate translate</a>: translate on doubleclick</li>
+<li><a href="https://addons.mozilla.org/de/firefox/addon/styl-us/">Stylus</a>: custom css style (darkmode)</li>
+</ul>
+<h1 id="bash"><a class="header" href="#bash">Bash</a></h1>
+<p>Some bash file recommendations:</p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+
+set -euo pipefail
+
+[[ &quot;${BASH_VERSINFO[0]}&quot; -lt 4 ]] &amp;&amp; die &quot;Bash &gt;=4 required&quot;
+
+function installed {
+  cmd=$(command -v &quot;${1}&quot;)
+
+  [[ -n &quot;${cmd}&quot; ]] &amp;&amp; [[ -f &quot;${cmd}&quot; ]]
+  return ${?}
+}
+
+function die {
+  &gt;&amp;2 echo &quot;Fatal: ${@}&quot;
+  exit 1
+}
+
+deps=(curl nc dig)
+for dep in &quot;${deps[@]}&quot;; do
+  installed &quot;${dep}&quot; || die &quot;Missing '${dep}'&quot;
+done
+
+# Code blocks aren't subshells, so `exit` works as expected
+risky-thing || { &gt;&amp;2 echo &quot;risky-thing didn't work!&quot;; exit 1; }
+
+</code></pre>
+<p>Another pretty nice template: <a href="https://betterdev.blog/minimal-safe-bash-script-template/">Source</a></p>
+<pre><code>#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+cd &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)&quot; &gt;/dev/null 2&gt;&amp;1
+
+trap cleanup SIGINT SIGTERM ERR EXIT
+
+usage() {
+  cat &lt;&lt;EOF
+Usage: $(basename &quot;$0&quot;) [-h] [-v] [-f] -p param_value arg1 [arg2...]
+
+Script description here.
+
+Available options:
+
+-h, --help      Print this help and exit
+-v, --verbose   Print script debug info
+-f, --flag      Some flag description
+-p, --param     Some param description
+EOF
+  exit
+}
+
+cleanup() {
+  trap - SIGINT SIGTERM ERR EXIT
+  # script cleanup here
+}
+
+setup_colors() {
+  if [[ -t 2 ]] &amp;&amp; [[ -z &quot;${NO_COLOR-}&quot; ]] &amp;&amp; [[ &quot;${TERM-}&quot; != &quot;dumb&quot; ]]; then
+    NOCOLOR='\033[0m' RED='\033[0;31m' GREEN='\033[0;32m' ORANGE='\033[0;33m' BLUE='\033[0;34m' PURPLE='\033[0;35m' CYAN='\033[0;36m' YELLOW='\033[1;33m'
+  else
+    NOCOLOR='' RED='' GREEN='' ORANGE='' BLUE='' PURPLE='' CYAN='' YELLOW=''
+  fi
+}
+
+msg() {
+  echo &gt;&amp;2 -e &quot;${1-}&quot;
+}
+
+die() {
+  local msg=$1
+  local code=${2-1} # default exit status 1
+  msg &quot;$msg&quot;
+  exit &quot;$code&quot;
+}
+
+parse_params() {
+  # default values of variables set from params
+  flag=0
+  param=''
+
+  while :; do
+    case &quot;${1-}&quot; in
+    -h | --help)
+      usage
+      ;;
+    -v | --verbose)
+      set -x
+      ;;
+    --no-color)
+      NO_COLOR=1
+      ;;
+    -f | --flag) # example flag
+      flag=1
+      ;;
+    -p | --param) # example named parameter
+      param=&quot;${2-}&quot;
+      shift
+      ;;
+    -?*)
+      die &quot;Unknown option: $1&quot;
+      ;;
+    *)
+      break
+      ;;
+    esac
+    shift
+  done
+
+  args=(&quot;$@&quot;)
+
+  # check required params and arguments
+  [[ -z &quot;${param-}&quot; ]] &amp;&amp; die &quot;Missing required parameter: param&quot;
+  [[ ${#args[@]} -eq 0 ]] &amp;&amp; die &quot;Missing script arguments&quot;
+
+  return 0
+}
+
+parse_params &quot;$@&quot;
+setup_colors
+
+# script logic here
+
+msg &quot;${RED}Read parameters:${NOCOLOR}&quot;
+msg &quot;- flag: ${flag}&quot;
+msg &quot;- param: ${param}&quot;
+msg &quot;- arguments: ${args[*]-}&quot;
+</code></pre>
+<h1 id="environment"><a class="header" href="#environment">Environment</a></h1>
+<h2 id="development-on-a-virtual-server-docker"><a class="header" href="#development-on-a-virtual-server-docker">Development on a virtual-server (docker)</a></h2>
+<p>Try to develop my daily projects within the vitualServer with docker and traefik
+as proxy for localhost.</p>
+<p>Source:</p>
+<ul>
+<li><a href="https://www.cloudbees.com/blog/quick-easy-https-for-local-development/">cloudbees</a></li>
+<li><a href="https://github.com/Heziode/traefik-v2-https-ssl-localhost">heziode traefik</a></li>
+<li><a href="https://dev.to/nflamel/how-to-have-https-on-development-with-docker-traefik-v2-and-mkcert-2jh3">dev.to - nflamel</a></li>
+<li><a href="https://kevinquillen.com/setting-traefik-2-local-ssl-certificate">kevinquillen</a></li>
+</ul>
+<h1 id="git-versioning-tool-for-developers"><a class="header" href="#git-versioning-tool-for-developers">GIT Versioning tool for developers</a></h1>
+<blockquote>
+<p>my daily most used commands</p>
+</blockquote>
+<h2 id="highly-recommended"><a class="header" href="#highly-recommended">Highly recommended</a></h2>
+<p>The usage of aliases from git plugin/oh-my-zsh: <a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh">git-plugin</a> zsh-load: <a href="https://github.com/dvogt23/dotfiles/blob/master/zsh/.zshrc#L40">zinit</a></p>
+<p>Here are some git commands, that I NOT used daily. Mainly i use the zsh git plugin with all the useful short commands
+(alias) like <code>gs # git status</code> and <code>gcd # git checkout develop</code>. It is really handy and i love it.</p>
+<p><strong>Checkout a subdir of a git repository</strong></p>
+<pre><code class="language-bash">$ mkdir pcl-examples
+$ cd pcl-examples #make a directory we want to copy folders to
+$ git init #initialize the empty local repo
+$ git remote add origin -f https://github.com/PointCloudLibrary/pcl.git #add the remote origin
+$ git config core.sparsecheckout true #very crucial. this is where we tell git we are checking out specifics
+$ echo &quot;examples/*&quot; &gt;&gt; .git/info/sparse-checkout #recursively checkout examples folder
+$ git pull --depth=2 origin master #go only 2 depths down the examples directory
+</code></pre>
+<p><strong>Switch to previous branch</strong></p>
+<pre><code class="language-bash">git checkout -
+</code></pre>
+<p><code>-</code> is an alias for the previous branch</p>
+<p><strong>Open all files with conflicts at once</strong></p>
+<pre><code class="language-bash">git diff --name-only --diff-filter=U | uniq  | xargs $EDITOR
+</code></pre>
+<p><strong>What changed?</strong></p>
+<pre><code class="language-bash">git whatchanged —-since=‘2 weeks ago’
+</code></pre>
+<p><strong>Open a branch as new directory</strong></p>
+<pre><code class="language-bash">git worktree add ../worktree2 master
+git worktree remove ../f_branch_worktree
+</code></pre>
+<p><strong>Search in git history</strong></p>
+<pre><code class="language-bash">git rev-list —all | xargs git grep '&lt;YOUR REGEX&gt;' # regex
+git rev-list —all | xargs git grep -F '&lt;YOUR STRING&gt;' # non-regex
+</code></pre>
+<h1 id="kotlin"><a class="header" href="#kotlin">Kotlin</a></h1>
+<h3 id="optional-api"><a class="header" href="#optional-api">Optional API</a></h3>
+<p>Source:
+https://4comprehension.com/kotlins-java-util-optional-equivalents/</p>
+<pre><code>val x: Int? = 7     // ofNullable()
+
+val result = x
+?.let { ...  }      // map()
+?.takeIf { ...  }   // filter()
+?: 42               // orElseGet()
+</code></pre>
+<h3 id="next"><a class="header" href="#next">next</a></h3>
+<h1 id="make"><a class="header" href="#make">Make</a></h1>
+<p>CFLAGS += -Wall -Wextra
+LDLIBS = -lcurses
+OBJS = foo.o bar.o baz.o</p>
+<p>foo: $(OBJS)
+$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@</p>
+<pre><code>foo.o bar.o: foo.h
+</code></pre>
+<p>clean:
+rm -f $(OBJS) foo</p>
+<h1 id="maven"><a class="header" href="#maven">Maven</a></h1>
+<h3 id="build-subproject-with-dependencies-include"><a class="header" href="#build-subproject-with-dependencies-include">Build subproject with dependencies include</a></h3>
+<pre><code class="language-bash">mvn clean install -pl [project name] -amd
+</code></pre>
+<h3 id="change-project-version"><a class="header" href="#change-project-version">Change project version</a></h3>
+<pre><code class="language-bash">mvn versions:set -DnewVersion=1.1.0 &amp;&amp; mvn versions:commit
+</code></pre>
+<h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
+<p>Source: <a href="https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/">Wrapper types</a></p>
+<h3 id="wrapper-types"><a class="header" href="#wrapper-types">Wrapper types</a></h3>
+<p><strong>Box</strong> This abstraction is a low cost abstraction for dynamic allocation. If you want to allocate some memory on the heap and safely pass a pointer to that memory around, this is ideal.</p>
+<p><strong>Rc</strong> is a reference counted pointer for multiple owning. </p>
+<h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<h2 id="use-console-print"><a class="header" href="#use-console-print">Use console print</a></h2>
+<p>Different type to print to console:</p>
+<pre><code class="language-javascript">console.log() – For general output of logging information.
+console.info() – Informative logging of information.
+console.debug() – Outputs a message to the console with the log level debug.
+console.warn() – Outputs a warning message.
+console.error() – Outputs an error message.
+
+console.assert() 
+
+console.count() - count line execution
+console.dir() - print object
+
+console.group() - start group
+console.groupEnd() - end group
+
+console.memory() - check heap size
+
+console.table() - print tabular data
+
+console.time() - track time
+console.timeEnd()
+
+console.trace() - output stack trace
+</code></pre>
+<p>Source: <a href="https://markodenic.com/use-console-log-like-a-pro/">markodenic</a></p>
+<h1 id="equipment"><a class="header" href="#equipment">Equipment</a></h1>
+<p>Here are a collection of my most favorite technical apps/devices/configuartions.</p>
+<h3 id="equipment-1"><a class="header" href="#equipment-1">Equipment</a></h3>
+<p><strong>Hardware</strong>
+- Dell XPS 13 9370 (Arch Linux)
+- iPhone 7 (MN922ZD/A)
+- iPad mini</p>
+<h3 id="operating-system-"><a class="header" href="#operating-system-">Operating system (💙)</a></h3>
+<p><strong>Arch Linux:</strong>
+- Alacritty (terminal emulator)
+- Btrfs (filesystem)
+- Dmenu (launcher)
+- Firefox (browser)
+- NeoVim (texteditor)
+- Neomutt (email client)
+- Nextcloud (cloud)
+- Pass (password-manager)
+- Polybar (statusbar)
+- Ranger (file manager)
+- Spotify (music)
+- Telegram (messeging)
+- Visual Studio code (editor)
+- i3 (tiling window manager)</p>
+<h3 id="iphone"><a class="header" href="#iphone">iPhone</a></h3>
+<p><strong>Favorite apps:</strong>
+- Youtube (media)
+- Duolingo (language learning)
+- Feedly (RSS-reader)
+- Firefox (browser)
+- Google News (news)
+- Instagram (social)
+- Nextcloud (cloud)
+- Pass (password-manager)
+- Reddit (social)
+- Spotify (music/podcast)
+- Strava (sport tracking)
+- TV Time (series tracking)
+- Telegram/WhatsApp (messenger)
+- Tomorrow (banking)
+- Twitter (social)
+- Wireguard (vpn)
+- Wunderlist (todo list)
+- Pocket (readinglist)</p>
+<h1 id="apps"><a class="header" href="#apps">Apps</a></h1>
+<pre><code>https://getkap.co/ - screen recording
+https://contao.org/de/
+http://www.zentyal.org/
+Ninite - Software Installation
+Zoneminder - Video Betriebssystem
+Froxlor - alt. SysCP
+MarkdownPad2
+Nfon
+Prezi.com
+J Language 
+MS Mathematics
+PapDesigner
+SOGo/ZAG
+Glympse - live Standort mitteilen
+speedof.me - html5 speedtest
+Bodhi 
+Hiren's BootCD From USB
+ceph
+Mirantis
+Xming - XServer für putty
+skjlls.com - eigene Kompetenz in Euro messen
+reveal.js - HTML Presentation
+Dynv6 - dyndns
+Skuawk.com - bildportal
+Wallpaper pattern http://subtlepatterns.com/
+Audials - rip spotify
+ApricityOS
+Mattermost - Slack OS alternative
+Phacility/Phanricator - PM Tool
+HackerOne/BugCrowd/Mutilledae -Security Spiel
+scoop - windows shell
+tls.imirhil.fr - Cryptocheck
+bulma.io - css framework
+Zazu - launcher
+curl -Ss icanhazip.com - IP Adresse
+Mango - markdown editor
+Desmos/calculator - graphen
+Etcher.io - Bootable Usb
+tyyd - share terminal via http
+reptyr - transfer process to tmux
+wtfutil - personal site in terminal
+ulauncher - app launcher
+</code></pre>
+<h1 id="arch-linux"><a class="header" href="#arch-linux">Arch linux</a></h1>
+<h2 id="sway"><a class="header" href="#sway">Sway</a></h2>
+<p>Full wayland config: <a href="https://www.fosskers.ca/en/blog/wayland">fosskers.ca</a></p>
+<h2 id="packages"><a class="header" href="#packages">Packages</a></h2>
+<pre><code>Nemo - File Explorer
+Seahorse - GUI für keyring
+alacritty-git           # rust terminal emulator
+alsa-utils
+apvlv
+arandr
+arc-gtk-theme
+archfetch
+at
+autoconf
+autojump
+autojump - Terminal directory switch
+automake
+base-devel - Maketools
+bat
+bat - cat alternative
+bc
+bc - bash calculator
+bleachbit
+calcurse
+calcurse - Kalender
+compton
+cower
+dbeaver
+diff-so-fancy
+dmenu
+docker
+dunst
+exa
+exa - ls Ersatz
+fd
+feh
+feh - Bildbeteachtung Bash
+file-roller p7zip zip unzip unrar
+firefox
+fish
+font-manager
+fzf
+fzf - fuzzy finder
+gcc
+gcc-libs
+git
+git-flow-completion-git
+gitg
+gnome-font-viewer
+gnome-keyring
+gnome-keyring - Passwort Verwaltung
+go
+gparted
+gq
+grep
+gsimplecal
+gucharmap - Font Manager
+htop - Prozessexplorer
+hugo
+i3blocks
+i3gaps                  # window manager
+i3status
+icdiff
+iftop
+imagemagick
+inetutils
+intellij-idea-community-edition
+inxi
+iputils
+make
+maven
+mc
+minitube
+ncdu
+ncdu - Tree Size
+neofetch
+neofetch - Bash
+neomutt
+neovim
+neovim - Editor
+network-manager-applet
+networkmanager
+newsboat
+nmap
+notification-daemon
+npm
+numlockx
+numlockx - Numpad
+offlineimap
+oh-my-zsh-git
+p7zip
+pass
+pass - Passwortmanager
+pass-otp
+pass-update
+peco
+peco - Filertool
+polybar-git
+prezto-git
+pulseaudio
+pulseaudio-alsa
+pv
+pymodoro-git
+python-neovim
+python-pip
+python2-neovim
+python2-pip
+qtpass
+qutebrowser
+ranger
+ranger - File Explorer
+rdesktop
+reflector
+reflex - run cmd after file change
+resty-git
+ripgrep
+ripgrep - searcher
+rofi
+rofi-greenclip
+rofi-pass-git
+rsync
+rustup
+rxvt-unicode
+screenfetch
+scrot
+shellcheck
+simplescreenrecorder
+slack-desktop
+stow
+strace
+sublime-text-dev
+terminator
+terminator - Terminal
+termite
+thefuck - command correcter
+tldr
+tldr - short man page
+tmux
+ttf-iosevka
+ttf-iosevka-term
+turtl - Notes
+ufw
+ufw - Firewall
+unzip
+vim
+vimpager
+visual-studio-code
+wal-git
+weechat
+wget
+wunderline
+xarchiver
+xclip
+xdg-user-dirs
+xdg-user-dirs - User folders
+xdotool
+xss-lock
+yay
+zathura
+zathura-pdf-mupdf
+zsh
+zsh-syntax-highlighting
+</code></pre>
+<h2 id="10-things-after-installation"><a class="header" href="#10-things-after-installation">10 Things after installation</a></h2>
+<p>Source: <a href="https://www.youtube.com/watch?v=jW4GFGOIUjc">Average Linux User</a></p>
+<p>Check your current kernel:
+uname -r</p>
+<h3 id="1-install-an-lts-kernel-and-reconfigure-grub"><a class="header" href="#1-install-an-lts-kernel-and-reconfigure-grub">1. Install an LTS kernel and reconfigure grub:</a></h3>
+<pre><code>sudo pacman -S linux-lts
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<p>You may also install linux-lts-headers.
+Reboot and check which kernel is in use with uname -r.</p>
+<p>Remove non-lts kernel
+sudo pacman -Rs linux</p>
+<h3 id="2-install-microcode"><a class="header" href="#2-install-microcode">2. Install Microcode</a></h3>
+<p>For intel processors with grub boot loader:</p>
+<pre><code>sudo pacman -S intel-ucode
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<p>For AMD processors install linux-firmware package.</p>
+<h3 id="3-disable-grub-delay"><a class="header" href="#3-disable-grub-delay">3. Disable GRUB delay</a></h3>
+<p>Add the following to /etc/default/grub:
+achieve the fastest possible boot:</p>
+<pre><code>GRUB_FORCE_HIDDEN_MENU=&quot;true&quot;
+</code></pre>
+<p>Then put file 31_hold_shift to /etc/grub.d/.
+Download 31_hold_shift https://goo.gl/nac6Kp</p>
+<p>Make it executable, and regenerate the grub configuration:</p>
+<pre><code>sudo chmod a+x /etc/grub.d/31_hold_shift
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<h3 id="4-install-some-key-packages"><a class="header" href="#4-install-some-key-packages">4. Install some key packages</a></h3>
+<pre><code>sudo pacman -S adobe-source-sans-pro-fonts aspell-en enchant gst-libav gst-plugins-good hunspell-en icedtea-web jre8-openjdk languagetool libmythes mythes-en pkgstats ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-font-family
+</code></pre>
+<h3 id="5-set-up-firewall"><a class="header" href="#5-set-up-firewall">5. Set up firewall</a></h3>
+<p>Install ufw:</p>
+<pre><code>sudo pacman -S ufw
+</code></pre>
+<p>Enable it.</p>
+<pre><code>sudo ufw enable 
+</code></pre>
+<p>Check its status:</p>
+<pre><code>sudo ufw status verbose
+</code></pre>
+<p>Enable the start-up with the system:</p>
+<pre><code>sudo systemctl enable ufw.service
+</code></pre>
+<p>Reboot and check the status again. It should be active.</p>
+<h3 id="6-encrypt-your-home-directory"><a class="header" href="#6-encrypt-your-home-directory">6. Encrypt your home directory</a></h3>
+<p>Logged out. Switch to a console with Ctrl+Alt+F2. Login as a root and check that your user own no processes:</p>
+<pre><code>ps -U username 
+</code></pre>
+<p>Install the necessary applications:</p>
+<pre><code>sudo pacman -S rsync lsof ecryptfs-utils
+</code></pre>
+<p>Then encrypt your home directory:</p>
+<pre><code>modprobe ecryptfs
+ecryptfs-migrate-home -u username
+</code></pre>
+<p>Mount your encrypted home.</p>
+<pre><code>ecryptfs-mount-private
+</code></pre>
+<p>Unwrap the passphrase and save it somewhere where only you can access it.</p>
+<pre><code>ecryptfs-unwrap-passphrase
+</code></pre>
+<p>Run</p>
+<pre><code>ls .ecryptfs
+</code></pre>
+<p>Edit /etc/pam.d/system-auth:</p>
+<p>After the line &quot;auth required pam_unix.so&quot; add: </p>
+<pre><code>auth required pam_ecryptfs.so unwrap
+</code></pre>
+<p>Above the line &quot;password required pam_unix.so&quot; insert:</p>
+<pre><code>password optional pam_ecryptfs.so
+</code></pre>
+<p>After the line &quot;session required pam_unix.so&quot; add: </p>
+<pre><code>session optional pam_ecryptfs.so unwrap
+</code></pre>
+<p>Reboot and make sure that you can login to your desktop</p>
+<h3 id="7-remove-orphans"><a class="header" href="#7-remove-orphans">7. Remove orphans</a></h3>
+<pre><code>sudo pacman -Rns $(pacman -Qtdq)
+</code></pre>
+<h3 id="8-optimize-pacmans-database-access-speeds"><a class="header" href="#8-optimize-pacmans-database-access-speeds">8. Optimize pacman's database access speeds</a></h3>
+<pre><code>sudo pacman-optimize
+</code></pre>
+<h3 id="9-check-for-errors"><a class="header" href="#9-check-for-errors">9. Check for errors</a></h3>
+<pre><code>sudo systemctl --failed
+sudo journalctl -p 3 -xb
+</code></pre>
+<h3 id="10-backup-the-system"><a class="header" href="#10-backup-the-system">10. Backup the system</a></h3>
+<pre><code>sudo rsync -aAXvP --delete --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude=/lost+found --exclude=/home/.ecryptfs / /mnt/backupDestination/
+</code></pre>
+<h1 id="linux-commands"><a class="header" href="#linux-commands">Linux commands</a></h1>
+<p>@linux @bash</p>
+<h3 id="useful-oneliners"><a class="header" href="#useful-oneliners">Useful oneliners</a></h3>
+<p>Show dir sizes: <code>du -hs */ | sort -hr | head</code></p>
+<h3 id="a-one-liner-version-incrementer"><a class="header" href="#a-one-liner-version-incrementer">A one-liner version incrementer</a></h3>
+<pre><code class="language-bash">inc_version() {
+    awk -F. -vOFS=. '{ $ver++; while(ver++&lt;NF) $ver=0; print $0 }' ver=$1
+}
+</code></pre>
+<p>Source: https://gir.st/blog/inc-version.htm</p>
+<h3 id="reset-efivars-in-bootmenu-bootctl"><a class="header" href="#reset-efivars-in-bootmenu-bootctl">Reset efivars in bootmenu (bootctl)</a></h3>
+<p>To remove LoaderEntryDefault-[...] variable it was enough to press d key twice 
+in the boot menu: to set and unset a new value.
+To remove LoaderConfigTimeout-[...] variable it turned out enough to press 
+Shift+t enough times to set the timeout to 0, plus one more time.
+<a href="https://unix.stackexchange.com/questions/459389/systemd-boot-skips-boot-menu-and-ignores-settings-in-loader-loader-conf">Link</a></p>
+<h3 id="list-open-ports"><a class="header" href="#list-open-ports">List open ports</a></h3>
+<pre><code>sudo ss -tulpn
+sudo netstat -tulpn | grep LISTEN
+sudo lsof -i -P -n | grep LISTEN    # process list
+sudo nmap -sT -O localhost # scan localhost
+</code></pre>
+<h3 id="find-file-from-inode-number"><a class="header" href="#find-file-from-inode-number">Find file from iNode Number</a></h3>
+<pre><code>find ~/ -inum 123456
+</code></pre>
+<h3 id="start-gui-app-in-background-from-commandline"><a class="header" href="#start-gui-app-in-background-from-commandline">Start GUI app in background from commandline</a></h3>
+<pre><code>&lt;guiapp&gt; . &amp;!
+</code></pre>
+<h3 id="run-last-command-as-root"><a class="header" href="#run-last-command-as-root">Run last command as root</a></h3>
+<pre><code>sudo !!
+</code></pre>
+<h3 id="serve-current-dir-tree-at-8080"><a class="header" href="#serve-current-dir-tree-at-8080">Serve current dir tree at :8080</a></h3>
+<p>Only in python2</p>
+<pre><code>python -m SimpleHTTPServer
+</code></pre>
+<p>Python3:</p>
+<pre><code>python3 -m http.server
+
+
+### Replacing in last command
+</code></pre>
+<p>^sub^to</p>
+<pre><code>### Supervise command (run every 2s)
+</code></pre>
+<p>watch &quot;ls -larth&quot;</p>
+<pre><code>### Kill program using one port
+
+```bash
+sudo fuser -k 8000/tcp
+</code></pre>
+<h3 id="limit-memory-usage-for-following-commands"><a class="header" href="#limit-memory-usage-for-following-commands">Limit memory usage for following commands</a></h3>
+<pre><code>ulimit -Sv 1000       # 1000 KBs = 1 MB
+ulimit -Sv unlimited  # Remove limit
+</code></pre>
+<h3 id="rename-selected-files-using-a-regular-expression"><a class="header" href="#rename-selected-files-using-a-regular-expression">Rename selected files using a regular expression</a></h3>
+<pre><code>rename 's/\.bak$/.txt/' *.bak
+</code></pre>
+<h3 id="get-full-path-of-file"><a class="header" href="#get-full-path-of-file">Get full path of file</a></h3>
+<pre><code>readlink -f file.txt
+</code></pre>
+<h3 id="list-contents-of-targz-and-extract-only-one-file"><a class="header" href="#list-contents-of-targz-and-extract-only-one-file">List contents of tar.gz and extract only one file</a></h3>
+<pre><code>tar tf file.tgz
+tar xf file.tgz filename }}
+</code></pre>
+<h3 id="list-files-by-size"><a class="header" href="#list-files-by-size">List files by size</a></h3>
+<pre><code>ls -lS
+</code></pre>
+<h3 id="nice-trace-route"><a class="header" href="#nice-trace-route">Nice trace route</a></h3>
+<pre><code>mtr google.com
+</code></pre>
+<h3 id="find-files-tips"><a class="header" href="#find-files-tips">Find files tips</a></h3>
+<pre><code>find . -size 20c             # By file size (20 bytes)
+find . -name &quot;*.gz&quot; -delete  # Delete files
+find . -exec echo {} \;      # One file by line
+./file1
+./file2
+./file3
+find . -exec echo {} \+      # All in the same line
+./file1 ./file2 ./file3
+</code></pre>
+<h3 id="print-text-ad-infinitum"><a class="header" href="#print-text-ad-infinitum">Print text ad infinitum</a></h3>
+<pre><code>yes
+yes hello
+</code></pre>
+<h3 id="who-is-logged-in"><a class="header" href="#who-is-logged-in">Who is logged in?</a></h3>
+<pre><code>w
+</code></pre>
+<h3 id="prepend-line-number"><a class="header" href="#prepend-line-number">Prepend line number</a></h3>
+<pre><code>ls | nl
+</code></pre>
+<h3 id="grep-with-perl-like-syntax-allows-chars-like-t"><a class="header" href="#grep-with-perl-like-syntax-allows-chars-like-t">Grep with Perl like syntax (allows chars like \t)</a></h3>
+<pre><code>grep -P &quot;\t&quot;
+</code></pre>
+<h3 id="cat-backwards-starting-from-the-end"><a class="header" href="#cat-backwards-starting-from-the-end">Cat backwards (starting from the end)</a></h3>
+<pre><code>tac file
+</code></pre>
+<h3 id="check-permissions-of-each-directory-to-a-file"><a class="header" href="#check-permissions-of-each-directory-to-a-file">Check permissions of each directory to a file</a></h3>
+<p>It is useful to detect permissions errors, for example when configuring a web server.</p>
+<pre><code>namei -l /path/to/file.txt
+</code></pre>
+<h3 id="run-command-every-time-a-file-is-modified"><a class="header" href="#run-command-every-time-a-file-is-modified">Run command every time a file is modified</a></h3>
+<pre><code>while inotifywait -e close_write document.tex
+do
+    make
+done
+</code></pre>
+<h3 id="copy-to-clipboard"><a class="header" href="#copy-to-clipboard">Copy to clipboard</a></h3>
+<pre><code>cat file.txt | xclip -selection clipboard
+</code></pre>
+<h3 id="spell-and-grammar-check-in-latex"><a class="header" href="#spell-and-grammar-check-in-latex">Spell and grammar check in Latex</a></h3>
+<pre><code>detex file.tex | diction -bs
+</code></pre>
+<p>You may need to install the following
+sudo apt-get install diction texlive-extra-utils.</p>
+<h3 id="check-resources-usage-of-command"><a class="header" href="#check-resources-usage-of-command">Check resources' usage of command</a></h3>
+<pre><code>/usr/bin/time -v ls
+</code></pre>
+<h3 id="randomize-lines-in-file"><a class="header" href="#randomize-lines-in-file">Randomize lines in file</a></h3>
+<pre><code>cat file.txt | sort -R
+cat file.txt | sort -R | head  # Pick a random sambple
+</code></pre>
+<h3 id="even-better-suggested-by-xearl-in-hacker-news"><a class="header" href="#even-better-suggested-by-xearl-in-hacker-news">Even better (suggested by xearl in Hacker news):</a></h3>
+<pre><code>shuf file.txt
+</code></pre>
+<h3 id="keep-program-running-after-leaving-ssh-session"><a class="header" href="#keep-program-running-after-leaving-ssh-session">Keep program running after leaving SSH session</a></h3>
+<pre><code>If the program doesn't need any interaction
+nohup ./script.sh &amp;
+</code></pre>
+<p>If you need to enter some input manually and then want to leave</p>
+<pre><code>./script.sh
+&lt;Type any input you want&gt;
+&lt;Ctrl-Z&gt;          # send process to sleep
+jobs -l           # find out the job id
+disown -h jobid   # disown job
+bg                # continue running in the background
+</code></pre>
+<p>Of course, you can also use screen or tmux for this purpose.</p>
+<h3 id="run-a-command-for-a-limited-time"><a class="header" href="#run-a-command-for-a-limited-time">Run a command for a limited time</a></h3>
+<pre><code>timeout 10s ./script.sh
+</code></pre>
+<h3 id="restart-every-30-minutes"><a class="header" href="#restart-every-30-minutes">Restart every 30 minutes</a></h3>
+<pre><code>while true; do timeout 30m ./script.sh; done
+</code></pre>
+<h3 id="combine-lines-from-two-sorted-files"><a class="header" href="#combine-lines-from-two-sorted-files">Combine lines from two sorted files</a></h3>
+<pre><code>comm file1 file2
+</code></pre>
+<h3 id="split-long-file-in-files-with-same-number-of-lines"><a class="header" href="#split-long-file-in-files-with-same-number-of-lines">Split long file in files with same number of lines</a></h3>
+<pre><code>split -l LINES -d file.txt output_prefix
+</code></pre>
+<h3 id="flush-swap-partition"><a class="header" href="#flush-swap-partition">Flush swap partition</a></h3>
+<p>If a program eats too much memory, the swap can get filled with the rest of the memory and when you go back to normal, everything is slow. Just restart the swap partition to fix it:</p>
+<pre><code>sudo swapoff -a
+sudo swapon -a
+</code></pre>
+<h3 id="fix-ext4-file-system-with-problems-with-its-superblock"><a class="header" href="#fix-ext4-file-system-with-problems-with-its-superblock">Fix ext4 file system with problems with its superblock</a></h3>
+<pre><code>sudo fsck.ext4 -f -y /dev/sda1
+sudo fsck.ext4 -v /dev/sda1
+sudo mke2fs -n /dev/sda1
+sudo e2fsck -n &lt;first block number of previous list&gt; /dev/sda1
+</code></pre>
+<h3 id="create-empty-file-of-given-size"><a class="header" href="#create-empty-file-of-given-size">Create empty file of given size</a></h3>
+<pre><code>fallocate -l 1G test.img
+</code></pre>
+<h3 id="manipulate-pdfs-from-the-command-line"><a class="header" href="#manipulate-pdfs-from-the-command-line">Manipulate PDFs from the command line</a></h3>
+<p>To join, shuffle, select, etc. pdftk is a great tool</p>
+<pre><code>pdftk *.pdf cat output all.pdf        # Join PDFs together
+pdftk A=in.pdf cat A5 output out.pdf  # Extract page from PDF
+</code></pre>
+<p>You can also manipulate the content with cpdf</p>
+<pre><code>cpdf -draft in.pdf -o out.pdf      # Remove images
+cpdf -blacktext in.pdf -o out.pdf  # Convert all text to black color
+</code></pre>
+<h3 id="monitor-the-progress-in-terms-of-generated-output"><a class="header" href="#monitor-the-progress-in-terms-of-generated-output">Monitor the progress in terms of generated output</a></h3>
+<p>Write random data, encode it in base64 and monitor how fast it
+is being sent to /dev/null</p>
+<pre><code>cat /dev/urandom | base64 | pv -lbri2 &gt; /dev/null
+</code></pre>
+<h1 id="ideas"><a class="header" href="#ideas">Ideas</a></h1>
+<ul>
+<li>
+<p>TODO host an own music streaming <a href="https://www.navidrome.org/docs/installation/docker/">navidrome</a></p>
+</li>
+<li>
+<p>TODO Create own wireguard pihole on vs: <a href="https://github.com/IAmStoxe/wirehole">wirehole</a></p>
+</li>
+<li>
+<p>TODO Host my own signal proxy
+<a href="https://signal.org/blog/help-iran-reconnect/">Help iran to connect signal</a></p>
+</li>
+<li>
+<p>TODO Treafik Wildcard Zertifikat konfigurieren
+Ultimate docker home server with traefik smarthomebeginner blogpost</p>
+</li>
+<li>
+<p>TODO Web analytics Plausible.io</p>
+</li>
+<li>
+<p>TODO SMTP backup Mailcatcher
+Postfix relay config:</p>
+<p>Edit the Postfix configuration to specify the desired relaying. Where example.com is your domain, in /etc/postfix/main.cf, set:</p>
+<pre><code>    relay_domains = example.com
+    relayhost = primary-mx.example.com
+    inet_interfaces = all
+    local_recipient_maps =
+    mynetworks =
+</code></pre>
+<p>Launch Postfix. sudo /etc/init.d/postfix start</p>
+</li>
+<li>
+<p>TODO Web IRC Client <a href="https://github.com/thelounge/thelounge">the-lounge</a></p>
+</li>
+<li>
+<p>TODO IT Hardware Management Snap-IT</p>
+</li>
+<li>
+<p>TODO Media Server <a href="https://jellyfin.org">JellyFin</a></p>
+</li>
+</ul>
+<h1 id="knx"><a class="header" href="#knx">KNX</a></h1>
+<h2 id="diy"><a class="header" href="#diy">DIY</a></h2>
+<p>Blog article for doing it yourself: <a href="https://knx-blogger.de/knx-kosten-senken-durch-eigenleistung">Kosten senken durch Eigenleistung</a>
+KNX DIY service: <a href="https://mainsmarthome.de/">Main-Smarthome</a></p>
+<h1 id="home-assistent"><a class="header" href="#home-assistent">Home-Assistent</a></h1>
+<h2 id="cool-stuff"><a class="header" href="#cool-stuff">Cool stuff</a></h2>
+<ul>
+<li>awesome <a href="https://www.awesome-ha.com/">ha</a></li>
+</ul>
+<h2 id="shutter-control"><a class="header" href="#shutter-control">Shutter control</a></h2>
+<h3 id="mqtt-slider"><a class="header" href="#mqtt-slider">MQTT Slider</a></h3>
+<p><strong>Works!</strong> Tasmota wiki for <a href="tech/smarthome/">covers</a>:</p>
+<pre><code class="language-yml">cover:
+  - platform: mqtt
+    name: &quot;Wohnzimmer Zentrale&quot;
+    availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
+    payload_available: &quot;Online&quot;
+    payload_not_available: &quot;Offline&quot;
+    position_topic: &quot;Smarthome/jalosien/wohnzimmer/stat/SHUTTER1&quot;
+    position_open: 100
+    position_closed: 0
+    set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/ShutterPosition1&quot;
+    command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/BACKLOG&quot;
+    payload_open: &quot;ShutterOpen1&quot;
+    payload_close: &quot;ShutterClose1&quot;
+    payload_stop: &quot;ShutterStop1&quot;
+    retain: false
+    optimistic: false
+    qos: 1
+</code></pre>
+<p>Definition from github
+<a href="https://github.com/arendst/Tasmota/issues/6614#issuecomment-541785867">snakuzzo</a>:</p>
+<pre><code class="language-yml">- platform: mqtt
+  name: &quot;Wohnzimmer Zentrale&quot;
+  availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
+  state_topic: &quot;stat/sonoff-cletto/RESULT&quot;
+  command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd&quot;
+  value_template: '{{ value | int }}'
+  qos: 1
+  retain: false
+  payload_open: &quot;ShutterOpen1&quot;
+  payload_close: &quot;ShutterClose1&quot;
+  payload_stop: &quot;ShutterStop1&quot;
+  state_open: &quot;ON&quot;
+  state_closed: &quot;OFF&quot;
+  payload_available: &quot;Online&quot;
+  payload_not_available: &quot;Offline&quot;
+  optimistic: true
+  set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/shutterposition&quot;
+  position_topic: &quot;Smarthome/jalosien/wohnzimmer/stat/SHUTTER1&quot;
+</code></pre>
+<p>A definition for slider from <a href="https://community.home-assistant.io/t/shelly-2-as-roller-shutter-with-percentage/85817/2">community/florian</a></p>
+<pre><code class="language-yml">- platform: mqtt
+  name: bedroom_cover
+  command_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/command&quot;
+  position_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/pos&quot;
+  set_position_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/command/pos&quot;
+  availability_topic: &quot;shellies/shellyswitch-xxxxxx/online&quot;
+  payload_available: &quot;true&quot;
+  payload_not_available: &quot;false&quot;
+  qos: 1
+  retain: false
+  payload_open: &quot;open&quot;
+  payload_close: &quot;close&quot;
+  payload_stop: &quot;stop&quot;
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+</code></pre>
+<p>another one</p>
+<pre><code class="language-yml">  - platform: mqtt
+    name: living_room_shutter
+    availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
+    state_topic: &quot;tele/persiana_dormitorio/RESULT&quot;
+    command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd&quot;
+    set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/shutterposition&quot;
+    value_template: &quot;{{ value_json['SHUTTER-1'] }}&quot;
+    qos: 1
+    retain: true
+    payload_open: &quot;SHUTTEROPEN&quot;
+    payload_close: &quot;SHUTTERCLOSE&quot;
+    payload_stop: &quot;SHUTTERSTOP&quot;
+    state_open: &quot;ON&quot;
+    state_closed: &quot;OFF&quot;
+    payload_available: &quot;Online&quot;
+    payload_not_available: &quot;Offline&quot;
+    optimistic: true
+</code></pre>
+<h3 id="automation"><a class="header" href="#automation">Automation</a></h3>
+<pre><code class="language-yml">- id: '1611493304194'
+  alias: Jalosien runter bei Sonnenuntergang
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: +00:30:00
+  action:
+  - service: cover.set_cover_position
+    data:
+      position: 0
+    entity_id: cover.wohnzimmer_zentrale
+  mode: single
+- id: '1611863540767'
+  alias: Jalosien hoch bei Sonnenaufgang
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: -00:30:00
+  action:
+  - service: cover.set_cover_position
+    data:
+      position: 100
+    entity_id: cover.wohnzimmer_zentrale
+  mode: single
+</code></pre>
+<h1 id="misc"><a class="header" href="#misc">Misc</a></h1>
+<h3 id="some-interesting-dotfiles"><a class="header" href="#some-interesting-dotfiles">Some interesting dotfiles:</a></h3>
+<ul>
+<li>https://github.com/webgefrickel/dotfiles #mutt</li>
+<li>https://github.com:frank604/scripts.git</li>
+<li>https://github.com/Northcode/dotfiles.git</li>
+<li>https://github.com:rcr/dotfiles.git</li>
+<li>https://github.com/ReekyMarko/dotfiles</li>
+<li><a href="https://github.com/ishchow/dotfiles/blob/master/.config/nvim/lua/diary.lua">ishchow - lua</a></li>
+</ul>
+<h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
+<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a>
+<code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
+<h3 id="security-book"><a class="header" href="#security-book">Security book</a></h3>
+<p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/%7Erja14/book.html">Book</a></p>
+<h3 id="linux-hardening-book"><a class="header" href="#linux-hardening-book">Linux hardening book</a></h3>
+<p>How to harden alinux system guide:
+<a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html">Book</a></p>
+<h3 id="custom-sortation-of-database-entries"><a class="header" href="#custom-sortation-of-database-entries">Custom sortation of database entries</a></h3>
+<p>Found an good article about, how handle the custom sortation of entires in sql database. TL;DR just add an column <code>pos</code> to the table and auto-increment this value. If insert an entry between of some rows, just calculate the new position for this entry like: ((pos n-1 + pos n+1) / 2</p>
+<p><strong>i.e.:</strong></p>
+<p>| names | pos |
+| peter | 1   |
+| tom   | 2   |
+| harry | 2.5 |
+| ben   | 3   |</p>
+<p><a href="https://begriffs.com/posts/2018-03-20-user-defined-order.html">begriffs.com - User defined order</a></p>
+<h3 id="owasp-10-most-critical-security-issues-for-web-applications"><a class="header" href="#owasp-10-most-critical-security-issues-for-web-applications">OWASP 10 most critical security issues for web applications</a></h3>
+<p>Some notes of: <a href="https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html">OWASP Top 10 - heise</a> from <a href="https://owasp.org/www-project-juice-shop/">Tobias Glemser</a></p>
+<p><strong>Content:</strong></p>
+<ul>
+<li>Einführung in relevante Organisationen</li>
+<li>Beispiele in der öffentlichen Wahrnehmung</li>
+<li>Die zehn häufigsten Sicherheitsrisiken bei Webanwendungen – OWASP Top 10 (u. a. SQLInjection, Cross-Site-Scripting, CSRF, Denial-of-Service)</li>
+<li>Interaktive Demonstrationen zu allen Risiken</li>
+<li>Aufzeigen der Auswirkungen</li>
+<li>Passende Beispiele mit realem Bezug</li>
+<li>Vorstellung von Prüfwerkzeugen und Methoden bei der Prüfung in Form von Penetrationstests</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>XSS bei eBay -&gt; Haftung? Gesetzt sagt: Stand der Technik einhalten!</li>
+<li>OWASP SAMM/Cheat Sheet anschauen</li>
+<li>Pentest sicher/unsicher? Keine eindeutige Aussage, da Momentaufnahme!</li>
+<li>Security Beauftragter muss Fragen stellen um die Kommunikation anzuregen
+<ul>
+<li>Entwickler tragen keine Verantwortung, wenn Sicherheitsaspekte nicht berücksichtigt werden</li>
+</ul>
+</li>
+<li>Masche aus Maßnahmen zur Bekämpfung von Risiken schmählern die Gefahr</li>
+<li>Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest</li>
+<li>OWASP Ressourcen: <a href="https://owasp.org/www-project-web-security-testing-guide/">Web security testing guide</a>, <a href="https://hub.docker.com/r/vulnerables/web-dvwa">OWASP-BWA</a> - Test machine, <a href="https://www.zaproxy.org/docs/docker/baseline-scan/">ZAP</a>, <a href="https://owasp.org/www-project-juice-shop/">Juice-Shop</a> </li>
+<li>Angriffe: 
+<ul>
+<li>Injection
+<ul>
+<li>SQL, LDAP, OS-commands -&gt; backend</li>
+<li>XSS -&gt; frontend</li>
+<li>sqlmap / <code>Mc O'Caml</code> test</li>
+</ul>
+</li>
+<li>Broken Authentication
+<ul>
+<li>sessionId in GET</li>
+<li>nur sessionId als Authorisierung</li>
+<li>login brute-force verhindern</li>
+</ul>
+</li>
+<li>Sesitive data sxposure
+<ul>
+<li>backup files im www dir</li>
+<li>keine durchgängige Verschlüsslung</li>
+</ul>
+</li>
+<li>XML External Entities (XXE)
+<ul>
+<li>SOAP API</li>
+</ul>
+</li>
+<li>Broken access control
+<ul>
+<li>Zugriff auf Dateien <code>?page=/etc/passwd</code></li>
+<li>per ID auf Daten dritter zugreifen</li>
+</ul>
+</li>
+<li>Security misconfiguration
+<ul>
+<li>Härtung der Infrastruktur</li>
+<li>update von 3rd party libs</li>
+<li>default accounts beachten</li>
+</ul>
+</li>
+<li>XSS Cross-site-scriting
+<ul>
+<li>js injection auf website</li>
+</ul>
+</li>
+<li>Insecure deserialization
+<ul>
+<li>parser libs updaten!</li>
+</ul>
+</li>
+<li>Insufficient logging &amp; monitoring
+<ul>
+<li>fehlerhafte login Versuche</li>
+<li>Transaktionen protokollieren</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Eingabe im frontend &amp; backend! validieren vor API Aufruf!</strong></p>
+<p><strong>Trivia:</strong></p>
+<ul>
+<li>Geheime Botschaften by Simon Singh (Buch)</li>
+<li>Mr. Robot (Serie)</li>
+<li>Hackers (Film)</li>
+<li>Iron Sky (Film)</li>
+</ul>
+<h1 id="music"><a class="header" href="#music">Music</a></h1>
+<h2 id="favorit-songs"><a class="header" href="#favorit-songs">Favorit songs:</a></h2>
+<ul>
+<li>Lydie Auvray - Couscous</li>
+<li>Egor Kreed - Самая самая</li>
+<li>Stephane Wrembel - Bistro Fada</li>
+<li>Adana Twins - Strange</li>
+<li>La Marina - Cuffin' season (Remix) [feat. Fabolous]</li>
+<li>Harry Nilsson - One</li>
+<li>Bill Withers - Lean on Me</li>
+<li>Nôze - Marabout</li>
+<li>Coldplay - Hymn for the Weekend</li>
+<li>Frank Ocean - Pink Matter</li>
+<li>I Monster - Daydream In Blue</li>
+<li>Kid Cudi - Releaser</li>
+<li>Kid Cudi - Swim In The Light</li>
+<li>Kid Cudi - Frequency</li>
+<li>Rae Sremmurd - Black Beatles</li>
+<li>Petit Biscuit - Sunset Lover</li>
+<li>Jon Bellion - All Time Low</li>
+<li>Imagine Dragons - Believer</li>
+<li>Michael Kiwanuka - One More Night</li>
+<li>Michael Kiwanuka - Love &amp; Hate</li>
+<li>Michael Kiwanuka - Cold Little Heart</li>
+<li>Jah Khalib - Ты словно целая вселенная</li>
+<li>Грибы - Тает лёд</li>
+<li>Ulrich Tukur &amp; Die Rhythmus Boys - Morphium</li>
+<li>Anitta - Vai malandra (feat. Tropkillaz &amp; DJ Yuri Martins)</li>
+<li>Indila - Dernière danse</li>
+<li>Yves Montand - Bella Ciao</li>
+<li>Manu Chao - Me Gustas Tu</li>
+<li>Manu Chao - Bongo Bong</li>
+<li>Pyotr Ilyich Tchaikovsky - The Seasons, Op. 37a: II. February. Carnival</li>
+<li>Lluni - King</li>
+<li>George Davidson - Mariage D'Amour</li>
+<li>Dendemann - Keine Parolen</li>
+<li>John Legend - Green Light (feat. André 3000)</li>
+<li>sean - Mercutio</li>
+<li>Deichkind - Richtig Gutes Zeug</li>
+<li>Evelyn Stein - Quiet Resource</li>
+<li>Zaz - Pourquoi tu joues faux</li>
+<li>Max Girko - Иди За Второй</li>
+<li>Zemlyane - The grass near the house</li>
+<li>Mark Eliyahu - Endless</li>
+<li>Old Man Canyon - Phantoms and Friends</li>
+<li>Estelle - American Boy</li>
+<li>Michael Kiwanuka - Solid Ground</li>
+<li>RIN - Monica Bellucci</li>
+<li>Eminem - Marsh</li>
+<li>MoTrip - Changed - Aus Sing meinen Song, Vol. 7</li>
+<li>Tima Belorusskih - Одуванчик</li>
+<li>Omega - Pegao / Me Miro y La Mire (TikTok Hit)</li>
+<li>Timati - Звездопад</li>
+<li>Kanye West - Nah Nah Nah</li>
+<li>Shuggie Otis - Aht Uh Mi Hed</li>
+<li>Toše Proeski - Nesanica</li>
+<li>Ensemble Vanya - Russian Cyberfolk Song</li>
+<li>Zaz - Je veux</li>
+<li>Gorillaz - Feel Good Inc.</li>
+</ul>
+<h1 id="books"><a class="header" href="#books">Books</a></h1>
+<p>Here is a list of books I read in the past, after school. My favorit genre are non-fiction books and biographies.</p>
+<h3 id="wishlist"><a class="header" href="#wishlist">Wishlist</a></h3>
+<ul>
+<li>?</li>
+</ul>
+<h3 id="2020"><a class="header" href="#2020">2020</a></h3>
+<p><strong>21 Lektionen</strong> by Yuval Noah Harari
+ISBN: 978-3406739682 ⭐ ⭐ ⭐ ⭐</p>
+<ul>
+<li>
+<p>Ein gutes Buch über die aktuellen Gegebenheiten in der Welt. Und sehr viel pro westl. Politik ohne Reflektion.</p>
+<blockquote>
+<p>Was also sollten wir unterrichten?  Zahlreiche Fachpädagogen behaupten, Schulen sollten sich auf die Vermittlung der vier Ks verlegen kritisches Denken, Kommunikation, Kollaboration und Kreativität. Allgemeiner sollten Schulen weniger Wert auf technisches Können legen und stattdessen universell anwendbare Lebensfertigkeiten in den Mittelpunkt rücken. Am allerwichtigsten wird die Fähigkeit sein, mit Veränderung umzugehen, neue Dinge zu lernen und in unvertrauten Situationen das seelische Gleichgewicht zu wahren. Wollen wir mit der Welt des Jahres 2050 Schritt halten, müssen wir nicht nur neue Ideen und Produkte erfinden wir müssen vor allem uns selbst immer wieder neu erfinden.“</p>
+</blockquote>
+<blockquote>
+<p>Den Menschen wurde von frühester Kindheit an beigebracht, an die Erzählung zu glauben. Sie hören sie von ihren Eltern, ihren Lehrern, ihren Nachbarn und der allgemeinen Kultur lange, bevor sie die geistige und emotionale Unabhängigkeit entwickeln, die notwendig ist, um solche Geschichten zu hinterfragen und auf ihren Wahrheitsgehalt zu überprüfen. Zu der Zeit, da ihr Intellekt heranreift, sind sie so sehr in diese Erzählung eingebunden, dass sie ihren Verstand eher dazu nutzen, sie rational zu begründen als sie anzuzweifeln. Die meisten Menschen, die auf ldentitätssuche gehen, sind wie Kinder, die sich auf Schatzsuche begeben. Sie finden nur, was ihre Eltern zuvor für sie versteckt haben.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Ein Gentleman in Moskau</strong> by Amor Towles 
+ISBN: 978-3548290720 ⭐ ⭐ ⭐ ⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>In guten wie in schlechten Tagen</strong> by Tayari Jones 
+ISBN: 978-3716040256 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<h3 id="2019"><a class="header" href="#2019">2019</a></h3>
+<p><strong>Schlaf nicht wenn es dunkel wird</strong> by Joy Fielding<br />
+ISBN: 978-3-442-46173-8 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Gespräch mit Freunden</strong> by Sally Rooney<br />
+ISBN: 978-3-630-87541-5 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>The big five for life</strong> by John Strelecky<br />
+ISBN: 978-3423345286 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>GRM - Brainfuck</strong> by Sibylle Berg<br />
+ISBN: 978-3462051438 ⭐⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Blechtrommel</strong> by Güter Grass<br />
+ISBN: 978-3423118217 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Auf die Bäume ihr Affen</strong> by Hans A. Pestalozzi<br />
+ISBN: 978-3729603134 ⭐⭐⭐⭐⭐<br />
+This book is the best retrospective view of the last few years in a political and social point of view. The author is so clear and straight forward in pointing to the causes of our all prblem situations in the current time of life.</p>
+<p><strong>Jäger, Hirten, Kritiker</strong> by Richard David Precht<br />
+ISBN: 978-3442315017 ⭐⭐⭐<br />
+A very good insight into the future problems and obstacles of today's society and possible solutions to counter them. Somewhat too superficial and predictable.</p>
+<h3 id="2018"><a class="header" href="#2018">2018</a></h3>
+<p><strong>Warum dänische Kinder glücklicher und ausgeglichener sind: Die Erziehungsgeheimnisse des glücklichsten Volks der Welt</strong> by Jessica Joelle Alexander (Autor), Iben Dissing Sandahl (Autor), Karin Wirth (Übersetzer) ISBN:978-3442393213 ⭐⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Just for fun (Linus Torvalds)</strong> by David Diamond<br />
+ISBN: 978-3423362993 ⭐⭐⭐⭐<br />
+A really good book in an interview perspective. Linus Torvals tells how he was creating Linux with some nerdy details and how her workflow was/is in maintaining the best operating system in this world.</p>
+<p><strong>Neustart</strong> by Stephan Urbach<br />
+ISBN: 978-3426787298 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Eine Einführung - Einflüsse, Machtstrukturen und Selbstheilung im 21. Jahrhundert</strong> by Vinoth Müller<br />
+ISBN: 978-3741877537 ⭐⭐<br />
+This book written by a &quot;hobby&quot; author who is burning for this topic and all that goes with it. It was really hard read it, cause it seems to be very unstructured and the inexperience of the author makes it difficult to read it as well.</p>
+<p><strong>The great Gatsby</strong> by F. Scott Fitzgerald<br />
+ISBN: 978-3150092422 ⭐⭐⭐<br />
+Really good written old love story.</p>
+<h3 id="2017"><a class="header" href="#2017">2017</a></h3>
+<p><strong>Psychologie der Massen</strong> by Gustave Le Bon<br />
+ISBN: 978-3868200263 ⭐⭐⭐⭐<br />
+Very good and concise book about the psychology of people who are influenced by the masses.</p>
+<p><strong>Ansichten eines Clowns</strong> by Heinrich Böll<br />
+ISBN: 978-3423004008 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Hundsköpfe</strong> by Morten Ramsland<br />
+ISBN: 978-3442736294 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Deutsch sein und schwarz dazu</strong> by Theodor Michael<br />
+ISBN: 978-3423348577 ⭐⭐⭐⭐<br />
+A really good biogrophie of a african migrant at the beginning of the 19 century in germany and his experiences with racism in the epoch.</p>
+<p><strong>Elon Musk</strong> by Ashlee Vance &amp; Elon Musk<br />
+ISBN: 978-3898799065 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>1984</strong> by George Orwell<br />
+ISBN: 978-3548225623 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<h3 id="past"><a class="header" href="#past">Past</a></h3>
+<p><strong>Anna Karenina</strong> by Tolstoi<br />
+ISBN: 978-3491961968 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Das glücklichste Volk - Sieben Jahre bei den Pirahã-Indianern am Amazonas</strong> by Daniel Everett<br />
+ISBN: 978-3421043078 ⭐⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Das Tahiti Projekt</strong> by Dirk C. Fleck<br />
+ISBN: 978-3492253628 ⭐⭐⭐<br />
+A futuristic utopia of a society in the future simulated on an island.</p>
+<p><strong>Kopf schlägt Kapital</strong> by Günter Faltin<br />
+ISBN: 978-3423347570 ⭐⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<p><strong>Die Google Falle</strong> by Gerald Reischl<br />
+ISBN: 978-3800073238 ⭐⭐⭐<br />
+Very superficial development history of google and the processes of a powerful software group.</p>
+<p><strong>Glück</strong> by Eckart von Hirschhausen<br />
+ISBN: 978-3499623554 ⭐⭐</p>
+<ul>
+<li>review</li>
+</ul>
+<h1 id="podcasts"><a class="header" href="#podcasts">Podcasts</a></h1>
+<p><strong>My list of interesting podcasts:</strong></p>
+<ul>
+<li>Zeit Verbrechen</li>
+<li>SWR2 Wissen</li>
+<li>Daily Quarks</li>
+<li>Hotel Matze</li>
+<li>Fest &amp; Flauschig</li>
+<li>Gemischtes Hack</li>
+<li>The Joe Rogan experience</li>
+<li>Eine Stunde history</li>
+<li>100 Sekunden Wissen </li>
+<li>Das Ziel ist im Weg </li>
+<li>Betreutes Fühlen</li>
+<li>In extremen Köpfen </li>
+<li>Alternativlos</li>
+<li>Grenzgänger </li>
+</ul>
+<p><strong>History of podcast listening:</strong></p>
+<ul>
+<li><a href="https://youtu.be/ExbLAF2kzGw">Hazel &amp; Thomas Gast: Usus Mango</a>
+<ul>
+<li>Elke Heidenreich eine gute Produzentin beim WDR</li>
+<li>Die Ernsthaftigkeit Deutschlands den Rassismus zu bekämpfen mit der AFD im Bundestag und einer #metoo Bewegung ohne einer Konsequenz für jemanden</li>
+</ul>
+</li>
+</ul>
+<h1 id="series"><a class="header" href="#series">Series</a></h1>
+<h1 id="movies"><a class="header" href="#movies">Movies</a></h1>
+<h1 id="videos"><a class="header" href="#videos">Videos</a></h1>
+<ul>
+<li>
+<p>SWR <em>Der mit dem Wald spricht</em> 
+Gast: Marc Marshall &amp; Jana Palaske <a href="https://youtu.be/6B1BLF9LpYY">Video</a></p>
+<blockquote>
+<p>Nur 3% der deutschen Wälder sind im Ursprung echt, alles andere sind “Plantagen”.</p>
+</blockquote>
+<blockquote>
+<p>Der Baum ist im Wald nur der Zeiger einer Uhr, da die ganzen Tiere &amp; Insekten meist ausgeblendet werden. </p>
+</blockquote>
+</li>
+<li>
+<p>Youtube <em>Grenzgänger - Shayan Garcia trifft Aufspürerin</em> <a href="https://youtu.be/cyvyJqoL7H4">Video</a></p>
+<blockquote>
+<p>Die Vergnügungsmaschine der kapitalistischen Kultur versucht jedes Gefühl für unsere Geschichte zu eliminieren. Damit die Gegenwart zu einer dauerhaften Wiederholung des hedonistischen Moments verkommt  (nur auf das eigene Glück aussein) Das Gefangensein im immer Gleichen fördert nicht nur die Geschichtsvergessenheit, sondern auch die Ablehnung einer alternativen Zukunftsvision. Besonders junge Menschen sind heute im Kreislauf einer sofortigen Triebbefriedigung gefangen. Sie leben in einem Dauerrausch, es ist nicht nur die Sucht nach Sex und Drogen verbreitetet, sondern auch die Sucht nach Status und Erfolg. Die Sucht nach einer hohen Sichtbarkeit und Resonanz.  In den kapitalistischen Zivilisationen ist gegen die Seelen der Jugendlichen ein Kampf zugange. Sie werden so dermassen abgestumpft, damit aus ihnen keine Wahrheitssucher und Kämpfer für Gerechtigkeit werden - Prof. Cornel West</p>
+</blockquote>
+</li>
+</ul>
+<p><a href="personal/home/furniture.html#">#</a> Furniture</p>
+<h2 id="livingroom"><a class="header" href="#livingroom">Livingroom</a></h2>
+<ul>
+<li>Dinner table
+<ul>
+<li>mömax <a href="https://www.vidarholen.net/contents/blog/?p=904">Link</a></li>
+<li>Masie <a href="https://www.themasie.com/de/">Link</a></li>
+</ul>
+</li>
+<li>Turntable
+<ul>
+<li>marley <a href="https://www.thehouseofmarley.de/stir-it-up-wireless-1.html">Marley stir up wireless 249,99E</a></li>
+</ul>
+</li>
+<li>Plants
+<ul>
+<li><a href="https://www.plantsome.de/">plantsome</a></li>
+</ul>
+</li>
+<li>Seats
+<ul>
+<li><a href="https://kavehome.com/de/de/p/selia-stuhl-mit-antikem-nussbaumfinish">Selia</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="kitchen"><a class="header" href="#kitchen">Kitchen</a></h2>
+<ul>
+<li>Esspresso machine <a href="https://www.rommelsbacher.de/de/kaffee-espresso-center-eks-3010.html">rommelsbacher</a></li>
+<li>Espresso machine <a href="https://www.gaggia.de/manual-machines/new-classic/">gaggia classic</a></li>
+<li><a href="https://www.breville.com/us/en/products/espresso/bes920.html">Breville</a></li>
+</ul>
+<h2 id="interesting"><a class="header" href="#interesting">Interesting</a></h2>
+<ul>
+<li>Design <a href="https://www.torquato.de/">torquato</a></li>
+<li>Classics <a href="https://www.pamono.de/">pamono</a></li>
+</ul>
+<h2 id="indoor-gardening"><a class="header" href="#indoor-gardening">Indoor gardening</a></h2>
+<ul>
+<li><a href="https://www.obi.de/magazin/indoor-jungle">Indoor-Jungle
+OBI</a></li>
+</ul>
+<h1 id="clothing"><a class="header" href="#clothing">Clothing</a></h1>
+<ul>
+<li>Basketball stuff <a href="https://benklark.com/en/">Benklark</a></li>
+</ul>
+<h1 id="cooking"><a class="header" href="#cooking">Cooking</a></h1>
+<h2 id="pizza-recipe"><a class="header" href="#pizza-recipe">Pizza recipe</a></h2>
+<p>Neapolitan:</p>
+<ul>
+<li>500g Mehl</li>
+<li>350g Wasser (kalt)</li>
+<li>15g Salz</li>
+<li>0.5g Hefe</li>
+</ul>
+<p>16h bei Zimmertemperatur, 270g große Teiglinge, dann 6h Zimmertemperatur</p>
+<h2 id="egg-salad"><a class="header" href="#egg-salad">Egg salad</a></h2>
+<ul>
+<li>10 Eier</li>
+<li>250 gr. Mayo</li>
+<li>1 Tl Senf</li>
+<li>5 gr. Zucker</li>
+<li>1 Tl. Salz</li>
+<li>Prise Pfeffer</li>
+<li>Schnittlauch nach Bedarf</li>
+</ul>
+<h1 id="garden"><a class="header" href="#garden">Garden</a></h1>
+<h2 id="basic"><a class="header" href="#basic">Basic</a></h2>
+<ul>
+<li>Some basic garden <a href="personal/home/../home/furniture.html#indoor-gardening">Indoor gardening</a></li>
+</ul>
+<h2 id="teracce"><a class="header" href="#teracce">Teracce</a></h2>
+<ul>
+<li>Roofing <a href="https://www.tuinmaximaal.de/">TUI Maximaal</a></li>
+</ul>
+<h1 id="garage"><a class="header" href="#garage">Garage</a></h1>
+<h2 id="electro-connection"><a class="header" href="#electro-connection">Electro connection</a></h2>
+<blockquote>
+<p>&quot;Elektroinstallation auf 10 A Dauerlast prüfen in der Garage ist ohnehin eine gute Idee, weil Stromanschlüsse in Garagen gern gepfuscht werden.&quot; - <a href="https://www.heise.de/tests/Schraege-Ideen-Volvo-XC40-Recharge-PHEV-im-Test-5048581.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag&amp;hg=1&amp;hgi=11&amp;hgf=false">Source</a></p>
+</blockquote>
+<h1 id="pharmacy"><a class="header" href="#pharmacy">Pharmacy</a></h1>
+<p>Our home pharmcy list should always be present:</p>
+<ul>
+<li>Kopfschmerzen Paracetamol</li>
+<li>Orthomol Immun</li>
+<li>Erkältung Grippostad</li>
+<li>Krampf Buscopan</li>
+<li>Halsschmerzen Dobendan Strepsis Synergie Honig &amp; Zitrone</li>
+<li>Stiche Fenistil</li>
+<li>Wunde Bepanthen</li>
+<li>Husten Mucosolvan</li>
+<li>Antimückenspray Autan</li>
+<li>Magen-Darm Iberogast</li>
+<li>Nasenspray Nasic+</li>
+<li>Erbrechen Vomex</li>
+<li>Schmerz-/Fieber Ibuprofen 400</li>
+</ul>
+<p><strong>Kids</strong>:</p>
+<ul>
+<li>Schmerz Voltaren</li>
+<li>Verstopfung Movicol</li>
+<li>Schnupfen Nasivin für Babys (Kochsalz nicht hilft)</li>
+<li>Verstopfung Babylax oder Glycilax Zäpfchen</li>
+<li>Zahnbeschwerden Dentinox Gel</li>
+<li>Blähungen Lefax Pumpliquid</li>
+<li>Durchfall Loperamid</li>
+<li>Ohrentropfen Otalgan</li>
+<li>Durchfall Elektrolyte Oralpädon 240 Erdbeere</li>
+<li>Schnupfen Kochsalzlösung 0,9% Ampullen</li>
+<li>Durchfall Elektrolyte Elotrans</li>
+<li>Fieber Paracetamol Zäpfchen oder Nurofen Saft</li>
+</ul>
+<h1 id="homestead"><a class="header" href="#homestead">Homestead</a></h1>
+<p>The most important point for building or buy your own house is to have the garden in south direction. </p>
+<h3 id="doorbell"><a class="header" href="#doorbell">Doorbell</a></h3>
+<ul>
+<li><a href="https://mathfel.de/produkt/4-draht-tuersprechanlage-gegensprechanlage-mit-wlan-und-7-zoll-monitor/">mathfel</a></li>
+</ul>
+<h1 id="kids"><a class="header" href="#kids">Kids</a></h1>
+<h2 id="lifehacks"><a class="header" href="#lifehacks">Lifehacks</a></h2>
+<p><a href="https://twitter.com/frauhackenpiep/status/1363560588446752768?s=21">Source</a></p>
+<h1 id="bucketlist"><a class="header" href="#bucketlist">Bucketlist</a></h1>
+<p>A list of our bucketlist book where we document our events:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Ein Theaterstück anschauen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Blind Booking fliegen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Cliffs of Moher besichtigen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Kochkurs besuchen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Santorini besuchen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Eine Bootsfahrt über die Moldau in Prag machen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Thailand besuchen und etwas Exotisches essen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Sandburg bauen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Zusammen ein Buch lesen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Einem Neugeborenen die Hand halten</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Konzert-Tickets auf den Teller legen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Paar-Fotoshooting</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Oldtimer fahren</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Glasbläserei besuchen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Die Medina von Marrakesch besuchen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Im Infinitypool über Bangkok schwimmen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Blumenstrauß ohne Grund schenken</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Schlittschuh laufen unter freiem Himmel</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Roadtrip zusammen unternehmen</li>
+<li><input disabled="" type="checkbox"/>
+Heißluftballon fliegen</li>
+<li><input disabled="" type="checkbox"/>
+Tag zu zweit für einen guten Zweck arbeiten</li>
+<li><input disabled="" type="checkbox"/>
+Tanzkurs belegen</li>
+<li><input disabled="" type="checkbox"/>
+In einem Wasserfall gemeinsam duschen</li>
+<li><input disabled="" type="checkbox"/>
+Baum gemeinsam pflanzen</li>
+<li><input disabled="" type="checkbox"/>
+Ski oder Snowboard fahren</li>
+<li><input disabled="" type="checkbox"/>
+Gemeinsam klettern gehen</li>
+<li><input disabled="" type="checkbox"/>
+Gegenseitig ein Outfit aussuchen</li>
+<li><input disabled="" type="checkbox"/>
+Silvester am Strand mit Cocktail verbringen</li>
+<li><input disabled="" type="checkbox"/>
+Ein Messeevent besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Hammam besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Zelten mit Lagerfeuer</li>
+<li><input disabled="" type="checkbox"/>
+Taj Mahal besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Schmuck für den anderen schmieden</li>
+<li><input disabled="" type="checkbox"/>
+Gemeinsam (Halb?) Marathon laufen</li>
+<li><input disabled="" type="checkbox"/>
+Ganzen Tag zusammen im Bett kuscheln</li>
+<li><input disabled="" type="checkbox"/>
+Drachen steigen lassen</li>
+<li><input disabled="" type="checkbox"/>
+Schneemann bauen</li>
+<li><input disabled="" type="checkbox"/>
+In den Sonnenuntergang segeln</li>
+<li><input disabled="" type="checkbox"/>
+Krimidinner besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Zusammen auf Pferden reiten</li>
+<li><input disabled="" type="checkbox"/>
+Romantische Kutschfahrt</li>
+<li><input disabled="" type="checkbox"/>
+Auf einem See ein Bootspicknick machen</li>
+<li><input disabled="" type="checkbox"/>
+Segway Tour machen</li>
+<li><input disabled="" type="checkbox"/>
+Auf alle 7 Kontinente einen Fuß gesetzt haben</li>
+<li><input disabled="" type="checkbox"/>
+Feuerwerk auf dem Dach eines Hochhauses</li>
+<li><input disabled="" type="checkbox"/>
+Mit Delfinen schwimmen</li>
+<li><input disabled="" type="checkbox"/>
+Unter dem Sternenhimmel schlafen</li>
+<li><input disabled="" type="checkbox"/>
+Am Times Square stehen und küssen</li>
+<li><input disabled="" type="checkbox"/>
+In Stockholm einen Köttbullar essen</li>
+<li><input disabled="" type="checkbox"/>
+Über die Golden Gate Bridge fahren</li>
+<li><input disabled="" type="checkbox"/>
+Im Regen tanzen und küssen</li>
+<li><input disabled="" type="checkbox"/>
+Paar-Portrait anfertigen lassen</li>
+<li><input disabled="" type="checkbox"/>
+Autokino erleben</li>
+<li><input disabled="" type="checkbox"/>
+In Australien ein Känguru streicheln</li>
+<li><input disabled="" type="checkbox"/>
+In Dubai das höchste Gebäude besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Gemeinsam 24 Stunden wach bleiben</li>
+<li><input disabled="" type="checkbox"/>
+Mit dem Fahrrad 100km an einem Tag fahren</li>
+<li><input disabled="" type="checkbox"/>
+Candlelight-Dinner in einem Sterne-Restaurant essen</li>
+<li><input disabled="" type="checkbox"/>
+Zusammen eine neue Sprache lernen</li>
+<li><input disabled="" type="checkbox"/>
+Eine Safaritour machen</li>
+<li><input disabled="" type="checkbox"/>
+Den Macchu Picchu besteigen</li>
+<li><input disabled="" type="checkbox"/>
+Kolosseum in Rom besichtigen</li>
+<li><input disabled="" type="checkbox"/>
+Tandem fahren</li>
+<li><input disabled="" type="checkbox"/>
+Wale in der freien Natur anschauen</li>
+<li><input disabled="" type="checkbox"/>
+Nackt schwimmen um Mitternacht</li>
+<li><input disabled="" type="checkbox"/>
+Helikopter fliegen</li>
+<li><input disabled="" type="checkbox"/>
+Disneyland besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Wilde Kissenschlacht</li>
+<li><input disabled="" type="checkbox"/>
+Tandem-Paragliding    </li>
+<li><input disabled="" type="checkbox"/>
+Zusammen auf ein Festival gehen</li>
+<li><input disabled="" type="checkbox"/>
+Sternenwarte besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Kreuzfahrt unternehmen</li>
+<li><input disabled="" type="checkbox"/>
+Tauchkurs belegen</li>
+<li><input disabled="" type="checkbox"/>
+Von Gondoliere fahren lassen</li>
+<li><input disabled="" type="checkbox"/>
+Sich gegenseitig die Haare schneiden</li>
+<li><input disabled="" type="checkbox"/>
+Weinberg besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Initialien mit Herz in einen Baum schnitzen</li>
+<li><input disabled="" type="checkbox"/>
+Filmmarathon übers Wochenende</li>
+<li><input disabled="" type="checkbox"/>
+Elefanten reiten</li>
+<li><input disabled="" type="checkbox"/>
+In Lissabon auf dem Rossi einen Glückscent in den Brunnen werfen</li>
+<li><input disabled="" type="checkbox"/>
+Akropolis in Athen besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Hagia Sofia in Istanbul besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Den Hobbit in Neuseeland besuchen</li>
+<li><input disabled="" type="checkbox"/>
+In der blauen Lagune in Island aufwärmen</li>
+<li><input disabled="" type="checkbox"/>
+Eine finnische Sauna in Helsinki besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Surfen in Portugal</li>
+<li><input disabled="" type="checkbox"/>
+Den Hermannsweg mit dem Fahrrad lang fahren</li>
+<li><input disabled="" type="checkbox"/>
+Das deutsche Sportabzeichen in Gold schaffen</li>
+<li><input disabled="" type="checkbox"/>
+Eine Fastenzeit durchleben</li>
+<li><input disabled="" type="checkbox"/>
+Eine Longboardfahrt am Boulevard von Miami</li>
+<li><input disabled="" type="checkbox"/>
+Die Christus-Statue in Rio erklimmen</li>
+<li><input disabled="" type="checkbox"/>
+Eine Patenschaft für einen Baum übernehmen</li>
+<li><input disabled="" type="checkbox"/>
+Eine Fernsehsendung besuchen</li>
+<li><input disabled="" type="checkbox"/>
+Segelflugzeug fliegen</li>
+<li><input disabled="" type="checkbox"/>
+Das 1. Date nochmal nachspielen</li>
+<li><input disabled="" type="checkbox"/>
+Paddeltour machen</li>
+<li><input disabled="" type="checkbox"/>
+Mit einer Vespa durch Italien fahren</li>
+<li><input disabled="" type="checkbox"/>
+Wandern in der Schweiz</li>
+<li><input disabled="" type="checkbox"/>
+Gemeinsam ein Haus bauen</li>
+</ul>
+<h1 id="learning"><a class="header" href="#learning">Learning</a></h1>
+<p>I love to learn something new...</p>
+<p>Sources:</p>
+<ul>
+<li>Some languages <a href="https://www.duolingo.com/profile/Dtri23">duolingo</a></li>
+<li><a href="https://learnxinyminutes.com/">learnxinminutes</a></li>
+<li>Keyboard typing <a href="https://www.keybr.com/">Keybr</a></li>
+<li>TypingClub <a href="https://www.typingclub.com">typingclub</a></li>
+<li>Shortcuts <a href="https://www.shortcutfoo.com/">shortcutfoo</a></li>
+</ul>
+<h1 id="rails"><a class="header" href="#rails">Rails</a></h1>
+<p>Rails is a very cool framework for web-applications and IMO the best for
+mvp-prototyping and beyond.</p>
+<p>Learning from some youtube guys:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8i5JFLfbWkE">Video</a> Source: <a href="https://github.com/justalever/projekt">Projekt</a></li>
+<li><a href="https://www.youtube.com/watch?v=u2o_new-T0o&amp;t=555s">Video</a> Source:
+<a href="https://github.com/StephenFiser/simple-pm/tree/episode-1">simple-pm</a></li>
+<li>Best practises <a href="https://youtu.be/vw7PlBvLq9k">Semicolon&amp;Sons - Best practises I</a>
+Passing ruby data to javaScript</li>
+</ul>
+<h2 id="professional-ruby-on-rails-developer-with-rails-5"><a class="header" href="#professional-ruby-on-rails-developer-with-rails-5">Professional Ruby on Rails Developer with Rails 5</a></h2>
+<p>Some note while making the <a href="https://www.udemy.com/course/pro-ruby-on-rails-rails5/">udamy course</a> and some <a href="personal/learning/./ruby.html">ruby</a> notes:</p>
+<h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
+<p>Render plain text:</p>
+<pre><code class="language-ruby">def hello
+  render plain: &quot;hello world!&quot;
+end
+</code></pre>
+<p>Create a controller with a method and use a object in view:</p>
+<pre><code class="language-ruby"># controller
+class TodosController &lt; ApplicationController
+
+  def new
+   @todo = Todo.new 
+  end
+
+end
+
+# view
+&lt;%= form_for @todo do |f| %&gt;
+
+&lt;% end %&gt;
+</code></pre>
+<p>Use <code>flash</code> for notifications:</p>
+<pre><code class="language-ruby">#controller
+@todo.save
+flash[:notice] = &quot;Todo was created successfully&quot;
+
+# view
+&lt;% flash.each do |name, msg| %&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;%= msg %&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;% end %&gt;
+</code></pre>
+<p>A bootstrap styled flash messages:</p>
+<pre><code class="language-ruby">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-10 col-md-offset-1&quot;&gt;
+    &lt;% flash.each do |name, msg| %&gt;
+      &lt;div class=&quot;alert alert-&lt;%= name %&gt;&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/a&gt;
+        &lt;%= msg %&gt;
+      &lt;/div&gt;
+    &lt;% end %&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Render partials in view ie a file <code>views/layouts/_messages.html.erb</code>:</p>
+<pre><code class="language-ruby">&lt;%= render 'layouts/messages' %&gt;
+</code></pre>
+<p>Before run a method do action:</p>
+<pre><code class="language-ruby"># controller
+before_action :set_todo, only: [:edit, :update, :show, :destroy]
+
+private
+
+  def set_todo
+    @todo = Todo.find(params[:id])
+  end
+
+  def todo_params
+    params.require(:todo).permit(:name, :description)
+  end
+
+  # permit has_many list
+  def recipe_params  
+    params.require(:recipe).permit(:name, :description, ingredient_ids: [])  
+  end
+
+end
+</code></pre>
+<p>Add pg to production for ie. heroku deployment:</p>
+<pre><code class="language-ruby">group :production do
+  gem 'pg'
+end
+
+bundle install --without production
+</code></pre>
+<p>Some simple validations:</p>
+<pre><code class="language-ruby">validates :name, presence: true
+validates :description, presence: true, length: { minimum: 5, maximum: 500 }
+</code></pre>
+<p>Application helpers:</p>
+<pre><code class="language-ruby">helper_method :current_chef, :logged_in?
+
+def current_chef
+  @current_chef ||= Chef.find(session[:chef_id]) if session[:chef_id]
+end
+
+def logged_in?
+  !!current_chef
+end
+
+def require_user
+  if !logged_in?
+    flash[:danger] = &quot;You must be logged in to perform that action&quot;
+    redirect_to root_path
+    # also possible
+    redirect_to :back
+  end
+end
+</code></pre>
+<p>Render partial for model:</p>
+<pre><code class="language-ruby"># View
+&lt;% if recipe.ingredients.any? %&gt;  
+  &lt;p&gt;Ingredients: &lt;%= render recipe.ingredients %&gt;&lt;/p&gt;  
+&lt;% end %&gt;
+
+# Now create a new partial _ingredient.html.erb under the app/views/ingredients folder for this to work
+
+&lt;span class=&quot;badge&quot;&gt;&lt;%= link_to ingredient.name,   
+                      ingredient_path(ingredient) %&gt;   &lt;/span&gt;
+</code></pre>
+<h3 id="model"><a class="header" href="#model">Model</a></h3>
+<p>Order models by column:</p>
+<pre><code class="language-ruby"># order by updated_at -&gt; top of model
+default_scope -&gt; { order(updated_at: :desc) }
+</code></pre>
+<p>Get just the last 20 entries of a model</p>
+<pre><code class="language-ruby">def self.most_recent  
+  order(:created_at).last(20)  
+end
+</code></pre>
+<h3 id="routes"><a class="header" href="#routes">Routes</a></h3>
+<p>Set root route:</p>
+<pre><code class="language-ruby"># router.rb
+root &quot;pages#home&quot;
+</code></pre>
+<p>Specific route to controller#method:</p>
+<pre><code class="language-ruby">get '/about', to: 'pages#about'
+</code></pre>
+<p>Nested routes:</p>
+<pre><code class="language-ruby">resources :recipes do  
+  resources :comments, only: [:create]  
+end
+
+# Form in view
+&lt;%= form\_for(\[@recipe, @comment\], :html =&gt; {class: &quot;form-horizontal&quot;,   
+                                                role: &quot;form&quot;}) do |f| %&gt;
+</code></pre>
+<h3 id="links"><a class="header" href="#links">Links</a></h3>
+<p>Create links in views:</p>
+<pre><code class="language-ruby">&lt;%= link_to &quot;Edit this todo&quot;, edit_todo_path(@todo) %&gt;
+&lt;%= link_to &quot;Back to todos listing&quot;, todos_path %&gt;
+&lt;td&gt;&lt;%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: &quot;Are you sure?&quot;} %&gt;&lt;/td&gt;
+&lt;%= link_to &quot;MyRecipes&quot;, root_path, class: &quot;navbar-brand&quot;, id: &quot;logo&quot; %&gt;
+&lt;%= link_to &quot;Sign up or log in&quot;, &quot;#&quot; class: &quot;btn btn-danger btn-lg&quot; %&gt;
+</code></pre>
+<h3 id="tests"><a class="header" href="#tests">Tests</a></h3>
+<p>Create integration test for model:</p>
+<pre><code class="language-ruby">rails generate integration_test recipes
+</code></pre>
+<p>Simple test root path:</p>
+<pre><code class="language-ruby">test &quot;should get home&quot; do
+  get pages_home_url
+  assert_response :success
+end
+
+test &quot;should get root&quot; do
+  get root_url
+  assert_response :success
+end
+</code></pre>
+<p>to fix this tests, do:</p>
+<pre><code class="language-ruby">root &quot;pages#home&quot;
+get 'pages/home', to: 'pages#home'
+
+# controller
+class PagesController &lt; ApplicationController
+  def home
+  end
+end
+</code></pre>
+<p>Test a simple validation:</p>
+<pre><code class="language-ruby">require 'test_helper'
+
+class RecipeTest &lt; ActiveSupport::TestCase
+  
+  def setup
+    @recipe = Recipe.new(name: &quot;vegetable&quot;, description: &quot;great vegetable recipe&quot;)  
+  end
+  
+  test &quot;recipe should be valid&quot; do
+    assert @recipe.valid?
+  end  
+  
+  test &quot;name should be present&quot; do
+    @recipe.name = &quot; &quot;
+    assert_not @recipe.valid?
+  end
+  
+  test &quot;description should be present&quot; do
+    @recipe.description = &quot; &quot;
+    assert_not @recipe.valid?
+  end
+  
+  test &quot;description shouldn't be less than 5 characters&quot; do
+    @recipe.description = &quot;a&quot; * 3
+    assert_not @recipe.valid?
+  end
+  
+  test &quot;description shouldn't be more than 500 characters&quot; do
+    @recipe.description = &quot;a&quot; * 501
+    assert_not @recipe.valid?
+  end
+  
+  test &quot;should get recipes show&quot; do
+    get recipe_path(@recipe)
+    assert_template 'recipes/show'
+    assert_match @recipe.name, response.body
+    assert_match @recipe.description, response.body
+    assert_match @chef.chefname, response.body
+  end
+  
+  test &quot;should get recipes listing&quot; do
+    get recipes_path
+    assert_template 'recipes/index'
+    assert_select &quot;a[href=?]&quot;, recipe_path(@recipe), text: @recipe.name
+    assert_select &quot;a[href=?]&quot;, recipe_path(@recipe2), text: @recipe2.name
+  end
+end
+</code></pre>
+<p>Test a email validation:</p>
+<pre><code class="language-ruby">require 'test_helper'
+
+class ChefTest &lt; ActiveSupport::TestCase
+  
+  def setup
+    @chef = Chef.new(chefname: &quot;mashrur&quot;, email: &quot;mashrur@example.com&quot;)
+  end
+  
+  test &quot;should be valid&quot; do
+    assert @chef.valid?
+  end
+  
+  test &quot;name should be present&quot; do
+    @chef.chefname = &quot; &quot;
+    assert_not @chef.valid?
+  end
+  
+  test &quot;name should be less than 30 characters&quot; do
+    @chef.chefname = &quot;a&quot; * 31
+    assert_not @chef.valid?
+  end
+  
+  test &quot;email should be present&quot; do
+    @chef.email = &quot; &quot;
+    assert_not @chef.valid?
+  end
+  
+  test &quot;email should not be too long&quot; do
+    @chef.email = &quot;a&quot; * 245 + &quot;@example.com&quot;
+    assert_not @chef.valid?
+  end
+  
+  test &quot;email should accept correct format&quot; do
+    valid_emails = %w[user@example.com MASHRUR@gmail.com M.first@yahoo.ca john+smith@co.uk.org]
+    valid_emails.each do |valids|
+      @chef.email = valids
+      assert @chef.valid?, &quot;#{valids.inspect} should be valid&quot;
+    end
+  end
+  
+  test &quot;should reject invalid addresses&quot; do
+    invalid_emails = %w[mashrur@example mashrur@example,com mashrur.name@gmail. joe@bar+foo.com]
+    invalid_emails.each do |invalids|
+      @chef.email = invalids
+      assert_not @chef.valid?, &quot;#{invalids.inspect} should be invalid&quot;
+    end
+  end 
+  
+  test &quot;email should be unique and case insensitive&quot; do
+    duplicate_chef = @chef.dup
+    duplicate_chef.email = @chef.email.upcase
+    @chef.save
+    assert_not duplicate_chef.valid?
+  end
+  
+  test &quot;reject an invalid signup&quot; do
+    get signup_path
+    assert_no_difference &quot;Chef.count&quot; do
+      post chefs_path, params: { chef: { chefname: &quot; &quot;, 
+                                 email: &quot; &quot;, password: &quot;password&quot;,
+                                    password_confirmation: &quot; &quot; } }
+    end
+    assert_template 'chefs/new'
+    assert_select 'h2.panel-title'
+    assert_select 'div.panel-body'
+  end
+  
+  test &quot;accept valid signup&quot; do
+    get signup_path
+    assert_difference &quot;Chef.count&quot;, 1 do
+      post chefs_path, params: { chef: { chefname: &quot;mashrur&quot;, 
+                email: &quot;mashrur@example.com&quot;, password: &quot;password&quot;,
+                              password_confirmation: &quot;password&quot; } }
+    end
+    follow_redirect!
+    assert_template 'chefs/show'
+    assert_not flash.empty?
+  end
+  
+end
+
+# controller
+class Chef &lt; ApplicationRecord
+  validates :chefname, presence: true, length: { maximum: 30 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+  
+end
+</code></pre>
+<p>Downcase before save with test:</p>
+<pre><code class="language-ruby">before_save { self.email = email.downcase }
+
+# And then test it with:
+
+test &quot;email should be lower case before hitting db&quot; do
+  mixed_email = &quot;JohN@ExampLe.com&quot;
+  @chef.email = mixed_email
+  @chef.save
+  assert_equal mixed_email.downcase, @chef.reload.email 
+end
+</code></pre>
+<p>Create a association and test it:</p>
+<p>Association</p>
+<pre><code class="language-ruby"># chef model
+validates :chef_id, presence: true
+has_many :recipes
+
+# recipe model
+belongs_to :chef
+
+# destroy with dependent
+has_many :recipes, dependent: :destroy
+</code></pre>
+<p>Test</p>
+<pre><code class="language-ruby">def setup
+  @chef = Chef.create!(chefname: &quot;mashrur&quot;, email: &quot;mashrur@example.com&quot;)
+  @recipe = @chef.recipes.build(name: &quot;vegetable&quot;, description: &quot;great vegetable recipe&quot;)  
+end
+
+test &quot;recipe without chef should be invalid&quot; do
+  @recipe.chef_id = nil
+  assert_not @recipe.valid?
+end
+</code></pre>
+<h3 id="styling"><a class="header" href="#styling">Styling</a></h3>
+<p>Add <code>bootstrap</code> to project (good html/css tutorial <a href="https://learn.shayhowe.com/html-css/">link</a>):</p>
+<pre><code class="language-ruby">gem 'bootstrap-sass', '~&gt; 3.3.7'
+gem 'jquery-rails'
+
+# app/assets/javascripts/application.js
+//= require bootstrap-sprockets
+
+# app/assets/stylesheets/custom.css.scss
+@import &quot;bootstrap-sprockets&quot;;
+@import &quot;bootstrap&quot;;
+</code></pre>
+<h3 id="views"><a class="header" href="#views">Views</a></h3>
+<p>Render html for each data:</p>
+<pre><code class="language-ruby">&lt;%= f.collection_check_boxes :ingredient_ids,   
+                                    Ingredient.all, :id, :name do |cb| %&gt;  
+&lt;% cb.label(class: &quot;checkbox-inline input_checkbox&quot;) {cb.check_box(class: &quot;checkbox&quot;) + cb.text} %&gt;  
+      &lt;% end %&gt;
+</code></pre>
+<h3 id="database"><a class="header" href="#database">Database</a></h3>
+<p>Create migration:</p>
+<pre><code class="language-ruby">rails generate migration create_recipes
+
+# modify the migration file
+rails db:migrate
+</code></pre>
+<p>Rename column:</p>
+<pre><code class="language-ruby">rename_column :recipes, :email, :description
+rails db:migrate
+</code></pre>
+<p>Many to many association:</p>
+<pre><code class="language-ruby"># Model
+has_many :recipe_ingredients  
+has_many :recipes, through: :recipe_ingredients
+</code></pre>
+<h1 id="ruby"><a class="header" href="#ruby">Ruby</a></h1>
+<p>Some interesting ressources for the programming language ruby.</p>
+<h2 id="useful-functions"><a class="header" href="#useful-functions">Useful functions</a></h2>
+<p>Some <code>ruby</code> functions:</p>
+<pre><code class="language-ruby">truncate(recipe.description, length: 150)   # truncate
+time_ago_in_words(recipe.created_at)        # date
+pluralize(count, &quot;apple&quot;)                   # pluralize if count &gt; 1 to apples
+
+</code></pre>
+<h2 id="books-1"><a class="header" href="#books-1">Books</a></h2>
+<ul>
+<li><a href="https://i-love-ruby.gitlab.io/#_getting_started">I love ruby</a></li>
+</ul>
+<h1 id="cycling"><a class="header" href="#cycling">Cycling</a></h1>
+<h2 id="cool-bikes"><a class="header" href="#cool-bikes">Cool bikes</a></h2>
+<ul>
+<li><a href="https://bonvelo.de/singlespeed-e-bike/rakede-boost-black">Bonvelo E-bike</a></li>
+</ul>
+<h1 id="misc-1"><a class="header" href="#misc-1">Misc</a></h1>
+<p>@misc</p>
+<h3 id="avatar"><a class="header" href="#avatar">Avatar</a></h3>
+<p>Avatar maker</p>
+<pre><code class="language-bash">https://getavataaars.com/?accessoriesType=Blank&amp;clotheColor=Gray01&amp;clotheType=ShirtCrewNeck&amp;eyeType=Default&amp;eyebrowType=Default&amp;facialHairColor=BrownDark&amp;facialHairType=BeardLight&amp;hairColor=BrownDark&amp;mouthType=Serious&amp;skinColor=Brown&amp;topType=ShortHairShortFlat
+</code></pre>
+<p>Château Margüi - Châteauvert</p>
+<h1 id="berlin"><a class="header" href="#berlin">Berlin</a></h1>
+<p>Secret garden - vegan sushi
+Frea - vegan. Zero waste. 
+Kopps - weltbest vegan
+Mana - vegan
+Lucky leek - vegan</p>
+<h1 id="dÃ¼sseldorf"><a class="header" href="#dÃ¼sseldorf">DÃ¼sseldorf</a></h1>
+<ul>
+<li>in the japanese quarter, eat in &quot;Eat Tokyo&quot;</li>
+<li>Gusan</li>
+</ul>
+<h1 id="hamburg"><a class="header" href="#hamburg">Hamburg</a></h1>
+<p>Azeitona - vegetarische arabische Küche
+Boname - türkische Küche</p>
+<h1 id="london"><a class="header" href="#london">London</a></h1>
+<ul>
+<li>Darjeeling Express (indisch)</li>
+<li></li>
+</ul>
+<p>Marrakesch - Marokko</p>
+<ul>
+<li>Teppich laden nr 142 mr blauvier
+Beni Ourain Teppich aus Schafwolle Rautenmuster 1,45 x 2,15</li>
+<li>Restaurant le jardin
+tasjine und pastata essen
+Shop über dem Restaurant
+Norya Ayron
+qaftan kimono
+-souks Markt bazar
+-33 rue majorelle
+Tresor des nomades</li>
+<li>Ben jussuf</li>
+<li>Café de France
+-bazar Altstadt Medina</li>
+<li>rue Yves Saint Laurent - rue majorelle</li>
+<li>bahia Palast*</li>
+<li>Djemaa El Fna (: N°98 Mustafa / mix Teller)</li>
+<li>Restaurant &quot;Fundouk&quot; (Unbedingt probieren: Hühnchen mit kandierten Zitronen und Oliven.)</li>
+<li>Hamam – Place des Épices Spa</li>
+<li>Bain Bleu und Le Bains de marrakesch</li>
+<li>arganöl
+https://www.google.de/amp/s/www.cntraveler.com/galleries/2015-01-06/shopping-in-morocco-dont-leave-without-these-souvenirs-tapestries-argan-oil/amp</li>
+<li>Wasserfälle ouzoud</li>
+<li>La Crêperie de Marrakesch</li>
+<li>maison de la photographie</li>
+<li>Agadir
+-amlou
+-taj palace
+-la mamounia
+Kamel reiten
+Beduinen Zelt</li>
+<li>Quadtour in der Wüste
+La Palmeraie*
+​</li>
+</ul>
+<h1 id="portugal"><a class="header" href="#portugal">Portugal</a></h1>
+<ul>
+<li>taste portugisian cafe &quot;Sical 5 Estrelas&quot;</li>
+</ul>
+<h1 id="tel-aviv"><a class="header" href="#tel-aviv">Tel Aviv</a></h1>
+<p>Abu hasan - humus</p>
+<p>Cafe Sperl - Kapuziner/Melonch</p>
+<h1 id="kroatia"><a class="header" href="#kroatia">Kroatia</a></h1>
+<h2 id="krk"><a class="header" href="#krk">Krk</a></h2>
+<ul>
+<li><a href="https://www.visitkrk.com/de/villa_lurda/320_320/8">Villa Lurda</a></li>
+</ul>
+<h1 id="netherland"><a class="header" href="#netherland">Netherland</a></h1>
+<ul>
+<li>
+<p>Drouwenerzand Park
+Great park for kids with all-you-can-eat</p>
+</li>
+<li>
+<p>Giethorn
+Is called the dutch venice</p>
+</li>
+<li>
+<p>Camping in castricum (Gemüsehaus)
+<a href="https://www.campinggeversduin.de/mieten">Geversduin</a></p>
+</li>
+</ul>
+<h1 id="art"><a class="header" href="#art">Art</a></h1>
+<p>Favorite artists:</p>
+<h2 id="jean-michel-basquiat"><a class="header" href="#jean-michel-basquiat">Jean-Michel Basquiat</a></h2>
+<h2 id="pablo-picasso"><a class="header" href="#pablo-picasso">Pablo Picasso</a></h2>
+<h2 id="leon-löwentraut"><a class="header" href="#leon-löwentraut">Leon Löwentraut</a></h2>
+<h2 id="ivan-aivazovsky"><a class="header" href="#ivan-aivazovsky">Ivan Aivazovsky</a></h2>
+<h2 id="heinz-henschel"><a class="header" href="#heinz-henschel">Heinz Henschel</a></h2>
+<p>https://www.verlag-david.de</p>
+<h1 id="3-mäuse"><a class="header" href="#3-mäuse">3 Mäuse</a></h1>
+<p>Drei Mäuse sitzen an der Bar und protzen damit, wer von ihnen die coolste ist. Die Erste sagt: &quot;Wenn ich eine Mausefalle sehe, nehme ich mit der linken Hand den Käse raus. Mit der rechten fange ich den Bügel ab und mache vor dem Essen noch etwas Krafttraining&quot;. Die Zweite: &quot;Wenn bei uns Rattengift gestreut wird, nehme ich mir eine Rasierklinge, hacke den Stoff klein, lege eine Linie und zieh mir das Zeug durch die Nase.&quot; Die dritte Maus steht auf und geht. &quot;Hat's Dir die Sprache verschlagen?&quot; fragen die Mäuse. &quot;Ihr langweilt mich&quot;, sagt die Dritte. &quot;Ich geh nach Hause, die Katze ficken.&quot;</p>
+<h1 id="uwe"><a class="header" href="#uwe">Uwe</a></h1>
+<p>Ein Mann kommt in ein kleines Lokal und fragt: &quot;Habt ihr hier auch Nutten?&quot;
+Sagt der Wirt: &quot;Nee, wir haben nur unseren Uwe.&quot;
+Guckt der Mann etwas verwirrt und meint dann: &quot;Egal, ich bin so geil, ich brauche jetzt unbedingt Sex. Was kostet das denn?&quot;
+&quot;80€&quot;, sagt daraufhin der Wirt.
+&quot;OK. Und wie läuft das dann ab? Ich geb dem uwe die 80 € und dann wird gebumst?&quot;
+&quot;Nein, nicht ganz&quot;, sagt der Wirt. &quot;40 € bekommt unser Bürgermeister. Es ist sein Dorf und er hat es eigentlich nicht so gerne. So ist er beruhigt und sagt auch nix.&quot;
+&quot;OK, egal. Dann bekommt der Uwe eben 40€.&quot;
+&quot;Auch nicht&quot;, sagt der Wirt. 20 € bekomme ich. Das hier ist mein Gasthaus und ich hab das auch nicht so gerne.&quot;
+&quot;Soll mir auch recht sein&quot;, sagt der Mann. &quot;Bekommt der Uwe eben nur 20€.&quot;
+&quot;Auch falsch,&quot; sagt der Wirt. &quot;Die letzten 20€ teilen sich Michael und Rainer. Die halten Uwe fest. Der hat das nämlich auch nicht so gerne.&quot;</p>
+<h1 id="new-words-german"><a class="header" href="#new-words-german">New words (german)</a></h1>
+<p>Here I note all the unknown words, that I found while reading.</p>
+<pre><code>Amme
+Askese - grichische Büste
+Denunziation - Androhung/ öffentliche Beschuldigung
+Desjatine
+Dezennien
+Diabas
+Dossier - Sammlung von Dokumenten zu einem Thema
+Dschunke - ein oder mehrmstiger Segelschiff
+Elliptisch
+Eloxiert - Oberflächentechnik einer oxidischen Schutzschicht
+Entgraten -
+Epauletten - Schulterstück einer Uniform
+Equipagen
+Ethnographisch - 
+Fehdehandschuh - Streit beginnen/annehmen
+Flakon -  Glasgefäss
+Gestuet
+Goutiert - Gefallen haben/ jemand,etwas schätzen
+Hermaphrodit - Zwitter
+Jovial - wohlwollendes herablassendes Verhalten
+Kalesche
+Kiepe
+Kimono - jap. Kleidungsstück
+Konvolut - lat. zusammengerollt, Verwachsung
+Leuzismus
+Livree - Uniform der Dienerschaft
+Nomenklatur - Namesverzeichnis/Sammlung von Benennungen
+Nuancen - feine Optimierung
+Pein
+Pekuniär - Geld Finanzielle Basis
+Pelonken
+Percheron - Kaltblut Pferderasse
+Permutation - Anordnung von Objekten
+Praeludium - Eröffnungsinstrumental = Prä
+Präses - leitende Person kirchlicher Gremien
+Sublimiert - durch Veredelung auf eine höhere Stufe gebracht
+Synode - Kirhcenmitglider
+Teint
+Trunk
+Tuell
+</code></pre>
+<h1 id="ireland"><a class="header" href="#ireland">Ireland</a></h1>
+<p>A poem on our journey in ireland, the bus driver bud wishes a poem from her adventurers. </p>
+<blockquote>
+<p>living in the wild like a sheep
+alongside are the cliffs so deep
+Sitting in the bus listening to Bud's stories
+Makes you feel like there are no worries
+And all you want is this to keep.</p>
+</blockquote>
+<blockquote>
+<p>All those greyish stones around
+Standing together on the ground
+Walls builded by the people
+In the back a steeple
+And the wind makes a sad sound.</p>
+</blockquote>
+<blockquote>
+<p>To the cliffs from east to the west
+the guide bud does all the best
+tells us lots of funny stories
+creates for us some new memories
+One thing learned again: never rest
+​</p>
+</blockquote>
+<h1 id="quotes"><a class="header" href="#quotes">Quotes</a></h1>
+<p>Pablo Picasso</p>
+<blockquote>
+<p>Others have seen what is and asked why. I have seen what could be and asked why not.</p>
+</blockquote>
+<p>Goran Kikic(?)</p>
+<blockquote>
+<p>Alle sagten: Das geht nicht. Dann kam einer, der wusste das nicht und hat's gemacht.</p>
+</blockquote>
+<p>Leo Tolstoi (Lew Nikolajewitsch Tolstoi)</p>
+<blockquote>
+<p>Es gibt Menschen, die ein Stück Land ‚Mein‘ nennen, und dieses Land nie gesehen und betreten haben. Die Menschen trachten im Leben nicht danach zu tun, was sie für gut halten, sondern danach, möglichst viele Dinge ‚Mein‘ zu nennen.</p>
+</blockquote>
+<p>Dont know where I found it.</p>
+<blockquote>
+<p>Werbung = Die Kunst, auf den Kopf zu zielen und die Brieftasche zu treffen</p>
+</blockquote>
+<p>Asma Khan‘s father (Chefs table S6E3)</p>
+<blockquote>
+<p>Use your life to make a difference, because being in a position of privilege, you have a duty. To lift others up.</p>
+</blockquote>
+<p>Immanuel Kant</p>
+<blockquote>
+<p>Die Freiheit des Einzelnen endet dort, wo die Freiheit des Anderen beginnt.</p>
+</blockquote>
+<p>Savas Yurderi</p>
+<blockquote>
+<p>Der Sinn des Leben ist, deinem Leben einen Sinn zu geben</p>
+</blockquote>
+<p>Carl Josef »Necko« Neckermann. (1912 - 1992)</p>
+<blockquote>
+<p>Wer nicht mit der Zeit geht, geht mit der Zeit.</p>
+</blockquote>
+<p>Muhammad Ali</p>
+<blockquote>
+<p>If it doesn’t challenge you, it doesn’t change you</p>
+</blockquote>
+<p>Karl Stojka, Auschwitzüberlebender</p>
+<blockquote>
+<p>Es waren nicht Hitler oder Himmler, die mich verschleppt, geschlagen &amp; meine Familie erschossen haben.
+Es waren der Schuster, der Milchmann, der Nachbar, die eine Uniform bekamen und dann glaubten, sie seien die Herrenrasse.</p>
+</blockquote>
+<p>Wie man gut schreibt</p>
+<ol>
+<li>Alliterationen auslassen. Allezeit.</li>
+<li>Fuck Anglizismen!</li>
+<li>Denk Dir keine Sätze, die das Prädikat zerteilen, aus.</li>
+<li>Achte auf korekte Orthographie, und Interpunktion</li>
+<li>Meide das Klischee wie der Teufel das Weihwasser. 
+Es ist ein alter Hut. </li>
+<li>Vergleiche sind schlimmer als Klischees.</li>
+<li>Am schlimmsten sind Superlative. 
+Achtens: Halte Aufbau und Stil durch. </li>
+<li>Sei mehr oder weniger spezifisch.</li>
+<li>Kein Mensch mag allgemeine Behauptungen.</li>
+<li>Sei nicht redundant, benutze nicht mehr Wörter als nötig. 
+Das ist nämlich total absolut überflüssig. </li>
+<li>Wer braucht rhetorische Fragen?</li>
+<li>Übertreibung ist eine Million mal schlimmer als Untertreibung. 
+​</li>
+</ol>
+<h1 id="29-ways-to-stay-creative"><a class="header" href="#29-ways-to-stay-creative">29 ways to stay creative</a></h1>
+<p>Found it a long time ago and print it to a poster.</p>
+<pre><code>01 make Lists
+02 Carry a notebook everyWhere
+03 try Free Writing
+04 Get aWay From the Computer
+05 quit beatinG yourselF up
+06 take breaks
+07 sing in the shoWer
+08 drink Coffe
+09 Listen to neW musiC
+10 be open
+11 surround yourselF With Creative people
+12 get feedbaCk
+13 CoLLaborate
+14 don`t Give up
+15 praCtiCe praCtiCe praCtiCe
+16 alloW yourselF to make mistakes
+17 Go someWhere neW
+18 Count your bLessings
+19 Get lots oF rest
+20 take risks
+21 break the ruLes
+22 don`t forCe it
+23 read a paGe oF the diCtionary
+24 Create a frameWork
+25 stop tryinG to be someone else`s perfeCt
+26 Got an idea? Write it doWn
+27 CLean your WorkspaCe
+28 have fun
+29 Finish something
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
