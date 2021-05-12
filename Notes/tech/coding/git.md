@@ -1,6 +1,17 @@
 # GIT Versioning tool for developers
 > my daily most used commands
 
+## Ignoring bulk change commits with git blame (>git 2.23)
+
+Ignore revs after bulk changes (ie style, format) in git blame:
+
+```sh
+touch .git-blame-ignore-revs # put commit ids here
+git config --global blame.ignoreRevsFile .git-blame-ignore-revs # set file as default to ignore
+```
+
+Source: [moxio](https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame)
+
 ## Highly recommended
 
 The usage of aliases from git plugin/oh-my-zsh: [git-plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh) zsh-load: [zinit](https://github.com/dvogt23/dotfiles/blob/master/zsh/.zshrc#L40)
