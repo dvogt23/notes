@@ -31,4 +31,3 @@ Kamel reiten
 Beduinen Zelt
 - Quadtour in der Wüste
 La Palmeraie*
-    ​
