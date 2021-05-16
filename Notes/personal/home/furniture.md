@@ -15,6 +15,7 @@
   - Esspresso machine [rommelsbacher](https://www.rommelsbacher.de/de/kaffee-espresso-center-eks-3010.html)
   - Espresso machine [gaggia classic](https://www.gaggia.de/manual-machines/new-classic/)
   - [Breville](https://www.breville.com/us/en/products/espresso/bes920.html)
+  - [Bezzera BZ10](https://www.coffeecircle.com/de/p/bezzera-bz10-mit-eureka-mci)
 
 ## Interesting
   - Design [torquato](https://www.torquato.de/)
