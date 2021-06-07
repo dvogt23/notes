@@ -8,3 +8,4 @@ Sources:
  - Keyboard typing [Keybr](https://www.keybr.com/)
  - TypingClub [typingclub](https://www.typingclub.com)
  - Shortcuts [shortcutfoo](https://www.shortcutfoo.com/)
+ - TypeRacer [typeracer](https://play.typeracer.com/)

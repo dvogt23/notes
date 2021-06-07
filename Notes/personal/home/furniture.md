@@ -21,6 +21,9 @@
   - Design [torquato](https://www.torquato.de/)
   - Classics [pamono](https://www.pamono.de/)
 
+## Art
+  - [Inzpero](https://inzpero.de/)
+
 ## Indoor gardening
 
   - [Indoor-Jungle
