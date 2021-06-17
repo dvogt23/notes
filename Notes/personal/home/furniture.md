@@ -19,7 +19,7 @@
   - Waterfilter [alb](https://alb-filter.com/collections/trinkwasserfilter/products/alb-filter-untertisch-komplett-set)
 
 ## Office
-  - [Wilkhan Rider](https://shop.wilkhahn.com/Rider-Stehhilfe/205)
+  - [Wilkhan Rider](https://shop.wilkhahn.com/Rider-Stehhilfe/205) chair/bumper
 
 ## Interesting
   - Design [torquato](https://www.torquato.de/)
