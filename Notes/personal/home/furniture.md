@@ -16,6 +16,10 @@
   - Espresso machine [gaggia classic](https://www.gaggia.de/manual-machines/new-classic/)
   - [Breville](https://www.breville.com/us/en/products/espresso/bes920.html)
   - [Bezzera BZ10](https://www.coffeecircle.com/de/p/bezzera-bz10-mit-eureka-mci)
+  - Waterfilter [alb](https://alb-filter.com/collections/trinkwasserfilter/products/alb-filter-untertisch-komplett-set)
+
+## Office
+  - [Wilkhan Rider](https://shop.wilkhahn.com/Rider-Stehhilfe/205)
 
 ## Interesting
   - Design [torquato](https://www.torquato.de/)

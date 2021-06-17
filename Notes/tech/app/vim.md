@@ -2,6 +2,12 @@
 
 Some useful keybindings and many more for my favorite editor.
 
+### Articles
+
+Some interesting blog posts:
+
+ - [Vim for advanced users](https://thevaluable.dev/vim-advanced/)
+
 ### Settings
 
  - TypeScript environment
