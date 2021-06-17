@@ -215,6 +215,11 @@ Generate your ssh key without following command:</p>
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><p><a href="tech/app/vim.html#">#</a> VIM/NEOVIM 💓</p>
 <p>Some useful keybindings and many more for my favorite editor.</p>
+<h3 id="articles"><a class="header" href="#articles">Articles</a></h3>
+<p>Some interesting blog posts:</p>
+<ul>
+<li><a href="https://thevaluable.dev/vim-advanced/">Vim for advanced users</a></li>
+</ul>
 <h3 id="settings"><a class="header" href="#settings">Settings</a></h3>
 <ul>
 <li>TypeScript environment
@@ -1272,6 +1277,91 @@ KNX DIY service: <a href="https://mainsmarthome.de/">Main-Smarthome</a></p>
 <li>https://github.com/ReekyMarko/dotfiles</li>
 <li><a href="https://github.com/ishchow/dotfiles/blob/master/.config/nvim/lua/diary.lua">ishchow - lua</a></li>
 </ul>
+<h3 id="wireguard"><a class="header" href="#wireguard">Wireguard</a></h3>
+<p>Setup wireguard with good explanations: <a href="https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478">What They Don’t Tell You About Setting Up A WireGuard VPN</a></p>
+<pre><code># Generate keys in /etc/wireguard
+cd /etc/wireguard
+wg genkey | tee privatekey | wg pubkey &gt; publickey
+</code></pre>
+<pre><code># /etc/wireguard/wg0.conf on the server
+[Interface]
+Address = 10.0.0.1/24
+ListenPort = 51820
+# Use your own private key, from /etc/wireguard/privatekey
+PrivateKey = WCzcoJZaxurBVM/wO1ogMZgg5O5W12ON94p38ci+zG4=
+
+[Peer]
+# VPN client's public key
+PublicKey = lIINA9aXWqLzbkApDsg3cpQ3m4LnPS0OXogSasNW5RY=
+# VPN client's IP address in the VPN
+AllowedIPs = 10.0.0.8/32
+</code></pre>
+<p>Relaying traffic</p>
+<pre><code># /etc/sysctl.conf
+
+net.ipv4.ip_forward=1
+
+# Then apply the settings by running:
+sysctl -p
+</code></pre>
+<p>Client config:</p>
+<pre><code># /etc/wireguard/wg0.conf on the client
+[Interface]
+# The address your computer will use on the VPN
+Address = 10.0.0.8/32# Load your privatekey from file
+PostUp = wg set %i private-key /etc/wireguard/privatekey
+# Also ping the vpn server to ensure the tunnel is initialized
+PostUp = ping -c1 10.0.0.1[Peer]
+# VPN server's wireguard public key (USE YOURS!)
+PublicKey = CcZHeaO08z55/x3FXdsSGmOQvZG32SvHlrwHnsWlGTs=# Public IP address of your VPN server (USE YOURS!)
+# Use the floating IP address if you created one for your VPN server
+Endpoint = 123.123.123.123:51820# 10.0.0.0/24 is the VPN subnet
+AllowedIPs = 10.0.0.0/24# To also accept and send traffic to a VPC subnet at 10.110.0.0/20
+# AllowedIPs = 10.0.0.0/24,10.110.0.0/20# To accept traffic from and send traffic to any IP address through the VPN
+# AllowedIPs = 0.0.0.0/0# To keep a connection open from the server to this client
+# (Use if you're behind a NAT, e.g. on a home network, and
+# want peers to be able to connect to you.)
+# PersistentKeepalive = 25
+</code></pre>
+<h3 id="nginx-config"><a class="header" href="#nginx-config">NGINX config</a></h3>
+<p>Some nginx features for developers.</p>
+<p>Redirect a domain to localhost dev server:</p>
+<pre><code>user nginx;
+worker_processes auto;
+
+events {}
+
+http {
+    access_log  /var/log/nginx/access.log combined;
+
+    # include /etc/nginx/conf.d/*.conf;
+
+    upstream backend {
+        server backend.local:10000;
+    }
+
+    server {
+        server_name proxy.local;
+        listen 8000;
+
+        location / {
+            proxy_pass http://backend;
+        }
+    }
+}
+</code></pre>
+<p>Source: <a href="https://alex.dzyoba.com/blog/nginx-features-for-developers/">Nice nginx features for developers</a></p>
+<h3 id="floc-blocking"><a class="header" href="#floc-blocking">FLoC blocking</a></h3>
+<p>Block FLoC within traefik:</p>
+<pre><code># traefik.toml
+
+[http.middlewares]
+  [http.middlewares.floc.headers]
+    [http.middlewares.floc.headers.customResponseHeaders]
+        Permissions-Policy = &quot;interest-cohort=()&quot;
+
+</code></pre>
+<p>Source: <a href="https://paramdeo.com//blog/opting-your-website-out-of-googles-floc-network">Paramdeo Singh - Opting your Website out of Google’s FLoC Network</a></p>
 <h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
 <p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a>
 <code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
@@ -1655,6 +1745,11 @@ Gast: Marc Marshall &amp; Jana Palaske <a href="https://youtu.be/6B1BLF9LpYY">Vi
 <li>Espresso machine <a href="https://www.gaggia.de/manual-machines/new-classic/">gaggia classic</a></li>
 <li><a href="https://www.breville.com/us/en/products/espresso/bes920.html">Breville</a></li>
 <li><a href="https://www.coffeecircle.com/de/p/bezzera-bz10-mit-eureka-mci">Bezzera BZ10</a></li>
+<li>Waterfilter <a href="https://alb-filter.com/collections/trinkwasserfilter/products/alb-filter-untertisch-komplett-set">alb</a></li>
+</ul>
+<h2 id="office"><a class="header" href="#office">Office</a></h2>
+<ul>
+<li><a href="https://shop.wilkhahn.com/Rider-Stehhilfe/205">Wilkhan Rider</a></li>
 </ul>
 <h2 id="interesting"><a class="header" href="#interesting">Interesting</a></h2>
 <ul>
@@ -1834,6 +1929,12 @@ OBI</a></li>
 <h3 id="doorbell"><a class="header" href="#doorbell">Doorbell</a></h3>
 <ul>
 <li><a href="https://mathfel.de/produkt/4-draht-tuersprechanlage-gegensprechanlage-mit-wlan-und-7-zoll-monitor/">mathfel</a></li>
+</ul>
+<h2 id="self-made"><a class="header" href="#self-made">Self-made</a></h2>
+<p>If you want to try to do it yourself:</p>
+<h3 id="kanalization"><a class="header" href="#kanalization">Kanalization</a></h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bovzQx1zrhk">KR Initiative Kunstoffrohre - Der optimale Hausanschluss</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kids"><a class="header" href="#kids">Kids</a></h1>
 <h2 id="lifehacks"><a class="header" href="#lifehacks">Lifehacks</a></h2>
