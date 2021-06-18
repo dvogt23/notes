@@ -8,6 +8,10 @@
  * https://github.com/ReekyMarko/dotfiles
  * [ishchow - lua](https://github.com/ishchow/dotfiles/blob/master/.config/nvim/lua/diary.lua)
 
+### Cool stuff
+
+ - ASCII paint [asciiflow](https://asciiflow.com)
+
 ### Wireguard
 
 Setup wireguard with good explanations: [What They Don’t Tell You About Setting Up A WireGuard VPN](https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478)
