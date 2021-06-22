@@ -37,6 +37,7 @@
     - [Series](personal/input/series.md)
     - [Movies](personal/input/movies.md)
     - [Videos](personal/input/videos.md)
+    - [Articles](personal/input/articles.md)
   - [Home]()
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)
