@@ -11,6 +11,7 @@
 ### Cool stuff
 
  - ASCII paint [asciiflow](https://asciiflow.com)
+ - Privacy sexy [privacy.sexy](https://privacy.sexy/)
 
 ### Wireguard
 
