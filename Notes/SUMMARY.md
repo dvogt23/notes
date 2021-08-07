@@ -17,6 +17,7 @@
     - [Maven](tech/coding/maven.md)
     - [Rust](tech/coding/rust.md)
     - [Javascript](tech/coding/javascript.md)
+    - [Python](tech/coding/python.md)
   - [Equipment](tech/equipment.md)
   - [Linux]()
     - [Apps](tech/linux/apps.md)

@@ -12,6 +12,7 @@
 
  - ASCII paint [asciiflow](https://asciiflow.com)
  - Privacy sexy [privacy.sexy](https://privacy.sexy/)
+ - Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
 
 ### Wireguard
 

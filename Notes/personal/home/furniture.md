@@ -8,6 +8,7 @@
     - marley [Marley stir up wireless 249,99E](https://www.thehouseofmarley.de/stir-it-up-wireless-1.html)
   - Plants
     - [plantsome](https://www.plantsome.de/)
+    - [plant pot - etsy](https://www.etsy.com/listing/933513376/indoor-plant-pot-willow)
   - Seats
     - [Selia](https://kavehome.com/de/de/p/selia-stuhl-mit-antikem-nussbaumfinish)
 
@@ -25,6 +26,7 @@
 ## Interesting
   - Design [torquato](https://www.torquato.de/)
   - Classics [pamono](https://www.pamono.de/)
+  - Prints [independentrepublic](https://www.independentrepublic.it/collections/prints/products/sacred-profane-iii-4-prints-pack)
 
 ## Art
   - [Inzpero](https://inzpero.de/)

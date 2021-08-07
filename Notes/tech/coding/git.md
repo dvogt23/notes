@@ -1,6 +1,18 @@
 # GIT Versioning tool for developers
 > my daily most used commands
 
+## Commit to an older hash
+
+Run: `git-amend.sh <older-hash>`
+
+```bash git-amend.sh
+hash=$1
+git add .
+git commit --fixup $hash
+# 'GIT_EDITOR=true' makes the rebase non-interactive
+GIT_EDITOR=true git rebase -i --autosquash $hash^
+```
+
 ## Ignoring bulk change commits with git blame (>git 2.23)
 
 Ignore revs after bulk changes (ie style, format) in git blame:
