@@ -10,6 +10,7 @@
     - [Firefox](tech/app/firefox.md)
   - [Bash](tech/bash.md)
   - [Coding]()
+    - [Basic](tech/coding/basic.md)
     - [Environment](tech/coding/environment.md)
     - [Git](tech/coding/git.md)
     - [Kotlin](tech/coding/kotlin.md)
