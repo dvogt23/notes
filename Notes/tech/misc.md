@@ -15,6 +15,13 @@
  - Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
  - AirDrop [snapdrop](https://snapdrop.net/)
 
+### `target="_blank"` vulnerability
+
+Add always `rel="noopener noreferrer"` to `target="_blank"` links, because of:
+
+ - [stackoverflow](https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable)
+ - [jitbit](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)
+
 ### Wireguard
 
 Setup wireguard with good explanations: [What They Don’t Tell You About Setting Up A WireGuard VPN](https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478)
