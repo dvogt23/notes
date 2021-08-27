@@ -162,6 +162,12 @@
 <li>Youtube (ad-free) <a href="https://github.com/TeamPiped/Piped">piped</a></li>
 <li>AirDrop <a href="https://snapdrop.net/">snapdrop</a></li>
 </ul>
+<h3 id="target_blank-vulnerability"><a class="header" href="#target_blank-vulnerability"><code>target=&quot;_blank&quot;</code> vulnerability</a></h3>
+<p>Add always <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> links, because of:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable">stackoverflow</a></li>
+<li><a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">jitbit</a></li>
+</ul>
 <h3 id="wireguard"><a class="header" href="#wireguard">Wireguard</a></h3>
 <p>Setup wireguard with good explanations: <a href="https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478">What They Don’t Tell You About Setting Up A WireGuard VPN</a></p>
 <pre><code># Generate keys in /etc/wireguard
