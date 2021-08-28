@@ -43,3 +43,8 @@ Karl Stojka, Auschwitzüberlebender
 Mahatma Gandhi
 
 > Die Größe und den moralischen Fortschritt einer Nation kann man daran messen, wie sie ihre Tiere behandeln.
+
+Bertolt Brecht 
+
+> Reicher Mann und armer Mann standen da und sah’n sich an. Und der arme sagte bleich, wär ich nicht arm, wärst du nicht reich.
+
