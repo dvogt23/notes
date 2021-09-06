@@ -2,6 +2,10 @@
 
 Some interesting ressources for the programming language ruby.
 
+## Curriculum
+
+ - [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
+
 ## Useful functions
 Some `ruby` functions:
 
