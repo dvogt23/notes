@@ -3,6 +3,10 @@
 Rails is a very cool framework for web-applications and IMO the best for
 mvp-prototyping and beyond.
 
+## Curriculum
+
+ - [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
+
 Learning from some youtube guys:
 
  - [Video](https://www.youtube.com/watch?v=8i5JFLfbWkE) Source: [Projekt](https://github.com/justalever/projekt)
