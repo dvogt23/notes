@@ -48,3 +48,6 @@ Bertolt Brecht
 
 > Reicher Mann und armer Mann standen da und sah’n sich an. Und der arme sagte bleich, wär ich nicht arm, wärst du nicht reich.
 
+Albert Einstein
+
+> Diejenigen, die das Privileg haben, zu wissen, haben die Pflicht zu handeln.
