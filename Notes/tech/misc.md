@@ -14,6 +14,7 @@
  - Privacy sexy [privacy.sexy](https://privacy.sexy/)
  - Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
  - AirDrop [snapdrop](https://snapdrop.net/)
+ - Slide/Prasentation [sli.dev](https://sli.dev/)
 
 ### `target="_blank"` vulnerability
 

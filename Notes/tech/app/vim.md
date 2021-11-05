@@ -7,6 +7,7 @@ Some useful keybindings and many more for my favorite editor.
 Some interesting blog posts:
 
  - [Vim for advanced users](https://thevaluable.dev/vim-advanced/)
+ - [History and effective use of Vim](https://begriffs.com/posts/2019-07-19-history-use-vim.html)
 
 ### Settings
 

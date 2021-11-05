@@ -8,3 +8,4 @@
 
  - Camping in castricum (Gemüsehaus)
    [Geversduin](https://www.campinggeversduin.de/mieten)
+ - Texel [Bundgalow 165](https://www.vredelusttexel.nl/de/verblijf/accommodatie-item/81/Bungalow-165)
