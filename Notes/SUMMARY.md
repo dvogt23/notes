@@ -60,6 +60,7 @@
 - [Travel]()
   - [Countries]()
     - [Austria](travel/austria.md)
+    - [Columbia](travel/columbia.md)
     - [France](travel/france.md)
     - [Germany](travel/germany.md)
     - [Great britian](travel/greatbritian.md)
