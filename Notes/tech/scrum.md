@@ -19,7 +19,7 @@ Thats the most prefered agile software development method that I mostly worked w
 
  - good way:
    
-    Present something important or howto for usage of a finished feature to the product owner.
+    Present something important things or howto for usage of a finished feature to the product owner.
 
  - bad way:
     
@@ -35,16 +35,19 @@ Thats the most prefered agile software development method that I mostly worked w
     
         Everone inputs some points into the i.e. following columns.
 
-       | House of straw | House of sticks | House of bricks |
-       | ---            | ---             | ---             |
-       | ...            | ...             | ...             |
-       | Start          | Stop            | Continue        |
-       | ...            | ...             | ...             |
+| House of straw | House of sticks | House of bricks |
+| ---            | ---             | ---             |
+| ...            | ...             | ...             |
+  
+| Start          | Stop            | Continue        |
+| ---            | ---             | ---             |
+| ...            | ...             | ...             |
+  
+| Liked | Learned | Lacked | Longed for |
+| ---   | ---     | ---    | ---        |
+| ...   | ...     | ...    | ...        |
 
-       | Liked | Learned | Lacked | Longed for |
-       | ---   | ---     | ---    | ---        |
-       | ...   | ...     | ...    | ...        |
-
+  *
     - Step 2 (grooming):
 
       Everyone groom this points together (group them if same topic)
