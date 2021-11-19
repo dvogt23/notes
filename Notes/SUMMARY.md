@@ -26,6 +26,7 @@
     - [Apps](tech/linux/apps.md)
     - [Arch linux](tech/linux/arch.md)
     - [Linux commands](tech/linux/linux_commands.md)
+  - [Scrum](tech/scrum.md)
   - [Self-hosting]()
     - [Ideas](tech/selfhosting/ideas.md)
   - [Smart-Home]()
