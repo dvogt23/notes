@@ -6,6 +6,7 @@
  - Kopps - weltbest vegan
  - Mana - vegan
  - Lucky leek - vegan
+ - [Sudho 2](http://sadhu-restaurant.com/) indish
 
 ## Düsseldorf
 
