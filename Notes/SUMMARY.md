@@ -72,6 +72,7 @@
     - [Marokko](travel/marokko.md)
     - [Netherland](travel/netherland.md)
     - [Portugal](travel/portugal.md)
+    - [Spain](travel/spain.md)
 
 - [Misc]()
   - [Arts](misc/arts.md)
