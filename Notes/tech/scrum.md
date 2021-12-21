@@ -33,7 +33,7 @@ Thats the most prefered agile software development method that I mostly worked w
 
     - Step 1 (retro):
     
-        Everone inputs some points into the i.e. following columns.
+        Everyone inputs some points into the i.e. following columns.
 
 | House of straw | House of sticks | House of bricks |
 | ---            | ---             | ---             |
