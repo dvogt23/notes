@@ -15,6 +15,9 @@ Some interesting blog posts:
    Great article to this topic from [Jose Alvarez | medium](https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c)
  - Lua config
    Different stuff from [oroques](https://oroques.dev/notes/neovim-init/) [icyphox](https://icyphox.sh/blog/nvim-lua/)
+### Generate random secure string
+
+`:r! openssl rand -base64 12`
 
 ### Format json
 

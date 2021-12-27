@@ -1,5 +1,6 @@
 # Ideas
 
+ - TODO Note taking [wiz.cn](https://www.wiz.cn)
  - TODO todo management [vikunja](https://vikunja.io/docs/)
  - TODO host an own music streaming [navidrome](https://www.navidrome.org/docs/installation/docker/)
  - TODO Create own wireguard pihole on vs: [wirehole](https://github.com/IAmStoxe/wirehole)
