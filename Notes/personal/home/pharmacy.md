@@ -2,55 +2,55 @@
 
 Our home pharmacy list should always be present:
 
- - Antimückenspray 
+- Antimückenspray 
   - Autan
- - Erbrechen 
+- Erbrechen 
   - Vomex
- - Erkältung Grippostad
- - Halsschmerzen 
+- Erkältung Grippostad
+- Halsschmerzen 
   - Dobendan Strepsis Synergie Honig & Zitrone
- - Husten 
+- Husten 
   - Mucosolvan
- - Kopfschmerzen 
+- Kopfschmerzen 
   - Paracetamol
- - Krampf 
+- Krampf 
   - Buscopan
- - Magen-Darm 
+- Magen-Darm 
   - Iberogast
- - Mandelentzündung 
+- Mandelentzündung 
   - Tantum Verde Spray
   - Tonsipret Tabletten
- - Nasenspray 
+- Nasenspray 
   - Nasic+
- - Orthomol 
+- Orthomol 
   - Immun
- - Schmerz-/Fieber 
+- Schmerz-/Fieber 
   - Ibuprofen 400
- - Stiche 
+- Stiche 
   - Fenistil
- - Wunde 
+- Wunde 
   - Bepanthen
 
 **Kids**:
 
- - Blähungen 
+- Blähungen 
   - Lefax Pumpliquid
- - Durchfall 
+- Durchfall 
   - Elektrolyte Elotrans
   - Elektrolyte Oralpädon 240 Erdbeere
   - Loperamid
- - Fieber 
+- Fieber 
   - Paracetamol Zäpfchen 
   - Nurofen Saft
- - Ohrentropfen 
+- Ohrentropfen 
   - Otalgan
- - Schmerz 
+- Schmerz 
   - Voltaren
- - Schnupfen 
+- Schnupfen 
   - Kochsalzlösung 0,9% Ampullen
   - Nasivin für Babys (Kochsalz nicht hilft)
- - Verstopfung 
+- Verstopfung 
   - Babylax oder Glycilax Zäpfchen
   - Movicol
- - Zahnbeschwerden 
+- Zahnbeschwerden 
   - Dentinox Gel
