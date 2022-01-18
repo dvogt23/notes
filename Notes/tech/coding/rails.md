@@ -21,9 +21,9 @@ Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-
 
 ## Articles
 
- - Great note collection from [corsego](https://blog.corsego.com/)
+- Great note collection from [corsego](https://blog.corsego.com/)
   - devise, hotwire, turbo, darkmode, basics, views
- - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
+- Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
   - rails, ruby, ...
 
 ### Basics

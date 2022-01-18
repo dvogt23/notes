@@ -6,7 +6,8 @@ Our home pharmacy list should always be present:
   - Autan
 - Erbrechen 
   - Vomex
-- Erkältung Grippostad
+- Erkältung 
+  - Grippostad
 - Halsschmerzen 
   - Dobendan Strepsis Synergie Honig & Zitrone
 - Husten 
