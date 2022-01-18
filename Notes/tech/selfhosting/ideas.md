@@ -1,5 +1,15 @@
 # Ideas
 
+ - Great article about self-hosting architecture [cprimozic](https://cprimozic.net/blog/my-selfhosted-websites-architecture/)
+   - modern nginx features with difference modules
+   - phost for quick static site self-hosting
+   - plausible for analytics
+   - sentry for logging
+   - httpbin for api testing
+   - send for private file sharing
+   - munin for monitoring
+   - google cloud archive coldline for backup
+
  - TODO Note taking [wiz.cn](https://www.wiz.cn)
  - TODO todo management [vikunja](https://vikunja.io/docs/)
  - TODO host an own music streaming [navidrome](https://www.navidrome.org/docs/installation/docker/)

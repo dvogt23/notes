@@ -14,3 +14,7 @@
 **Rc** is a reference counted pointer for multiple owning. 
 
 Source: [Wrapper types](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/)
+
+### Articles
+
+ - Some nice tipps & tricks from [federicoterzi](https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/)

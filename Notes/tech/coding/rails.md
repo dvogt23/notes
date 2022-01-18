@@ -19,6 +19,13 @@ Learning from some youtube guys:
 
 Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [ruby](./ruby.md) notes:
 
+## Articles
+
+ - Great note collection from [corsego](https://blog.corsego.com/)
+  - devise, hotwire, turbo, darkmode, basics, views
+ - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
+  - rails, ruby, ...
+
 ### Basics
 
 Render plain text:

@@ -1,32 +1,56 @@
 # Pharmacy
 
-Our home pharmcy list should always be present:
+Our home pharmacy list should always be present:
 
- - Kopfschmerzen Paracetamol
- - Orthomol Immun
+ - Antimückenspray 
+  - Autan
+ - Erbrechen 
+  - Vomex
  - Erkältung Grippostad
- - Krampf Buscopan
- - Halsschmerzen Dobendan Strepsis Synergie Honig & Zitrone
- - Stiche Fenistil
- - Wunde Bepanthen
- - Husten Mucosolvan
- - Antimückenspray Autan
- - Magen-Darm Iberogast
- - Nasenspray Nasic+
- - Erbrechen Vomex
- - Schmerz-/Fieber Ibuprofen 400
+ - Halsschmerzen 
+  - Dobendan Strepsis Synergie Honig & Zitrone
+ - Husten 
+  - Mucosolvan
+ - Kopfschmerzen 
+  - Paracetamol
+ - Krampf 
+  - Buscopan
+ - Magen-Darm 
+  - Iberogast
+ - Mandelentzündung 
+  - Tantum Verde Spray
+  - Tonsipret Tabletten
+ - Nasenspray 
+  - Nasic+
+ - Orthomol 
+  - Immun
+ - Schmerz-/Fieber 
+  - Ibuprofen 400
+ - Stiche 
+  - Fenistil
+ - Wunde 
+  - Bepanthen
 
 **Kids**:
 
- - Schmerz Voltaren
- - Verstopfung Movicol
- - Schnupfen Nasivin für Babys (Kochsalz nicht hilft)
- - Verstopfung Babylax oder Glycilax Zäpfchen
- - Zahnbeschwerden Dentinox Gel
- - Blähungen Lefax Pumpliquid
- - Durchfall Loperamid
- - Ohrentropfen Otalgan
- - Durchfall Elektrolyte Oralpädon 240 Erdbeere
- - Schnupfen Kochsalzlösung 0,9% Ampullen
- - Durchfall Elektrolyte Elotrans
- - Fieber Paracetamol Zäpfchen oder Nurofen Saft
+ - Blähungen 
+  - Lefax Pumpliquid
+ - Durchfall 
+  - Elektrolyte Elotrans
+  - Elektrolyte Oralpädon 240 Erdbeere
+  - Loperamid
+ - Fieber 
+  - Paracetamol Zäpfchen 
+  - Nurofen Saft
+ - Ohrentropfen 
+  - Otalgan
+ - Schmerz 
+  - Voltaren
+ - Schnupfen 
+  - Kochsalzlösung 0,9% Ampullen
+  - Nasivin für Babys (Kochsalz nicht hilft)
+ - Verstopfung 
+  - Babylax oder Glycilax Zäpfchen
+  - Movicol
+ - Zahnbeschwerden 
+  - Dentinox Gel
