@@ -1854,6 +1854,10 @@ KNX DIY service: <a href="https://mainsmarthome.de/">Main-Smarthome</a></p>
 <li><a href="https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable">stackoverflow</a></li>
 <li><a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">jitbit</a></li>
 </ul>
+<h3 id="macos"><a class="header" href="#macos">MacOS</a></h3>
+<p>Shutdown without confirmation from terminal:</p>
+<p><code>osascript -e 'tell app &quot;System Events&quot; to shut down'</code></p>
+<p>Source: <a href="https://apple.stackexchange.com/a/103633">Stackexchange</a></p>
 <h3 id="wireguard"><a class="header" href="#wireguard">Wireguard</a></h3>
 <p>Setup wireguard with good explanations: <a href="https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478">What They Don’t Tell You About Setting Up A WireGuard VPN</a></p>
 <pre><code># Generate keys in /etc/wireguard
@@ -1940,21 +1944,15 @@ http {
 </code></pre>
 <p>Source: <a href="https://paramdeo.com//blog/opting-your-website-out-of-googles-floc-network">Paramdeo Singh - Opting your Website out of Google’s FLoC Network</a></p>
 <h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
-<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a>
-<code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
+<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
 <h3 id="security-book"><a class="header" href="#security-book">Security book</a></h3>
 <p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/%7Erja14/book.html">Book</a></p>
 <h3 id="linux-hardening-book"><a class="header" href="#linux-hardening-book">Linux hardening book</a></h3>
-<p>How to harden alinux system guide:
-<a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html">Book</a></p>
+<p>How to harden alinux system guide: <a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html">Book</a></p>
 <h3 id="custom-sortation-of-database-entries"><a class="header" href="#custom-sortation-of-database-entries">Custom sortation of database entries</a></h3>
 <p>Found an good article about, how handle the custom sortation of entires in sql database. TL;DR just add an column <code>pos</code> to the table and auto-increment this value. If insert an entry between of some rows, just calculate the new position for this entry like: ((pos n-1 + pos n+1) / 2</p>
 <p><strong>i.e.:</strong></p>
-<p>| names | pos |
-| peter | 1   |
-| tom   | 2   |
-| harry | 2.5 |
-| ben   | 3   |</p>
+<p>| names | pos | | peter | 1 | | tom | 2 | | harry | 2.5 | | ben | 3 |</p>
 <p><a href="https://begriffs.com/posts/2018-03-20-user-defined-order.html">begriffs.com - User defined order</a></p>
 <h3 id="owasp-10-most-critical-security-issues-for-web-applications"><a class="header" href="#owasp-10-most-critical-security-issues-for-web-applications">OWASP 10 most critical security issues for web applications</a></h3>
 <p>Some notes of: <a href="https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html">OWASP Top 10 - heise</a> from <a href="https://owasp.org/www-project-juice-shop/">Tobias Glemser</a></p>
@@ -1980,8 +1978,8 @@ http {
 </li>
 <li>Masche aus Maßnahmen zur Bekämpfung von Risiken schmählern die Gefahr</li>
 <li>Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest</li>
-<li>OWASP Ressourcen: <a href="https://owasp.org/www-project-web-security-testing-guide/">Web security testing guide</a>, <a href="https://hub.docker.com/r/vulnerables/web-dvwa">OWASP-BWA</a> - Test machine, <a href="https://www.zaproxy.org/docs/docker/baseline-scan/">ZAP</a>, <a href="https://owasp.org/www-project-juice-shop/">Juice-Shop</a> </li>
-<li>Angriffe: 
+<li>OWASP Ressourcen: <a href="https://owasp.org/www-project-web-security-testing-guide/">Web security testing guide</a>, <a href="https://hub.docker.com/r/vulnerables/web-dvwa">OWASP-BWA</a> - Test machine, <a href="https://www.zaproxy.org/docs/docker/baseline-scan/">ZAP</a>, <a href="https://owasp.org/www-project-juice-shop/">Juice-Shop</a></li>
+<li>Angriffe:
 <ul>
 <li>Injection
 <ul>
@@ -2720,7 +2718,7 @@ zerrupfen und untermengen.</p>
 <li><a href="https://www.muensterland.com/tourismus/themen/erlebnis-region-muensterland/picknick/picknickplaetze-muensterland/picknickplatz-bockholter-berge/">Bockholter Berge</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="documents"><a class="header" href="#documents">Documents</a></h1>
-<p>I prefer to scan my entire post incoming via iphone <a href="personal/">app</a> to my cloud and organize my personal document collection in following structure:</p>
+<p>I prefer to scan my entire post incoming via iphone <a href="https://apps.apple.com/de/app/scanner-pro-dokumente-scannen/id333710667">Readdle - Scanner Pro</a> to my cloud and organize my personal document collection in following structure:</p>
 <ul>
 <li>
 <p><strong>Arbeit und  Beruf</strong>
