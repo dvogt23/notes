@@ -30,6 +30,7 @@ Thats the most prefered agile software development method that I mostly worked w
  - good way:
    
    Great tool for retrospectives is [team-o-clock](https://www.teamoclock.com)
+   [goretro](https://app.goretro.ai/)
 
     - Step 1 (retro):
     
@@ -87,3 +88,4 @@ Thats the most prefered agile software development method that I mostly worked w
  - bad way:
     
     ...
+

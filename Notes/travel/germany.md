@@ -7,6 +7,7 @@
  - Mana - vegan
  - Lucky leek - vegan
  - [Sudho 2](http://sadhu-restaurant.com/) indish
+ - India Club - indisch
 
 ## Düsseldorf
 

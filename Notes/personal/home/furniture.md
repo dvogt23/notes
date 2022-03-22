@@ -28,16 +28,17 @@
   - Classics [pamono](https://www.pamono.de/)
   - Prints [independentrepublic](https://www.independentrepublic.it/collections/prints/products/sacred-profane-iii-4-prints-pack)
   - Furniture [articture](https://articture.com)
+  - [Vivense](https://www.vivense.de/)
 
 ## Electro
 
   - [Wandelt - KNX](https://www.elektro-wandelt.de)
-  - Lights [delampenspec](https://delampenspecialist.myshopify.com)
   - [Böttcher AG](https://www.bueromarkt-ag.de)
 
 ## Art
 
   - [Inzpero](https://inzpero.de/)
+  - [ARTlistic](https://artlistic.com)
 
 ## Roof
 
