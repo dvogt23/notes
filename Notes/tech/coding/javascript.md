@@ -30,3 +30,45 @@ console.trace() - output stack trace
 ```
 
 Source: [markodenic](https://markodenic.com/use-console-log-like-a-pro/)
+
+## React location listener
+
+To trigger event son laction change in React:
+
+```js
+import { useEffect } from 'react';
+
+import { useHistory } from 'react-router-dom';
+
+type EtrackWrapperProps = {
+  et_et: string;
+  et_pagename: string;
+};
+
+declare global {
+  interface Window {
+    gtag?: (key: string, trackingId: string, config: { page_path: string }) => void;
+    et_eC_Wrapper?: (props: EtrackWrapperProps) => void;
+  }
+}
+
+export type PushType = (id: string, pathname: string) => void;
+
+interface TrackingProps {
+  trackerId: string;
+  update: PushType;
+}
+
+export const useTracking = ({ trackerId, update }: TrackingProps) => {
+  const { listen } = useHistory();
+
+  useEffect(() => {
+    const unlisten = listen((location) => {
+      update(trackerId, location.pathname);
+    });
+
+    return unlisten;
+  }, [trackerId, update, listen]);
+};
+
+```

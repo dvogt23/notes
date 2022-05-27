@@ -1,8 +1,50 @@
-# Home-Assistent
+[#](#) Home-Assistent
 
 ## Cool stuff
 
  - awesome [ha](https://www.awesome-ha.com/)
+ - Community store [hacs](https://hacs.xyz/)
+ - Dashboard [mushroom](https://github.com/piitaya/lovelace-mushroom)
+
+## Pollenflug
+
+Sensoren anlegen:
+
+```yml
+# Pollenflug Informationen
+- platform: rest
+  scan_interval: 3600
+  name: "DWD Pollen"
+  resource: https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json
+  json_attributes_path: "$..content[?(@.partregion_id==42)].Pollen"
+  json_attributes:
+    - Erle
+    - Beifuss
+    - Ambrosia
+    - Birke
+    - Esche
+    - Hasel
+    - Graeser
+    - Roggen
+  value_template: "{{ value_json.last_update }}"
+- platform: template
+  sensors:
+    dwd_pollen_erle:
+      icon_template: "mdi:tree-outline"
+      friendly_name: "Erle"
+      value_template: >-
+        {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['today'] %}
+        {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
+      attribute_templates:
+        today: >-
+          {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['today'] %}
+          {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
+        tomorrow: >-
+          {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['tomorrow'] %}
+          {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
+```
+
+Source: [youtube/smarthomeyourself](https://youtu.be/yHI9Dt4xD4g)
 
 ## Shutter control
 

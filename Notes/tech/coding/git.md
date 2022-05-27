@@ -1,6 +1,38 @@
 # GIT Versioning tool for developers
 > my daily most used commands
 
+## Reducing size of git repository with git-replace
+
+For reporitories with a huge history it takes a long time to clone this whole
+git overhead.
+
+It relativy easy to spilit your history from one commit to a completly other
+repository.
+
+1. Create new repository (destination for your old history)
+1. Add this repository url to your huge repo:
+  `git remote add project-history C:\repos\git-replace\history`
+1. Create a history branch from your latest commit (first commit of history repo)
+  `git branch history 590f4d3`
+1. Push this branch to history-repo
+  `git push project-history history:main`
+1. Reduce size of main repo
+  `git commit-tree -m "For historic commits, run 'git replace <child-ID> 590f4d3'" "590f4d3~^{tree}"
+d3bee05dac84c66b7d13f99a5edf790688f51494`
+  `git rebase 590f4d3~ --onto d3bee05  --rebase-merges`
+1. Push small size to origin
+  `git push origin main --force-with-lease`
+1. Clone fresh repo and add history repo to main as a branch
+  `git remote add project-history C:\repos\git-replace\history`
+  `git fetch project-history`
+  `git branch history project-history/main`
+1. Replace a commit from main to history for connection
+  `git replace 92305a9 590f4d3`
+1. Delete replacement
+  `git replace -d 92305a9`
+
+Source: [andrewlock.net](https://andrewlock.net/reducing-the-size-of-a-git-repository-with-git-replace/)
+
 ## Commit to an older hash
 
 Run: `git-amend.sh <older-hash>`
