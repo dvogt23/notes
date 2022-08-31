@@ -163,23 +163,118 @@
 <li>AirDrop <a href="https://snapdrop.net/">snapdrop</a></li>
 <li>Slide/Prasentation <a href="https://sli.dev/">sli.dev</a></li>
 </ul>
-<h3 id="target_blank-vulnerability"><a class="header" href="#target_blank-vulnerability"><code>target=&quot;_blank&quot;</code> vulnerability</a></h3>
-<p>Add always <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> links, because of:</p>
+<h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
+<p>Navigating</p>
+<pre><code>Line number: go to that line and print it.
+pn - Print current line and line number.
+3kxe - mark line 3 as &quot;xe&quot;.
+'xep - print the line marked as xe.
+</code></pre>
+<p>Editing</p>
+<pre><code>a - start editing after the current line.
+i - start editing before the current line.
+c - replace the current line.
+end the editing with only a period on a line (.).
+1d - delete line 1.
+1,2j - join line one and two.
+</code></pre>
+<p>Printing</p>
+<pre><code>1,$p - print entire buffer.
+    ,p - also prints the entire buffer.
+2,3p - print lines 2 and 3.
+.,4p - print from the current line (.) to line 4.
+-1,+1p - print 1 line above and 1 line below the current line.
+</code></pre>
+<p>Buffer operations</p>
+<pre><code>2t4 - Copy line 2 to after line 4.
+2t$ - Copy line 2 to the end of the file.
+3m6 - Move line 3 to after line 6.
+2,4m$ - Move lines 2 to 4 to the end of the file.
+</code></pre>
+<p>Searching / replace</p>
+<pre><code>/like - Move to the next line after the current one matching regular expression /like.
+?Like - Search backwards.
+1s/re/jo - Substitute only the first occurence of re with jo on line 1.
+1s/re/jo/g - Substitute all occurences of re with jo on line 1.
+1,$s/re/jo/g - Substitute all occurences of re with jo in the whole buffer.
+</code></pre>
+<p>Regular expresions</p>
+<pre><code>g/re/p - print all the lines matching regular expression /re/.
+v/re/p - print all the lines NOT matching regular expression /re/.
+g/re/m$ - move all the lines matching regular expression /re/ to the end of the file.
+</code></pre>
+<p>Reading and writing</p>
+<pre><code>w file.txt - Save the current buffer as filename file.txt.
+w - Save the current buffer if the file is already saved.
+w1,4 - Save lines 1 to 4 to the current buffer.
+W - append to a file (not replace).
+r /etc/hosts - Insert the contents of /etc/hosts after the current line.
+r !ps -e - Insert the output of the command &quot;ps -e&quot; after the current line.
+e file.txt - Open the file file.txt and replace the current buffer.
+</code></pre>
+<p><a href="https://raymii.org/s/tutorials/ed_cheatsheet.html">Source: raymii.org</a></p>
+<h3 id="generate-qrcode-in-terminal"><a class="header" href="#generate-qrcode-in-terminal">Generate qrcode in terminal</a></h3>
+<p><code>qrencode -m 2 -t utf8 &lt; file.conf</code></p>
+<h3 id="macos-brew-install-older-version"><a class="header" href="#macos-brew-install-older-version">MacOS Brew install older version</a></h3>
 <ul>
-<li><a href="https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable">stackoverflow</a></li>
-<li><a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">jitbit</a></li>
+<li>You create a local “tap” - which I assume is something like a local brew repository</li>
+<li>You extract the desired version of the package into this local tap</li>
+<li>You install your local tap</li>
 </ul>
-<h3 id="macos"><a class="header" href="#macos">MacOS</a></h3>
-<p>Shutdown without confirmation from terminal:</p>
-<p><code>osascript -e 'tell app &quot;System Events&quot; to shut down'</code></p>
-<p>Source: <a href="https://apple.stackexchange.com/a/103633">Stackexchange</a></p>
-<h3 id="wireguard"><a class="header" href="#wireguard">Wireguard</a></h3>
-<p>Setup wireguard with good explanations: <a href="https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478">What They Don’t Tell You About Setting Up A WireGuard VPN</a></p>
-<pre><code># Generate keys in /etc/wireguard
+<pre><code class="language-bash"># use $USER variable to mimick userName/repoName structure
+# this does not actually create any git repositories
+# 1. create a new tap
+brew tap-new $USER/local-&lt;packageName&gt;
+# 2. extract into local tap
+brew extract --version=1.2.3 &lt;packageName&gt; $USER/local-&lt;packageName&gt;
+# 3. run brew install@version as usual
+brew install &lt;packageName&gt;@1.2.3
+```
+
+If not found:
+
+```bash
+# list all local taps
+brew tap
+
+# go to tap and check out correct hash
+cd /usr/local/Homebrew/Library/Taps/&lt;packageName&gt;
+git checkout &lt;hash&gt;
+# prevent brew from checking out different hash
+HOMEBREW_NO_AUTO_UPDATE=1 brew install &lt;packageName&gt;
+
+# can list and switch between all versions
+brew list --versions
+brew switch &lt;packageName&gt; &lt;version&gt;
+```
+
+### `target=&quot;_blank&quot;` vulnerability
+
+Add always `rel=&quot;noopener noreferrer&quot;` to `target=&quot;_blank&quot;` links, because of:
+
+* [stackoverflow](https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable)
+* [jitbit](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)
+
+### MacOS
+
+Shutdown without confirmation from terminal:
+
+`osascript -e 'tell app &quot;System Events&quot; to shut down'`
+
+Source: [Stackexchange](https://apple.stackexchange.com/a/103633)
+
+### Wireguard
+
+Setup wireguard with good explanations: [What They Don’t Tell You About Setting Up A WireGuard VPN](https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478)
+
+```
+# Generate keys in /etc/wireguard
 cd /etc/wireguard
 wg genkey | tee privatekey | wg pubkey &gt; publickey
-</code></pre>
-<pre><code># /etc/wireguard/wg0.conf on the server
+```
+
+```
+# /etc/wireguard/wg0.conf on the server
 [Interface]
 Address = 10.0.0.1/24
 ListenPort = 51820
@@ -191,17 +286,23 @@ PrivateKey = WCzcoJZaxurBVM/wO1ogMZgg5O5W12ON94p38ci+zG4=
 PublicKey = lIINA9aXWqLzbkApDsg3cpQ3m4LnPS0OXogSasNW5RY=
 # VPN client's IP address in the VPN
 AllowedIPs = 10.0.0.8/32
-</code></pre>
-<p>Relaying traffic</p>
-<pre><code># /etc/sysctl.conf
+```
+
+Relaying traffic
+
+```
+# /etc/sysctl.conf
 
 net.ipv4.ip_forward=1
 
 # Then apply the settings by running:
 sysctl -p
-</code></pre>
-<p>Client config:</p>
-<pre><code># /etc/wireguard/wg0.conf on the client
+```
+
+Client config:
+
+```
+# /etc/wireguard/wg0.conf on the client
 [Interface]
 # The address your computer will use on the VPN
 Address = 10.0.0.8/32# Load your privatekey from file
@@ -218,11 +319,16 @@ AllowedIPs = 10.0.0.0/24# To also accept and send traffic to a VPC subnet at 10.
 # (Use if you're behind a NAT, e.g. on a home network, and
 # want peers to be able to connect to you.)
 # PersistentKeepalive = 25
-</code></pre>
-<h3 id="nginx-config"><a class="header" href="#nginx-config">NGINX config</a></h3>
-<p>Some nginx features for developers.</p>
-<p>Redirect a domain to localhost dev server:</p>
-<pre><code>user nginx;
+```
+
+### NGINX config
+
+Some nginx features for developers.
+
+Redirect a domain to localhost dev server:
+
+```
+user nginx;
 worker_processes auto;
 
 events {}
@@ -245,122 +351,110 @@ http {
         }
     }
 }
-</code></pre>
-<p>Source: <a href="https://alex.dzyoba.com/blog/nginx-features-for-developers/">Nice nginx features for developers</a></p>
-<h3 id="floc-blocking"><a class="header" href="#floc-blocking">FLoC blocking</a></h3>
-<p>Block FLoC within traefik:</p>
-<pre><code># traefik.toml
+```
+
+Source: [Nice nginx features for developers](https://alex.dzyoba.com/blog/nginx-features-for-developers/)
+
+### FLoC blocking
+
+Block FLoC within traefik:
+
+```
+# traefik.toml
 
 [http.middlewares]
   [http.middlewares.floc.headers]
     [http.middlewares.floc.headers.customResponseHeaders]
         Permissions-Policy = &quot;interest-cohort=()&quot;
 
+```
+
+Source: [Paramdeo Singh - Opting your Website out of Google's FLoC Network](https://paramdeo.com//blog/opting-your-website-out-of-googles-floc-network)
+
+### Create QR-Code for your wifi
+
+[Source](https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/) `qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;`
+
+### Security book
+
+A most recommended it security book: [Book](https://www.cl.cam.ac.uk/\~rja14/book.html)
+
+### Linux hardening book
+
+How to harden alinux system guide: [Book](https://madaidans-insecurities.github.io/guides/linux-hardening.html)
+
+### Custom sortation of database entries
+
+Found an good article about, how handle the custom sortation of entires in sql database. TL;DR just add an column `pos` to the table and auto-increment this value. If insert an entry between of some rows, just calculate the new position for this entry like: ((pos n-1 + pos n+1) / 2
+
+**i.e.:**
+
+| names | pos | | peter | 1 | | tom | 2 | | harry | 2.5 | | ben | 3 |
+
+[begriffs.com - User defined order](https://begriffs.com/posts/2018-03-20-user-defined-order.html)
+
+### OWASP 10 most critical security issues for web applications
+
+Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html) from [Tobias Glemser](https://owasp.org/www-project-juice-shop/)
+
+**Content:**
+
+* Einführung in relevante Organisationen
+* Beispiele in der öffentlichen Wahrnehmung
+* Die zehn häufigsten Sicherheitsrisiken bei Webanwendungen – OWASP Top 10 (u. a. SQLInjection, Cross-Site-Scripting, CSRF, Denial-of-Service)
+* Interaktive Demonstrationen zu allen Risiken
+* Aufzeigen der Auswirkungen
+* Passende Beispiele mit realem Bezug
+* Vorstellung von Prüfwerkzeugen und Methoden bei der Prüfung in Form von Penetrationstests
+
+**Notes:**
+
+* XSS bei eBay -&gt; Haftung? Gesetzt sagt: Stand der Technik einhalten!
+* OWASP SAMM/Cheat Sheet anschauen
+* Pentest sicher/unsicher? Keine eindeutige Aussage, da Momentaufnahme!
+* Security Beauftragter muss Fragen stellen um die Kommunikation anzuregen
+  * Entwickler tragen keine Verantwortung, wenn Sicherheitsaspekte nicht berücksichtigt werden
+* Masche aus Maßnahmen zur Bekämpfung von Risiken schmählern die Gefahr
+* Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest
+* OWASP Ressourcen: [Web security testing guide](https://owasp.org/www-project-web-security-testing-guide/), [OWASP-BWA](https://hub.docker.com/r/vulnerables/web-dvwa) - Test machine, [ZAP](https://www.zaproxy.org/docs/docker/baseline-scan/), [Juice-Shop](https://owasp.org/www-project-juice-shop/)
+* Angriffe:
+  * Injection
+    * SQL, LDAP, OS-commands -&gt; backend
+    * XSS -&gt; frontend
+    * sqlmap / `Mc O'Caml` test
+  * Broken Authentication
+    * sessionId in GET
+    * nur sessionId als Authorisierung
+    * login brute-force verhindern
+  * Sesitive data sxposure
+    * backup files im www dir
+    * keine durchgängige Verschlüsslung
+  * XML External Entities (XXE)
+    * SOAP API
+  * Broken access control
+    * Zugriff auf Dateien `?page=/etc/passwd`
+    * per ID auf Daten dritter zugreifen
+  * Security misconfiguration
+    * Härtung der Infrastruktur
+    * update von 3rd party libs
+    * default accounts beachten
+  * XSS Cross-site-scriting
+    * js injection auf website
+  * Insecure deserialization
+    * parser libs updaten!
+  * Insufficient logging &amp; monitoring
+    * fehlerhafte login Versuche
+    * Transaktionen protokollieren
+
+**Eingabe im frontend &amp; backend! validieren vor API Aufruf!**
+
+**Trivia:**
+
+* Geheime Botschaften by Simon Singh (Buch)
+* Mr. Robot (Serie)
+* Hackers (Film)
+* Iron Sky (Film)
 </code></pre>
-<p>Source: <a href="https://paramdeo.com//blog/opting-your-website-out-of-googles-floc-network">Paramdeo Singh - Opting your Website out of Google’s FLoC Network</a></p>
-<h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
-<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
-<h3 id="security-book"><a class="header" href="#security-book">Security book</a></h3>
-<p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/%7Erja14/book.html">Book</a></p>
-<h3 id="linux-hardening-book"><a class="header" href="#linux-hardening-book">Linux hardening book</a></h3>
-<p>How to harden alinux system guide: <a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html">Book</a></p>
-<h3 id="custom-sortation-of-database-entries"><a class="header" href="#custom-sortation-of-database-entries">Custom sortation of database entries</a></h3>
-<p>Found an good article about, how handle the custom sortation of entires in sql database. TL;DR just add an column <code>pos</code> to the table and auto-increment this value. If insert an entry between of some rows, just calculate the new position for this entry like: ((pos n-1 + pos n+1) / 2</p>
-<p><strong>i.e.:</strong></p>
-<p>| names | pos | | peter | 1 | | tom | 2 | | harry | 2.5 | | ben | 3 |</p>
-<p><a href="https://begriffs.com/posts/2018-03-20-user-defined-order.html">begriffs.com - User defined order</a></p>
-<h3 id="owasp-10-most-critical-security-issues-for-web-applications"><a class="header" href="#owasp-10-most-critical-security-issues-for-web-applications">OWASP 10 most critical security issues for web applications</a></h3>
-<p>Some notes of: <a href="https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html">OWASP Top 10 - heise</a> from <a href="https://owasp.org/www-project-juice-shop/">Tobias Glemser</a></p>
-<p><strong>Content:</strong></p>
-<ul>
-<li>Einführung in relevante Organisationen</li>
-<li>Beispiele in der öffentlichen Wahrnehmung</li>
-<li>Die zehn häufigsten Sicherheitsrisiken bei Webanwendungen – OWASP Top 10 (u. a. SQLInjection, Cross-Site-Scripting, CSRF, Denial-of-Service)</li>
-<li>Interaktive Demonstrationen zu allen Risiken</li>
-<li>Aufzeigen der Auswirkungen</li>
-<li>Passende Beispiele mit realem Bezug</li>
-<li>Vorstellung von Prüfwerkzeugen und Methoden bei der Prüfung in Form von Penetrationstests</li>
-</ul>
-<p><strong>Notes:</strong></p>
-<ul>
-<li>XSS bei eBay -&gt; Haftung? Gesetzt sagt: Stand der Technik einhalten!</li>
-<li>OWASP SAMM/Cheat Sheet anschauen</li>
-<li>Pentest sicher/unsicher? Keine eindeutige Aussage, da Momentaufnahme!</li>
-<li>Security Beauftragter muss Fragen stellen um die Kommunikation anzuregen
-<ul>
-<li>Entwickler tragen keine Verantwortung, wenn Sicherheitsaspekte nicht berücksichtigt werden</li>
-</ul>
-</li>
-<li>Masche aus Maßnahmen zur Bekämpfung von Risiken schmählern die Gefahr</li>
-<li>Verarbeitung von Kreditkartendaten gesetzl. jährl. Pentest</li>
-<li>OWASP Ressourcen: <a href="https://owasp.org/www-project-web-security-testing-guide/">Web security testing guide</a>, <a href="https://hub.docker.com/r/vulnerables/web-dvwa">OWASP-BWA</a> - Test machine, <a href="https://www.zaproxy.org/docs/docker/baseline-scan/">ZAP</a>, <a href="https://owasp.org/www-project-juice-shop/">Juice-Shop</a></li>
-<li>Angriffe:
-<ul>
-<li>Injection
-<ul>
-<li>SQL, LDAP, OS-commands -&gt; backend</li>
-<li>XSS -&gt; frontend</li>
-<li>sqlmap / <code>Mc O'Caml</code> test</li>
-</ul>
-</li>
-<li>Broken Authentication
-<ul>
-<li>sessionId in GET</li>
-<li>nur sessionId als Authorisierung</li>
-<li>login brute-force verhindern</li>
-</ul>
-</li>
-<li>Sesitive data sxposure
-<ul>
-<li>backup files im www dir</li>
-<li>keine durchgängige Verschlüsslung</li>
-</ul>
-</li>
-<li>XML External Entities (XXE)
-<ul>
-<li>SOAP API</li>
-</ul>
-</li>
-<li>Broken access control
-<ul>
-<li>Zugriff auf Dateien <code>?page=/etc/passwd</code></li>
-<li>per ID auf Daten dritter zugreifen</li>
-</ul>
-</li>
-<li>Security misconfiguration
-<ul>
-<li>Härtung der Infrastruktur</li>
-<li>update von 3rd party libs</li>
-<li>default accounts beachten</li>
-</ul>
-</li>
-<li>XSS Cross-site-scriting
-<ul>
-<li>js injection auf website</li>
-</ul>
-</li>
-<li>Insecure deserialization
-<ul>
-<li>parser libs updaten!</li>
-</ul>
-</li>
-<li>Insufficient logging &amp; monitoring
-<ul>
-<li>fehlerhafte login Versuche</li>
-<li>Transaktionen protokollieren</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>Eingabe im frontend &amp; backend! validieren vor API Aufruf!</strong></p>
-<p><strong>Trivia:</strong></p>
-<ul>
-<li>Geheime Botschaften by Simon Singh (Buch)</li>
-<li>Mr. Robot (Serie)</li>
-<li>Hackers (Film)</li>
-<li>Iron Sky (Film)</li>
-</ul>
 
                     </main>
 

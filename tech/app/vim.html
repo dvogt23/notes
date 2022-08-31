@@ -160,6 +160,11 @@ Great article to this topic from <a href="https://jose-elias-alvarez.medium.com/
 <li>Lua config
 Different stuff from <a href="https://oroques.dev/notes/neovim-init/">oroques</a> <a href="https://icyphox.sh/blog/nvim-lua/">icyphox</a></li>
 </ul>
+<h3 id="print-mapping"><a class="header" href="#print-mapping">Print mapping</a></h3>
+<pre><code>:redir! &gt; vim_keys.txt
+:silent verbose map
+:redir END
+</code></pre>
 <h3 id="generate-random-secure-string"><a class="header" href="#generate-random-secure-string">Generate random secure string</a></h3>
 <p><code>:r! openssl rand -base64 12</code></p>
 <h3 id="format-json"><a class="header" href="#format-json">Format json</a></h3>
@@ -215,8 +220,8 @@ d&lt;CRL-V&gt;2j  delete 2 chars in that column
 Ctrl-w - delete back one word
 Ctrl-u - delete back to the start of line or the start of current insert
 </code></pre>
-<p>Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode? 
-You can do that with </p>
+<p>Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode?
+You can do that with</p>
 <pre><code>Ctrl-r 0
 </code></pre>
 <p>Source: [Jovica - Mastering Vim Quickly #127]</p>
