@@ -29,6 +29,7 @@
   - Prints [independentrepublic](https://www.independentrepublic.it/collections/prints/products/sacred-profane-iii-4-prints-pack)
   - Furniture [articture](https://articture.com)
   - [Vivense](https://www.vivense.de/)
+  - [Homeloo](https://homeloo.com/shop/)
 
 ## Electro
 

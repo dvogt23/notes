@@ -6,15 +6,22 @@ Some useful keybindings and many more for my favorite editor.
 
 Some interesting blog posts:
 
- - [Vim for advanced users](https://thevaluable.dev/vim-advanced/)
- - [History and effective use of Vim](https://begriffs.com/posts/2019-07-19-history-use-vim.html)
+- [Vim for advanced users](https://thevaluable.dev/vim-advanced/)
+- [History and effective use of Vim](https://begriffs.com/posts/2019-07-19-history-use-vim.html)
 
 ### Settings
 
- - TypeScript environment
-   Great article to this topic from [Jose Alvarez | medium](https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c)
- - Lua config
-   Different stuff from [oroques](https://oroques.dev/notes/neovim-init/) [icyphox](https://icyphox.sh/blog/nvim-lua/)
+- TypeScript environment
+  Great article to this topic from [Jose Alvarez | medium](https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c)
+- Lua config
+  Different stuff from [oroques](https://oroques.dev/notes/neovim-init/) [icyphox](https://icyphox.sh/blog/nvim-lua/)
+
+### Print mapping
+
+    :redir! > vim_keys.txt
+    :silent verbose map
+    :redir END
+
 ### Generate random secure string
 
 `:r! openssl rand -base64 12`
@@ -45,7 +52,7 @@ To delete lines with a pattern:
 
 " make line lowercase
 :g/useless/norm gu$
-````
+```
 
 Source: [A vim guide for advanced user](https://thevaluable.dev/vim-advanced/)
 
@@ -96,15 +103,16 @@ Source:
     Ctrl-h - delete back one character (just like Backspace)
     Ctrl-w - delete back one word
     Ctrl-u - delete back to the start of line or the start of current insert
-    
-Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode? 
-You can do that with 
+
+Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode?
+You can do that with
 
     Ctrl-r 0
 
 Source: [Jovica - Mastering Vim Quickly #127]
 
 ### Vim and shell
+
 Run command from vim
 
     :!{cmd}
@@ -125,17 +133,20 @@ write as input to command
 Source: [vim and the shell](https://vimways.org/2019/vim-and-the-shell/)
 
 ## Splits
+
 Splits are very useful i.e. in vimdiff. So here some keybindings.  
 Source: [thoughbot.com](https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally)  
 Help: `:help splits` & `:help CRTL-W`
 
 ### More natural splits opening
+
 Open new split panes to right and bottom, which feels more natural than Vim’s default:
 
     set splitbelow
     set splitright
 
-### Resizing splits 
+### Resizing splits
+
 Vim’s defaults are useful for changing split shapes:
 
     "Max out the height of the current split
@@ -148,6 +159,7 @@ Vim’s defaults are useful for changing split shapes:
     ctrl + w =
 
 ### More split manipulation
+
     "Swap top/bottom or left/right split
     Ctrl+W R
 

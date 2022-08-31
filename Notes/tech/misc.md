@@ -17,6 +17,103 @@
 * AirDrop [snapdrop](https://snapdrop.net/)
 * Slide/Prasentation [sli.dev](https://sli.dev/)
 
+### Ed cheatsheet
+
+Navigating
+
+    Line number: go to that line and print it.
+    pn - Print current line and line number.
+    3kxe - mark line 3 as "xe".
+    'xep - print the line marked as xe.
+
+Editing
+
+    a - start editing after the current line.
+    i - start editing before the current line.
+    c - replace the current line.
+    end the editing with only a period on a line (.).
+    1d - delete line 1.
+    1,2j - join line one and two.
+
+Printing
+
+    1,$p - print entire buffer.
+        ,p - also prints the entire buffer.
+    2,3p - print lines 2 and 3.
+    .,4p - print from the current line (.) to line 4.
+    -1,+1p - print 1 line above and 1 line below the current line.
+
+Buffer operations
+
+    2t4 - Copy line 2 to after line 4.
+    2t$ - Copy line 2 to the end of the file.
+    3m6 - Move line 3 to after line 6.
+    2,4m$ - Move lines 2 to 4 to the end of the file.
+
+Searching / replace
+
+    /like - Move to the next line after the current one matching regular expression /like.
+    ?Like - Search backwards.
+    1s/re/jo - Substitute only the first occurence of re with jo on line 1.
+    1s/re/jo/g - Substitute all occurences of re with jo on line 1.
+    1,$s/re/jo/g - Substitute all occurences of re with jo in the whole buffer.
+
+Regular expresions
+
+    g/re/p - print all the lines matching regular expression /re/.
+    v/re/p - print all the lines NOT matching regular expression /re/.
+    g/re/m$ - move all the lines matching regular expression /re/ to the end of the file.
+
+Reading and writing
+
+    w file.txt - Save the current buffer as filename file.txt.
+    w - Save the current buffer if the file is already saved.
+    w1,4 - Save lines 1 to 4 to the current buffer.
+    W - append to a file (not replace).
+    r /etc/hosts - Insert the contents of /etc/hosts after the current line.
+    r !ps -e - Insert the output of the command "ps -e" after the current line.
+    e file.txt - Open the file file.txt and replace the current buffer.
+
+[Source: raymii.org](https://raymii.org/s/tutorials/ed_cheatsheet.html)
+
+### Generate qrcode in terminal
+
+`qrencode -m 2 -t utf8 < file.conf`
+
+### MacOS Brew install older version
+
+ - You create a local “tap” - which I assume is something like a local brew repository
+ - You extract the desired version of the package into this local tap
+ - You install your local tap
+
+````bash
+# use $USER variable to mimick userName/repoName structure
+# this does not actually create any git repositories
+# 1. create a new tap
+brew tap-new $USER/local-<packageName>
+# 2. extract into local tap
+brew extract --version=1.2.3 <packageName> $USER/local-<packageName>
+# 3. run brew install@version as usual
+brew install <packageName>@1.2.3
+```
+
+If not found:
+
+```bash
+# list all local taps
+brew tap
+
+# go to tap and check out correct hash
+cd /usr/local/Homebrew/Library/Taps/<packageName>
+git checkout <hash>
+# prevent brew from checking out different hash
+HOMEBREW_NO_AUTO_UPDATE=1 brew install <packageName>
+
+# can list and switch between all versions
+brew list --versions
+brew switch <packageName> <version>
+```
+
 ### `target="_blank"` vulnerability
 
 Add always `rel="noopener noreferrer"` to `target="_blank"` links, because of:
