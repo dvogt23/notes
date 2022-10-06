@@ -1,5 +1,7 @@
 # Ruby
 
+Some interesting ressources for the programming language ruby.
+
 ## RVM SSL errors
 
 Install again with:
@@ -7,8 +9,6 @@ Install again with:
 ```
 rvm install 3.0.2 --with-openssl-dir=`brew --prefix openssl`
 ```
-
-Some interesting ressources for the programming language ruby.
 
 ## Useful functions
 Some `ruby` functions:

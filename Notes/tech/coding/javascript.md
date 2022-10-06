@@ -8,7 +8,7 @@ If this error occures:
 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
 ```
 
-You just have to drop you `.next` dir for fix that.
+You just have to drop your `.next` dir for fix that.
 
 ## Use console print
 
