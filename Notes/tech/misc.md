@@ -2,20 +2,34 @@
 
 ### Some interesting dotfiles:
 
-* https://github.com/webgefrickel/dotfiles #mutt
-* https://github.com:frank604/scripts.git
-* https://github.com/Northcode/dotfiles.git
-* https://github.com:rcr/dotfiles.git
-* https://github.com/ReekyMarko/dotfiles
-* [ishchow - lua](https://github.com/ishchow/dotfiles/blob/master/.config/nvim/lua/diary.lua)
+- https://github.com/webgefrickel/dotfiles #mutt
+- https://github.com:frank604/scripts.git
+- https://github.com/Northcode/dotfiles.git
+- https://github.com:rcr/dotfiles.git
+- https://github.com/ReekyMarko/dotfiles
+- [ishchow - lua](https://github.com/ishchow/dotfiles/blob/master/.config/nvim/lua/diary.lua)
 
 ### Cool stuff
 
-* ASCII paint [asciiflow](https://asciiflow.com)
-* Privacy sexy [privacy.sexy](https://privacy.sexy/)
-* Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
-* AirDrop [snapdrop](https://snapdrop.net/)
-* Slide/Prasentation [sli.dev](https://sli.dev/)
+- ASCII paint [asciiflow](https://asciiflow.com)
+- Privacy sexy [privacy.sexy](https://privacy.sexy/)
+- Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
+- AirDrop [snapdrop](https://snapdrop.net/)
+- Slide/Prasentation [sli.dev](https://sli.dev/)
+
+### Docker
+
+#### Show ip addresses of running containers:
+
+```bash
+docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.Networks.frontend.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+```
+
+### YAML get full path
+
+```bash
+cat myfile.yml | yq e '.. | select(. == "*") | {(path | join(".")): .} '
+```
 
 ### Ed cheatsheet
 
@@ -82,9 +96,9 @@ Reading and writing
 
 ### MacOS Brew install older version
 
- - You create a local “tap” - which I assume is something like a local brew repository
- - You extract the desired version of the package into this local tap
- - You install your local tap
+- You create a local “tap” - which I assume is something like a local brew repository
+- You extract the desired version of the package into this local tap
+- You install your local tap
 
 ````bash
 # use $USER variable to mimick userName/repoName structure
@@ -320,3 +334,4 @@ Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-
 * Mr. Robot (Serie)
 * Hackers (Film)
 * Iron Sky (Film)
+````

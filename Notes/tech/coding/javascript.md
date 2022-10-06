@@ -1,5 +1,15 @@
 # JavaScript
 
+## NextJS Error
+
+If this error occures:
+
+```
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
+```
+
+You just have to drop you `.next` dir for fix that.
+
 ## Use console print
 
 Different type to print to console:
@@ -11,7 +21,7 @@ console.debug() – Outputs a message to the console with the log level debug.
 console.warn() – Outputs a warning message.
 console.error() – Outputs an error message.
 
-console.assert() 
+console.assert()
 
 console.count() - count line execution
 console.dir() - print object
@@ -70,5 +80,4 @@ export const useTracking = ({ trackerId, update }: TrackingProps) => {
     return unlisten;
   }, [trackerId, update, listen]);
 };
-
 ```
