@@ -1021,6 +1021,10 @@ has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ruby"><a class="header" href="#ruby">Ruby</a></h1>
+<h2 id="rvm-ssl-errors"><a class="header" href="#rvm-ssl-errors">RVM SSL errors</a></h2>
+<p>Install again with:</p>
+<pre><code>rvm install 3.0.2 --with-openssl-dir=`brew --prefix openssl`
+</code></pre>
 <p>Some interesting ressources for the programming language ruby.</p>
 <h2 id="useful-functions"><a class="header" href="#useful-functions">Useful functions</a></h2>
 <p>Some <code>ruby</code> functions:</p>
@@ -1051,6 +1055,11 @@ Crossplatform desktop app -&gt; <a href="https://css-tricks.com/how-i-built-a-cr
 <li>Some nice tipps &amp; tricks from <a href="https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/">federicoterzi</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<h2 id="nextjs-error"><a class="header" href="#nextjs-error">NextJS Error</a></h2>
+<p>If this error occures:</p>
+<pre><code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
+</code></pre>
+<p>You just have to drop you <code>.next</code> dir for fix that.</p>
 <h2 id="use-console-print"><a class="header" href="#use-console-print">Use console print</a></h2>
 <p>Different type to print to console:</p>
 <pre><code class="language-javascript">console.log() – For general output of logging information.
@@ -1059,7 +1068,7 @@ console.debug() – Outputs a message to the console with the log level debug.
 console.warn() – Outputs a warning message.
 console.error() – Outputs an error message.
 
-console.assert() 
+console.assert()
 
 console.count() - count line execution
 console.dir() - print object
@@ -1113,7 +1122,6 @@ export const useTracking = ({ trackerId, update }: TrackingProps) =&gt; {
     return unlisten;
   }, [trackerId, update, listen]);
 };
-
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
 <h2 id="articles-3"><a class="header" href="#articles-3">Articles</a></h2>
@@ -1966,6 +1974,13 @@ KNX DIY service: <a href="https://mainsmarthome.de/">Main-Smarthome</a></p>
 <li>AirDrop <a href="https://snapdrop.net/">snapdrop</a></li>
 <li>Slide/Prasentation <a href="https://sli.dev/">sli.dev</a></li>
 </ul>
+<h3 id="docker"><a class="header" href="#docker">Docker</a></h3>
+<h4 id="show-ip-addresses-of-running-containers"><a class="header" href="#show-ip-addresses-of-running-containers">Show ip addresses of running containers:</a></h4>
+<pre><code class="language-bash">docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.Networks.frontend.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+</code></pre>
+<h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
+<pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
+</code></pre>
 <h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
 <p>Navigating</p>
 <pre><code>Line number: go to that line and print it.

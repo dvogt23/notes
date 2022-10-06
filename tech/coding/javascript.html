@@ -146,6 +146,11 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<h2 id="nextjs-error"><a class="header" href="#nextjs-error">NextJS Error</a></h2>
+<p>If this error occures:</p>
+<pre><code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
+</code></pre>
+<p>You just have to drop you <code>.next</code> dir for fix that.</p>
 <h2 id="use-console-print"><a class="header" href="#use-console-print">Use console print</a></h2>
 <p>Different type to print to console:</p>
 <pre><code class="language-javascript">console.log() – For general output of logging information.
@@ -154,7 +159,7 @@ console.debug() – Outputs a message to the console with the log level debug.
 console.warn() – Outputs a warning message.
 console.error() – Outputs an error message.
 
-console.assert() 
+console.assert()
 
 console.count() - count line execution
 console.dir() - print object
@@ -208,7 +213,6 @@ export const useTracking = ({ trackerId, update }: TrackingProps) =&gt; {
     return unlisten;
   }, [trackerId, update, listen]);
 };
-
 </code></pre>
 
                     </main>

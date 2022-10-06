@@ -163,6 +163,13 @@
 <li>AirDrop <a href="https://snapdrop.net/">snapdrop</a></li>
 <li>Slide/Prasentation <a href="https://sli.dev/">sli.dev</a></li>
 </ul>
+<h3 id="docker"><a class="header" href="#docker">Docker</a></h3>
+<h4 id="show-ip-addresses-of-running-containers"><a class="header" href="#show-ip-addresses-of-running-containers">Show ip addresses of running containers:</a></h4>
+<pre><code class="language-bash">docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.Networks.frontend.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+</code></pre>
+<h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
+<pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
+</code></pre>
 <h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
 <p>Navigating</p>
 <pre><code>Line number: go to that line and print it.
