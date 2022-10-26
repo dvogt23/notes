@@ -1,3 +1,10 @@
+---
+id: "tech/coding/ruby.md"
+aliases:
+  - "Ruby"
+tags: []
+---
+
 # Ruby
 
 Some interesting ressources for the programming language ruby.

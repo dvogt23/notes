@@ -16,6 +16,7 @@
 - Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
 - AirDrop [snapdrop](https://snapdrop.net/)
 - Slide/Prasentation [sli.dev](https://sli.dev/)
+- Mulit device for geeks [flipper zero](https://flipperzero.one/)
 
 ### Docker
 
@@ -96,7 +97,8 @@ Reading and writing
 
 ### MacOS Brew install older version
 
-- You create a local “tap” - which I assume is something like a local brew repository
+- You create a local “tap” - which I assume is something like a local brew
+  repository
 - You extract the desired version of the package into this local tap
 - You install your local tap
 
