@@ -16,6 +16,7 @@ jobs:
         with:
           mdbook-version: '0.4.10'
         # mdbook-version: 'latest'
+      - run: cargo install mdbook-yml-header
 
       - run: mdbook build
 
