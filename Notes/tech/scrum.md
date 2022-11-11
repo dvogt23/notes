@@ -11,7 +11,7 @@ Thats the most prefered agile software development method that I mostly worked w
     from front-/back-end. Talk about upcoming releases and their open todos.
 
  - bad way:
-    
+
     Everyone just saying what they did yesterday and whats the plan for that
     day.
 
@@ -22,7 +22,7 @@ Thats the most prefered agile software development method that I mostly worked w
     Present something important things or howto for usage of a finished feature to the product owner.
 
  - bad way:
-    
+
     Everyone summarize the tasks of the finished sprint from own perspective.
 
 ## Retrospective
@@ -73,19 +73,19 @@ Thats the most prefered agile software development method that I mostly worked w
 
  - good way:
    
-    ...
+    Create a good plan about the process of the next sprint with related tasks from frontend & backend.
 
  - bad way:
-    
-    ...
+
+    Just put some tasks into the next sprint and probably assign these to someone.
 
 ## Refinement
 
  - good way:
    
-    ...
+    Talk about tasks and pick someone from backend/frontend to make some technical assumptions about a possible approach.
 
  - bad way:
-    
-    ...
+ 
+    Just ask about question to some tasks and clearify these in a discussion.
 

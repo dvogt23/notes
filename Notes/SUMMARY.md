@@ -56,6 +56,7 @@
   - [Sport]()
     - [Cycling](personal/sport/cycling.md)
     - [Hiking](personal/sport/hiking.md)
+    - [Basketball](personal/sport/basketball.md)
   - [Documents](personal/documents.md)
   - [Misc](personal/misc.md)
 
