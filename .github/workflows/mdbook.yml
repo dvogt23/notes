@@ -1,22 +1,35 @@
 name: github pages
 
 on:
+  pull_request:
   push:
     branches:
       - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Cache cargo registry
+        uses: actions/cache@v3
+        continue-on-error: false
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git            
+            ~/.cargo/bin            
+          key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.lock') }}
+          restore-keys: |
+                        ${{ runner.os }}-cargo-
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: '0.4.10'
-        # mdbook-version: 'latest'
-      - run: cargo install mdbook-yml-header
+          mdbook-version: 'latest'
+      - name: Install mdbook-yml-header
+        run: command -v mdbook-yml-header || cargo install mdbook-yml-header
 
       - run: mdbook build
 
