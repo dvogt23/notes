@@ -1055,6 +1055,20 @@ time_ago_in_words(recipe.created_at)        # date
 pluralize(count, &quot;apple&quot;)                   # pluralize if count &gt; 1 to apples
 
 </code></pre>
+<h2 id="object-lookup"><a class="header" href="#object-lookup">Object lookup</a></h2>
+<pre><code class="language-ruby">module GildedRose
+	DEFAULT CLASS = Item
+	SPECIALIZED CLASSES = {
+		'normal' =&gt; Normal,
+		'Aged Brie' =&gt; Brie,
+		'Backstage passes to a TAFKAL80ETC concert' =&gt; Backstage }
+
+	def self.for(name, quality, days_remaining)
+		(SPECIALIZED CLASSES [name] || DEFAULT CLASS)
+			.new(quality, days_remaining)
+	end
+end
+</code></pre>
 <h2 id="books"><a class="header" href="#books">Books</a></h2>
 <ul>
 <li><a href="https://i-love-ruby.gitlab.io/#_getting_started">I love ruby</a></li>
