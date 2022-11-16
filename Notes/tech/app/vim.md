@@ -1,4 +1,4 @@
-[#](#) VIM/NEOVIM 💓
+# VIM/NEOVIM 💓
 
 Some useful keybindings and many more for my favorite editor.
 
@@ -8,6 +8,42 @@ Some interesting blog posts:
 
 - [Vim for advanced users](https://thevaluable.dev/vim-advanced/)
 - [History and effective use of Vim](https://begriffs.com/posts/2019-07-19-history-use-vim.html)
+
+### Copilot (docker)
+
+If you wanna try copilot:
+
+```bash
+docker run --name copilotcontainer -it debian:sid-slim
+
+apt update && apt upgrade -y
+
+apt install -y neovim nodejs git
+
+git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+
+vim
+
+# Now in vim type:
+# :Copilot setup
+# And then hit enter
+# The plugin will display a token.
+# Open a browser and paste the code on https://github.com/login/device
+# After a few moments, the plugin will finish the setup
+# Now exit vim
+# Exit the container
+
+docker commit copilotcontainer copilot
+
+docker rm copilotcontainer
+
+## All done
+
+# From now on, you can use the copilot container with:
+# docker run --rm -it copilot
+```
+
+Source: [gibney](https://www.gibney.org/copilot_vim_docker)
 
 ### Settings
 
