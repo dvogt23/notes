@@ -136,7 +136,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p><a href="#">#</a> VIM/NEOVIM 💓</p>
+                        <h1 id="vimneovim-"><a class="header" href="#vimneovim-">VIM/NEOVIM 💓</a></h1>
 <p>Some useful keybindings and many more for my favorite editor.</p>
 <h3 id="articles"><a class="header" href="#articles">Articles</a></h3>
 <p>Some interesting blog posts:</p>
@@ -144,6 +144,37 @@
 <li><a href="https://thevaluable.dev/vim-advanced/">Vim for advanced users</a></li>
 <li><a href="https://begriffs.com/posts/2019-07-19-history-use-vim.html">History and effective use of Vim</a></li>
 </ul>
+<h3 id="copilot-docker"><a class="header" href="#copilot-docker">Copilot (docker)</a></h3>
+<p>If you wanna try copilot:</p>
+<pre><code class="language-bash">docker run --name copilotcontainer -it debian:sid-slim
+
+apt update &amp;&amp; apt upgrade -y
+
+apt install -y neovim nodejs git
+
+git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+
+vim
+
+# Now in vim type:
+# :Copilot setup
+# And then hit enter
+# The plugin will display a token.
+# Open a browser and paste the code on https://github.com/login/device
+# After a few moments, the plugin will finish the setup
+# Now exit vim
+# Exit the container
+
+docker commit copilotcontainer copilot
+
+docker rm copilotcontainer
+
+## All done
+
+# From now on, you can use the copilot container with:
+# docker run --rm -it copilot
+</code></pre>
+<p>Source: <a href="https://www.gibney.org/copilot_vim_docker">gibney</a></p>
 <h3 id="settings"><a class="header" href="#settings">Settings</a></h3>
 <ul>
 <li>TypeScript environment

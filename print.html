@@ -200,7 +200,7 @@
 Generate your ssh key without following command:</p>
 <pre><code>	ssh-keygen -t rsa -b 2046 -m PEM -f ./secret.key
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><p><a href="tech/app/vim.html#">#</a> VIM/NEOVIM 💓</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vimneovim-"><a class="header" href="#vimneovim-">VIM/NEOVIM 💓</a></h1>
 <p>Some useful keybindings and many more for my favorite editor.</p>
 <h3 id="articles"><a class="header" href="#articles">Articles</a></h3>
 <p>Some interesting blog posts:</p>
@@ -208,6 +208,37 @@ Generate your ssh key without following command:</p>
 <li><a href="https://thevaluable.dev/vim-advanced/">Vim for advanced users</a></li>
 <li><a href="https://begriffs.com/posts/2019-07-19-history-use-vim.html">History and effective use of Vim</a></li>
 </ul>
+<h3 id="copilot-docker"><a class="header" href="#copilot-docker">Copilot (docker)</a></h3>
+<p>If you wanna try copilot:</p>
+<pre><code class="language-bash">docker run --name copilotcontainer -it debian:sid-slim
+
+apt update &amp;&amp; apt upgrade -y
+
+apt install -y neovim nodejs git
+
+git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+
+vim
+
+# Now in vim type:
+# :Copilot setup
+# And then hit enter
+# The plugin will display a token.
+# Open a browser and paste the code on https://github.com/login/device
+# After a few moments, the plugin will finish the setup
+# Now exit vim
+# Exit the container
+
+docker commit copilotcontainer copilot
+
+docker rm copilotcontainer
+
+## All done
+
+# From now on, you can use the copilot container with:
+# docker run --rm -it copilot
+</code></pre>
+<p>Source: <a href="https://www.gibney.org/copilot_vim_docker">gibney</a></p>
 <h3 id="settings"><a class="header" href="#settings">Settings</a></h3>
 <ul>
 <li>TypeScript environment
@@ -614,8 +645,6 @@ mvp-prototyping and beyond.</p>
 <li>Best practises <a href="https://youtu.be/vw7PlBvLq9k">Semicolon&amp;Sons - Best practises I</a>
 Passing ruby data to javaScript</li>
 </ul>
-<h2 id="professional-ruby-on-rails-developer-with-rails-5"><a class="header" href="#professional-ruby-on-rails-developer-with-rails-5">Professional Ruby on Rails Developer with Rails 5</a></h2>
-<p>Some note while making the <a href="https://www.udemy.com/course/pro-ruby-on-rails-rails5/">udamy course</a> and some <a href="tech/coding/./ruby.html">ruby</a> notes:</p>
 <h2 id="articles-1"><a class="header" href="#articles-1">Articles</a></h2>
 <ul>
 <li>Great note collection from <a href="https://blog.corsego.com/">corsego</a>
@@ -629,6 +658,8 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h2 id="professional-ruby-on-rails-developer-with-rails-5"><a class="header" href="#professional-ruby-on-rails-developer-with-rails-5">Professional Ruby on Rails Developer with Rails 5</a></h2>
+<p>Some note while making the <a href="https://www.udemy.com/course/pro-ruby-on-rails-rails5/">udamy course</a> and some <a href="tech/coding/./ruby.html">ruby</a> notes:</p>
 <h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
 <p>Render plain text:</p>
 <pre><code class="language-ruby">def hello
@@ -1045,6 +1076,32 @@ Crossplatform desktop app -&gt; <a href="https://css-tricks.com/how-i-built-a-cr
 <ul>
 <li>Some nice tipps &amp; tricks from <a href="https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/">federicoterzi</a></li>
 </ul>
+<h2 id="error-handling"><a class="header" href="#error-handling">Error handling</a></h2>
+<p>Rusts result type is a great construct for creating error chains, something like:</p>
+<pre><pre class="playground"><code class="language-rust edition2018"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn read_config_file(path: &amp;str)
+    -&gt; Result&lt;String, ConfigFileError&gt; {
+    std::fs::read_to_string(path)
+        .map_err(ConfigFileError::ReadError)
+}
+
+fn parse_config_file(file: String) 
+    -&gt; Result&lt;i32, ConfigFileError&gt; {
+    file.parse()
+        .map_err(ConfigFileError::ParseError)
+}
+
+fn work_with_config_file(path: &amp;str) 
+    -&gt; Result&lt;i32, ConfigFileError&gt; {
+    // No ? required at all - just directly return
+    // the Result, since the types match!
+    read_config_file(path).and_then(parse_config_file)
+    // .and_then(something_else).and_then(even_more_things) ....
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>Source: <a href="https://naiveai.hashnode.dev/rust-result-cool">naiveai</a>, <a href="https://blog.burntsushi.net/rust-error-handling/">bruntsushi</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
 <h2 id="nextjs-error"><a class="header" href="#nextjs-error">NextJS Error</a></h2>
 <p>If this error occures:</p>
@@ -2968,7 +3025,8 @@ zerrupfen und untermengen.</p>
 <ul>
 <li><a href="https://www.muensterland.com/tourismus/themen/erlebnis-region-muensterland/picknick/picknickplaetze-muensterland/picknickplatz-bockholter-berge/">Bockholter Berge</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><p>I love playing basketball and doing it in a local team twice a week. Here are some notes about my favorite sport.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basketball"><a class="header" href="#basketball">Basketball</a></h1>
+<p>I love playing basketball and doing it in a local team twice a week. Here are some notes about my favorite sport.</p>
 <h3 id="defense"><a class="header" href="#defense">Defense</a></h3>
 <p>A <a href="https://de.wikihow.com/Beim-Basketball-in-der-Verteidigung-spielen#Ohne-Ball-verteidigen">good article</a> about defense position and play moves.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="documents"><a class="header" href="#documents">Documents</a></h1>

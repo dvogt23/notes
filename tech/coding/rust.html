@@ -153,6 +153,32 @@ Crossplatform desktop app -&gt; <a href="https://css-tricks.com/how-i-built-a-cr
 <ul>
 <li>Some nice tipps &amp; tricks from <a href="https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/">federicoterzi</a></li>
 </ul>
+<h2 id="error-handling"><a class="header" href="#error-handling">Error handling</a></h2>
+<p>Rusts result type is a great construct for creating error chains, something like:</p>
+<pre><pre class="playground"><code class="language-rust edition2018"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn read_config_file(path: &amp;str)
+    -&gt; Result&lt;String, ConfigFileError&gt; {
+    std::fs::read_to_string(path)
+        .map_err(ConfigFileError::ReadError)
+}
+
+fn parse_config_file(file: String) 
+    -&gt; Result&lt;i32, ConfigFileError&gt; {
+    file.parse()
+        .map_err(ConfigFileError::ParseError)
+}
+
+fn work_with_config_file(path: &amp;str) 
+    -&gt; Result&lt;i32, ConfigFileError&gt; {
+    // No ? required at all - just directly return
+    // the Result, since the types match!
+    read_config_file(path).and_then(parse_config_file)
+    // .and_then(something_else).and_then(even_more_things) ....
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>Source: <a href="https://naiveai.hashnode.dev/rust-result-cool">naiveai</a>, <a href="https://blog.burntsushi.net/rust-error-handling/">bruntsushi</a></p>
 
                     </main>
 
