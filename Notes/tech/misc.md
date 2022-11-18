@@ -102,7 +102,7 @@ Reading and writing
 - You extract the desired version of the package into this local tap
 - You install your local tap
 
-````bash
+```bash
 # use $USER variable to mimick userName/repoName structure
 # this does not actually create any git repositories
 # 1. create a new tap

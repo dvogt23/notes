@@ -38,7 +38,7 @@ module GildedRose
 		'Backstage passes to a TAFKAL80ETC concert' => Backstage }
 
 	def self.for(name, quality, days_remaining)
-		(SPECIALIZED_CLASSES [name] || DEFAULT_CLASS)
+		(SPECIALIZED_CLASSES[name] || DEFAULT_CLASS)
 			.new(quality, days_remaining)
 	end
 end
