@@ -26,10 +26,20 @@
 docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.Networks.frontend.IPAddress }} {{ .Name }}' | sed 's/ \// /'
 ```
 
+### Raspberry Pi
+
+Show the model in shell `cat /sys/firmware/devicetree/base/model`
+
 ### YAML get full path
 
 ```bash
 cat myfile.yml | yq e '.. | select(. == "*") | {(path | join(".")): .} '
+```
+
+### Replace passwords in `gz` logile
+
+```bash
+gzip -cd rails.log.gz | sed -re 's/(\"password\"=>)(\"(.*)\",)/\1\"[FILTERed]",/g' | sed -re 's/(\"password_confirmation\"=>)(\"(.*)\")/\1\"[FILTERed]"/g' | gzip > rails.tmp
 ```
 
 ### Ed cheatsheet

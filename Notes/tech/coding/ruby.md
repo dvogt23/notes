@@ -17,6 +17,16 @@ Install again with:
 rvm install 3.0.2 --with-openssl-dir=`brew --prefix openssl`
 ```
 
+If you got `You must recompile Ruby with OpenSSL support` on Mac ARM (M1) you have to:
+
+```bash
+brew uninstall openssl@3
+brew reinstall openssl@1.1
+
+#open new shell
+rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disable-binary
+```
+
 ## Useful functions
 Some `ruby` functions:
 
@@ -47,3 +57,9 @@ end
 ## Books
 
  - [I love ruby](https://i-love-ruby.gitlab.io/#_getting_started)
+
+        {%- for key,item in
+        state_attr('binary_sensor.multimatic_errors_21212300202609620938026089n5',
+        'errors').items() if key=='title' -%}
+         {% if not loop.first %},{% endif %}{{ item }}
+        {% endfor -%}

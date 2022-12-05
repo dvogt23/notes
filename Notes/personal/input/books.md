@@ -2,9 +2,25 @@
 
 Here is a list of books I read in the past, after school. My favorit genre are non-fiction books and biographies.
 
-### Wishlist
+### 2022
 
-* ?
+**Imperium USA** by Daniele Ganser
+ISBN: 978-3-946778-27-1 ⭐ ⭐ ⭐ ⭐
+
+> US-Offiziere wie General Butler wissen, dass der US-Imperialismus in Lateinamerika rücksichtslos wütete. »Von 1909 bis 1912 war ich an der Säuberung Nicaraguas für das internationale Bankhaus Brown Brothers beteiligt«, erinnert sich Butler. »1916 habe ich den amerikanischen Zucker-baronen die Dominikanische Republik serviert. In China half ich, dafür zu sorgen, dass Standard Oil ungestört seinen Geschäften nachgehen konnte. In diesen Jahren hatte ich, wie die Jungs in den Hinterzimmern sagen würden, eine prächtige Gangsterbande am Laufen. Wenn ich so zurückblicke, glaube ich, dass ich Al Capone ein paar Tipps hätte geben können. Er schaffte es gerade einmal, mit seiner Bande in drei Bezirken zu operieren. Ich operierte auf drei Kontinenten.«
+
+> Black Elk, der Medizinmann der Oglala Sioux, war ein Vertreter der Friedensbewegung und beschrieb diese Verbundenheit mit der Mensch-heitsfamilie so: »Der erste Friede - der wichtigste - ist der, welcher in die Seelen der Menschen einzieht, wenn sie ihre Verwandtschaft, ihre Harmonie mit dem Universum einsehen und wissen, dass im Mittelpunkt der Welt das große Geheimnis wohnt, und dass diese Mitte tatsächlich überall ist. Sie ist in jedem von uns - dies ist der wirkliche Friede, alle anderen sind lediglich Spiegelungen davon. Der zweite Friede ist der, welcher zwischen Einzelnen geschlossen wird, und der dritte ist der zwischen Völkern.
+Aber vor allem sollt ihr sehen, dass es nie Frieden zwischen Völkern geben kann, wenn nicht der erste Friede vorhanden ist, der, wie ich schon sagte, innerhalb der Menschenseele wohnt.«
+
+**Einzeln sein** by Rüdiger Safranski
+ISBN: 978-3-446-25671-2 ⭐ ⭐ ⭐ ⭐
+
+> Das ist die Pointe des Ganzen: Der Sinn von Sein ist die Zeit.
+Es gibt nichts Beharrendes. Wenn der Sinn von Sein die Zeit ist, so heißt das: Keine übergreifende Idee, kein Gott, kein Ziel der Geschichte und so fort verbürgen diesen Sinn, wie das in der Tradition üblich ist. Es bleibt die Zeit, die zwar nicht aufhört, aber in der wir aufhören, weil wir befristet sind. Unsere Zeit ist die befristete, die tödliche Zeit.
+
+> Der Denkende ist zwar vereinzelt, aber nicht einsam, denn er bleibt in Gesellschaft - mit sich selbst. Denken, so Hannah Arendt, ist mit der Erfahrung des inneren Gesprächs mit sich selbst verbunden: Das Denken ist, existentiell gesehen, etwas, das man allein tut, aber nicht einsam: allein sein heißt mit sich selbst umgehen; einsam sein heißt alleine sein, ohne sich in das Zwei-in-einem aufspalten zu können, ohne sich selbst Gesellschaft leisten zu können.
+
+> Dieser Vergleichszwang begünstigt zwar Wettbewerb und Konkurrenz und damit das Streben nach überbietender Originalität, doch es entstehen eben auch neue Anpassungszwänge. Der Vergleichshorizont weitet sich, und es wird immer schwieriger, für sich selbst Maßstäbe und Orientierungen zu finden. In Anbetracht der vielen Möglichkeiten und Angebote ist das Eigene, was immer es bedeuten mag, in Ge-fahr, entwertet zu werden. Und so schließt man sich eben einer Kohorte an und übernimmt die dort maßgeblichen Standards beim Lebens-stil, bei Meinungen und Uberzeugungen.
 
 ### 2020
 
