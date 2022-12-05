@@ -58,8 +58,4 @@ end
 
  - [I love ruby](https://i-love-ruby.gitlab.io/#_getting_started)
 
-        {%- for key,item in
-        state_attr('binary_sensor.multimatic_errors_21212300202609620938026089n5',
-        'errors').items() if key=='title' -%}
-         {% if not loop.first %},{% endif %}{{ item }}
-        {% endfor -%}
+       
