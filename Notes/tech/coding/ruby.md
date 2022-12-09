@@ -27,6 +27,11 @@ brew reinstall openssl@1.1
 rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disable-binary
 ```
 
+On arch you have to install openssl-1.0 and run:
+```bash
+PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig:/usr/lib/pkgconfig rvm install <ruby-version>
+```
+
 ## Useful functions
 Some `ruby` functions:
 
