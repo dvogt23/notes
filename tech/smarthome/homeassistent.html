@@ -4,7 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Home-Assistent - Knowledge book</title>
+
+
         <!-- Custom HTML head -->
+        
         <meta name="description" content="Fixable notes of my life and experience">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -15,19 +18,23 @@
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
         <link rel="stylesheet" href="../../css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../../fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../../";
@@ -84,7 +91,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -111,6 +118,7 @@
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -124,6 +132,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -142,6 +151,8 @@
 <li>Community store <a href="https://hacs.xyz/">hacs</a></li>
 <li>Dashboard <a href="https://github.com/piitaya/lovelace-mushroom">mushroom</a></li>
 </ul>
+<h2 id="audio-output-on-audio-jack"><a class="header" href="#audio-output-on-audio-jack">Audio output on audio-jack</a></h2>
+<p>Install following plugin: <a href="https://github.com/Poeschl/Hassio-Addons/tree/main/mpd">MPD</a></p>
 <h2 id="pollenflug"><a class="header" href="#pollenflug">Pollenflug</a></h2>
 <p>Sensoren anlegen:</p>
 <pre><code class="language-yml"># Pollenflug Informationen
@@ -290,9 +301,11 @@
                             <a rel="prev" href="../../tech/smarthome/knx.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+
                             <a rel="next" href="../../tech/misc.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -302,6 +315,7 @@
                     <a rel="prev" href="../../tech/smarthome/knx.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+
                     <a rel="next" href="../../tech/misc.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -309,16 +323,25 @@
 
         </div>
 
+
+
+
         <script>
             window.playground_copyable = true;
         </script>
+
+
         <script src="../../elasticlunr.min.js"></script>
         <script src="../../mark.min.js"></script>
         <script src="../../searcher.js"></script>
+
         <script src="../../clipboard.min.js"></script>
         <script src="../../highlight.js"></script>
         <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
+
+
+    </div>
     </body>
 </html>

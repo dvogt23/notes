@@ -4,7 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Misc - Knowledge book</title>
+
+
         <!-- Custom HTML head -->
+        
         <meta name="description" content="Fixable notes of my life and experience">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -15,19 +18,23 @@
         <link rel="stylesheet" href="../css/general.css">
         <link rel="stylesheet" href="../css/chrome.css">
         <link rel="stylesheet" href="../css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../highlight.css">
         <link rel="stylesheet" href="../tomorrow-night.css">
         <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
@@ -84,7 +91,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -111,6 +118,7 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -124,6 +132,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -152,7 +161,7 @@
 <li>Youtube (ad-free) <a href="https://github.com/TeamPiped/Piped">piped</a></li>
 <li>AirDrop <a href="https://snapdrop.net/">snapdrop</a></li>
 <li>Slide/Prasentation <a href="https://sli.dev/">sli.dev</a></li>
-<li>Mulit device for geeks <a href="https://flipperzero.one/">flipper zero</a></li>
+<li>Multi device for geeks <a href="https://flipperzero.one/">flipper zero</a></li>
 </ul>
 <h3 id="docker"><a class="header" href="#docker">Docker</a></h3>
 <h4 id="show-ip-addresses-of-running-containers"><a class="header" href="#show-ip-addresses-of-running-containers">Show ip addresses of running containers:</a></h4>
@@ -160,6 +169,11 @@
 </code></pre>
 <h3 id="raspberry-pi"><a class="header" href="#raspberry-pi">Raspberry Pi</a></h3>
 <p>Show the model in shell <code>cat /sys/firmware/devicetree/base/model</code></p>
+<h3 id="ssh"><a class="header" href="#ssh">SSH</a></h3>
+<h4 id="articles"><a class="header" href="#articles">Articles</a></h4>
+<ul>
+<li><a href="https://iximiuz.com/en/posts/ssh-tunnels/">Port forwarding (advanced)</a></li>
+</ul>
 <h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
 <pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
 </code></pre>
@@ -346,7 +360,7 @@ http {
 <h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
 <p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
 <h3 id="security-book"><a class="header" href="#security-book">Security book</a></h3>
-<p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/%7Erja14/book.html">Book</a></p>
+<p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/~rja14/book.html">Book</a></p>
 <h3 id="linux-hardening-book"><a class="header" href="#linux-hardening-book">Linux hardening book</a></h3>
 <p>How to harden alinux system guide: <a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html">Book</a></p>
 <h3 id="custom-sortation-of-database-entries"><a class="header" href="#custom-sortation-of-database-entries">Custom sortation of database entries</a></h3>
@@ -455,9 +469,11 @@ http {
                             <a rel="prev" href="../tech/smarthome/homeassistent.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+
                             <a rel="next" href="../personal/input/music.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -467,6 +483,7 @@ http {
                     <a rel="prev" href="../tech/smarthome/homeassistent.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+
                     <a rel="next" href="../personal/input/music.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -474,16 +491,25 @@ http {
 
         </div>
 
+
+
+
         <script>
             window.playground_copyable = true;
         </script>
+
+
         <script src="../elasticlunr.min.js"></script>
         <script src="../mark.min.js"></script>
         <script src="../searcher.js"></script>
+
         <script src="../clipboard.min.js"></script>
         <script src="../highlight.js"></script>
         <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
+
+
+    </div>
     </body>
 </html>
