@@ -1,6 +1,28 @@
+---
+id: "personal/input/books.md"
+aliases:
+  - "Books"
+tags: []
+---
+
 # Books
 
 Here is a list of books I read in the past, after school. My favorit genre are non-fiction books and biographies.
+
+#### Read-list
+
+ - Eric-Emmanuel Schmitt - Monsieur Ibrahim und die Blumen des Koran
+ - Die Rothschilds. Des Hauses Aufstieg, Blütezeit und Erbe
+ - The Luck of Barry Lyndon
+ - Das trunkene Schiff
+ - The Invisible Man
+ - Der Spieler
+ - Das Schneckenhaus by Mustafa Khalifa
+
+### 2023
+
+**Der Prozess** by Franz Kafka
+ISBN: 978-3-10-038190-3 ⭐ ⭐ ⭐ 
 
 ### 2022
 

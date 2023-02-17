@@ -1,3 +1,10 @@
+---
+id: "tech/smarthome/homeassistent.md"
+aliases:
+  - "Cool stuff"
+tags: []
+---
+
 [#](#) Home-Assistent
 
 ## Cool stuff
@@ -5,6 +12,10 @@
  - awesome [ha](https://www.awesome-ha.com/)
  - Community store [hacs](https://hacs.xyz/)
  - Dashboard [mushroom](https://github.com/piitaya/lovelace-mushroom)
+
+## Audio output on audio-jack
+
+Install following plugin: [MPD](https://github.com/Poeschl/Hassio-Addons/tree/main/mpd)
 
 ## Pollenflug
 

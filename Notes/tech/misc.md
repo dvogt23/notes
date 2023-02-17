@@ -16,7 +16,7 @@
 - Youtube (ad-free) [piped](https://github.com/TeamPiped/Piped)
 - AirDrop [snapdrop](https://snapdrop.net/)
 - Slide/Prasentation [sli.dev](https://sli.dev/)
-- Mulit device for geeks [flipper zero](https://flipperzero.one/)
+- Multi device for geeks [flipper zero](https://flipperzero.one/)
 
 ### Docker
 
@@ -29,6 +29,12 @@ docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.Networks.
 ### Raspberry Pi
 
 Show the model in shell `cat /sys/firmware/devicetree/base/model`
+
+### SSH
+
+#### Articles
+
+ - [Port forwarding (advanced)](https://iximiuz.com/en/posts/ssh-tunnels/)
 
 ### YAML get full path
 

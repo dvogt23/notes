@@ -9,6 +9,10 @@ tags: []
 
 Some interesting ressources for the programming language ruby.
 
+## Books
+
+ - [I love ruby](https://i-love-ruby.gitlab.io/#_getting_started)
+
 ## RVM SSL errors
 
 Install again with:
@@ -59,8 +63,28 @@ module GildedRose
 end
 ```
 
-## Books
+## Match data
 
- - [I love ruby](https://i-love-ruby.gitlab.io/#_getting_started)
+```ruby
+class MatchData
+  alias_method :deconstruct, :to_a
 
-       
+  def deconstruct_keys(keys)
+    named_captures.transform_keys(&:to_sym).slice(*keys)
+  end
+end
+
+IP_REGEX = /
+  (?<first_octet>\d{1,3})\.
+  (?<second_octet>\d{1,3})\.
+  (?<third_octet>\d{1,3})\.
+  (?<fourth_octet>\d{1,3})
+/x
+
+'192.168.1.1'.match(IP_REGEX) in {
+  first_octet: '198',
+  fourth_octet: '1'
+}
+# => true
+```
+Source: [dev.to/baweaver](https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15)
