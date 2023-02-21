@@ -22,6 +22,34 @@ Learning from some youtube guys:
 - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
   - rails, ruby, ...
 
+## RSpec factory trait & transient
+
+```ruby
+FactoryBot.define do
+  factory :user, class: User do
+    trait :with_book do
+      transient do
+        # 🦄1. default value when you use :with_book trait
+        # 🦄2. Dont't assign just 'Agile'. see also: https://thoughtbot.com/blog/deprecating-static-attributes-in-factory_bot-4-11
+        title { 'Agile' }
+      end
+      after(:build) do |user, evaluator|
+        user.book = FactoryBot.create(:book, title: evaluator.title)
+      end
+    end
+  end
+
+  factory :book, class Book do
+    sequence(:title) { |n| "book no.#{n}" } # 🦄 default value
+  end
+
+end
+
+# usage
+let!(:user) { create(:user, :with_book, title: 'Ruby') }
+```
+Source: [dev.to/n350071](https://dev.to/n350071/rspec-factorybot-transient-trait-with-argument-2djd)
+
 ## Professional Ruby on Rails Developer with Rails 5
 
 Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [ruby](./ruby.md) notes:
