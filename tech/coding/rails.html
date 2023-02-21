@@ -172,6 +172,31 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h2 id="rspec-factory-trait--transient"><a class="header" href="#rspec-factory-trait--transient">RSpec factory trait &amp; transient</a></h2>
+<pre><code class="language-ruby">FactoryBot.define do
+  factory :user, class: User do
+    trait :with_book do
+      transient do
+        # 🦄1. default value when you use :with_book trait
+        # 🦄2. Dont't assign just 'Agile'. see also: https://thoughtbot.com/blog/deprecating-static-attributes-in-factory_bot-4-11
+        title { 'Agile' }
+      end
+      after(:build) do |user, evaluator|
+        user.book = FactoryBot.create(:book, title: evaluator.title)
+      end
+    end
+  end
+
+  factory :book, class Book do
+    sequence(:title) { |n| &quot;book no.#{n}&quot; } # 🦄 default value
+  end
+
+end
+
+# usage
+let!(:user) { create(:user, :with_book, title: 'Ruby') }
+</code></pre>
+<p>Source: <a href="https://dev.to/n350071/rspec-factorybot-transient-trait-with-argument-2djd">dev.to/n350071</a></p>
 <h2 id="professional-ruby-on-rails-developer-with-rails-5"><a class="header" href="#professional-ruby-on-rails-developer-with-rails-5">Professional Ruby on Rails Developer with Rails 5</a></h2>
 <p>Some note while making the <a href="https://www.udemy.com/course/pro-ruby-on-rails-rails5/">udamy course</a> and some <a href="./ruby.html">ruby</a> notes:</p>
 <h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
