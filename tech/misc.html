@@ -72,10 +72,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -169,6 +171,8 @@
 </code></pre>
 <h3 id="raspberry-pi"><a class="header" href="#raspberry-pi">Raspberry Pi</a></h3>
 <p>Show the model in shell <code>cat /sys/firmware/devicetree/base/model</code></p>
+<h3 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h3>
+<p>Some security <a href="https://sysdig.com/blog/top-owasp-kubernetes/">guidelines for kubernetes (OWASP)</a></p>
 <h3 id="ssh"><a class="header" href="#ssh">SSH</a></h3>
 <h4 id="articles"><a class="header" href="#articles">Articles</a></h4>
 <ul>

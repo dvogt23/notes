@@ -72,10 +72,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -208,6 +210,33 @@ IP_REGEX = /
 # =&gt; true
 </code></pre>
 <p>Source: <a href="https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15">dev.to/baweaver</a></p>
+<h2 id="refinement"><a class="header" href="#refinement">Refinement</a></h2>
+<p>Extend/overwrite string behavior in module (specific scope)</p>
+<pre><code class="language-ruby">module PatchedString
+  refine String do
+    def +(value)
+      self &lt;&lt; &quot;, #{value}&quot;
+    end
+  end
+end
+
+module RegularNamespace
+  def self.append_strings(a, b)
+    a + b
+  end
+end
+
+module PatchedNamespace
+  using PatchedString
+
+  def self.append_strings(a, b)
+    a + b
+  end
+end
+
+RegularNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;12&quot;
+PatchedNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;1, 2&quot;
+</code></pre>
 
                     </main>
 

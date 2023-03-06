@@ -72,10 +72,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -155,6 +157,9 @@ allow reusability as much as possible. Mostly useful for frontend design.</p>
 <li>…</li>
 </ul>
 <p>Source: <a href="https://bradfrost.com/blog/post/atomic-web-design/">Brad Frost</a></p>
+<h2 id="coding-style"><a class="header" href="#coding-style">Coding style</a></h2>
+<p>At the linux kernel guideline are some good advices: <a href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html#linux-kernel-coding-style">The linux kernel - coding style</a>
+Google have some <a href="https://google.github.io/styleguide/">guidelines</a> for some languages as well.</p>
 
                     </main>
 

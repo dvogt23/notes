@@ -72,10 +72,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -177,7 +179,7 @@ console.trace() - output stack trace
 </code></pre>
 <p>Source: <a href="https://markodenic.com/use-console-log-like-a-pro/">markodenic</a></p>
 <h2 id="react-location-listener"><a class="header" href="#react-location-listener">React location listener</a></h2>
-<p>To trigger event son laction change in React:</p>
+<p>To trigger events on location change in React, i.e. for integrate tracking code:</p>
 <pre><code class="language-js">import { useEffect } from 'react';
 
 import { useHistory } from 'react-router-dom';

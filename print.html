@@ -73,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -521,6 +523,9 @@ allow reusability as much as possible. Mostly useful for frontend design.</p>
 <li>…</li>
 </ul>
 <p>Source: <a href="https://bradfrost.com/blog/post/atomic-web-design/">Brad Frost</a></p>
+<h2 id="coding-style"><a class="header" href="#coding-style">Coding style</a></h2>
+<p>At the linux kernel guideline are some good advices: <a href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html#linux-kernel-coding-style">The linux kernel - coding style</a>
+Google have some <a href="https://google.github.io/styleguide/">guidelines</a> for some languages as well.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="environment"><a class="header" href="#environment">Environment</a></h1>
 <h2 id="development-on-a-virtual-server-docker"><a class="header" href="#development-on-a-virtual-server-docker">Development on a virtual-server (docker)</a></h2>
 <p>Try to develop my daily projects within the vitualServer with docker and traefik
@@ -642,7 +647,7 @@ console.trace() - output stack trace
 </code></pre>
 <p>Source: <a href="https://markodenic.com/use-console-log-like-a-pro/">markodenic</a></p>
 <h2 id="react-location-listener"><a class="header" href="#react-location-listener">React location listener</a></h2>
-<p>To trigger event son laction change in React:</p>
+<p>To trigger events on location change in React, i.e. for integrate tracking code:</p>
 <pre><code class="language-js">import { useEffect } from 'react';
 
 import { useHistory } from 'react-router-dom';
@@ -740,6 +745,23 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h2 id="data-class"><a class="header" href="#data-class">Data class</a></h2>
+<p>Similiar to the <a href="https://docs.ruby-lang.org/en/master/Data.html">value-alike objects</a> in ruby(3.2), here an example for rails:</p>
+<pre><code class="language-ruby">class DataClass
+  ATTRIBUTES = %i[first_name last_name city zipcode phone_number].freeze
+
+  include ActiveModel::Model
+
+  attr_accessor *ATTRIBUTES
+
+  def ==(object)
+    ATTRIBUTES.all? { |attribute| public_send(attribute) == object.public_send(attribute) }
+  end
+end
+
+ConsumerClass.new(DataClass({first_name: &quot;Bill&quot;, last_name: &quot;...&quot;, ...}))
+</code></pre>
+<p>Links: <a href="https://github.com/saturnflyer/polyfill-data">Polyfill - Data gem</a></p>
 <h2 id="rspec-factory-trait--transient"><a class="header" href="#rspec-factory-trait--transient">RSpec factory trait &amp; transient</a></h2>
 <pre><code class="language-ruby">FactoryBot.define do
   factory :user, class: User do
@@ -1213,6 +1235,33 @@ IP_REGEX = /
 # =&gt; true
 </code></pre>
 <p>Source: <a href="https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15">dev.to/baweaver</a></p>
+<h2 id="refinement"><a class="header" href="#refinement">Refinement</a></h2>
+<p>Extend/overwrite string behavior in module (specific scope)</p>
+<pre><code class="language-ruby">module PatchedString
+  refine String do
+    def +(value)
+      self &lt;&lt; &quot;, #{value}&quot;
+    end
+  end
+end
+
+module RegularNamespace
+  def self.append_strings(a, b)
+    a + b
+  end
+end
+
+module PatchedNamespace
+  using PatchedString
+
+  def self.append_strings(a, b)
+    a + b
+  end
+end
+
+RegularNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;12&quot;
+PatchedNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;1, 2&quot;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
 <h3 id="learning"><a class="header" href="#learning">Learning</a></h3>
 <p><strong>TODO:</strong></p>
@@ -1887,7 +1936,7 @@ day.</p>
 <p>Just put some tasks into the next sprint and probably assign these to someone.</p>
 </li>
 </ul>
-<h2 id="refinement"><a class="header" href="#refinement">Refinement</a></h2>
+<h2 id="refinement-1"><a class="header" href="#refinement-1">Refinement</a></h2>
 <ul>
 <li>
 <p>good way:</p>
@@ -2138,6 +2187,8 @@ Postfix relay config:</p>
 </code></pre>
 <h3 id="raspberry-pi"><a class="header" href="#raspberry-pi">Raspberry Pi</a></h3>
 <p>Show the model in shell <code>cat /sys/firmware/devicetree/base/model</code></p>
+<h3 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h3>
+<p>Some security <a href="https://sysdig.com/blog/top-owasp-kubernetes/">guidelines for kubernetes (OWASP)</a></p>
 <h3 id="ssh"><a class="header" href="#ssh">SSH</a></h3>
 <h4 id="articles-4"><a class="header" href="#articles-4">Articles</a></h4>
 <ul>

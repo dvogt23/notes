@@ -72,10 +72,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -172,6 +174,23 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h2 id="data-class"><a class="header" href="#data-class">Data class</a></h2>
+<p>Similiar to the <a href="https://docs.ruby-lang.org/en/master/Data.html">value-alike objects</a> in ruby(3.2), here an example for rails:</p>
+<pre><code class="language-ruby">class DataClass
+  ATTRIBUTES = %i[first_name last_name city zipcode phone_number].freeze
+
+  include ActiveModel::Model
+
+  attr_accessor *ATTRIBUTES
+
+  def ==(object)
+    ATTRIBUTES.all? { |attribute| public_send(attribute) == object.public_send(attribute) }
+  end
+end
+
+ConsumerClass.new(DataClass({first_name: &quot;Bill&quot;, last_name: &quot;...&quot;, ...}))
+</code></pre>
+<p>Links: <a href="https://github.com/saturnflyer/polyfill-data">Polyfill - Data gem</a></p>
 <h2 id="rspec-factory-trait--transient"><a class="header" href="#rspec-factory-trait--transient">RSpec factory trait &amp; transient</a></h2>
 <pre><code class="language-ruby">FactoryBot.define do
   factory :user, class: User do
