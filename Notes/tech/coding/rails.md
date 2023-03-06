@@ -22,6 +22,28 @@ Learning from some youtube guys:
 - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
   - rails, ruby, ...
 
+## Data class
+
+Similiar to the [value-alike objects](https://docs.ruby-lang.org/en/master/Data.html) in ruby(3.2), here an example for rails:
+
+```ruby
+class DataClass
+  ATTRIBUTES = %i[first_name last_name city zipcode phone_number].freeze
+
+  include ActiveModel::Model
+
+  attr_accessor *ATTRIBUTES
+
+  def ==(object)
+    ATTRIBUTES.all? { |attribute| public_send(attribute) == object.public_send(attribute) }
+  end
+end
+
+ConsumerClass.new(DataClass({first_name: "Bill", last_name: "...", ...}))
+```
+
+Links: [Polyfill - Data gem](https://github.com/saturnflyer/polyfill-data)
+
 ## RSpec factory trait & transient
 
 ```ruby

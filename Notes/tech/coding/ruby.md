@@ -88,3 +88,34 @@ IP_REGEX = /
 # => true
 ```
 Source: [dev.to/baweaver](https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15)
+
+## Refinement
+
+Extend/overwrite string behavior in module (specific scope)
+
+```ruby
+module PatchedString
+  refine String do
+    def +(value)
+      self << ", #{value}"
+    end
+  end
+end
+
+module RegularNamespace
+  def self.append_strings(a, b)
+    a + b
+  end
+end
+
+module PatchedNamespace
+  using PatchedString
+
+  def self.append_strings(a, b)
+    a + b
+  end
+end
+
+RegularNamespace.append_strings("1", "2") # => "12"
+PatchedNamespace.append_strings("1", "2") # => "1, 2"
+```

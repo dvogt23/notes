@@ -30,6 +30,10 @@ docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.Networks.
 
 Show the model in shell `cat /sys/firmware/devicetree/base/model`
 
+### Kubernetes
+
+Some security [guidelines for kubernetes (OWASP)](https://sysdig.com/blog/top-owasp-kubernetes/)
+
 ### SSH
 
 #### Articles

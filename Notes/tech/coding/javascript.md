@@ -43,7 +43,7 @@ Source: [markodenic](https://markodenic.com/use-console-log-like-a-pro/)
 
 ## React location listener
 
-To trigger event son laction change in React:
+To trigger events on location change in React, i.e. for integrate tracking code:
 
 ```js
 import { useEffect } from 'react';
