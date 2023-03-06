@@ -11,7 +11,6 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 
 #### Read-list
 
- - Eric-Emmanuel Schmitt - Monsieur Ibrahim und die Blumen des Koran
  - Die Rothschilds. Des Hauses Aufstieg, Blütezeit und Erbe
  - The Luck of Barry Lyndon
  - Das trunkene Schiff
@@ -20,6 +19,12 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - Das Schneckenhaus by Mustafa Khalifa
 
 ### 2023
+
+**Monsieur Ibrahim und die Blumen des Koran** by Eric-Emmanuel Schmitt
+ISBN: 978-3-25-060055-8 ⭐ ⭐ ⭐ 
+
+**Das Neue Alphabet. Russische Lesebücher.** by Ley Tolstoi
+ISBN: - ⭐ ⭐ ⭐ 
 
 **Der Prozess** by Franz Kafka
 ISBN: 978-3-10-038190-3 ⭐ ⭐ ⭐ 
