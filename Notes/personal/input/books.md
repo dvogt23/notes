@@ -23,7 +23,7 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 **Monsieur Ibrahim und die Blumen des Koran** by Eric-Emmanuel Schmitt
 ISBN: 978-3-25-060055-8 ⭐ ⭐ ⭐ 
 
-**Das Neue Alphabet. Russische Lesebücher.** by Ley Tolstoi
+**Das Neue Alphabet. Russische Lesebücher.** by Lew Tolstoi
 ISBN: - ⭐ ⭐ ⭐ 
 
 **Der Prozess** by Franz Kafka
