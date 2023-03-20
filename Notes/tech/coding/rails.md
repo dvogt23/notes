@@ -21,6 +21,26 @@ Learning from some youtube guys:
   - devise, hotwire, turbo, darkmode, basics, views
 - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
   - rails, ruby, ...
+- Great summary about encryption in rails7 [corsego](https://blog.corsego.com/encrypted-credentials)
+
+## RSpec
+### Testing an array with attributes
+
+```ruby
+expect(items[0].id).to eql(1)
+expect(items[0].name).to eql('One')
+expect(items[1].id).to eql(2)
+expect(items[1].name).to eql('Two')
+
+expect(items[0]).to have_attributes(id: 1, name: 'One')
+expect(items[1]).to have_attributes(id: 2, name: 'Two')
+
+expect(items).to match_array([
+  have_attributes(id: 1, name: 'One'),
+  have_attributes(id: 2, name: 'Two'),
+])
+```
+Source: [benpickles](https://www.benpickles.com/articles/73-testing-an-array-of-objects-with-rspec-have_attributes)
 
 ## Data class
 
@@ -41,7 +61,6 @@ end
 
 ConsumerClass.new(DataClass({first_name: "Bill", last_name: "...", ...}))
 ```
-
 Links: [Polyfill - Data gem](https://github.com/saturnflyer/polyfill-data)
 
 ## RSpec factory trait & transient

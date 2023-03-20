@@ -44,7 +44,7 @@
 
 ## Wardrobe
 
-- [Wall wood](https://billi.de/mca-wandregal-alwar-17006..2?srsltid=Ad5pg_F6U6x8ySHyTd6fmvAgACcPsc5r97KXzx9iibddwWLcnMTedcy9S_g)
+- [Wall wood](https://www.etsy.com/de/listing/980757393/hangegarderobe-hannes-holz-o-hangende)
 - [Ropes](https://www.etsy.com/cart/?show_cart=7839997436&ref=listing_page)
 - [Picket](https://ikarus.de/picket-wandgarderobe.html)
 - [Oslo](https://ikarus.de/oslo-garderobenhaken.html)

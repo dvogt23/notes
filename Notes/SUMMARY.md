@@ -49,6 +49,7 @@
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)
     - [Cooking](personal/home/cooking.md)
+    - [Coffee](personal/home/coffee.md)
     - [Garden](personal/home/garden.md)
     - [Garage](personal/home/garage.md)
     - [Pharmacy](personal/home/pharmacy.md)

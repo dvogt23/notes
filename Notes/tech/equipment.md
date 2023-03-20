@@ -8,6 +8,10 @@ Here are a collection of my most favorite technical apps/devices/configuartions.
     - iPhone 7 (MN922ZD/A)
     - iPad mini
 
+### Mechanical keyboard
+
+Actualy using my keychron k2, but sneaking infos about some splitted one, i.e. [Ferris sweep](https://shop.beekeeb.com/product/ferris-sweep-bling-lp-low-profile-split-keyboard-diy-kit/) or some better one from [mb](https://mechboards.co.uk/) for DIY.
+
 ### Operating system (💙)
 **Arch Linux:**
     - Alacritty (terminal emulator)

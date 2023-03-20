@@ -17,6 +17,7 @@
 - AirDrop [snapdrop](https://snapdrop.net/)
 - Slide/Prasentation [sli.dev](https://sli.dev/)
 - Multi device for geeks [flipper zero](https://flipperzero.one/)
+- Nix quickstart [zero-to-nix](https://zero-to-nix.com/start)
 
 ### Docker
 

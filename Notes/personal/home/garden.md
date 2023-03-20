@@ -7,3 +7,7 @@
 ## Teracce
 
 - Roofing [TUI Maximaal](https://www.tuinmaximaal.de/)
+
+## Trees
+
+- [Artmeyer Gartenbaumschule](https://artmeyer-gartenbaumschule.de/sortiment/) regional tree selling shop
