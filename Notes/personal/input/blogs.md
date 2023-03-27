@@ -1,16 +1,18 @@
 ---
-id: "personal/input/rss.md"
+id: "personal/input/blogs.md"
 aliases:
-  - "rss"
+  - "blogs"
 tags: []
 ---
 
-# rss
+# Blogs
 
 Here is a collection of my rss subscriptions:
 
 - Lobsters - [rss](https://lobste.rs/rss) 
-- heise Develo. er - Neueste Meldungen - [rss](https://www.heise.de/developer/rss/news-atom.xml)
+- Realitätsabzweig - [blog](https://steadyhq.com/en/realitatsabzweig/posts)
+- Zeitgeschehen im Fokus - [blog](https://zeitgeschehen-im-fokus.ch/de)
+- heise Developer - Neueste Meldungen - [rss](https://www.heise.de/developer/rss/news-atom.xml)
 - netzpolitik.org - [rss](https://netzpolitik.org/feed/)
 - D. Kriesel - [rss](https://www.dkriesel.com/feed.php?blog=blog-de&amp;content=html&amp;linkto=current&amp;mode=blogtng)
 - Fefes Blog - [rss](https://blog.fefe.de/rss.xml?html)

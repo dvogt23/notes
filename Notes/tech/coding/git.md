@@ -33,6 +33,10 @@ d3bee05dac84c66b7d13f99a5edf790688f51494`
 
 Source: [andrewlock.net](https://andrewlock.net/reducing-the-size-of-a-git-repository-with-git-replace/)
 
+## Articles
+
+- [Under the hood](https://articles.foletta.org/post/git-under-the-hood/)
+
 ## Commit to an older hash
 
 Run: `git-amend.sh <older-hash>`

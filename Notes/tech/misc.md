@@ -17,7 +17,18 @@
 - AirDrop [snapdrop](https://snapdrop.net/)
 - Slide/Prasentation [sli.dev](https://sli.dev/)
 - Multi device for geeks [flipper zero](https://flipperzero.one/)
+
+### Nix
+
+Articles
 - Nix quickstart [zero-to-nix](https://zero-to-nix.com/start)
+- [Tidy up your home with nix](https://juliu.is/tidying-your-home-with-nix/)
+- [Github actions with nix](https://determinate.systems/posts/nix-github-actions)
+
+### Emacs
+
+Articles
+- [Best howto](https://www2.lib.uchicago.edu/keith/emacs/#org92ca48f)
 
 ### Docker
 

@@ -44,7 +44,7 @@
     - [Movies](personal/input/movies.md)
     - [Videos](personal/input/videos.md)
     - [Articles](personal/input/articles.md)
-    - [RSS](personal/input/rss.md)
+    - [Blogs](personal/input/blogs.md)
   - [Home]()
     - [Furniture](personal/home/furniture.md)
     - [Clothing](personal/home/clothing.md)

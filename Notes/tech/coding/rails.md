@@ -22,6 +22,7 @@ Learning from some youtube guys:
 - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)
   - rails, ruby, ...
 - Great summary about encryption in rails7 [corsego](https://blog.corsego.com/encrypted-credentials)
+- [ActiveRecord Mistakes that slow down your app](https://www.speedshop.co/2019/01/10/three-activerecord-mistakes.html#where-means-filtering-is-done-by-the-database)
 
 ## RSpec
 ### Testing an array with attributes
