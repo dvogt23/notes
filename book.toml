@@ -3,6 +3,7 @@ title = "Knowledge book"
 description = "Fixable notes of my life and experience"
 authors = ["Dmitrij Vogt <divogt@vogt.dev>"]
 language = "en"
+src = "Notes"
 
 [rust]
 edition = "2018"
