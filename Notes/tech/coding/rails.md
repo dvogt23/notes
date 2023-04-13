@@ -24,6 +24,12 @@ Learning from some youtube guys:
 - Great summary about encryption in rails7 [corsego](https://blog.corsego.com/encrypted-credentials)
 - [ActiveRecord Mistakes that slow down your app](https://www.speedshop.co/2019/01/10/three-activerecord-mistakes.html#where-means-filtering-is-done-by-the-database)
 
+### Race conditions
+
+Avoid race conditions with `ActiveRecord::Base.transaction do` and `Model.lock.find(model_id)` or `my_model_object.lock!`
+
+Source: [fastruby.io](https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html)
+
 ## RSpec
 ### Testing an array with attributes
 
