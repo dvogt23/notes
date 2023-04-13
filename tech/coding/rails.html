@@ -176,6 +176,9 @@ Passing ruby data to javaScript</li>
 <li>Great summary about encryption in rails7 <a href="https://blog.corsego.com/encrypted-credentials">corsego</a></li>
 <li><a href="https://www.speedshop.co/2019/01/10/three-activerecord-mistakes.html#where-means-filtering-is-done-by-the-database">ActiveRecord Mistakes that slow down your app</a></li>
 </ul>
+<h3 id="race-conditions"><a class="header" href="#race-conditions">Race conditions</a></h3>
+<p>Avoid race conditions with <code>ActiveRecord::Base.transaction do</code> and <code>Model.lock.find(model_id)</code> or <code>my_model_object.lock!</code></p>
+<p>Source: <a href="https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html">fastruby.io</a></p>
 <h2 id="rspec"><a class="header" href="#rspec">RSpec</a></h2>
 <h3 id="testing-an-array-with-attributes"><a class="header" href="#testing-an-array-with-attributes">Testing an array with attributes</a></h3>
 <pre><code class="language-ruby">expect(items[0].id).to eql(1)
