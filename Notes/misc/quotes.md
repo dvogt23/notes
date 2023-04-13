@@ -51,3 +51,7 @@ Bertolt Brecht
 Albert Einstein
 
 > Diejenigen, die das Privileg haben, zu wissen, haben die Pflicht zu handeln.
+
+G. Michael Hopf
+
+>Hard times create strong men, strong men create good times, good times create weak men, and weak men create hard times
