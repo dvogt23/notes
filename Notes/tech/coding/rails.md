@@ -5,7 +5,7 @@ mvp-prototyping and beyond.
 
 ## Curriculum
 
- - [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
+ - [Full Stack Ruby on Rails | theodinproject](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
 
 Learning from some youtube guys:
 
