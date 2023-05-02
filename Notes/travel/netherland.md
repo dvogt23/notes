@@ -1,5 +1,11 @@
 # Netherland
 
+**Special characteristics**
+- very rare rest places on highways
+- the kids have no headgear on very cold days in winter
+- no bakeries for breakfasts outside of city centrum (book breakfast in hotel or buy something in the evening for the next morning)
+
+**Places**
  - Drouwenerzand Park
    Great park for kids with all-you-can-eat
    
@@ -9,6 +15,21 @@
  - Camping in castricum (Gemüsehaus)
    [Geversduin](https://www.campinggeversduin.de/mieten)
  - Texel [Bundgalow 165](https://www.vredelusttexel.nl/de/verblijf/accommodatie-item/81/Bungalow-165)
+
+## Amersfoort
+- Bastion Hotel ⭐️⭐️⭐️⭐️
+   Not that expansive hotel (new building)
+- Zoo Dierenpark ⭐️⭐️⭐️⭐️
+   Exotic animals with great activities for kids with a huge dino park
+- Playground Randenbroek, great park
+- La base pizza (italian pizza)
+
+## Utrecht
+- Rent a bike at [William street bike BV](https://maps.app.goo.gl/PkRy7FgE1KGNwTmYA?g_st=ic)
+- Ride a tour till the botanical garden over the favorite rainbow path
+- take a city boat tour
+- climb the dom and enjoy the pubs around
+- Ramen brothers utrecht (delicious!)
 
 ## Texel
 
