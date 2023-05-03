@@ -1,9 +1,19 @@
-# Knowledge
+# Notes
 
-This is a place for some personal notes. I try to use the zettelkasten method. Thats should help me to summarize all the input that I'm reading day by day. My workflow is dead simple with a vim plugin (vimwiki/vim-zettel) and a synchronised folder to my private nextcloud and a github repository for converting all the notes to a mdbook. On my mobile (iPhone) actually I prefer to use [obsidian (mobile)](obsidian.md) for editing my markdown files and sync these via WebDAV on my Nextcloud.
+Some notes of my life managed with nvim and some plugins, sometimes with obsidian.md:
 
-Interesting knowledges:
+- [vimwiki](https://github.com/vimwiki/vimwiki)
+- [vimwiki-sync](https://github.com/icalvin102/vimwiki-sync)
+- [vim-zettel](https://github.com/michal-h21/vim-zettel)
 
-* [Nikita](https://github.com/nikitavoloboev/knowledge)
-* [Yoshua](https://github.com/yoshuawuyts/notes)
-* [Andy](https://notes.andymatuschak.org/About_these_notes)
+And generate the webview with [mdBook](https://github.com/rust-lang/mdBook) for
+publishing in a browsable way.
+
+## See Also
+
+See [meta-knowledge](https://github.com/RichardLitt/meta-knowledge) for other
+lists by people who also record stuff on GitHub.
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
