@@ -18,6 +18,7 @@
 ## Hamburg
  - Azeitona - vegetarische arabische Küche
  - Boname - türkische Küche
+ - [Pamukkale Grill & Restaurant](https://pamukkalerestaurant.de/)
 
 ## Fürth
 
