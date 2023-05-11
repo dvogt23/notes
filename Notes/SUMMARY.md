@@ -33,6 +33,7 @@
   - [Smart-Home]()
     - [KNX](tech/smarthome/knx.md)
     - [Home-Assistent](tech/smarthome/homeassistent.md)
+  - [Split-keyboard](tech/splitkb.md)
   - [Misc](tech/misc.md)
 
 - [Personal]()
