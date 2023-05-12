@@ -30,4 +30,5 @@ expand = true
 heading-split-level = 2
 
 [preprocessor.yml-header]
+[preprocessor.tailor]
 

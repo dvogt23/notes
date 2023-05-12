@@ -30,6 +30,8 @@ jobs:
           mdbook-version: 'latest'
       - name: Install mdbook-yml-header
         run: command -v mdbook-yml-header || cargo install mdbook-yml-header
+      - name: Install mdbook-tailor
+        run: command -v mdbook-tailor || cargo install mdbook-tailor
 
       - run: mdbook build
 
