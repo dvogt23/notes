@@ -149,16 +149,34 @@
                         <h1 id="split-keyboard"><a class="header" href="#split-keyboard">Split keyboard</a></h1>
 <p>For my first try, I build a ferris sweep with Kailh Low Profile Choc Switches, Blank MBK Choc Low Profile Keycaps and two Elite-Pi controllers from splitkb.com.</p>
 <p>Some more details about my walkthrough this journey and its actual state:</p>
-<p><strong>Draft</strong>
-qmk compile -kb ferris/sweep -km dvogt23 -e CONVERT_TO=elite_pi
-make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-left
+<ol>
+<li>Get your ferris sweep <a href="https://github.com/davidphilipbarr/Sweep">pcb</a>, got my from a friend @mberrio</li>
+<li>buy all the <a href="https://github.com/davidphilipbarr/Sweep#components-list">components</a>, i.e. here <a href="https://splitkb.com">splitkb.com</a></li>
+<li>solder this on your pcb, <a href="https://github.com/davidphilipbarr/Sweep#how-do-i-make-this-thing">howto</a></li>
+</ol>
+<p>After finish the hardware, you have to flash your controllers. For me its two Elite-Pi controllers on my sweep (left &amp; right).</p>
+<ol>
+<li>install <a href="https://docs.qmk.fm/#/getting_started_build_tools">qmk</a> and test the first compile</li>
+<li>create a keymap with <a href="https://config.qmk.fm/#/ferris/sweep/LAYOUT_split_3x5_2">configurator</a></li>
+<li>set handedness to elite-pi with</li>
+</ol>
+<pre><code class="language-bash">make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-left
 make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-right
-https://docs.qmk.fm/#/getting_started_build_tools
-https://config.qmk.fm/#/ferris/sweep/LAYOUT_split_3x5_2
-https://ryan.himmelwright.net/post/qmk-flashing-ferris-sweep/
-https://caksoylar.github.io/keymap-drawer
-keybr.com(https://www.keybr.com)
-https://monkeytype.com/</p>
+</code></pre>
+<ol start="4">
+<li>each command creates a <code>.uf2</code> file, that the firmware file for each side to be <em>configured once</em> on each side</li>
+<li>plug-in each controller (first time starts in <a href="https://docs.keeb.io/elite-pi-guide#flashing">boot mode</a>) and copy <code>.uf2</code> to DF2 usb storage (it restarts &amp; flash automatically)</li>
+<li>create firmware, i.e. like this
+<code>qmk compile -kb ferris/sweep -km default -e CONVERT_TO=elite_pi</code></li>
+<li>copy created <code>.uf2</code> file to each controller</li>
+</ol>
+<p>After flashing your have a running ferris sweep split keyboard, which you must now learn to love. Take a lot of time to get to know each other …</p>
+<p>Play around with the configurator and create your own <code>keymap.json</code> file. If you ready to learn, print your keymap <a href="https://caksoylar.github.io/keymap-drawer">here</a> and start typing.</p>
+<p>Tools:</p>
+<ul>
+<li><a href="https://www.keybr.com">keybr.com</a></li>
+<li>https://monkeytype.com/</li>
+</ul>
 <p>![[images/IMG_0254.jpeg]]</p>
 
                     </main>
