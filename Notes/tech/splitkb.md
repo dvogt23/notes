@@ -31,4 +31,4 @@ Tools:
  - [keybr.com](https://www.keybr.com)
  - https://monkeytype.com/
 
-![[images/IMG_0254.jpeg]]
+![mykeyboard](images/IMG_0254.jpeg)
