@@ -63,6 +63,14 @@ Source: [utopia](https://utopia.de/ratgeber/sauerteig-ansetzen-gesundes-brot-aus
 
 ## Pizza recipe
 
+**Neapolitan 6pcs:**
+
+24h:
+- 1000g flour (caputo)
+- 620ml water
+- 3g dry east
+- 30g salt
+
 **Neapolitan 10pcs**:
 
 Poolish (16-24h):
