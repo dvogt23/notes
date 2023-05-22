@@ -24,3 +24,11 @@ Some of my solutions: [Github/CodeChallanges](https://github.com/dvogt23/CodeCha
 ## Speaking languages
 
  - learn german as russian [learngerman.dw.com](https://learngerman.dw.com/ru/overview#)
+
+## Spaced repetition
+
+
+
+> Writing good prompts forces one to circle around a concept, look at it from multiple angles, probe its properties, link it to other concepts through similarities and differences, reason about consequences and significance, derive parts of it from more fundamental pieces, and come up with a few concrete examples of it. These are the things that really build understanding.
+
+Source: [two-wrongs](https://two-wrongs.com/starting-spaced-repetition.html)
