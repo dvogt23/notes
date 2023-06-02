@@ -52,6 +52,12 @@ Some security [guidelines for kubernetes (OWASP)](https://sysdig.com/blog/top-ow
 
  - [Port forwarding (advanced)](https://iximiuz.com/en/posts/ssh-tunnels/)
 
+For sharing a local dev server for public, great service from [localhost.run](https://localhost.run):
+
+```bash
+ssh -R 80:localhost:3000 localhost.run
+```
+
 ### YAML get full path
 
 ```bash

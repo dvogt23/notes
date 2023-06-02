@@ -18,6 +18,7 @@ Source: [Wrapper types](https://manishearth.github.io/blog/2015/05/27/wrapper-ty
 ### Articles
 
  - Some nice tipps & tricks from [federicoterzi](https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/)
+ - Great google book for learning rust in 3 days (android) [google](https://google.github.io/comprehensive-rust)
 
 ## Error handling
 

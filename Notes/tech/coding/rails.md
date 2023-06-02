@@ -32,7 +32,7 @@ Source: [fastruby.io](https://www.fastruby.io/blog/rails/code-quality/An-introdu
 
 ## RSpec
 ### Testing an array with attributes
-
+ 
 ```ruby
 expect(items[0].id).to eql(1)
 expect(items[0].name).to eql('One')
