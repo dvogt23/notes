@@ -190,6 +190,9 @@
 <ul>
 <li><a href="https://iximiuz.com/en/posts/ssh-tunnels/">Port forwarding (advanced)</a></li>
 </ul>
+<p>For sharing a local dev server for public, great service from <a href="https://localhost.run">localhost.run</a>:</p>
+<pre><code class="language-bash">ssh -R 80:localhost:3000 localhost.run
+</code></pre>
 <h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
 <pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
 </code></pre>

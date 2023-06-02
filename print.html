@@ -1308,6 +1308,7 @@ Crossplatform desktop app -&gt; <a href="https://css-tricks.com/how-i-built-a-cr
 <h3 id="articles-4"><a class="header" href="#articles-4">Articles</a></h3>
 <ul>
 <li>Some nice tipps &amp; tricks from <a href="https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/">federicoterzi</a></li>
+<li>Great google book for learning rust in 3 days (android) <a href="https://google.github.io/comprehensive-rust">google</a></li>
 </ul>
 <h2 id="error-handling"><a class="header" href="#error-handling">Error handling</a></h2>
 <p>Rusts result type is a great construct for creating error chains, something like:</p>
@@ -2270,6 +2271,9 @@ make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-right
 <ul>
 <li><a href="https://iximiuz.com/en/posts/ssh-tunnels/">Port forwarding (advanced)</a></li>
 </ul>
+<p>For sharing a local dev server for public, great service from <a href="https://localhost.run">localhost.run</a>:</p>
+<pre><code class="language-bash">ssh -R 80:localhost:3000 localhost.run
+</code></pre>
 <h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
 <pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
 </code></pre>
