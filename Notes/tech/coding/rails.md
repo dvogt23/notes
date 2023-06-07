@@ -100,7 +100,7 @@ Source: [dev.to/n350071](https://dev.to/n350071/rspec-factorybot-transient-trait
 
 ## Professional Ruby on Rails Developer with Rails 5
 
-Some note while making the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [ruby](./ruby.md) notes:
+Some notes while doing the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [ruby](./ruby.md) notes:
 
 ### Basics
 
