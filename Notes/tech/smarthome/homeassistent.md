@@ -13,6 +13,24 @@ tags: []
  - Community store [hacs](https://hacs.xyz/)
  - Dashboard [mushroom](https://github.com/piitaya/lovelace-mushroom)
 
+## Database correction
+
+Sometimes getting wrong data from my smart meter, that one have to fix in database with the SQlite Web add-on on my home-assistant instance, with following commands:
+
+```sql
+SELECT *
+FROM "statistics" WHERE CAST(mean AS DECIMAL(12,6)) LIKE '3976%'
+
+UPDATE "statistics" 
+SET mean = OtherTable.Col1, 
+    Col2 = OtherTable.Col2 
+FROM (
+    SELECT *
+	FROM "statistics" WHERE CAST(mean AS DECIMAL(12,6)) 
+	LIKE '3976%')
+```
+```
+
 ## Audio output on audio-jack
 
 Install following plugin: [MPD](https://github.com/Poeschl/Hassio-Addons/tree/main/mpd)
