@@ -91,11 +91,33 @@
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -2053,11 +2075,30 @@ Postfix relay config:</p>
 <li>Community store <a href="https://hacs.xyz/">hacs</a></li>
 <li>Dashboard <a href="https://github.com/piitaya/lovelace-mushroom">mushroom</a></li>
 </ul>
-<h2 id="audio-output-on-audio-jack"><a class="header" href="#audio-output-on-audio-jack">Audio output on audio-jack</a></h2>
-<p>Install following plugin: <a href="https://github.com/Poeschl/Hassio-Addons/tree/main/mpd">MPD</a></p>
-<h2 id="pollenflug"><a class="header" href="#pollenflug">Pollenflug</a></h2>
-<p>Sensoren anlegen:</p>
-<pre><code class="language-yml"># Pollenflug Informationen
+<h2 id="database-correction"><a class="header" href="#database-correction">Database correction</a></h2>
+<p>Sometimes getting wrong data from my smart meter, that one have to fix in database with the SQlite Web add-on on my home-assistant instance, with following commands:</p>
+<pre><code class="language-sql">SELECT *
+FROM &quot;statistics&quot; WHERE CAST(mean AS DECIMAL(12,6)) LIKE '3976%'
+
+UPDATE &quot;statistics&quot; 
+SET mean = OtherTable.Col1, 
+    Col2 = OtherTable.Col2 
+FROM (
+    SELECT *
+	FROM &quot;statistics&quot; WHERE CAST(mean AS DECIMAL(12,6)) 
+	LIKE '3976%')
+</code></pre>
+<pre><code>
+## Audio output on audio-jack
+
+Install following plugin: [MPD](https://github.com/Poeschl/Hassio-Addons/tree/main/mpd)
+
+## Pollenflug
+
+Sensoren anlegen:
+
+```yml
+# Pollenflug Informationen
 - platform: rest
   scan_interval: 3600
   name: &quot;DWD Pollen&quot;
