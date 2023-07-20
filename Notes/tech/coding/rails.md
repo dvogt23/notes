@@ -23,6 +23,12 @@ Learning from some youtube guys:
   - rails, ruby, ...
 - Great summary about encryption in rails7 [corsego](https://blog.corsego.com/encrypted-credentials)
 - [ActiveRecord Mistakes that slow down your app](https://www.speedshop.co/2019/01/10/three-activerecord-mistakes.html#where-means-filtering-is-done-by-the-database)
+- Modularisation (Monolith):
+	 - [Deconstructing the Monolith](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
+	 - [The Modular Monolith: Rails Architecture | by Dan Manges | Medium](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
+	 - [Ruby on Rails - Bounded contexts via interface objects](https://blog.eq8.eu/article/rails-bounded-contexts.html)
+	 - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
+	 - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
 
 ### Race conditions
 
