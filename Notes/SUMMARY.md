@@ -1,7 +1,7 @@
 # Summary
 
 - [Knowledge](./README.md)
-  - [Productivity](productivity.md)
+  - [Productivity](misc/productivity.md)
 
 - [Tech]()
   - [Apps]()
