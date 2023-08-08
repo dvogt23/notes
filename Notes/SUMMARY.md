@@ -1,16 +1,15 @@
 # Summary
 
 - [Knowledge](./README.md)
-  - [Productivity](misc/productivity.md)
 
 - [Tech]()
   - [Apps]()
     - [Pass](tech/app/pass.md)
     - [Vim](tech/app/vim.md)
     - [Firefox](tech/app/firefox.md)
-  - [Bash](tech/bash.md)
   - [Coding]()
     - [Basic](tech/coding/basic.md)
+    - [Bash](tech/coding/bash.md)
     - [Environment](tech/coding/environment.md)
     - [Git](tech/coding/git.md)
     - [Javascript](tech/coding/javascript.md)
@@ -88,3 +87,4 @@
   - [Quotes](misc/quotes.md)
   - [Wie man gut schreibt?](misc/wie_man_gut_Schreibt.md)
   - [29 ways to stay creative](misc/29ways_to_stay_creative.md)
+  - [Productivity](misc/productivity.md)
