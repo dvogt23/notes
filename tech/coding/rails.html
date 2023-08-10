@@ -207,6 +207,9 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
+<p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command: </p>
+<p><code>bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman</code></p>
 <h3 id="race-conditions"><a class="header" href="#race-conditions">Race conditions</a></h3>
 <p>Avoid race conditions with <code>ActiveRecord::Base.transaction do</code> and <code>Model.lock.find(model_id)</code> or <code>my_model_object.lock!</code></p>
 <p>Source: <a href="https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html">fastruby.io</a></p>
