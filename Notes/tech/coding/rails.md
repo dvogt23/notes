@@ -30,6 +30,12 @@ Learning from some youtube guys:
 	 - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
 	 - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
 
+### Rails ERD
+
+For creating an erd diagram of your db schema, you could create a pdf with: [rails-erd](https://github.com/voormedia/rails-erd) with this command: 
+
+`bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman`
+
 ### Race conditions
 
 Avoid race conditions with `ActiveRecord::Base.transaction do` and `Model.lock.find(model_id)` or `my_model_object.lock!`
