@@ -1,6 +1,8 @@
 ---
 tags: daily, diary
 ---
+# {{date}}
+
 ### Ich bin dankbar für
 
 
