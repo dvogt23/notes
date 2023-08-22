@@ -30,6 +30,41 @@ Learning from some youtube guys:
 	 - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
 	 - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
 
+### Test coverage pre-commit hook
+
+To get an positive exit code for pre-commit hook integration you have to add this to your spec config:
+```ruby
+# spec/spec_helper.rb
+RSpec.configure do |config|
+  if ENV["TEST_COVERAGE"]
+    SimpleCov.start "rails" do
+      spec_paths = ARGV.grep %r{(spec)/\w+}
+      if spec_paths.any?
+        file_paths = spec_paths.map { |spec_path| spec_path.gsub(%r{spec/|_spec}, "") }
+        add_filter do |file|
+          file_paths.none? do |file_path|
+            if file.filename.include? "/app/"
+              file.filename.match?(%r{/app/#{file_path}})
+            else
+              file.filename.include?(file_path)
+            end
+          end
+        end
+      end
+      minimum_coverage 98.9
+      minimum_coverage_by_file 81.4
+    end
+  else
+    SimpleCov.start "bonim"
+  end
+  [...]
+```
+
+Pre-commit hook:
+```bash
+[[ -n "$specfiles" ]] && (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
+```
+
 ### Rails ERD
 
 For creating an erd diagram of your db schema, you could create a pdf with: [rails-erd](https://github.com/voormedia/rails-erd) with this command: 
