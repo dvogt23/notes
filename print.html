@@ -739,6 +739,36 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h3 id="test-coverage-pre-commit-hook"><a class="header" href="#test-coverage-pre-commit-hook">Test coverage pre-commit hook</a></h3>
+<p>To get an positive exit code for pre-commit hook integration you have to add this to your spec config:</p>
+<pre><code class="language-ruby"># spec/spec_helper.rb
+RSpec.configure do |config|
+  if ENV[&quot;TEST_COVERAGE&quot;]
+    SimpleCov.start &quot;rails&quot; do
+      spec_paths = ARGV.grep %r{(spec)/\w+}
+      if spec_paths.any?
+        file_paths = spec_paths.map { |spec_path| spec_path.gsub(%r{spec/|_spec}, &quot;&quot;) }
+        add_filter do |file|
+          file_paths.none? do |file_path|
+            if file.filename.include? &quot;/app/&quot;
+              file.filename.match?(%r{/app/#{file_path}})
+            else
+              file.filename.include?(file_path)
+            end
+          end
+        end
+      end
+      minimum_coverage 98.9
+      minimum_coverage_by_file 81.4
+    end
+  else
+    SimpleCov.start &quot;bonim&quot;
+  end
+  [...]
+</code></pre>
+<p>Pre-commit hook:</p>
+<pre><code class="language-bash">[[ -n &quot;$specfiles&quot; ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec &quot;$specfiles&quot; || exit 1)
+</code></pre>
 <h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
 <p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command: </p>
 <p><code>bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman</code></p>
