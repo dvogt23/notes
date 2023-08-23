@@ -230,12 +230,16 @@ RSpec.configure do |config|
       minimum_coverage_by_file 81.4
     end
   else
-    SimpleCov.start &quot;bonim&quot;
+    SimpleCov.start &quot;rails&quot;
   end
   [...]
 </code></pre>
 <p>Pre-commit hook:</p>
-<pre><code class="language-bash">[[ -n &quot;$specfiles&quot; ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec &quot;$specfiles&quot; || exit 1)
+<pre><code class="language-bash">files=$(git --no-pager diff --name-only --cached --diff-filter=AM)
+erbfiles=$(echo &quot;$files&quot; | grep -e '\.html.erb$')
+
+
+[[ -n &quot;$specfiles&quot; ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec &quot;$specfiles&quot; || exit 1)
 </code></pre>
 <h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
 <p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command: </p>
