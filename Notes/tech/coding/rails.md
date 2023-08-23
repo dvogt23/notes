@@ -55,13 +55,17 @@ RSpec.configure do |config|
       minimum_coverage_by_file 81.4
     end
   else
-    SimpleCov.start "bonim"
+    SimpleCov.start "rails"
   end
   [...]
 ```
 
 Pre-commit hook:
 ```bash
+files=$(git --no-pager diff --name-only --cached --diff-filter=AM)
+erbfiles=$(echo "$files" | grep -e '\.html.erb$')
+
+
 [[ -n "$specfiles" ]] && (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
 ```
 
