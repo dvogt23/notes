@@ -149,6 +149,63 @@ let!(:user) { create(:user, :with_book, title: 'Ruby') }
 ```
 Source: [dev.to/n350071](https://dev.to/n350071/rspec-factorybot-transient-trait-with-argument-2djd)
 
+## RailsWorld2023
+
+Some notes on talks:
+
+- Turbo morphing
+	- new feature for keep scrolling position on whole dom body change
+- no-build / bun
+	- key goal to eliminate build time for frontend stuff, ship as code
+- if assignment block
+	```ruby
+	def test
+	  42
+	end
+	if a = test
+		puts "Assign #{a}"
+	else
+	  puts "Nil is return"
+	end
+	```
+- Class.method(:name).source_location
+	- get code location of a method
+- Model attribute strict_loading prohibit loading relations
+```ruby
+class User < ApplicationRecord
+  has_many :comments, strict_loading: true
+end
+
+User.find(2).comments # => raises
+User.includes(:comments).find(2).comments # => [...]
+```
+- Migration add_column :virtual
+```ruby
+create_table :users do |t|
+  t.numeric :height_cm
+  t.virtual :height_in, type: :numeric, as: 'height_cm / 2.54', stored: true
+end
+```
+- Model with_options relations
+```ruby
+class User
+  with_options dependent: :destroy do |options|
+    options.has_many :tasks, class_name: "UserTask"
+    options.has_many :addresses
+  end
+end
+```
+- try(:method_name) || default_method
+- Routing constraints 
+	- subdomain 
+	- authenticated
+- Routes draw split into files
+- rails generate generator ApiClient
+- String truncate_words with omission
+- DateTime before? past? future?
+- Time.current.all_day .all_week …
+- Abbreviation number_to_human() round_mode significant format units
+
 ## Professional Ruby on Rails Developer with Rails 5
 
 Some notes while doing the [udamy course](https://www.udemy.com/course/pro-ruby-on-rails-rails5/) and some [ruby](./ruby.md) notes:
