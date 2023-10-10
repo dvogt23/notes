@@ -842,6 +842,77 @@ end
 let!(:user) { create(:user, :with_book, title: 'Ruby') }
 </code></pre>
 <p>Source: <a href="https://dev.to/n350071/rspec-factorybot-transient-trait-with-argument-2djd">dev.to/n350071</a></p>
+<h2 id="railsworld2023"><a class="header" href="#railsworld2023">RailsWorld2023</a></h2>
+<p>Some notes on talks:</p>
+<ul>
+<li>Turbo morphing
+<ul>
+<li>new feature for keep scrolling position on whole dom body change</li>
+</ul>
+</li>
+<li>no-build / bun
+<ul>
+<li>key goal to eliminate build time for frontend stuff, ship as code</li>
+</ul>
+</li>
+<li>if assignment block
+<pre><code class="language-ruby">def test
+  42
+end
+if a = test
+	puts &quot;Assign #{a}&quot;
+else
+  puts &quot;Nil is return&quot;
+end
+</code></pre>
+</li>
+<li>Class.method(:name).source_location
+<ul>
+<li>get code location of a method</li>
+</ul>
+</li>
+<li>Model attribute strict_loading prohibit loading relations</li>
+</ul>
+<pre><code class="language-ruby">class User &lt; ApplicationRecord
+  has_many :comments, strict_loading: true
+end
+
+User.find(2).comments # =&gt; raises
+User.includes(:comments).find(2).comments # =&gt; [...]
+</code></pre>
+<ul>
+<li>Migration add_column :virtual</li>
+</ul>
+<pre><code class="language-ruby">create_table :users do |t|
+  t.numeric :height_cm
+  t.virtual :height_in, type: :numeric, as: 'height_cm / 2.54', stored: true
+end
+</code></pre>
+<ul>
+<li>Model with_options relations</li>
+</ul>
+<pre><code class="language-ruby">class User
+  with_options dependent: :destroy do |options|
+    options.has_many :tasks, class_name: &quot;UserTask&quot;
+    options.has_many :addresses
+  end
+end
+</code></pre>
+<ul>
+<li>try(:method_name) || default_method</li>
+<li>Routing constraints 
+<ul>
+<li>subdomain </li>
+<li>authenticated</li>
+</ul>
+</li>
+<li>Routes draw split into files</li>
+<li>rails generate generator ApiClient</li>
+<li>String truncate_words with omission</li>
+<li>DateTime before? past? future?</li>
+<li>Time.current.all_day .all_week …</li>
+<li>Abbreviation number_to_human() round_mode significant format units</li>
+</ul>
 <h2 id="professional-ruby-on-rails-developer-with-rails-5"><a class="header" href="#professional-ruby-on-rails-developer-with-rails-5">Professional Ruby on Rails Developer with Rails 5</a></h2>
 <p>Some notes while doing the <a href="https://www.udemy.com/course/pro-ruby-on-rails-rails5/">udamy course</a> and some <a href="tech/coding/./ruby.html">ruby</a> notes:</p>
 <h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
