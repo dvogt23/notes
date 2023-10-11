@@ -6,3 +6,4 @@ work
 _remotely-save-metadata-on-remote.json
 book.toml
 sync.sh
+*.draft.md
