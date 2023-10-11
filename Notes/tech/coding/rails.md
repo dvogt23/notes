@@ -171,14 +171,6 @@ Some notes on talks:
 - Class.method(:name).source_location
 	- get code location of a method
 - Model attribute strict_loading prohibit loading relations
-```ruby
-class User < ApplicationRecord
-  has_many :comments, strict_loading: true
-end
-
-User.find(2).comments # => raises
-User.includes(:comments).find(2).comments # => [...]
-```
 - Migration add_column :virtual
 ```ruby
 create_table :users do |t|
