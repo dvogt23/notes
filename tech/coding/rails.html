@@ -340,15 +340,6 @@ end
 </ul>
 </li>
 <li>Model attribute strict_loading prohibit loading relations</li>
-</ul>
-<pre><code class="language-ruby">class User &lt; ApplicationRecord
-  has_many :comments, strict_loading: true
-end
-
-User.find(2).comments # =&gt; raises
-User.includes(:comments).find(2).comments # =&gt; [...]
-</code></pre>
-<ul>
 <li>Migration add_column :virtual</li>
 </ul>
 <pre><code class="language-ruby">create_table :users do |t|
