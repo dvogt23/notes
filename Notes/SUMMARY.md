@@ -9,6 +9,7 @@
     - [Firefox](tech/app/firefox.md)
   - [Coding]()
     - [Basic](tech/coding/basic.md)
+    - [General](tech/coding/general.md)
     - [Bash](tech/coding/bash.md)
     - [Environment](tech/coding/environment.md)
     - [Git](tech/coding/git.md)
