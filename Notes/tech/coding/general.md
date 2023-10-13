@@ -18,7 +18,7 @@ Some of my favourite tools and routines I using in my development environment.
 	- Colorscheme [Oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim)
 ### Window Management
 - MacOS [Rectangle](https://rectangleapp.com/)
-- Linux [Sway](https://swaywm.org//[Hyperland](https://hyprland.org)
+- Linux [Sway](https://swaywm.org)//[Hyperland](https://hyprland.org)
 ### Password management
 - Self-hosted password manager (Browser & App) [vaultwarden](https://github.com/dani-garcia/vaultwarden)
 ### Tools
