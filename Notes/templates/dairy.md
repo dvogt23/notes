@@ -3,29 +3,8 @@ tags: daily, diary
 ---
 # {{date}}
 
-### Ich bin dankbar für
+### Todo
+- [ ] 
 
-
-
-### Ich freue ich auf
-
-
-
-### Tagesfokus
-
-
-
-### Gefühl
-
-
-
-### Privat
-
-
-
-### Arbeit
-
-
-
-## Learnings
-
+### Log
+- 
