@@ -1,4 +1,6 @@
 # Quotes
+Ralph Waldo Emerson
+> Das Wissen, dass mindestens eine Person dank deiner Existenz ein besseres Leben hatte. Das bedeutet Erfolg.
 
 Steve Jobs
 > Die Leute, die so verrückt sind zu glauben, dass sie die Welt verändern können, sind diejenigen, die es tun.
