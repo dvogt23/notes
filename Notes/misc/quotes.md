@@ -1,7 +1,7 @@
 # Quotes
 
 Nicholas Rockefeller
->Der Feminismus ist unsere Erfindung aus zwei Gründen. Vorher zahlte nur die Hälfte der Bevölkerung Steuern, jetzt fast alle weil die Frauen arbeiten gehen. Außerdem wurde damit die Familie zerstört und wir haben dadurch die Macht über die Kinder erhalten. Sie sind unter unserer Kontrolle mit unseren Medien und bekommen unsere Botschaft eingetrichtert, stehen nicht mehr unter dem Einfluss der intakten Familie. In dem wir die Frauen gegen die Männer aufhetzen und die Partnerschaft und die Gemeinschaft der Familie zerstören, haben wir eine kaputte Gesellschaft aus Egoisten geschaffen, die arbeiten (für die angebliche Karriere), konsumieren (Mode, Schönheit, Marken), dadurch unsere Sklaven sind und es dann auch noch gut finden.
+> Der Feminismus ist unsere Erfindung aus zwei Gründen. Vorher zahlte nur die Hälfte der Bevölkerung Steuern, jetzt fast alle weil die Frauen arbeiten gehen. Außerdem wurde damit die Familie zerstört und wir haben dadurch die Macht über die Kinder erhalten. Sie sind unter unserer Kontrolle mit unseren Medien und bekommen unsere Botschaft eingetrichtert, stehen nicht mehr unter dem Einfluss der intakten Familie. In dem wir die Frauen gegen die Männer aufhetzen und die Partnerschaft und die Gemeinschaft der Familie zerstören, haben wir eine kaputte Gesellschaft aus Egoisten geschaffen, die arbeiten (für die angebliche Karriere), konsumieren (Mode, Schönheit, Marken), dadurch unsere Sklaven sind und es dann auch noch gut finden.
 
 Ralph Waldo Emerson
 > Das Wissen, dass mindestens eine Person dank deiner Existenz ein besseres Leben hatte. Das bedeutet Erfolg.
