@@ -66,8 +66,8 @@ input[type=checkbox]{
     border-radius: 4px;
     background: #efefef;
 }
-.book-summary ul.summary li span { 
-    font-weight: bold; 
+.book-summary ul.summary li span {
+    font-weight: bold;
     /* display: block; */
     /* padding: 10px 15px; */
     /* border-bottom: none; */

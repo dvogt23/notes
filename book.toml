@@ -12,6 +12,8 @@ edition = "2018"
 mathjax-support = true
 site-url = "/mdBook/"
 curly-quotes = true
+git-repository-url = "https://github.com/dvogt23/notes"
+additional-css = ["styles/footer.css"]
 
 [output.html.fold]
 enable = true
@@ -31,4 +33,7 @@ heading-split-level = 2
 
 [preprocessor.yml-header]
 [preprocessor.tailor]
+[preprocessor.last-changed]
+command = "mdbook-last-changed"
+renderer = ["html"]
 

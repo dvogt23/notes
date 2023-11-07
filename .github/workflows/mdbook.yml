@@ -18,8 +18,8 @@ jobs:
         with:
           path: |
             ~/.cargo/registry
-            ~/.cargo/git            
-            ~/.cargo/bin            
+            ~/.cargo/git
+            ~/.cargo/bin
           key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.lock') }}
           restore-keys: |
                         ${{ runner.os }}-cargo-
@@ -28,9 +28,11 @@ jobs:
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: 'latest'
-      - name: Install mdbook-yml-header
+      - name: Install mdbook-yml-header # drop yml frontmatter
         run: command -v mdbook-yml-header || cargo install mdbook-yml-header
-      - name: Install mdbook-tailor
+      - name: Install mdbook-last-changed # add footer with last changed and commit hash
+        run: command -v mdbook-last-changed || cargo install mdbook-last-changed
+      - name: Install mdbook-tailor # style images
         run: command -v mdbook-tailor || cargo install mdbook-tailor
 
       - run: mdbook build
