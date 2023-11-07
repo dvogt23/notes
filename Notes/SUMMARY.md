@@ -86,6 +86,7 @@
   - [Jokes](misc/jokes.md)
   - [New words](misc/newwords.md)
   - [Poems](misc/poems.md)
+  - [Survival](./misc/survival.md)
   - [Quotes](misc/quotes.md)
   - [Wie man gut schreibt?](misc/wie_man_gut_Schreibt.md)
   - [29 ways to stay creative](misc/29ways_to_stay_creative.md)
