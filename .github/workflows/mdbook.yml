@@ -22,9 +22,8 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             ~/.cargo/bin
-          key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.lock') }}
-          restore-keys: |
-                        ${{ runner.os }}-cargo-
+          key: ${{ runner.os }}-cargo-${{ hashFiles('.github/workflows/mdbook.yml') }}
+          restore-keys: ${{ runner.os }}-cargo-
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
