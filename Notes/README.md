@@ -7,6 +7,7 @@ Interesting knowledges:
 * [Yoshua](https://github.com/yoshuawuyts/notes)
 * [Andy](https://notes.andymatuschak.org/About_these_notes)
 
+Another topic about publishing your notes: [digital-garden](https://github.com/MaggieAppleton/digital-gardeners)
 ## See Also
 
 See [meta-knowledge](https://github.com/RichardLitt/meta-knowledge) for other
