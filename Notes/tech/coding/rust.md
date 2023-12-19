@@ -4,8 +4,8 @@
 
 **TODO:**
 
- - [ ] wasm tutorial -> [linuxfoundation](https://training.linuxfoundation.org/announcements/using-web-assembly-written-in-rust-on-the-server-side/)
- - [ ] Crossplatform desktop app -> [css-tricks](https://css-tricks.com/how-i-built-a-cross-platform-desktop-application-with-svelte-redis-and-rust/)
+ - wasm tutorial -> [linuxfoundation](https://training.linuxfoundation.org/announcements/using-web-assembly-written-in-rust-on-the-server-side/)
+ - Crossplatform desktop app -> [css-tricks](https://css-tricks.com/how-i-built-a-cross-platform-desktop-application-with-svelte-redis-and-rust/)
 
 ### Wrapper types
 
