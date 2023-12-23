@@ -829,6 +829,33 @@ Passing ruby data to javaScript</li>
 </ul>
 </li>
 </ul>
+<h3 id="pattern-matching"><a class="header" href="#pattern-matching">Pattern matching</a></h3>
+<pre><code class="language-ruby">def extract(**data)
+  case data
+    in name: {first:}
+      puts first
+    in tags: [first_tag, *_]
+      puts first_tag
+  end
+end
+
+&gt; extract(name: { first: &quot;Brad&quot;, last: &quot;Gessler&quot; })
+&quot;Brad&quot;
+&gt; extract(tags: [&quot;person&quot;, &quot;earthling&quot;] })
+&quot;person&quot;
+</code></pre>
+<pre><code class="language-ruby">def matcher(**data)
+  if first = data.fetch(:first)
+    puts first
+  elsif data.key?(:tags)
+    tags = data.fetch(:tags)
+    if tags.is_a? Array
+      puts tags.first
+    end
+  end
+end
+</code></pre>
+<p>Source: <a href="https://fly.io/ruby-dispatch/pattern-matching-on-ruby-objects/">fly.io</a></p>
 <h3 id="test-coverage-pre-commit-hook"><a class="header" href="#test-coverage-pre-commit-hook">Test coverage pre-commit hook</a></h3>
 <p>To get an positive exit code for pre-commit hook integration you have to add this to your spec config:</p>
 <pre><code class="language-ruby"># spec/spec_helper.rb
@@ -1413,7 +1440,7 @@ rails db:migrate
 has_many :recipe_ingredients  
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2023-10-24, commit: <a href="https://github.com/dvogt23/notes/commit/b51aa49">b51aa49</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ruby"><a class="header" href="#ruby">Ruby</a></h1>
+<footer id="last-change">Last change: 2023-12-23, commit: <a href="https://github.com/dvogt23/notes/commit/e62e7e6">e62e7e6</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ruby"><a class="header" href="#ruby">Ruby</a></h1>
 <p>Some interesting ressources for the programming language ruby.</p>
 <h2 id="books"><a class="header" href="#books">Books</a></h2>
 <ul>
