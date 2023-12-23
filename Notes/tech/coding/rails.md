@@ -30,6 +30,37 @@ Learning from some youtube guys:
 	 - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
 	 - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
 
+### Pattern matching
+
+```ruby
+def extract(**data)
+  case data
+    in name: {first:}
+      puts first
+    in tags: [first_tag, *_]
+      puts first_tag
+  end
+end
+
+> extract(name: { first: "Brad", last: "Gessler" })
+"Brad"
+> extract(tags: ["person", "earthling"] })
+"person"
+```
+
+```ruby
+def matcher(**data)
+  if first = data.fetch(:first)
+    puts first
+  elsif data.key?(:tags)
+    tags = data.fetch(:tags)
+    if tags.is_a? Array
+      puts tags.first
+    end
+  end
+end
+```
+Source: [fly.io](https://fly.io/ruby-dispatch/pattern-matching-on-ruby-objects/)
 ### Test coverage pre-commit hook
 
 To get an positive exit code for pre-commit hook integration you have to add this to your spec config:
