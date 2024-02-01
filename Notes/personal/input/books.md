@@ -18,7 +18,16 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - Der Spieler
  - Das Schneckenhaus by Mustafa Khalifa
 
+### 2024
+
+**Trotzdem Ja zum Leben sagen: Ein Psychologe erlebt das Konzentrationslager**
+by Viktor E. Frankl
+ISBN: 978-3328102779 ⭐ ⭐ ⭐ ⭐ ⭐ 
 ### 2023
+
+**Das Mittelalter: Europa von 500 bis 1500**
+by Chris Wickham
+ISBN: 978-3608962086 ⭐ ⭐ ⭐ 
 
 **Monsieur Ibrahim und die Blumen des Koran** by Eric-Emmanuel Schmitt
 ISBN: 978-3-25-060055-8 ⭐ ⭐ ⭐ 

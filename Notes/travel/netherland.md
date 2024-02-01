@@ -45,7 +45,15 @@ Some point-of-interests for kids:
 - [Sommeltjespad](https://goo.gl/maps/2ShJh95q1DuTFeiW6) ⭐️⭐️⭐️⭐️
 - [Ecomare](https://goo.gl/maps/gcvBBAmMxpAx2Z3E7) ⭐️⭐️⭐️
 
+## Harleem
+
+- [I Fratelli](https://www.ifratellihaarlem.nl/) italian
+
 ## Amsterdam
+- [Nemo - science museum](https://www.nemosciencemuseum.nl/en/) experiments for kids
+- [Dun Yong Ramen (shop)](https://kitchen.dunyong.com/) tasty ramen (4th floor)
+
+---
 [Recommendations](https://public.3.basecamp.com/p/Zt3cC2LF9GUdNQA55cRZrcV9) from Amanda Perino
 
 **Practical tips**
