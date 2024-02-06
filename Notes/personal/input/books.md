@@ -23,6 +23,10 @@ Here is a list of books I read in the past, after school. My favorit genre are n
 **Trotzdem Ja zum Leben sagen: Ein Psychologe erlebt das Konzentrationslager**
 by Viktor E. Frankl
 ISBN: 978-3328102779 ⭐ ⭐ ⭐ ⭐ ⭐ 
+
+**Elon Musk**
+by Walter Isaacson
+ISBN: 978-1982181284 ⭐ ⭐ ⭐ ⭐
 ### 2023
 
 **Das Mittelalter: Europa von 500 bis 1500**
