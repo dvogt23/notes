@@ -189,14 +189,14 @@
 <h2 id="database-correction"><a class="header" href="#database-correction">Database correction</a></h2>
 <p>Sometimes getting wrong data from my smart meter, that one have to fix in database with the SQlite Web add-on on my home-assistant instance, with following commands:</p>
 <pre><code class="language-sql">SELECT *
-FROM &quot;statistics&quot; WHERE CAST(mean AS DECIMAL(12,6)) LIKE '3976%'
+FROM "statistics" WHERE CAST(mean AS DECIMAL(12,6)) LIKE '3976%'
 
-UPDATE &quot;statistics&quot; 
+UPDATE "statistics" 
 SET mean = OtherTable.Col1, 
     Col2 = OtherTable.Col2 
 FROM (
     SELECT *
-	FROM &quot;statistics&quot; WHERE CAST(mean AS DECIMAL(12,6)) 
+	FROM "statistics" WHERE CAST(mean AS DECIMAL(12,6)) 
 	LIKE '3976%')
 </code></pre>
 <pre><code>
@@ -212,9 +212,9 @@ Sensoren anlegen:
 # Pollenflug Informationen
 - platform: rest
   scan_interval: 3600
-  name: &quot;DWD Pollen&quot;
+  name: "DWD Pollen"
   resource: https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json
-  json_attributes_path: &quot;$..content[?(@.partregion_id==42)].Pollen&quot;
+  json_attributes_path: "$..content[?(@.partregion_id==42)].Pollen"
   json_attributes:
     - Erle
     - Beifuss
@@ -224,22 +224,22 @@ Sensoren anlegen:
     - Hasel
     - Graeser
     - Roggen
-  value_template: &quot;{{ value_json.last_update }}&quot;
+  value_template: "{{ value_json.last_update }}"
 - platform: template
   sensors:
     dwd_pollen_erle:
-      icon_template: &quot;mdi:tree-outline&quot;
-      friendly_name: &quot;Erle&quot;
+      icon_template: "mdi:tree-outline"
+      friendly_name: "Erle"
       value_template: &gt;-
         {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['today'] %}
-        {% if dwd_state == &quot;3&quot; %}6{% elif dwd_state == &quot;2-3&quot;%}5{% elif dwd_state == &quot;2&quot;%}4{% elif dwd_state == &quot;1-2&quot;%}3{% elif dwd_state == &quot;1&quot;%}2{% elif dwd_state == &quot;0-1&quot;%}1{% else %}0{% endif %}
+        {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
       attribute_templates:
         today: &gt;-
           {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['today'] %}
-          {% if dwd_state == &quot;3&quot; %}6{% elif dwd_state == &quot;2-3&quot;%}5{% elif dwd_state == &quot;2&quot;%}4{% elif dwd_state == &quot;1-2&quot;%}3{% elif dwd_state == &quot;1&quot;%}2{% elif dwd_state == &quot;0-1&quot;%}1{% else %}0{% endif %}
+          {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
         tomorrow: &gt;-
           {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['tomorrow'] %}
-          {% if dwd_state == &quot;3&quot; %}6{% elif dwd_state == &quot;2-3&quot;%}5{% elif dwd_state == &quot;2&quot;%}4{% elif dwd_state == &quot;1-2&quot;%}3{% elif dwd_state == &quot;1&quot;%}2{% elif dwd_state == &quot;0-1&quot;%}1{% else %}0{% endif %}
+          {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
 </code></pre>
 <p>Source: <a href="https://youtu.be/yHI9Dt4xD4g">youtube/smarthomeyourself</a></p>
 <h2 id="shutter-control"><a class="header" href="#shutter-control">Shutter control</a></h2>
@@ -247,18 +247,18 @@ Sensoren anlegen:
 <p><strong>Works!</strong> Tasmota wiki for <a href="">covers</a>:</p>
 <pre><code class="language-yml">cover:
   - platform: mqtt
-    name: &quot;Wohnzimmer Zentrale&quot;
-    availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
-    payload_available: &quot;Online&quot;
-    payload_not_available: &quot;Offline&quot;
-    position_topic: &quot;Smarthome/jalosien/wohnzimmer/stat/SHUTTER1&quot;
+    name: "Wohnzimmer Zentrale"
+    availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    position_topic: "Smarthome/jalosien/wohnzimmer/stat/SHUTTER1"
     position_open: 100
     position_closed: 0
-    set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/ShutterPosition1&quot;
-    command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/BACKLOG&quot;
-    payload_open: &quot;ShutterOpen1&quot;
-    payload_close: &quot;ShutterClose1&quot;
-    payload_stop: &quot;ShutterStop1&quot;
+    set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/ShutterPosition1"
+    command_topic: "Smarthome/jalosien/wohnzimmer/cmnd/BACKLOG"
+    payload_open: "ShutterOpen1"
+    payload_close: "ShutterClose1"
+    payload_stop: "ShutterStop1"
     retain: false
     optimistic: false
     qos: 1
@@ -266,38 +266,38 @@ Sensoren anlegen:
 <p>Definition from github
 <a href="https://github.com/arendst/Tasmota/issues/6614#issuecomment-541785867">snakuzzo</a>:</p>
 <pre><code class="language-yml">- platform: mqtt
-  name: &quot;Wohnzimmer Zentrale&quot;
-  availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
-  state_topic: &quot;stat/sonoff-cletto/RESULT&quot;
-  command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd&quot;
+  name: "Wohnzimmer Zentrale"
+  availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+  state_topic: "stat/sonoff-cletto/RESULT"
+  command_topic: "Smarthome/jalosien/wohnzimmer/cmnd"
   value_template: '{{ value | int }}'
   qos: 1
   retain: false
-  payload_open: &quot;ShutterOpen1&quot;
-  payload_close: &quot;ShutterClose1&quot;
-  payload_stop: &quot;ShutterStop1&quot;
-  state_open: &quot;ON&quot;
-  state_closed: &quot;OFF&quot;
-  payload_available: &quot;Online&quot;
-  payload_not_available: &quot;Offline&quot;
+  payload_open: "ShutterOpen1"
+  payload_close: "ShutterClose1"
+  payload_stop: "ShutterStop1"
+  state_open: "ON"
+  state_closed: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
   optimistic: true
-  set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/shutterposition&quot;
-  position_topic: &quot;Smarthome/jalosien/wohnzimmer/stat/SHUTTER1&quot;
+  set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/shutterposition"
+  position_topic: "Smarthome/jalosien/wohnzimmer/stat/SHUTTER1"
 </code></pre>
 <p>A definition for slider from <a href="https://community.home-assistant.io/t/shelly-2-as-roller-shutter-with-percentage/85817/2">community/florian</a></p>
 <pre><code class="language-yml">- platform: mqtt
   name: bedroom_cover
-  command_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/command&quot;
-  position_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/pos&quot;
-  set_position_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/command/pos&quot;
-  availability_topic: &quot;shellies/shellyswitch-xxxxxx/online&quot;
-  payload_available: &quot;true&quot;
-  payload_not_available: &quot;false&quot;
+  command_topic: "shellies/shellyswitch-xxxxxx/roller/0/command"
+  position_topic: "shellies/shellyswitch-xxxxxx/roller/0/pos"
+  set_position_topic: "shellies/shellyswitch-xxxxxx/roller/0/command/pos"
+  availability_topic: "shellies/shellyswitch-xxxxxx/online"
+  payload_available: "true"
+  payload_not_available: "false"
   qos: 1
   retain: false
-  payload_open: &quot;open&quot;
-  payload_close: &quot;close&quot;
-  payload_stop: &quot;stop&quot;
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
   position_open: 100
   position_closed: 0
   optimistic: false
@@ -305,20 +305,20 @@ Sensoren anlegen:
 <p>another one</p>
 <pre><code class="language-yml">  - platform: mqtt
     name: living_room_shutter
-    availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
-    state_topic: &quot;tele/persiana_dormitorio/RESULT&quot;
-    command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd&quot;
-    set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/shutterposition&quot;
-    value_template: &quot;{{ value_json['SHUTTER-1'] }}&quot;
+    availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+    state_topic: "tele/persiana_dormitorio/RESULT"
+    command_topic: "Smarthome/jalosien/wohnzimmer/cmnd"
+    set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/shutterposition"
+    value_template: "{{ value_json['SHUTTER-1'] }}"
     qos: 1
     retain: true
-    payload_open: &quot;SHUTTEROPEN&quot;
-    payload_close: &quot;SHUTTERCLOSE&quot;
-    payload_stop: &quot;SHUTTERSTOP&quot;
-    state_open: &quot;ON&quot;
-    state_closed: &quot;OFF&quot;
-    payload_available: &quot;Online&quot;
-    payload_not_available: &quot;Offline&quot;
+    payload_open: "SHUTTEROPEN"
+    payload_close: "SHUTTERCLOSE"
+    payload_stop: "SHUTTERSTOP"
+    state_open: "ON"
+    state_closed: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
     optimistic: true
 </code></pre>
 <h3 id="automation"><a class="header" href="#automation">Automation</a></h3>

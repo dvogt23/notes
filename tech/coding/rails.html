@@ -228,10 +228,10 @@ Passing ruby data to javaScript</li>
   end
 end
 
-&gt; extract(name: { first: &quot;Brad&quot;, last: &quot;Gessler&quot; })
-&quot;Brad&quot;
-&gt; extract(tags: [&quot;person&quot;, &quot;earthling&quot;] })
-&quot;person&quot;
+&gt; extract(name: { first: "Brad", last: "Gessler" })
+"Brad"
+&gt; extract(tags: ["person", "earthling"] })
+"person"
 </code></pre>
 <pre><code class="language-ruby">def matcher(**data)
   if first = data.fetch(:first)
@@ -249,14 +249,14 @@ end
 <p>To get an positive exit code for pre-commit hook integration you have to add this to your spec config:</p>
 <pre><code class="language-ruby"># spec/spec_helper.rb
 RSpec.configure do |config|
-  if ENV[&quot;TEST_COVERAGE&quot;]
-    SimpleCov.start &quot;rails&quot; do
+  if ENV["TEST_COVERAGE"]
+    SimpleCov.start "rails" do
       spec_paths = ARGV.grep %r{(spec)/\w+}
       if spec_paths.any?
-        file_paths = spec_paths.map { |spec_path| spec_path.gsub(%r{spec/|_spec}, &quot;&quot;) }
+        file_paths = spec_paths.map { |spec_path| spec_path.gsub(%r{spec/|_spec}, "") }
         add_filter do |file|
           file_paths.none? do |file_path|
-            if file.filename.include? &quot;/app/&quot;
+            if file.filename.include? "/app/"
               file.filename.match?(%r{/app/#{file_path}})
             else
               file.filename.include?(file_path)
@@ -268,19 +268,19 @@ RSpec.configure do |config|
       minimum_coverage_by_file 81.4
     end
   else
-    SimpleCov.start &quot;rails&quot;
+    SimpleCov.start "rails"
   end
   [...]
 </code></pre>
 <p>Pre-commit hook:</p>
 <pre><code class="language-bash">files=$(git --no-pager diff --name-only --cached --diff-filter=AM)
-erbfiles=$(echo &quot;$files&quot; | grep -e '\.html.erb$')
+erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 
 
-[[ -n &quot;$specfiles&quot; ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec &quot;$specfiles&quot; || exit 1)
+[[ -n "$specfiles" ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
 </code></pre>
 <h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
-<p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command: </p>
+<p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command:</p>
 <p><code>bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman</code></p>
 <h3 id="race-conditions"><a class="header" href="#race-conditions">Race conditions</a></h3>
 <p>Avoid race conditions with <code>ActiveRecord::Base.transaction do</code> and <code>Model.lock.find(model_id)</code> or <code>my_model_object.lock!</code></p>
@@ -321,23 +321,23 @@ expect(items).to match_array([
 
  failure_message_for_should do |model|
      if @message
-       &quot;Validation errors #{model.errors[attribute].inspect} should include #{@message.inspect}&quot;
+       "Validation errors #{model.errors[attribute].inspect} should include #{@message.inspect}"
      else
-       &quot;#{model.class} should have errors on attribute #{attribute.inspect}&quot;
+       "#{model.class} should have errors on attribute #{attribute.inspect}"
      end
    end
  
    failure_message_for_should_not do |model|
-     &quot;#{model.class} should not have an error on attribute #{attribute.inspect}&quot;
+     "#{model.class} should not have an error on attribute #{attribute.inspect}"
    end
  end
 
 
 # usage
 describe User do
-  before { subject.email = &quot;foobar&quot; }
+  before { subject.email = "foobar" }
 
-  it { should have_errors_on(:email).with_message(&quot;Email has an invalid format&quot;) }
+  it { should have_errors_on(:email).with_message("Email has an invalid format") }
 
 end
 </code></pre>
@@ -355,7 +355,7 @@ end
   end
 end
 
-ConsumerClass.new(DataClass({first_name: &quot;Bill&quot;, last_name: &quot;...&quot;, ...}))
+ConsumerClass.new(DataClass({first_name: "Bill", last_name: "...", ...}))
 </code></pre>
 <p>Links: <a href="https://github.com/saturnflyer/polyfill-data">Polyfill - Data gem</a></p>
 <h2 id="rspec-factory-trait--transient"><a class="header" href="#rspec-factory-trait--transient">RSpec factory trait &amp; transient</a></h2>
@@ -374,7 +374,7 @@ ConsumerClass.new(DataClass({first_name: &quot;Bill&quot;, last_name: &quot;...&
   end
 
   factory :book, class Book do
-    sequence(:title) { |n| &quot;book no.#{n}&quot; } # 🦄 default value
+    sequence(:title) { |n| "book no.#{n}" } # 🦄 default value
   end
 
 end
@@ -401,9 +401,9 @@ let!(:user) { create(:user, :with_book, title: 'Ruby') }
   42
 end
 if a = test
-	puts &quot;Assign #{a}&quot;
+	puts "Assign #{a}"
 else
-  puts &quot;Nil is return&quot;
+  puts "Nil is return"
 end
 </code></pre>
 </li>
@@ -425,16 +425,16 @@ end
 </ul>
 <pre><code class="language-ruby">class User
   with_options dependent: :destroy do |options|
-    options.has_many :tasks, class_name: &quot;UserTask&quot;
+    options.has_many :tasks, class_name: "UserTask"
     options.has_many :addresses
   end
 end
 </code></pre>
 <ul>
 <li>try(:method_name) || default_method</li>
-<li>Routing constraints 
+<li>Routing constraints
 <ul>
-<li>subdomain </li>
+<li>subdomain</li>
 <li>authenticated</li>
 </ul>
 </li>
@@ -450,7 +450,7 @@ end
 <h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
 <p>Render plain text:</p>
 <pre><code class="language-ruby">def hello
-  render plain: &quot;hello world!&quot;
+  render plain: "hello world!"
 end
 </code></pre>
 <p>Create a controller with a method and use a object in view:</p>
@@ -471,7 +471,7 @@ end
 <p>Use <code>flash</code> for notifications:</p>
 <pre><code class="language-ruby">#controller
 @todo.save
-flash[:notice] = &quot;Todo was created successfully&quot;
+flash[:notice] = "Todo was created successfully"
 
 # view
 &lt;% flash.each do |name, msg| %&gt;
@@ -481,11 +481,11 @@ flash[:notice] = &quot;Todo was created successfully&quot;
 &lt;% end %&gt;
 </code></pre>
 <p>A bootstrap styled flash messages:</p>
-<pre><code class="language-ruby">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-md-10 col-md-offset-1&quot;&gt;
+<pre><code class="language-ruby">&lt;div class="row"&gt;
+  &lt;div class="col-md-10 col-md-offset-1"&gt;
     &lt;% flash.each do |name, msg| %&gt;
-      &lt;div class=&quot;alert alert-&lt;%= name %&gt;&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/a&gt;
+      &lt;div class="alert alert-&lt;%= name %&gt;"&gt;
+        &lt;a href="#" class="close" data-dismiss="alert"&gt;×&lt;/a&gt;
         &lt;%= msg %&gt;
       &lt;/div&gt;
     &lt;% end %&gt;
@@ -540,7 +540,7 @@ end
 
 def require_user
   if !logged_in?
-    flash[:danger] = &quot;You must be logged in to perform that action&quot;
+    flash[:danger] = "You must be logged in to perform that action"
     redirect_to root_path
     # also possible
     redirect_to :back
@@ -555,7 +555,7 @@ end
 
 # Now create a new partial _ingredient.html.erb under the app/views/ingredients folder for this to work
 
-&lt;span class=&quot;badge&quot;&gt;&lt;%= link_to ingredient.name,   
+&lt;span class="badge"&gt;&lt;%= link_to ingredient.name,   
                       ingredient_path(ingredient) %&gt;   &lt;/span&gt;
 </code></pre>
 <h3 id="model"><a class="header" href="#model">Model</a></h3>
@@ -571,7 +571,7 @@ end
 <h3 id="routes"><a class="header" href="#routes">Routes</a></h3>
 <p>Set root route:</p>
 <pre><code class="language-ruby"># router.rb
-root &quot;pages#home&quot;
+root "pages#home"
 </code></pre>
 <p>Specific route to controller#method:</p>
 <pre><code class="language-ruby">get '/about', to: 'pages#about'
@@ -582,34 +582,34 @@ root &quot;pages#home&quot;
 end
 
 # Form in view
-&lt;%= form\_for(\[@recipe, @comment\], :html =&gt; {class: &quot;form-horizontal&quot;,   
-                                                role: &quot;form&quot;}) do |f| %&gt;
+&lt;%= form\_for(\[@recipe, @comment\], :html =&gt; {class: "form-horizontal",   
+                                                role: "form"}) do |f| %&gt;
 </code></pre>
 <h3 id="links"><a class="header" href="#links">Links</a></h3>
 <p>Create links in views:</p>
-<pre><code class="language-ruby">&lt;%= link_to &quot;Edit this todo&quot;, edit_todo_path(@todo) %&gt;
-&lt;%= link_to &quot;Back to todos listing&quot;, todos_path %&gt;
-&lt;td&gt;&lt;%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: &quot;Are you sure?&quot;} %&gt;&lt;/td&gt;
-&lt;%= link_to &quot;MyRecipes&quot;, root_path, class: &quot;navbar-brand&quot;, id: &quot;logo&quot; %&gt;
-&lt;%= link_to &quot;Sign up or log in&quot;, &quot;#&quot; class: &quot;btn btn-danger btn-lg&quot; %&gt;
+<pre><code class="language-ruby">&lt;%= link_to "Edit this todo", edit_todo_path(@todo) %&gt;
+&lt;%= link_to "Back to todos listing", todos_path %&gt;
+&lt;td&gt;&lt;%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: "Are you sure?"} %&gt;&lt;/td&gt;
+&lt;%= link_to "MyRecipes", root_path, class: "navbar-brand", id: "logo" %&gt;
+&lt;%= link_to "Sign up or log in", "#" class: "btn btn-danger btn-lg" %&gt;
 </code></pre>
 <h3 id="tests"><a class="header" href="#tests">Tests</a></h3>
 <p>Create integration test for model:</p>
 <pre><code class="language-ruby">rails generate integration_test recipes
 </code></pre>
 <p>Simple test root path:</p>
-<pre><code class="language-ruby">test &quot;should get home&quot; do
+<pre><code class="language-ruby">test "should get home" do
   get pages_home_url
   assert_response :success
 end
 
-test &quot;should get root&quot; do
+test "should get root" do
   get root_url
   assert_response :success
 end
 </code></pre>
 <p>to fix this tests, do:</p>
-<pre><code class="language-ruby">root &quot;pages#home&quot;
+<pre><code class="language-ruby">root "pages#home"
 get 'pages/home', to: 'pages#home'
 
 # controller
@@ -624,34 +624,34 @@ end
 class RecipeTest &lt; ActiveSupport::TestCase
   
   def setup
-    @recipe = Recipe.new(name: &quot;vegetable&quot;, description: &quot;great vegetable recipe&quot;)  
+    @recipe = Recipe.new(name: "vegetable", description: "great vegetable recipe")  
   end
   
-  test &quot;recipe should be valid&quot; do
+  test "recipe should be valid" do
     assert @recipe.valid?
   end  
   
-  test &quot;name should be present&quot; do
-    @recipe.name = &quot; &quot;
+  test "name should be present" do
+    @recipe.name = " "
     assert_not @recipe.valid?
   end
   
-  test &quot;description should be present&quot; do
-    @recipe.description = &quot; &quot;
+  test "description should be present" do
+    @recipe.description = " "
     assert_not @recipe.valid?
   end
   
-  test &quot;description shouldn't be less than 5 characters&quot; do
-    @recipe.description = &quot;a&quot; * 3
+  test "description shouldn't be less than 5 characters" do
+    @recipe.description = "a" * 3
     assert_not @recipe.valid?
   end
   
-  test &quot;description shouldn't be more than 500 characters&quot; do
-    @recipe.description = &quot;a&quot; * 501
+  test "description shouldn't be more than 500 characters" do
+    @recipe.description = "a" * 501
     assert_not @recipe.valid?
   end
   
-  test &quot;should get recipes show&quot; do
+  test "should get recipes show" do
     get recipe_path(@recipe)
     assert_template 'recipes/show'
     assert_match @recipe.name, response.body
@@ -659,11 +659,11 @@ class RecipeTest &lt; ActiveSupport::TestCase
     assert_match @chef.chefname, response.body
   end
   
-  test &quot;should get recipes listing&quot; do
+  test "should get recipes listing" do
     get recipes_path
     assert_template 'recipes/index'
-    assert_select &quot;a[href=?]&quot;, recipe_path(@recipe), text: @recipe.name
-    assert_select &quot;a[href=?]&quot;, recipe_path(@recipe2), text: @recipe2.name
+    assert_select "a[href=?]", recipe_path(@recipe), text: @recipe.name
+    assert_select "a[href=?]", recipe_path(@recipe2), text: @recipe2.name
   end
 end
 </code></pre>
@@ -673,74 +673,74 @@ end
 class ChefTest &lt; ActiveSupport::TestCase
   
   def setup
-    @chef = Chef.new(chefname: &quot;mashrur&quot;, email: &quot;mashrur@example.com&quot;)
+    @chef = Chef.new(chefname: "mashrur", email: "mashrur@example.com")
   end
   
-  test &quot;should be valid&quot; do
+  test "should be valid" do
     assert @chef.valid?
   end
   
-  test &quot;name should be present&quot; do
-    @chef.chefname = &quot; &quot;
+  test "name should be present" do
+    @chef.chefname = " "
     assert_not @chef.valid?
   end
   
-  test &quot;name should be less than 30 characters&quot; do
-    @chef.chefname = &quot;a&quot; * 31
+  test "name should be less than 30 characters" do
+    @chef.chefname = "a" * 31
     assert_not @chef.valid?
   end
   
-  test &quot;email should be present&quot; do
-    @chef.email = &quot; &quot;
+  test "email should be present" do
+    @chef.email = " "
     assert_not @chef.valid?
   end
   
-  test &quot;email should not be too long&quot; do
-    @chef.email = &quot;a&quot; * 245 + &quot;@example.com&quot;
+  test "email should not be too long" do
+    @chef.email = "a" * 245 + "@example.com"
     assert_not @chef.valid?
   end
   
-  test &quot;email should accept correct format&quot; do
+  test "email should accept correct format" do
     valid_emails = %w[user@example.com MASHRUR@gmail.com M.first@yahoo.ca john+smith@co.uk.org]
     valid_emails.each do |valids|
       @chef.email = valids
-      assert @chef.valid?, &quot;#{valids.inspect} should be valid&quot;
+      assert @chef.valid?, "#{valids.inspect} should be valid"
     end
   end
   
-  test &quot;should reject invalid addresses&quot; do
+  test "should reject invalid addresses" do
     invalid_emails = %w[mashrur@example mashrur@example,com mashrur.name@gmail. joe@bar+foo.com]
     invalid_emails.each do |invalids|
       @chef.email = invalids
-      assert_not @chef.valid?, &quot;#{invalids.inspect} should be invalid&quot;
+      assert_not @chef.valid?, "#{invalids.inspect} should be invalid"
     end
   end 
   
-  test &quot;email should be unique and case insensitive&quot; do
+  test "email should be unique and case insensitive" do
     duplicate_chef = @chef.dup
     duplicate_chef.email = @chef.email.upcase
     @chef.save
     assert_not duplicate_chef.valid?
   end
   
-  test &quot;reject an invalid signup&quot; do
+  test "reject an invalid signup" do
     get signup_path
-    assert_no_difference &quot;Chef.count&quot; do
-      post chefs_path, params: { chef: { chefname: &quot; &quot;, 
-                                 email: &quot; &quot;, password: &quot;password&quot;,
-                                    password_confirmation: &quot; &quot; } }
+    assert_no_difference "Chef.count" do
+      post chefs_path, params: { chef: { chefname: " ", 
+                                 email: " ", password: "password",
+                                    password_confirmation: " " } }
     end
     assert_template 'chefs/new'
     assert_select 'h2.panel-title'
     assert_select 'div.panel-body'
   end
   
-  test &quot;accept valid signup&quot; do
+  test "accept valid signup" do
     get signup_path
-    assert_difference &quot;Chef.count&quot;, 1 do
-      post chefs_path, params: { chef: { chefname: &quot;mashrur&quot;, 
-                email: &quot;mashrur@example.com&quot;, password: &quot;password&quot;,
-                              password_confirmation: &quot;password&quot; } }
+    assert_difference "Chef.count", 1 do
+      post chefs_path, params: { chef: { chefname: "mashrur", 
+                email: "mashrur@example.com", password: "password",
+                              password_confirmation: "password" } }
     end
     follow_redirect!
     assert_template 'chefs/show'
@@ -764,8 +764,8 @@ end
 
 # And then test it with:
 
-test &quot;email should be lower case before hitting db&quot; do
-  mixed_email = &quot;JohN@ExampLe.com&quot;
+test "email should be lower case before hitting db" do
+  mixed_email = "JohN@ExampLe.com"
   @chef.email = mixed_email
   @chef.save
   assert_equal mixed_email.downcase, @chef.reload.email 
@@ -785,11 +785,11 @@ has_many :recipes, dependent: :destroy
 </code></pre>
 <p>Test</p>
 <pre><code class="language-ruby">def setup
-  @chef = Chef.create!(chefname: &quot;mashrur&quot;, email: &quot;mashrur@example.com&quot;)
-  @recipe = @chef.recipes.build(name: &quot;vegetable&quot;, description: &quot;great vegetable recipe&quot;)  
+  @chef = Chef.create!(chefname: "mashrur", email: "mashrur@example.com")
+  @recipe = @chef.recipes.build(name: "vegetable", description: "great vegetable recipe")  
 end
 
-test &quot;recipe without chef should be invalid&quot; do
+test "recipe without chef should be invalid" do
   @recipe.chef_id = nil
   assert_not @recipe.valid?
 end
@@ -803,14 +803,14 @@ gem 'jquery-rails'
 //= require bootstrap-sprockets
 
 # app/assets/stylesheets/custom.css.scss
-@import &quot;bootstrap-sprockets&quot;;
-@import &quot;bootstrap&quot;;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 </code></pre>
 <h3 id="views"><a class="header" href="#views">Views</a></h3>
 <p>Render html for each data:</p>
 <pre><code class="language-ruby">&lt;%= f.collection_check_boxes :ingredient_ids,   
                                     Ingredient.all, :id, :name do |cb| %&gt;  
-&lt;% cb.label(class: &quot;checkbox-inline input_checkbox&quot;) {cb.check_box(class: &quot;checkbox&quot;) + cb.text} %&gt;  
+&lt;% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %&gt;  
       &lt;% end %&gt;
 </code></pre>
 <h3 id="database"><a class="header" href="#database">Database</a></h3>

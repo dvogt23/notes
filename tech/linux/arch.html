@@ -363,7 +363,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 <h3 id="3-disable-grub-delay"><a class="header" href="#3-disable-grub-delay">3. Disable GRUB delay</a></h3>
 <p>Add the following to /etc/default/grub:
 achieve the fastest possible boot:</p>
-<pre><code>GRUB_FORCE_HIDDEN_MENU=&quot;true&quot;
+<pre><code>GRUB_FORCE_HIDDEN_MENU="true"
 </code></pre>
 <p>Then put file 31_hold_shift to /etc/grub.d/.
 Download 31_hold_shift https://goo.gl/nac6Kp</p>
@@ -409,13 +409,13 @@ ecryptfs-migrate-home -u username
 <pre><code>ls .ecryptfs
 </code></pre>
 <p>Edit /etc/pam.d/system-auth:</p>
-<p>After the line “auth required pam_unix.so” add: </p>
+<p>After the line “auth required pam_unix.so” add:</p>
 <pre><code>auth required pam_ecryptfs.so unwrap
 </code></pre>
 <p>Above the line “password required pam_unix.so” insert:</p>
 <pre><code>password optional pam_ecryptfs.so
 </code></pre>
-<p>After the line “session required pam_unix.so” add: </p>
+<p>After the line “session required pam_unix.so” add:</p>
 <pre><code>session optional pam_ecryptfs.so unwrap
 </code></pre>
 <p>Reboot and make sure that you can login to your desktop</p>

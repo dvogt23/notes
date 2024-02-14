@@ -194,7 +194,7 @@
 brew reinstall openssl@1.1
 
 #open new shell
-rvm reinstall &quot;ruby-3.0.0&quot; --with-openssl-dir=`brew --prefix openssl@1.1` --disable-binary
+rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disable-binary
 </code></pre>
 <p>On arch you have to install openssl-1.0 and run:</p>
 <pre><code class="language-bash">PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig:/usr/lib/pkgconfig rvm install &lt;ruby-version&gt;
@@ -203,9 +203,31 @@ rvm reinstall &quot;ruby-3.0.0&quot; --with-openssl-dir=`brew --prefix openssl@1
 <p>Some <code>ruby</code> functions:</p>
 <pre><code class="language-ruby">truncate(recipe.description, length: 150)   # truncate
 time_ago_in_words(recipe.created_at)        # date
-pluralize(count, &quot;apple&quot;)                   # pluralize if count &gt; 1 to apples
+pluralize(count, "apple")                   # pluralize if count &gt; 1 to apples
 
 </code></pre>
+<h3 id="lambda-composition"><a class="header" href="#lambda-composition">Lambda composition</a></h3>
+<p>Combine lambda blocks together with  <code>&gt;&gt;</code> i.e. to create a new one like <code>TAX_FEE = TAX &gt;&gt; FEE</code></p>
+<pre><code class="language-ruby"># List of our individual pricing rules
+TAX           = -&gt;(val) { val + val*0.05 }
+FEE           = -&gt;(val) { val + 1 }
+PREMIUM       = -&gt;(val) { val + 10 }
+DISCOUNT      = -&gt;(val) { val * 0.90 }
+ROUND_TO_CENT = -&gt;(val) { val.round(2) }
+# One presenter
+PRESENT       = -&gt;(val) { val.to_f }
+
+# Pre-define some rule sets for some pricing scenarios
+REGULAR_SET    = [FEE, TAX, ROUND_TO_CENT, PRESENT]
+PREMIUM_SET    = [FEE, PREMIUM, TAX, ROUND_TO_CENT, PRESENT]
+DISCOUNTED_SET = [FEE, DISCOUNT, TAX, ROUND_TO_CENT, PRESENT]
+</code></pre>
+<p>Now we can define a price calculator:</p>
+<pre><code class="language-ruby">def apply_rules(rules:, base_price:)
+  rules.inject(:&gt;&gt;).call(base_price)
+end
+</code></pre>
+<p>Source: <a href="https://getaround.tech/ruby-lambda-composition/">get-around.tech</a></p>
 <h2 id="object-lookup"><a class="header" href="#object-lookup">Object lookup</a></h2>
 <pre><code class="language-ruby">module GildedRose
 	DEFAULT_CLASS = Item
@@ -248,7 +270,7 @@ IP_REGEX = /
 <pre><code class="language-ruby">module PatchedString
   refine String do
     def +(value)
-      self &lt;&lt; &quot;, #{value}&quot;
+      self &lt;&lt; ", #{value}"
     end
   end
 end
@@ -267,10 +289,10 @@ module PatchedNamespace
   end
 end
 
-RegularNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;12&quot;
-PatchedNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;1, 2&quot;
+RegularNamespace.append_strings("1", "2") # =&gt; "12"
+PatchedNamespace.append_strings("1", "2") # =&gt; "1, 2"
 </code></pre>
-<footer id="last-change">Last change: 2023-03-06, commit: <a href="https://github.com/dvogt23/notes/commit/10d2e87">10d2e87</a></footer>
+<footer id="last-change">Last change: 2024-02-14, commit: <a href="https://github.com/dvogt23/notes/commit/20f0c22">20f0c22</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

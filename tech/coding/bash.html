@@ -185,27 +185,27 @@
 
 set -euo pipefail
 
-[[ &quot;${BASH_VERSINFO[0]}&quot; -lt 4 ]] &amp;&amp; die &quot;Bash &gt;=4 required&quot;
+[[ "${BASH_VERSINFO[0]}" -lt 4 ]] &amp;&amp; die "Bash &gt;=4 required"
 
 function installed {
-  cmd=$(command -v &quot;${1}&quot;)
+  cmd=$(command -v "${1}")
 
-  [[ -n &quot;${cmd}&quot; ]] &amp;&amp; [[ -f &quot;${cmd}&quot; ]]
+  [[ -n "${cmd}" ]] &amp;&amp; [[ -f "${cmd}" ]]
   return ${?}
 }
 
 function die {
-  &gt;&amp;2 echo &quot;Fatal: ${@}&quot;
+  &gt;&amp;2 echo "Fatal: ${@}"
   exit 1
 }
 
 deps=(curl nc dig)
-for dep in &quot;${deps[@]}&quot;; do
-  installed &quot;${dep}&quot; || die &quot;Missing '${dep}'&quot;
+for dep in "${deps[@]}"; do
+  installed "${dep}" || die "Missing '${dep}'"
 done
 
 # Code blocks aren't subshells, so `exit` works as expected
-risky-thing || { &gt;&amp;2 echo &quot;risky-thing didn't work!&quot;; exit 1; }
+risky-thing || { &gt;&amp;2 echo "risky-thing didn't work!"; exit 1; }
 
 </code></pre>
 <p>Another pretty nice template: <a href="https://betterdev.blog/minimal-safe-bash-script-template/">Source</a></p>
@@ -213,13 +213,13 @@ risky-thing || { &gt;&amp;2 echo &quot;risky-thing didn't work!&quot;; exit 1; }
 
 set -Eeuo pipefail
 
-cd &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)&quot; &gt;/dev/null 2&gt;&amp;1
+cd "$(dirname "${BASH_SOURCE[0]}")" &gt;/dev/null 2&gt;&amp;1
 
 trap cleanup SIGINT SIGTERM ERR EXIT
 
 usage() {
   cat &lt;&lt;EOF
-Usage: $(basename &quot;$0&quot;) [-h] [-v] [-f] -p param_value arg1 [arg2...]
+Usage: $(basename "$0") [-h] [-v] [-f] -p param_value arg1 [arg2...]
 
 Script description here.
 
@@ -239,7 +239,7 @@ cleanup() {
 }
 
 setup_colors() {
-  if [[ -t 2 ]] &amp;&amp; [[ -z &quot;${NO_COLOR-}&quot; ]] &amp;&amp; [[ &quot;${TERM-}&quot; != &quot;dumb&quot; ]]; then
+  if [[ -t 2 ]] &amp;&amp; [[ -z "${NO_COLOR-}" ]] &amp;&amp; [[ "${TERM-}" != "dumb" ]]; then
     NOCOLOR='\033[0m' RED='\033[0;31m' GREEN='\033[0;32m' ORANGE='\033[0;33m' BLUE='\033[0;34m' PURPLE='\033[0;35m' CYAN='\033[0;36m' YELLOW='\033[1;33m'
   else
     NOCOLOR='' RED='' GREEN='' ORANGE='' BLUE='' PURPLE='' CYAN='' YELLOW=''
@@ -247,14 +247,14 @@ setup_colors() {
 }
 
 msg() {
-  echo &gt;&amp;2 -e &quot;${1-}&quot;
+  echo &gt;&amp;2 -e "${1-}"
 }
 
 die() {
   local msg=$1
   local code=${2-1} # default exit status 1
-  msg &quot;$msg&quot;
-  exit &quot;$code&quot;
+  msg "$msg"
+  exit "$code"
 }
 
 parse_params() {
@@ -263,7 +263,7 @@ parse_params() {
   param=''
 
   while :; do
-    case &quot;${1-}&quot; in
+    case "${1-}" in
     -h | --help)
       usage
       ;;
@@ -277,11 +277,11 @@ parse_params() {
       flag=1
       ;;
     -p | --param) # example named parameter
-      param=&quot;${2-}&quot;
+      param="${2-}"
       shift
       ;;
     -?*)
-      die &quot;Unknown option: $1&quot;
+      die "Unknown option: $1"
       ;;
     *)
       break
@@ -290,24 +290,24 @@ parse_params() {
     shift
   done
 
-  args=(&quot;$@&quot;)
+  args=("$@")
 
   # check required params and arguments
-  [[ -z &quot;${param-}&quot; ]] &amp;&amp; die &quot;Missing required parameter: param&quot;
-  [[ ${#args[@]} -eq 0 ]] &amp;&amp; die &quot;Missing script arguments&quot;
+  [[ -z "${param-}" ]] &amp;&amp; die "Missing required parameter: param"
+  [[ ${#args[@]} -eq 0 ]] &amp;&amp; die "Missing script arguments"
 
   return 0
 }
 
-parse_params &quot;$@&quot;
+parse_params "$@"
 setup_colors
 
 # script logic here
 
-msg &quot;${RED}Read parameters:${NOCOLOR}&quot;
-msg &quot;- flag: ${flag}&quot;
-msg &quot;- param: ${param}&quot;
-msg &quot;- arguments: ${args[*]-}&quot;
+msg "${RED}Read parameters:${NOCOLOR}"
+msg "- flag: ${flag}"
+msg "- param: ${param}"
+msg "- arguments: ${args[*]-}"
 </code></pre>
 <footer id="last-change">Last change: 2023-08-08, commit: <a href="https://github.com/dvogt23/notes/commit/8d67336">8d67336</a></footer>
                     </main>

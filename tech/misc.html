@@ -227,16 +227,16 @@
 <pre><code class="language-bash">ssh -R 80:localhost:3000 localhost.run
 </code></pre>
 <h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
-<pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
+<pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == "*") | {(path | join(".")): .} '
 </code></pre>
 <h3 id="replace-passwords-in-gz-logile"><a class="header" href="#replace-passwords-in-gz-logile">Replace passwords in <code>gz</code> logile</a></h3>
-<pre><code class="language-bash">gzip -cd rails.log.gz | sed -re 's/(\&quot;password\&quot;=&gt;)(\&quot;(.*)\&quot;,)/\1\&quot;[FILTERed]&quot;,/g' | sed -re 's/(\&quot;password_confirmation\&quot;=&gt;)(\&quot;(.*)\&quot;)/\1\&quot;[FILTERed]&quot;/g' | gzip &gt; rails.tmp
+<pre><code class="language-bash">gzip -cd rails.log.gz | sed -re 's/(\"password\"=&gt;)(\"(.*)\",)/\1\"[FILTERed]",/g' | sed -re 's/(\"password_confirmation\"=&gt;)(\"(.*)\")/\1\"[FILTERed]"/g' | gzip &gt; rails.tmp
 </code></pre>
 <h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
 <p>Navigating</p>
 <pre><code>Line number: go to that line and print it.
 pn - Print current line and line number.
-3kxe - mark line 3 as &quot;xe&quot;.
+3kxe - mark line 3 as "xe".
 'xep - print the line marked as xe.
 </code></pre>
 <p>Editing</p>
@@ -278,7 +278,7 @@ w - Save the current buffer if the file is already saved.
 w1,4 - Save lines 1 to 4 to the current buffer.
 W - append to a file (not replace).
 r /etc/hosts - Insert the contents of /etc/hosts after the current line.
-r !ps -e - Insert the output of the command &quot;ps -e&quot; after the current line.
+r !ps -e - Insert the output of the command "ps -e" after the current line.
 e file.txt - Open the file file.txt and replace the current buffer.
 </code></pre>
 <p><a href="https://raymii.org/s/tutorials/ed_cheatsheet.html">Source: raymii.org</a></p>
@@ -314,15 +314,15 @@ HOMEBREW_NO_AUTO_UPDATE=1 brew install &lt;packageName&gt;
 brew list --versions
 brew switch &lt;packageName&gt; &lt;version&gt;
 </code></pre>
-<h3 id="target_blank-vulnerability"><a class="header" href="#target_blank-vulnerability"><code>target=&quot;_blank&quot;</code> vulnerability</a></h3>
-<p>Add always <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> links, because of:</p>
+<h3 id="target_blank-vulnerability"><a class="header" href="#target_blank-vulnerability"><code>target="_blank"</code> vulnerability</a></h3>
+<p>Add always <code>rel="noopener noreferrer"</code> to <code>target="_blank"</code> links, because of:</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable">stackoverflow</a></li>
 <li><a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">jitbit</a></li>
 </ul>
 <h3 id="macos"><a class="header" href="#macos">MacOS</a></h3>
 <p>Shutdown without confirmation from terminal:</p>
-<p><code>osascript -e 'tell app &quot;System Events&quot; to shut down'</code></p>
+<p><code>osascript -e 'tell app "System Events" to shut down'</code></p>
 <p>Source: <a href="https://apple.stackexchange.com/a/103633">Stackexchange</a></p>
 <h3 id="wireguard"><a class="header" href="#wireguard">Wireguard</a></h3>
 <p>Setup wireguard with good explanations: <a href="https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478">What They Don’t Tell You About Setting Up A WireGuard VPN</a></p>
@@ -405,12 +405,12 @@ http {
 [http.middlewares]
   [http.middlewares.floc.headers]
     [http.middlewares.floc.headers.customResponseHeaders]
-        Permissions-Policy = &quot;interest-cohort=()&quot;
+        Permissions-Policy = "interest-cohort=()"
 
 </code></pre>
 <p>Source: <a href="https://paramdeo.com//blog/opting-your-website-out-of-googles-floc-network">Paramdeo Singh - Opting your Website out of Google’s FLoC Network</a></p>
 <h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
-<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
+<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png "WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;"</code></p>
 <h3 id="security-book"><a class="header" href="#security-book">Security book</a></h3>
 <p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/~rja14/book.html">Book</a></p>
 <h3 id="linux-hardening-book"><a class="header" href="#linux-hardening-book">Linux hardening book</a></h3>
@@ -513,7 +513,7 @@ http {
 <li>Iron Sky (Film)</li>
 </ul>
 <pre><code>
-&lt;footer id=&quot;last-change&quot;&gt;Last change: 2023-06-02, commit: &lt;a href=&quot;https://github.com/dvogt23/notes/commit/5fb8f32&quot;&gt;5fb8f32&lt;/a&gt;&lt;/footer&gt;</code></pre>
+&lt;footer id="last-change"&gt;Last change: 2023-06-02, commit: &lt;a href="https://github.com/dvogt23/notes/commit/5fb8f32"&gt;5fb8f32&lt;/a&gt;&lt;/footer&gt;</code></pre>
 
                     </main>
 

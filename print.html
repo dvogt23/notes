@@ -197,7 +197,7 @@ lists by people who also record stuff on GitHub.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pass-"><a class="header" href="#pass-">Pass 🔐</a></h1>
 <p>Favorite app on phone, also on terminal is <a href="https://www.passwordstore.org/">pass</a>.</p>
 <h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
-<p><strong>SSH key import on iPhone fails</strong> <a href="https://github.com/mssun/passforios/issues/218">issue</a>	
+<p><strong>SSH key import on iPhone fails</strong> <a href="https://github.com/mssun/passforios/issues/218">issue</a>
 Generate your ssh key without following command:</p>
 <pre><code>	ssh-keygen -t rsa -b 2046 -m PEM -f ./secret.key
 </code></pre>
@@ -264,10 +264,10 @@ Different stuff from <a href="https://oroques.dev/notes/neovim-init/">oroques</a
 <p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
 <h3 id="global-command"><a class="header" href="#global-command">Global command</a></h3>
 <p>To delete lines with a pattern:</p>
-<pre><code class="language-vim">&quot; delete line
+<pre><code class="language-vim">" delete line
 :g/useless/d
 
-&quot; make line lowercase
+" make line lowercase
 :g/useless/norm gu$
 </code></pre>
 <p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
@@ -338,23 +338,23 @@ set splitright
 </code></pre>
 <h3 id="resizing-splits"><a class="header" href="#resizing-splits">Resizing splits</a></h3>
 <p>Vim’s defaults are useful for changing split shapes:</p>
-<pre><code>&quot;Max out the height of the current split
+<pre><code>"Max out the height of the current split
 ctrl + w _
 
-&quot;Max out the width of the current split
+"Max out the width of the current split
 ctrl + w |
 
-&quot;Normalize all split sizes, which is very handy when resizing terminal
+"Normalize all split sizes, which is very handy when resizing terminal
 ctrl + w =
 </code></pre>
 <h3 id="more-split-manipulation"><a class="header" href="#more-split-manipulation">More split manipulation</a></h3>
-<pre><code>&quot;Swap top/bottom or left/right split
+<pre><code>"Swap top/bottom or left/right split
 Ctrl+W R
 
-&quot;Break out current window into a new tabview
+"Break out current window into a new tabview
 Ctrl+W T
 
-&quot;Close every window in the current tabview but the current one
+"Close every window in the current tabview but the current one
 Ctrl+W o
 </code></pre>
 <footer id="last-change">Last change: 2022-11-16, commit: <a href="https://github.com/dvogt23/notes/commit/7696934">7696934</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="firefox"><a class="header" href="#firefox">Firefox</a></h1>
@@ -471,27 +471,27 @@ Google have some <a href="https://google.github.io/styleguide/">guidelines</a> f
 
 set -euo pipefail
 
-[[ &quot;${BASH_VERSINFO[0]}&quot; -lt 4 ]] &amp;&amp; die &quot;Bash &gt;=4 required&quot;
+[[ "${BASH_VERSINFO[0]}" -lt 4 ]] &amp;&amp; die "Bash &gt;=4 required"
 
 function installed {
-  cmd=$(command -v &quot;${1}&quot;)
+  cmd=$(command -v "${1}")
 
-  [[ -n &quot;${cmd}&quot; ]] &amp;&amp; [[ -f &quot;${cmd}&quot; ]]
+  [[ -n "${cmd}" ]] &amp;&amp; [[ -f "${cmd}" ]]
   return ${?}
 }
 
 function die {
-  &gt;&amp;2 echo &quot;Fatal: ${@}&quot;
+  &gt;&amp;2 echo "Fatal: ${@}"
   exit 1
 }
 
 deps=(curl nc dig)
-for dep in &quot;${deps[@]}&quot;; do
-  installed &quot;${dep}&quot; || die &quot;Missing '${dep}'&quot;
+for dep in "${deps[@]}"; do
+  installed "${dep}" || die "Missing '${dep}'"
 done
 
 # Code blocks aren't subshells, so `exit` works as expected
-risky-thing || { &gt;&amp;2 echo &quot;risky-thing didn't work!&quot;; exit 1; }
+risky-thing || { &gt;&amp;2 echo "risky-thing didn't work!"; exit 1; }
 
 </code></pre>
 <p>Another pretty nice template: <a href="https://betterdev.blog/minimal-safe-bash-script-template/">Source</a></p>
@@ -499,13 +499,13 @@ risky-thing || { &gt;&amp;2 echo &quot;risky-thing didn't work!&quot;; exit 1; }
 
 set -Eeuo pipefail
 
-cd &quot;$(dirname &quot;${BASH_SOURCE[0]}&quot;)&quot; &gt;/dev/null 2&gt;&amp;1
+cd "$(dirname "${BASH_SOURCE[0]}")" &gt;/dev/null 2&gt;&amp;1
 
 trap cleanup SIGINT SIGTERM ERR EXIT
 
 usage() {
   cat &lt;&lt;EOF
-Usage: $(basename &quot;$0&quot;) [-h] [-v] [-f] -p param_value arg1 [arg2...]
+Usage: $(basename "$0") [-h] [-v] [-f] -p param_value arg1 [arg2...]
 
 Script description here.
 
@@ -525,7 +525,7 @@ cleanup() {
 }
 
 setup_colors() {
-  if [[ -t 2 ]] &amp;&amp; [[ -z &quot;${NO_COLOR-}&quot; ]] &amp;&amp; [[ &quot;${TERM-}&quot; != &quot;dumb&quot; ]]; then
+  if [[ -t 2 ]] &amp;&amp; [[ -z "${NO_COLOR-}" ]] &amp;&amp; [[ "${TERM-}" != "dumb" ]]; then
     NOCOLOR='\033[0m' RED='\033[0;31m' GREEN='\033[0;32m' ORANGE='\033[0;33m' BLUE='\033[0;34m' PURPLE='\033[0;35m' CYAN='\033[0;36m' YELLOW='\033[1;33m'
   else
     NOCOLOR='' RED='' GREEN='' ORANGE='' BLUE='' PURPLE='' CYAN='' YELLOW=''
@@ -533,14 +533,14 @@ setup_colors() {
 }
 
 msg() {
-  echo &gt;&amp;2 -e &quot;${1-}&quot;
+  echo &gt;&amp;2 -e "${1-}"
 }
 
 die() {
   local msg=$1
   local code=${2-1} # default exit status 1
-  msg &quot;$msg&quot;
-  exit &quot;$code&quot;
+  msg "$msg"
+  exit "$code"
 }
 
 parse_params() {
@@ -549,7 +549,7 @@ parse_params() {
   param=''
 
   while :; do
-    case &quot;${1-}&quot; in
+    case "${1-}" in
     -h | --help)
       usage
       ;;
@@ -563,11 +563,11 @@ parse_params() {
       flag=1
       ;;
     -p | --param) # example named parameter
-      param=&quot;${2-}&quot;
+      param="${2-}"
       shift
       ;;
     -?*)
-      die &quot;Unknown option: $1&quot;
+      die "Unknown option: $1"
       ;;
     *)
       break
@@ -576,24 +576,24 @@ parse_params() {
     shift
   done
 
-  args=(&quot;$@&quot;)
+  args=("$@")
 
   # check required params and arguments
-  [[ -z &quot;${param-}&quot; ]] &amp;&amp; die &quot;Missing required parameter: param&quot;
-  [[ ${#args[@]} -eq 0 ]] &amp;&amp; die &quot;Missing script arguments&quot;
+  [[ -z "${param-}" ]] &amp;&amp; die "Missing required parameter: param"
+  [[ ${#args[@]} -eq 0 ]] &amp;&amp; die "Missing script arguments"
 
   return 0
 }
 
-parse_params &quot;$@&quot;
+parse_params "$@"
 setup_colors
 
 # script logic here
 
-msg &quot;${RED}Read parameters:${NOCOLOR}&quot;
-msg &quot;- flag: ${flag}&quot;
-msg &quot;- param: ${param}&quot;
-msg &quot;- arguments: ${args[*]-}&quot;
+msg "${RED}Read parameters:${NOCOLOR}"
+msg "- flag: ${flag}"
+msg "- param: ${param}"
+msg "- arguments: ${args[*]-}"
 </code></pre>
 <footer id="last-change">Last change: 2023-08-08, commit: <a href="https://github.com/dvogt23/notes/commit/8d67336">8d67336</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="environment"><a class="header" href="#environment">Environment</a></h1>
 <h2 id="development-on-a-virtual-server-docker"><a class="header" href="#development-on-a-virtual-server-docker">Development on a virtual-server (docker)</a></h2>
@@ -624,7 +624,7 @@ repository.</p>
 <li>Push this branch to history-repo
 <code>git push project-history history:main</code></li>
 <li>Reduce size of main repo
-<code>git commit-tree -m &quot;For historic commits, run 'git replace &lt;child-ID&gt; 590f4d3'&quot; &quot;590f4d3~^{tree}&quot; d3bee05dac84c66b7d13f99a5edf790688f51494</code>
+<code>git commit-tree -m "For historic commits, run 'git replace &lt;child-ID&gt; 590f4d3'" "590f4d3~^{tree}" d3bee05dac84c66b7d13f99a5edf790688f51494</code>
 <code>git rebase 590f4d3~ --onto d3bee05  --rebase-merges</code></li>
 <li>Push small size to origin
 <code>git push origin main --force-with-lease</code></li>
@@ -666,7 +666,7 @@ $ cd pcl-examples #make a directory we want to copy folders to
 $ git init #initialize the empty local repo
 $ git remote add origin -f https://github.com/PointCloudLibrary/pcl.git #add the remote origin
 $ git config core.sparsecheckout true #very crucial. this is where we tell git we are checking out specifics
-$ echo &quot;examples/*&quot; &gt;&gt; .git/info/sparse-checkout #recursively checkout examples folder
+$ echo "examples/*" &gt;&gt; .git/info/sparse-checkout #recursively checkout examples folder
 $ git pull --depth=2 origin master #go only 2 depths down the examples directory
 </code></pre>
 <p><strong>Switch to previous branch</strong></p>
@@ -839,10 +839,10 @@ Passing ruby data to javaScript</li>
   end
 end
 
-&gt; extract(name: { first: &quot;Brad&quot;, last: &quot;Gessler&quot; })
-&quot;Brad&quot;
-&gt; extract(tags: [&quot;person&quot;, &quot;earthling&quot;] })
-&quot;person&quot;
+&gt; extract(name: { first: "Brad", last: "Gessler" })
+"Brad"
+&gt; extract(tags: ["person", "earthling"] })
+"person"
 </code></pre>
 <pre><code class="language-ruby">def matcher(**data)
   if first = data.fetch(:first)
@@ -860,14 +860,14 @@ end
 <p>To get an positive exit code for pre-commit hook integration you have to add this to your spec config:</p>
 <pre><code class="language-ruby"># spec/spec_helper.rb
 RSpec.configure do |config|
-  if ENV[&quot;TEST_COVERAGE&quot;]
-    SimpleCov.start &quot;rails&quot; do
+  if ENV["TEST_COVERAGE"]
+    SimpleCov.start "rails" do
       spec_paths = ARGV.grep %r{(spec)/\w+}
       if spec_paths.any?
-        file_paths = spec_paths.map { |spec_path| spec_path.gsub(%r{spec/|_spec}, &quot;&quot;) }
+        file_paths = spec_paths.map { |spec_path| spec_path.gsub(%r{spec/|_spec}, "") }
         add_filter do |file|
           file_paths.none? do |file_path|
-            if file.filename.include? &quot;/app/&quot;
+            if file.filename.include? "/app/"
               file.filename.match?(%r{/app/#{file_path}})
             else
               file.filename.include?(file_path)
@@ -879,19 +879,19 @@ RSpec.configure do |config|
       minimum_coverage_by_file 81.4
     end
   else
-    SimpleCov.start &quot;rails&quot;
+    SimpleCov.start "rails"
   end
   [...]
 </code></pre>
 <p>Pre-commit hook:</p>
 <pre><code class="language-bash">files=$(git --no-pager diff --name-only --cached --diff-filter=AM)
-erbfiles=$(echo &quot;$files&quot; | grep -e '\.html.erb$')
+erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 
 
-[[ -n &quot;$specfiles&quot; ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec &quot;$specfiles&quot; || exit 1)
+[[ -n "$specfiles" ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
 </code></pre>
 <h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
-<p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command: </p>
+<p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command:</p>
 <p><code>bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman</code></p>
 <h3 id="race-conditions"><a class="header" href="#race-conditions">Race conditions</a></h3>
 <p>Avoid race conditions with <code>ActiveRecord::Base.transaction do</code> and <code>Model.lock.find(model_id)</code> or <code>my_model_object.lock!</code></p>
@@ -932,23 +932,23 @@ expect(items).to match_array([
 
  failure_message_for_should do |model|
      if @message
-       &quot;Validation errors #{model.errors[attribute].inspect} should include #{@message.inspect}&quot;
+       "Validation errors #{model.errors[attribute].inspect} should include #{@message.inspect}"
      else
-       &quot;#{model.class} should have errors on attribute #{attribute.inspect}&quot;
+       "#{model.class} should have errors on attribute #{attribute.inspect}"
      end
    end
  
    failure_message_for_should_not do |model|
-     &quot;#{model.class} should not have an error on attribute #{attribute.inspect}&quot;
+     "#{model.class} should not have an error on attribute #{attribute.inspect}"
    end
  end
 
 
 # usage
 describe User do
-  before { subject.email = &quot;foobar&quot; }
+  before { subject.email = "foobar" }
 
-  it { should have_errors_on(:email).with_message(&quot;Email has an invalid format&quot;) }
+  it { should have_errors_on(:email).with_message("Email has an invalid format") }
 
 end
 </code></pre>
@@ -966,7 +966,7 @@ end
   end
 end
 
-ConsumerClass.new(DataClass({first_name: &quot;Bill&quot;, last_name: &quot;...&quot;, ...}))
+ConsumerClass.new(DataClass({first_name: "Bill", last_name: "...", ...}))
 </code></pre>
 <p>Links: <a href="https://github.com/saturnflyer/polyfill-data">Polyfill - Data gem</a></p>
 <h2 id="rspec-factory-trait--transient"><a class="header" href="#rspec-factory-trait--transient">RSpec factory trait &amp; transient</a></h2>
@@ -985,7 +985,7 @@ ConsumerClass.new(DataClass({first_name: &quot;Bill&quot;, last_name: &quot;...&
   end
 
   factory :book, class Book do
-    sequence(:title) { |n| &quot;book no.#{n}&quot; } # 🦄 default value
+    sequence(:title) { |n| "book no.#{n}" } # 🦄 default value
   end
 
 end
@@ -1012,9 +1012,9 @@ let!(:user) { create(:user, :with_book, title: 'Ruby') }
   42
 end
 if a = test
-	puts &quot;Assign #{a}&quot;
+	puts "Assign #{a}"
 else
-  puts &quot;Nil is return&quot;
+  puts "Nil is return"
 end
 </code></pre>
 </li>
@@ -1036,16 +1036,16 @@ end
 </ul>
 <pre><code class="language-ruby">class User
   with_options dependent: :destroy do |options|
-    options.has_many :tasks, class_name: &quot;UserTask&quot;
+    options.has_many :tasks, class_name: "UserTask"
     options.has_many :addresses
   end
 end
 </code></pre>
 <ul>
 <li>try(:method_name) || default_method</li>
-<li>Routing constraints 
+<li>Routing constraints
 <ul>
-<li>subdomain </li>
+<li>subdomain</li>
 <li>authenticated</li>
 </ul>
 </li>
@@ -1061,7 +1061,7 @@ end
 <h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
 <p>Render plain text:</p>
 <pre><code class="language-ruby">def hello
-  render plain: &quot;hello world!&quot;
+  render plain: "hello world!"
 end
 </code></pre>
 <p>Create a controller with a method and use a object in view:</p>
@@ -1082,7 +1082,7 @@ end
 <p>Use <code>flash</code> for notifications:</p>
 <pre><code class="language-ruby">#controller
 @todo.save
-flash[:notice] = &quot;Todo was created successfully&quot;
+flash[:notice] = "Todo was created successfully"
 
 # view
 &lt;% flash.each do |name, msg| %&gt;
@@ -1092,11 +1092,11 @@ flash[:notice] = &quot;Todo was created successfully&quot;
 &lt;% end %&gt;
 </code></pre>
 <p>A bootstrap styled flash messages:</p>
-<pre><code class="language-ruby">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-md-10 col-md-offset-1&quot;&gt;
+<pre><code class="language-ruby">&lt;div class="row"&gt;
+  &lt;div class="col-md-10 col-md-offset-1"&gt;
     &lt;% flash.each do |name, msg| %&gt;
-      &lt;div class=&quot;alert alert-&lt;%= name %&gt;&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/a&gt;
+      &lt;div class="alert alert-&lt;%= name %&gt;"&gt;
+        &lt;a href="#" class="close" data-dismiss="alert"&gt;×&lt;/a&gt;
         &lt;%= msg %&gt;
       &lt;/div&gt;
     &lt;% end %&gt;
@@ -1151,7 +1151,7 @@ end
 
 def require_user
   if !logged_in?
-    flash[:danger] = &quot;You must be logged in to perform that action&quot;
+    flash[:danger] = "You must be logged in to perform that action"
     redirect_to root_path
     # also possible
     redirect_to :back
@@ -1166,7 +1166,7 @@ end
 
 # Now create a new partial _ingredient.html.erb under the app/views/ingredients folder for this to work
 
-&lt;span class=&quot;badge&quot;&gt;&lt;%= link_to ingredient.name,   
+&lt;span class="badge"&gt;&lt;%= link_to ingredient.name,   
                       ingredient_path(ingredient) %&gt;   &lt;/span&gt;
 </code></pre>
 <h3 id="model"><a class="header" href="#model">Model</a></h3>
@@ -1182,7 +1182,7 @@ end
 <h3 id="routes"><a class="header" href="#routes">Routes</a></h3>
 <p>Set root route:</p>
 <pre><code class="language-ruby"># router.rb
-root &quot;pages#home&quot;
+root "pages#home"
 </code></pre>
 <p>Specific route to controller#method:</p>
 <pre><code class="language-ruby">get '/about', to: 'pages#about'
@@ -1193,34 +1193,34 @@ root &quot;pages#home&quot;
 end
 
 # Form in view
-&lt;%= form\_for(\[@recipe, @comment\], :html =&gt; {class: &quot;form-horizontal&quot;,   
-                                                role: &quot;form&quot;}) do |f| %&gt;
+&lt;%= form\_for(\[@recipe, @comment\], :html =&gt; {class: "form-horizontal",   
+                                                role: "form"}) do |f| %&gt;
 </code></pre>
 <h3 id="links"><a class="header" href="#links">Links</a></h3>
 <p>Create links in views:</p>
-<pre><code class="language-ruby">&lt;%= link_to &quot;Edit this todo&quot;, edit_todo_path(@todo) %&gt;
-&lt;%= link_to &quot;Back to todos listing&quot;, todos_path %&gt;
-&lt;td&gt;&lt;%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: &quot;Are you sure?&quot;} %&gt;&lt;/td&gt;
-&lt;%= link_to &quot;MyRecipes&quot;, root_path, class: &quot;navbar-brand&quot;, id: &quot;logo&quot; %&gt;
-&lt;%= link_to &quot;Sign up or log in&quot;, &quot;#&quot; class: &quot;btn btn-danger btn-lg&quot; %&gt;
+<pre><code class="language-ruby">&lt;%= link_to "Edit this todo", edit_todo_path(@todo) %&gt;
+&lt;%= link_to "Back to todos listing", todos_path %&gt;
+&lt;td&gt;&lt;%= link_to 'delete', todo_path(todo), method: :delete, data: { confirm: "Are you sure?"} %&gt;&lt;/td&gt;
+&lt;%= link_to "MyRecipes", root_path, class: "navbar-brand", id: "logo" %&gt;
+&lt;%= link_to "Sign up or log in", "#" class: "btn btn-danger btn-lg" %&gt;
 </code></pre>
 <h3 id="tests"><a class="header" href="#tests">Tests</a></h3>
 <p>Create integration test for model:</p>
 <pre><code class="language-ruby">rails generate integration_test recipes
 </code></pre>
 <p>Simple test root path:</p>
-<pre><code class="language-ruby">test &quot;should get home&quot; do
+<pre><code class="language-ruby">test "should get home" do
   get pages_home_url
   assert_response :success
 end
 
-test &quot;should get root&quot; do
+test "should get root" do
   get root_url
   assert_response :success
 end
 </code></pre>
 <p>to fix this tests, do:</p>
-<pre><code class="language-ruby">root &quot;pages#home&quot;
+<pre><code class="language-ruby">root "pages#home"
 get 'pages/home', to: 'pages#home'
 
 # controller
@@ -1235,34 +1235,34 @@ end
 class RecipeTest &lt; ActiveSupport::TestCase
   
   def setup
-    @recipe = Recipe.new(name: &quot;vegetable&quot;, description: &quot;great vegetable recipe&quot;)  
+    @recipe = Recipe.new(name: "vegetable", description: "great vegetable recipe")  
   end
   
-  test &quot;recipe should be valid&quot; do
+  test "recipe should be valid" do
     assert @recipe.valid?
   end  
   
-  test &quot;name should be present&quot; do
-    @recipe.name = &quot; &quot;
+  test "name should be present" do
+    @recipe.name = " "
     assert_not @recipe.valid?
   end
   
-  test &quot;description should be present&quot; do
-    @recipe.description = &quot; &quot;
+  test "description should be present" do
+    @recipe.description = " "
     assert_not @recipe.valid?
   end
   
-  test &quot;description shouldn't be less than 5 characters&quot; do
-    @recipe.description = &quot;a&quot; * 3
+  test "description shouldn't be less than 5 characters" do
+    @recipe.description = "a" * 3
     assert_not @recipe.valid?
   end
   
-  test &quot;description shouldn't be more than 500 characters&quot; do
-    @recipe.description = &quot;a&quot; * 501
+  test "description shouldn't be more than 500 characters" do
+    @recipe.description = "a" * 501
     assert_not @recipe.valid?
   end
   
-  test &quot;should get recipes show&quot; do
+  test "should get recipes show" do
     get recipe_path(@recipe)
     assert_template 'recipes/show'
     assert_match @recipe.name, response.body
@@ -1270,11 +1270,11 @@ class RecipeTest &lt; ActiveSupport::TestCase
     assert_match @chef.chefname, response.body
   end
   
-  test &quot;should get recipes listing&quot; do
+  test "should get recipes listing" do
     get recipes_path
     assert_template 'recipes/index'
-    assert_select &quot;a[href=?]&quot;, recipe_path(@recipe), text: @recipe.name
-    assert_select &quot;a[href=?]&quot;, recipe_path(@recipe2), text: @recipe2.name
+    assert_select "a[href=?]", recipe_path(@recipe), text: @recipe.name
+    assert_select "a[href=?]", recipe_path(@recipe2), text: @recipe2.name
   end
 end
 </code></pre>
@@ -1284,74 +1284,74 @@ end
 class ChefTest &lt; ActiveSupport::TestCase
   
   def setup
-    @chef = Chef.new(chefname: &quot;mashrur&quot;, email: &quot;mashrur@example.com&quot;)
+    @chef = Chef.new(chefname: "mashrur", email: "mashrur@example.com")
   end
   
-  test &quot;should be valid&quot; do
+  test "should be valid" do
     assert @chef.valid?
   end
   
-  test &quot;name should be present&quot; do
-    @chef.chefname = &quot; &quot;
+  test "name should be present" do
+    @chef.chefname = " "
     assert_not @chef.valid?
   end
   
-  test &quot;name should be less than 30 characters&quot; do
-    @chef.chefname = &quot;a&quot; * 31
+  test "name should be less than 30 characters" do
+    @chef.chefname = "a" * 31
     assert_not @chef.valid?
   end
   
-  test &quot;email should be present&quot; do
-    @chef.email = &quot; &quot;
+  test "email should be present" do
+    @chef.email = " "
     assert_not @chef.valid?
   end
   
-  test &quot;email should not be too long&quot; do
-    @chef.email = &quot;a&quot; * 245 + &quot;@example.com&quot;
+  test "email should not be too long" do
+    @chef.email = "a" * 245 + "@example.com"
     assert_not @chef.valid?
   end
   
-  test &quot;email should accept correct format&quot; do
+  test "email should accept correct format" do
     valid_emails = %w[user@example.com MASHRUR@gmail.com M.first@yahoo.ca john+smith@co.uk.org]
     valid_emails.each do |valids|
       @chef.email = valids
-      assert @chef.valid?, &quot;#{valids.inspect} should be valid&quot;
+      assert @chef.valid?, "#{valids.inspect} should be valid"
     end
   end
   
-  test &quot;should reject invalid addresses&quot; do
+  test "should reject invalid addresses" do
     invalid_emails = %w[mashrur@example mashrur@example,com mashrur.name@gmail. joe@bar+foo.com]
     invalid_emails.each do |invalids|
       @chef.email = invalids
-      assert_not @chef.valid?, &quot;#{invalids.inspect} should be invalid&quot;
+      assert_not @chef.valid?, "#{invalids.inspect} should be invalid"
     end
   end 
   
-  test &quot;email should be unique and case insensitive&quot; do
+  test "email should be unique and case insensitive" do
     duplicate_chef = @chef.dup
     duplicate_chef.email = @chef.email.upcase
     @chef.save
     assert_not duplicate_chef.valid?
   end
   
-  test &quot;reject an invalid signup&quot; do
+  test "reject an invalid signup" do
     get signup_path
-    assert_no_difference &quot;Chef.count&quot; do
-      post chefs_path, params: { chef: { chefname: &quot; &quot;, 
-                                 email: &quot; &quot;, password: &quot;password&quot;,
-                                    password_confirmation: &quot; &quot; } }
+    assert_no_difference "Chef.count" do
+      post chefs_path, params: { chef: { chefname: " ", 
+                                 email: " ", password: "password",
+                                    password_confirmation: " " } }
     end
     assert_template 'chefs/new'
     assert_select 'h2.panel-title'
     assert_select 'div.panel-body'
   end
   
-  test &quot;accept valid signup&quot; do
+  test "accept valid signup" do
     get signup_path
-    assert_difference &quot;Chef.count&quot;, 1 do
-      post chefs_path, params: { chef: { chefname: &quot;mashrur&quot;, 
-                email: &quot;mashrur@example.com&quot;, password: &quot;password&quot;,
-                              password_confirmation: &quot;password&quot; } }
+    assert_difference "Chef.count", 1 do
+      post chefs_path, params: { chef: { chefname: "mashrur", 
+                email: "mashrur@example.com", password: "password",
+                              password_confirmation: "password" } }
     end
     follow_redirect!
     assert_template 'chefs/show'
@@ -1375,8 +1375,8 @@ end
 
 # And then test it with:
 
-test &quot;email should be lower case before hitting db&quot; do
-  mixed_email = &quot;JohN@ExampLe.com&quot;
+test "email should be lower case before hitting db" do
+  mixed_email = "JohN@ExampLe.com"
   @chef.email = mixed_email
   @chef.save
   assert_equal mixed_email.downcase, @chef.reload.email 
@@ -1396,11 +1396,11 @@ has_many :recipes, dependent: :destroy
 </code></pre>
 <p>Test</p>
 <pre><code class="language-ruby">def setup
-  @chef = Chef.create!(chefname: &quot;mashrur&quot;, email: &quot;mashrur@example.com&quot;)
-  @recipe = @chef.recipes.build(name: &quot;vegetable&quot;, description: &quot;great vegetable recipe&quot;)  
+  @chef = Chef.create!(chefname: "mashrur", email: "mashrur@example.com")
+  @recipe = @chef.recipes.build(name: "vegetable", description: "great vegetable recipe")  
 end
 
-test &quot;recipe without chef should be invalid&quot; do
+test "recipe without chef should be invalid" do
   @recipe.chef_id = nil
   assert_not @recipe.valid?
 end
@@ -1414,14 +1414,14 @@ gem 'jquery-rails'
 //= require bootstrap-sprockets
 
 # app/assets/stylesheets/custom.css.scss
-@import &quot;bootstrap-sprockets&quot;;
-@import &quot;bootstrap&quot;;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 </code></pre>
 <h3 id="views"><a class="header" href="#views">Views</a></h3>
 <p>Render html for each data:</p>
 <pre><code class="language-ruby">&lt;%= f.collection_check_boxes :ingredient_ids,   
                                     Ingredient.all, :id, :name do |cb| %&gt;  
-&lt;% cb.label(class: &quot;checkbox-inline input_checkbox&quot;) {cb.check_box(class: &quot;checkbox&quot;) + cb.text} %&gt;  
+&lt;% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %&gt;  
       &lt;% end %&gt;
 </code></pre>
 <h3 id="database"><a class="header" href="#database">Database</a></h3>
@@ -1455,7 +1455,7 @@ has_many :recipes, through: :recipe_ingredients
 brew reinstall openssl@1.1
 
 #open new shell
-rvm reinstall &quot;ruby-3.0.0&quot; --with-openssl-dir=`brew --prefix openssl@1.1` --disable-binary
+rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disable-binary
 </code></pre>
 <p>On arch you have to install openssl-1.0 and run:</p>
 <pre><code class="language-bash">PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig:/usr/lib/pkgconfig rvm install &lt;ruby-version&gt;
@@ -1464,9 +1464,31 @@ rvm reinstall &quot;ruby-3.0.0&quot; --with-openssl-dir=`brew --prefix openssl@1
 <p>Some <code>ruby</code> functions:</p>
 <pre><code class="language-ruby">truncate(recipe.description, length: 150)   # truncate
 time_ago_in_words(recipe.created_at)        # date
-pluralize(count, &quot;apple&quot;)                   # pluralize if count &gt; 1 to apples
+pluralize(count, "apple")                   # pluralize if count &gt; 1 to apples
 
 </code></pre>
+<h3 id="lambda-composition"><a class="header" href="#lambda-composition">Lambda composition</a></h3>
+<p>Combine lambda blocks together with  <code>&gt;&gt;</code> i.e. to create a new one like <code>TAX_FEE = TAX &gt;&gt; FEE</code></p>
+<pre><code class="language-ruby"># List of our individual pricing rules
+TAX           = -&gt;(val) { val + val*0.05 }
+FEE           = -&gt;(val) { val + 1 }
+PREMIUM       = -&gt;(val) { val + 10 }
+DISCOUNT      = -&gt;(val) { val * 0.90 }
+ROUND_TO_CENT = -&gt;(val) { val.round(2) }
+# One presenter
+PRESENT       = -&gt;(val) { val.to_f }
+
+# Pre-define some rule sets for some pricing scenarios
+REGULAR_SET    = [FEE, TAX, ROUND_TO_CENT, PRESENT]
+PREMIUM_SET    = [FEE, PREMIUM, TAX, ROUND_TO_CENT, PRESENT]
+DISCOUNTED_SET = [FEE, DISCOUNT, TAX, ROUND_TO_CENT, PRESENT]
+</code></pre>
+<p>Now we can define a price calculator:</p>
+<pre><code class="language-ruby">def apply_rules(rules:, base_price:)
+  rules.inject(:&gt;&gt;).call(base_price)
+end
+</code></pre>
+<p>Source: <a href="https://getaround.tech/ruby-lambda-composition/">get-around.tech</a></p>
 <h2 id="object-lookup"><a class="header" href="#object-lookup">Object lookup</a></h2>
 <pre><code class="language-ruby">module GildedRose
 	DEFAULT_CLASS = Item
@@ -1509,7 +1531,7 @@ IP_REGEX = /
 <pre><code class="language-ruby">module PatchedString
   refine String do
     def +(value)
-      self &lt;&lt; &quot;, #{value}&quot;
+      self &lt;&lt; ", #{value}"
     end
   end
 end
@@ -1528,10 +1550,10 @@ module PatchedNamespace
   end
 end
 
-RegularNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;12&quot;
-PatchedNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;1, 2&quot;
+RegularNamespace.append_strings("1", "2") # =&gt; "12"
+PatchedNamespace.append_strings("1", "2") # =&gt; "1, 2"
 </code></pre>
-<footer id="last-change">Last change: 2023-03-06, commit: <a href="https://github.com/dvogt23/notes/commit/10d2e87">10d2e87</a></footer><div style="break-before: page; page-break-before: always;"></div><h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
+<footer id="last-change">Last change: 2024-02-14, commit: <a href="https://github.com/dvogt23/notes/commit/20f0c22">20f0c22</a></footer><div style="break-before: page; page-break-before: always;"></div><h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
 <h3 id="learning"><a class="header" href="#learning">Learning</a></h3>
 <p><strong>TODO:</strong></p>
 <ul>
@@ -1540,7 +1562,7 @@ PatchedNamespace.append_strings(&quot;1&quot;, &quot;2&quot;) # =&gt; &quot;1, 2
 </ul>
 <h3 id="wrapper-types"><a class="header" href="#wrapper-types">Wrapper types</a></h3>
 <p><strong>Box</strong> This abstraction is a low cost abstraction for dynamic allocation. If you want to allocate some memory on the heap and safely pass a pointer to that memory around, this is ideal.</p>
-<p><strong>Rc</strong> is a reference counted pointer for multiple owning. </p>
+<p><strong>Rc</strong> is a reference counted pointer for multiple owning.</p>
 <p>Source: <a href="https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/">Wrapper types</a></p>
 <h3 id="articles-4"><a class="header" href="#articles-4">Articles</a></h3>
 <ul>
@@ -1870,7 +1892,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 <h3 id="3-disable-grub-delay"><a class="header" href="#3-disable-grub-delay">3. Disable GRUB delay</a></h3>
 <p>Add the following to /etc/default/grub:
 achieve the fastest possible boot:</p>
-<pre><code>GRUB_FORCE_HIDDEN_MENU=&quot;true&quot;
+<pre><code>GRUB_FORCE_HIDDEN_MENU="true"
 </code></pre>
 <p>Then put file 31_hold_shift to /etc/grub.d/.
 Download 31_hold_shift https://goo.gl/nac6Kp</p>
@@ -1916,13 +1938,13 @@ ecryptfs-migrate-home -u username
 <pre><code>ls .ecryptfs
 </code></pre>
 <p>Edit /etc/pam.d/system-auth:</p>
-<p>After the line “auth required pam_unix.so” add: </p>
+<p>After the line “auth required pam_unix.so” add:</p>
 <pre><code>auth required pam_ecryptfs.so unwrap
 </code></pre>
 <p>Above the line “password required pam_unix.so” insert:</p>
 <pre><code>password optional pam_ecryptfs.so
 </code></pre>
-<p>After the line “session required pam_unix.so” add: </p>
+<p>After the line “session required pam_unix.so” add:</p>
 <pre><code>session optional pam_ecryptfs.so unwrap
 </code></pre>
 <p>Reboot and make sure that you can login to your desktop</p>
@@ -2117,14 +2139,14 @@ Postfix relay config:</p>
 <h2 id="database-correction"><a class="header" href="#database-correction">Database correction</a></h2>
 <p>Sometimes getting wrong data from my smart meter, that one have to fix in database with the SQlite Web add-on on my home-assistant instance, with following commands:</p>
 <pre><code class="language-sql">SELECT *
-FROM &quot;statistics&quot; WHERE CAST(mean AS DECIMAL(12,6)) LIKE '3976%'
+FROM "statistics" WHERE CAST(mean AS DECIMAL(12,6)) LIKE '3976%'
 
-UPDATE &quot;statistics&quot; 
+UPDATE "statistics" 
 SET mean = OtherTable.Col1, 
     Col2 = OtherTable.Col2 
 FROM (
     SELECT *
-	FROM &quot;statistics&quot; WHERE CAST(mean AS DECIMAL(12,6)) 
+	FROM "statistics" WHERE CAST(mean AS DECIMAL(12,6)) 
 	LIKE '3976%')
 </code></pre>
 <pre><code>
@@ -2140,9 +2162,9 @@ Sensoren anlegen:
 # Pollenflug Informationen
 - platform: rest
   scan_interval: 3600
-  name: &quot;DWD Pollen&quot;
+  name: "DWD Pollen"
   resource: https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json
-  json_attributes_path: &quot;$..content[?(@.partregion_id==42)].Pollen&quot;
+  json_attributes_path: "$..content[?(@.partregion_id==42)].Pollen"
   json_attributes:
     - Erle
     - Beifuss
@@ -2152,22 +2174,22 @@ Sensoren anlegen:
     - Hasel
     - Graeser
     - Roggen
-  value_template: &quot;{{ value_json.last_update }}&quot;
+  value_template: "{{ value_json.last_update }}"
 - platform: template
   sensors:
     dwd_pollen_erle:
-      icon_template: &quot;mdi:tree-outline&quot;
-      friendly_name: &quot;Erle&quot;
+      icon_template: "mdi:tree-outline"
+      friendly_name: "Erle"
       value_template: &gt;-
         {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['today'] %}
-        {% if dwd_state == &quot;3&quot; %}6{% elif dwd_state == &quot;2-3&quot;%}5{% elif dwd_state == &quot;2&quot;%}4{% elif dwd_state == &quot;1-2&quot;%}3{% elif dwd_state == &quot;1&quot;%}2{% elif dwd_state == &quot;0-1&quot;%}1{% else %}0{% endif %}
+        {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
       attribute_templates:
         today: &gt;-
           {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['today'] %}
-          {% if dwd_state == &quot;3&quot; %}6{% elif dwd_state == &quot;2-3&quot;%}5{% elif dwd_state == &quot;2&quot;%}4{% elif dwd_state == &quot;1-2&quot;%}3{% elif dwd_state == &quot;1&quot;%}2{% elif dwd_state == &quot;0-1&quot;%}1{% else %}0{% endif %}
+          {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
         tomorrow: &gt;-
           {% set dwd_state = state_attr('sensor.dwd_pollen', 'Erle')['tomorrow'] %}
-          {% if dwd_state == &quot;3&quot; %}6{% elif dwd_state == &quot;2-3&quot;%}5{% elif dwd_state == &quot;2&quot;%}4{% elif dwd_state == &quot;1-2&quot;%}3{% elif dwd_state == &quot;1&quot;%}2{% elif dwd_state == &quot;0-1&quot;%}1{% else %}0{% endif %}
+          {% if dwd_state == "3" %}6{% elif dwd_state == "2-3"%}5{% elif dwd_state == "2"%}4{% elif dwd_state == "1-2"%}3{% elif dwd_state == "1"%}2{% elif dwd_state == "0-1"%}1{% else %}0{% endif %}
 </code></pre>
 <p>Source: <a href="https://youtu.be/yHI9Dt4xD4g">youtube/smarthomeyourself</a></p>
 <h2 id="shutter-control"><a class="header" href="#shutter-control">Shutter control</a></h2>
@@ -2175,18 +2197,18 @@ Sensoren anlegen:
 <p><strong>Works!</strong> Tasmota wiki for <a href="tech/smarthome/">covers</a>:</p>
 <pre><code class="language-yml">cover:
   - platform: mqtt
-    name: &quot;Wohnzimmer Zentrale&quot;
-    availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
-    payload_available: &quot;Online&quot;
-    payload_not_available: &quot;Offline&quot;
-    position_topic: &quot;Smarthome/jalosien/wohnzimmer/stat/SHUTTER1&quot;
+    name: "Wohnzimmer Zentrale"
+    availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    position_topic: "Smarthome/jalosien/wohnzimmer/stat/SHUTTER1"
     position_open: 100
     position_closed: 0
-    set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/ShutterPosition1&quot;
-    command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/BACKLOG&quot;
-    payload_open: &quot;ShutterOpen1&quot;
-    payload_close: &quot;ShutterClose1&quot;
-    payload_stop: &quot;ShutterStop1&quot;
+    set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/ShutterPosition1"
+    command_topic: "Smarthome/jalosien/wohnzimmer/cmnd/BACKLOG"
+    payload_open: "ShutterOpen1"
+    payload_close: "ShutterClose1"
+    payload_stop: "ShutterStop1"
     retain: false
     optimistic: false
     qos: 1
@@ -2194,38 +2216,38 @@ Sensoren anlegen:
 <p>Definition from github
 <a href="https://github.com/arendst/Tasmota/issues/6614#issuecomment-541785867">snakuzzo</a>:</p>
 <pre><code class="language-yml">- platform: mqtt
-  name: &quot;Wohnzimmer Zentrale&quot;
-  availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
-  state_topic: &quot;stat/sonoff-cletto/RESULT&quot;
-  command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd&quot;
+  name: "Wohnzimmer Zentrale"
+  availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+  state_topic: "stat/sonoff-cletto/RESULT"
+  command_topic: "Smarthome/jalosien/wohnzimmer/cmnd"
   value_template: '{{ value | int }}'
   qos: 1
   retain: false
-  payload_open: &quot;ShutterOpen1&quot;
-  payload_close: &quot;ShutterClose1&quot;
-  payload_stop: &quot;ShutterStop1&quot;
-  state_open: &quot;ON&quot;
-  state_closed: &quot;OFF&quot;
-  payload_available: &quot;Online&quot;
-  payload_not_available: &quot;Offline&quot;
+  payload_open: "ShutterOpen1"
+  payload_close: "ShutterClose1"
+  payload_stop: "ShutterStop1"
+  state_open: "ON"
+  state_closed: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
   optimistic: true
-  set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/shutterposition&quot;
-  position_topic: &quot;Smarthome/jalosien/wohnzimmer/stat/SHUTTER1&quot;
+  set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/shutterposition"
+  position_topic: "Smarthome/jalosien/wohnzimmer/stat/SHUTTER1"
 </code></pre>
 <p>A definition for slider from <a href="https://community.home-assistant.io/t/shelly-2-as-roller-shutter-with-percentage/85817/2">community/florian</a></p>
 <pre><code class="language-yml">- platform: mqtt
   name: bedroom_cover
-  command_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/command&quot;
-  position_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/pos&quot;
-  set_position_topic: &quot;shellies/shellyswitch-xxxxxx/roller/0/command/pos&quot;
-  availability_topic: &quot;shellies/shellyswitch-xxxxxx/online&quot;
-  payload_available: &quot;true&quot;
-  payload_not_available: &quot;false&quot;
+  command_topic: "shellies/shellyswitch-xxxxxx/roller/0/command"
+  position_topic: "shellies/shellyswitch-xxxxxx/roller/0/pos"
+  set_position_topic: "shellies/shellyswitch-xxxxxx/roller/0/command/pos"
+  availability_topic: "shellies/shellyswitch-xxxxxx/online"
+  payload_available: "true"
+  payload_not_available: "false"
   qos: 1
   retain: false
-  payload_open: &quot;open&quot;
-  payload_close: &quot;close&quot;
-  payload_stop: &quot;stop&quot;
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
   position_open: 100
   position_closed: 0
   optimistic: false
@@ -2233,20 +2255,20 @@ Sensoren anlegen:
 <p>another one</p>
 <pre><code class="language-yml">  - platform: mqtt
     name: living_room_shutter
-    availability_topic: &quot;Smarthome/jalosien/wohnzimmer/tele/LWT&quot;
-    state_topic: &quot;tele/persiana_dormitorio/RESULT&quot;
-    command_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd&quot;
-    set_position_topic: &quot;Smarthome/jalosien/wohnzimmer/cmnd/shutterposition&quot;
-    value_template: &quot;{{ value_json['SHUTTER-1'] }}&quot;
+    availability_topic: "Smarthome/jalosien/wohnzimmer/tele/LWT"
+    state_topic: "tele/persiana_dormitorio/RESULT"
+    command_topic: "Smarthome/jalosien/wohnzimmer/cmnd"
+    set_position_topic: "Smarthome/jalosien/wohnzimmer/cmnd/shutterposition"
+    value_template: "{{ value_json['SHUTTER-1'] }}"
     qos: 1
     retain: true
-    payload_open: &quot;SHUTTEROPEN&quot;
-    payload_close: &quot;SHUTTERCLOSE&quot;
-    payload_stop: &quot;SHUTTERSTOP&quot;
-    state_open: &quot;ON&quot;
-    state_closed: &quot;OFF&quot;
-    payload_available: &quot;Online&quot;
-    payload_not_available: &quot;Offline&quot;
+    payload_open: "SHUTTEROPEN"
+    payload_close: "SHUTTERCLOSE"
+    payload_stop: "SHUTTERSTOP"
+    state_open: "ON"
+    state_closed: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
     optimistic: true
 </code></pre>
 <h3 id="automation"><a class="header" href="#automation">Automation</a></h3>
@@ -2361,16 +2383,16 @@ make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-right
 <pre><code class="language-bash">ssh -R 80:localhost:3000 localhost.run
 </code></pre>
 <h3 id="yaml-get-full-path"><a class="header" href="#yaml-get-full-path">YAML get full path</a></h3>
-<pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == &quot;*&quot;) | {(path | join(&quot;.&quot;)): .} '
+<pre><code class="language-bash">cat myfile.yml | yq e '.. | select(. == "*") | {(path | join(".")): .} '
 </code></pre>
 <h3 id="replace-passwords-in-gz-logile"><a class="header" href="#replace-passwords-in-gz-logile">Replace passwords in <code>gz</code> logile</a></h3>
-<pre><code class="language-bash">gzip -cd rails.log.gz | sed -re 's/(\&quot;password\&quot;=&gt;)(\&quot;(.*)\&quot;,)/\1\&quot;[FILTERed]&quot;,/g' | sed -re 's/(\&quot;password_confirmation\&quot;=&gt;)(\&quot;(.*)\&quot;)/\1\&quot;[FILTERed]&quot;/g' | gzip &gt; rails.tmp
+<pre><code class="language-bash">gzip -cd rails.log.gz | sed -re 's/(\"password\"=&gt;)(\"(.*)\",)/\1\"[FILTERed]",/g' | sed -re 's/(\"password_confirmation\"=&gt;)(\"(.*)\")/\1\"[FILTERed]"/g' | gzip &gt; rails.tmp
 </code></pre>
 <h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
 <p>Navigating</p>
 <pre><code>Line number: go to that line and print it.
 pn - Print current line and line number.
-3kxe - mark line 3 as &quot;xe&quot;.
+3kxe - mark line 3 as "xe".
 'xep - print the line marked as xe.
 </code></pre>
 <p>Editing</p>
@@ -2412,7 +2434,7 @@ w - Save the current buffer if the file is already saved.
 w1,4 - Save lines 1 to 4 to the current buffer.
 W - append to a file (not replace).
 r /etc/hosts - Insert the contents of /etc/hosts after the current line.
-r !ps -e - Insert the output of the command &quot;ps -e&quot; after the current line.
+r !ps -e - Insert the output of the command "ps -e" after the current line.
 e file.txt - Open the file file.txt and replace the current buffer.
 </code></pre>
 <p><a href="https://raymii.org/s/tutorials/ed_cheatsheet.html">Source: raymii.org</a></p>
@@ -2448,15 +2470,15 @@ HOMEBREW_NO_AUTO_UPDATE=1 brew install &lt;packageName&gt;
 brew list --versions
 brew switch &lt;packageName&gt; &lt;version&gt;
 </code></pre>
-<h3 id="target_blank-vulnerability"><a class="header" href="#target_blank-vulnerability"><code>target=&quot;_blank&quot;</code> vulnerability</a></h3>
-<p>Add always <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> links, because of:</p>
+<h3 id="target_blank-vulnerability"><a class="header" href="#target_blank-vulnerability"><code>target="_blank"</code> vulnerability</a></h3>
+<p>Add always <code>rel="noopener noreferrer"</code> to <code>target="_blank"</code> links, because of:</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/50709625/link-with-target-blank-and-rel-noopener-noreferrer-still-vulnerable">stackoverflow</a></li>
 <li><a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">jitbit</a></li>
 </ul>
 <h3 id="macos"><a class="header" href="#macos">MacOS</a></h3>
 <p>Shutdown without confirmation from terminal:</p>
-<p><code>osascript -e 'tell app &quot;System Events&quot; to shut down'</code></p>
+<p><code>osascript -e 'tell app "System Events" to shut down'</code></p>
 <p>Source: <a href="https://apple.stackexchange.com/a/103633">Stackexchange</a></p>
 <h3 id="wireguard"><a class="header" href="#wireguard">Wireguard</a></h3>
 <p>Setup wireguard with good explanations: <a href="https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478">What They Don’t Tell You About Setting Up A WireGuard VPN</a></p>
@@ -2539,12 +2561,12 @@ http {
 [http.middlewares]
   [http.middlewares.floc.headers]
     [http.middlewares.floc.headers.customResponseHeaders]
-        Permissions-Policy = &quot;interest-cohort=()&quot;
+        Permissions-Policy = "interest-cohort=()"
 
 </code></pre>
 <p>Source: <a href="https://paramdeo.com//blog/opting-your-website-out-of-googles-floc-network">Paramdeo Singh - Opting your Website out of Google’s FLoC Network</a></p>
 <h3 id="create-qr-code-for-your-wifi"><a class="header" href="#create-qr-code-for-your-wifi">Create QR-Code for your wifi</a></h3>
-<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png &quot;WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;&quot;</code></p>
+<p><a href="https://feeding.cloud.geek.nz/posts/encoding-wifi-access-point-passwords-qr-code/">Source</a> <code>qrencode -o wifi.png "WIFI:T:WPA;S:&lt;SSID&gt;;P:&lt;PASSWORD&gt;;;"</code></p>
 <h3 id="security-book"><a class="header" href="#security-book">Security book</a></h3>
 <p>A most recommended it security book: <a href="https://www.cl.cam.ac.uk/~rja14/book.html">Book</a></p>
 <h3 id="linux-hardening-book"><a class="header" href="#linux-hardening-book">Linux hardening book</a></h3>
@@ -2647,7 +2669,7 @@ http {
 <li>Iron Sky (Film)</li>
 </ul>
 <pre><code>
-&lt;footer id=&quot;last-change&quot;&gt;Last change: 2023-06-02, commit: &lt;a href=&quot;https://github.com/dvogt23/notes/commit/5fb8f32&quot;&gt;5fb8f32&lt;/a&gt;&lt;/footer&gt;</code></pre>
+&lt;footer id="last-change"&gt;Last change: 2023-06-02, commit: &lt;a href="https://github.com/dvogt23/notes/commit/5fb8f32"&gt;5fb8f32&lt;/a&gt;&lt;/footer&gt;</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="music"><a class="header" href="#music">Music</a></h1>
 <h2 id="favorit-songs"><a class="header" href="#favorit-songs">Favorit songs:</a></h2>
 <ul>
@@ -2722,20 +2744,20 @@ http {
 <h3 id="2024"><a class="header" href="#2024">2024</a></h3>
 <p><strong>Trotzdem Ja zum Leben sagen: Ein Psychologe erlebt das Konzentrationslager</strong>
 by Viktor E. Frankl
-ISBN: 978-3328102779 ⭐ ⭐ ⭐ ⭐ ⭐ </p>
+ISBN: 978-3328102779 ⭐ ⭐ ⭐ ⭐ ⭐</p>
 <p><strong>Elon Musk</strong>
 by Walter Isaacson
 ISBN: 978-1982181284 ⭐ ⭐ ⭐ ⭐</p>
 <h3 id="2023"><a class="header" href="#2023">2023</a></h3>
 <p><strong>Das Mittelalter: Europa von 500 bis 1500</strong>
 by Chris Wickham
-ISBN: 978-3608962086 ⭐ ⭐ ⭐ </p>
+ISBN: 978-3608962086 ⭐ ⭐ ⭐</p>
 <p><strong>Monsieur Ibrahim und die Blumen des Koran</strong> by Eric-Emmanuel Schmitt
-ISBN: 978-3-25-060055-8 ⭐ ⭐ ⭐ </p>
+ISBN: 978-3-25-060055-8 ⭐ ⭐ ⭐</p>
 <p><strong>Das Neue Alphabet. Russische Lesebücher.</strong> by Lew Tolstoi
-ISBN: - ⭐ ⭐ ⭐ </p>
+ISBN: - ⭐ ⭐ ⭐</p>
 <p><strong>Der Prozess</strong> by Franz Kafka
-ISBN: 978-3-10-038190-3 ⭐ ⭐ ⭐ </p>
+ISBN: 978-3-10-038190-3 ⭐ ⭐ ⭐</p>
 <h3 id="2022"><a class="header" href="#2022">2022</a></h3>
 <p><strong>Imperium USA</strong> by Daniele Ganser
 ISBN: 978-3-946778-27-1 ⭐ ⭐ ⭐ ⭐</p>
@@ -2772,12 +2794,12 @@ ISBN: 978-3406739682 ⭐ ⭐ ⭐ ⭐</p>
 </blockquote>
 </li>
 </ul>
-<p><strong>Ein Gentleman in Moskau</strong> by Amor Towles 
+<p><strong>Ein Gentleman in Moskau</strong> by Amor Towles
 ISBN: 978-3548290720 ⭐ ⭐ ⭐ ⭐</p>
 <ul>
 <li>review</li>
 </ul>
-<p><strong>In guten wie in schlechten Tagen</strong> by Tayari Jones 
+<p><strong>In guten wie in schlechten Tagen</strong> by Tayari Jones
 ISBN: 978-3716040256 ⭐⭐⭐</p>
 <ul>
 <li>review</li>
@@ -2898,12 +2920,12 @@ ISBN: 978-3499623554 ⭐⭐</p>
 <li>Gemischtes Hack</li>
 <li>The Joe Rogan experience</li>
 <li>Eine Stunde history</li>
-<li>100 Sekunden Wissen </li>
-<li>Das Ziel ist im Weg </li>
+<li>100 Sekunden Wissen</li>
+<li>Das Ziel ist im Weg</li>
 <li>Betreutes Fühlen</li>
-<li>In extremen Köpfen </li>
+<li>In extremen Köpfen</li>
 <li>Alternativlos</li>
-<li>Grenzgänger </li>
+<li>Grenzgänger</li>
 </ul>
 <p><strong>History of podcast listening:</strong></p>
 <ul>
@@ -2913,7 +2935,7 @@ ISBN: 978-3499623554 ⭐⭐</p>
 <li>Die Ernsthaftigkeit Deutschlands den Rassismus zu bekämpfen mit der AFD im Bundestag und einer #metoo Bewegung ohne einer Konsequenz für jemanden</li>
 </ul>
 </li>
-<li><a href="https://podcasts.apple.com/de/podcast/deine-chance-im-stimmungstief/id1478101145?i=1000583742294&amp;l=en">Betreutes Fühlen - Deine Chance im Stimmungstief</a> 
+<li><a href="https://podcasts.apple.com/de/podcast/deine-chance-im-stimmungstief/id1478101145?i=1000583742294&amp;l=en">Betreutes Fühlen - Deine Chance im Stimmungstief</a>
 <ul>
 <li>eine Medizintablette Einnahme auf der rechte Seite liegend, erreicht 10x schneller das Ziel im Körper um zu Wirken.</li>
 </ul>
@@ -2932,13 +2954,13 @@ Dialogs der beiden Hosts)</li>
 <footer id="last-change">Last change: 2020-09-09, commit: <a href="https://github.com/dvogt23/notes/commit/90b9f7d">90b9f7d</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="videos"><a class="header" href="#videos">Videos</a></h1>
 <ul>
 <li>
-<p>SWR <em>Der mit dem Wald spricht - Peter Wohlleben</em> 
+<p>SWR <em>Der mit dem Wald spricht - Peter Wohlleben</em>
 Gast: Marc Marshall &amp; Jana Palaske <a href="https://youtu.be/6B1BLF9LpYY">Video</a></p>
 <blockquote>
 <p>Nur 3% der deutschen Wälder sind im Ursprung echt, alles andere sind “Plantagen”.</p>
 </blockquote>
 <blockquote>
-<p>Der Baum ist im Wald nur der Zeiger einer Uhr, da die ganzen Tiere &amp; Insekten meist ausgeblendet werden. </p>
+<p>Der Baum ist im Wald nur der Zeiger einer Uhr, da die ganzen Tiere &amp; Insekten meist ausgeblendet werden.</p>
 </blockquote>
 </li>
 <li>
@@ -2979,7 +3001,7 @@ Dass man sagt: Okay, hier ist eine Mehrheits­meinung, die wird von hundert Wiss
 <footer id="last-change">Last change: 2021-06-22, commit: <a href="https://github.com/dvogt23/notes/commit/8c901af">8c901af</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="blogs"><a class="header" href="#blogs">Blogs</a></h1>
 <p>Here is a collection of my rss subscriptions:</p>
 <ul>
-<li>Lobsters - <a href="https://lobste.rs/rss">rss</a> </li>
+<li>Lobsters - <a href="https://lobste.rs/rss">rss</a></li>
 <li>Realitätsabzweig - <a href="https://steadyhq.com/en/realitatsabzweig/posts">blog</a></li>
 <li>Zeitgeschehen im Fokus - <a href="https://zeitgeschehen-im-fokus.ch/de">blog</a></li>
 <li>heise Developer - Neueste Meldungen - <a href="https://www.heise.de/developer/rss/news-atom.xml">rss</a></li>
@@ -3285,73 +3307,73 @@ zerrupfen und untermengen.</p>
 <footer id="last-change">Last change: 2021-02-12, commit: <a href="https://github.com/dvogt23/notes/commit/6096826">6096826</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="pharmacy"><a class="header" href="#pharmacy">Pharmacy</a></h1>
 <p>Our home pharmacy list should always be present:</p>
 <ul>
-<li>Antimückenspray 
+<li>Antimückenspray
 <ul>
 <li>Autan</li>
 </ul>
 </li>
-<li>Erbrechen 
+<li>Erbrechen
 <ul>
 <li>Vomex</li>
 </ul>
 </li>
-<li>Erkältung 
+<li>Erkältung
 <ul>
 <li>Grippostad</li>
 </ul>
 </li>
-<li>Halsschmerzen 
+<li>Halsschmerzen
 <ul>
 <li>Dobendan Strepsis Synergie Honig &amp; Zitrone</li>
 </ul>
 </li>
-<li>Husten 
+<li>Husten
 <ul>
 <li>Mucosolvan</li>
 </ul>
 </li>
-<li>Kopfschmerzen 
+<li>Kopfschmerzen
 <ul>
 <li>Paracetamol</li>
 </ul>
 </li>
-<li>Krampf 
+<li>Krampf
 <ul>
 <li>Buscopan</li>
 </ul>
 </li>
-<li>Magen-Darm 
+<li>Magen-Darm
 <ul>
 <li>Iberogast</li>
 </ul>
 </li>
-<li>Mandelentzündung 
+<li>Mandelentzündung
 <ul>
 <li>Tantum Verde Spray</li>
 <li>Tonsipret Tabletten</li>
 </ul>
 </li>
-<li>Nasenspray 
+<li>Nasenspray
 <ul>
 <li>Nasic+</li>
 </ul>
 </li>
-<li>Orthomol 
+<li>Orthomol
 <ul>
 <li>Immun</li>
 </ul>
 </li>
-<li>Schmerz-/Fieber 
+<li>Schmerz-/Fieber
 <ul>
 <li>Ibuprofen 400</li>
 </ul>
 </li>
-<li>Stiche 
+<li>Stiche
 <ul>
 <li>Fenistil</li>
 </ul>
 </li>
-<li>Wunde 
+<li>Wunde
 <ul>
 <li>Bepanthen</li>
 </ul>
@@ -3359,54 +3381,54 @@ zerrupfen und untermengen.</p>
 </ul>
 <p><strong>Kids</strong>:</p>
 <ul>
-<li>Blähungen 
+<li>Blähungen
 <ul>
 <li>Lefax Pumpliquid</li>
 </ul>
 </li>
-<li>Durchfall 
+<li>Durchfall
 <ul>
 <li>Elektrolyte Elotrans</li>
 <li>Elektrolyte Oralpädon 240 Erdbeere</li>
 <li>Loperamid</li>
 </ul>
 </li>
-<li>Fieber 
+<li>Fieber
 <ul>
-<li>Paracetamol Zäpfchen </li>
+<li>Paracetamol Zäpfchen</li>
 <li>Nurofen Saft</li>
 </ul>
 </li>
-<li>Ohrentropfen 
+<li>Ohrentropfen
 <ul>
 <li>Otalgan</li>
 </ul>
 </li>
-<li>Schmerz 
+<li>Schmerz
 <ul>
 <li>Voltaren</li>
 </ul>
 </li>
-<li>Schnupfen 
+<li>Schnupfen
 <ul>
 <li>Kochsalzlösung 0,9% Ampullen</li>
 <li>Nasivin für Babys (Kochsalz nicht hilft)</li>
 </ul>
 </li>
-<li>Verstopfung 
+<li>Verstopfung
 <ul>
 <li>Babylax oder Glycilax Zäpfchen</li>
 <li>Movicol</li>
 </ul>
 </li>
-<li>Zahnbeschwerden 
+<li>Zahnbeschwerden
 <ul>
 <li>Dentinox Gel</li>
 </ul>
 </li>
 </ul>
 <footer id="last-change">Last change: 2022-01-18, commit: <a href="https://github.com/dvogt23/notes/commit/6fa2f60">6fa2f60</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="homestead"><a class="header" href="#homestead">Homestead</a></h1>
-<p>The most important point for building or buy your own house is to have the garden in south direction. </p>
+<p>The most important point for building or buy your own house is to have the garden in south direction.</p>
 <h3 id="doorbell"><a class="header" href="#doorbell">Doorbell</a></h3>
 <ul>
 <li><a href="https://mathfel.de/produkt/4-draht-tuersprechanlage-gegensprechanlage-mit-wlan-und-7-zoll-monitor/">mathfel</a></li>
@@ -3518,73 +3540,73 @@ Verträge zu Mitgliedschaften im Fitnessstudios oder Vereinen, Kaufbelege für S
 <details>
 <summary>Script for create folder structure in terminal...</summary>
 <p>
-<pre><code class="language-bash">mkdir -p &quot;Arbeit und  Beruf/Zeugnisse&quot;
-mkdir -p &quot;Arbeit und  Beruf/Studienunterlagen&quot;
-mkdir -p &quot;Arbeit und  Beruf/Diplome&quot;
-mkdir -p &quot;Arbeit und  Beruf/Arbeits- und Ausbildungsverträge&quot;
-mkdir -p &quot;Arbeit und  Beruf/Fortbildungsmaßnahmen&quot;
-mkdir -p &quot;Arbeit und  Beruf/Arbeitsverträge&quot;
-mkdir -p &quot;Arbeit und  Beruf/Lohn- und Gehaltsabrechnungen&quot;
-mkdir -p &quot;Arbeit und  Beruf/Beurteilungen&quot;
+<pre><code class="language-bash">mkdir -p "Arbeit und  Beruf/Zeugnisse"
+mkdir -p "Arbeit und  Beruf/Studienunterlagen"
+mkdir -p "Arbeit und  Beruf/Diplome"
+mkdir -p "Arbeit und  Beruf/Arbeits- und Ausbildungsverträge"
+mkdir -p "Arbeit und  Beruf/Fortbildungsmaßnahmen"
+mkdir -p "Arbeit und  Beruf/Arbeitsverträge"
+mkdir -p "Arbeit und  Beruf/Lohn- und Gehaltsabrechnungen"
+mkdir -p "Arbeit und  Beruf/Beurteilungen"
 
-mkdir -p &quot;Fahrzeuge/Fahrzeugpapiere&quot;
-mkdir -p &quot;Fahrzeuge/Unterlagen Kfz-Steuer&quot;
-mkdir -p &quot;Fahrzeuge/Rechnungen Reparatur&quot;
-mkdir -p &quot;Fahrzeuge/Belege zu Unfällen&quot;
-mkdir -p &quot;Fahrzeuge/Mitgliedschaften Automobilclub&quot;
-mkdir -p &quot;Fahrzeuge/TÜV- und ASU-Belege&quot;
+mkdir -p "Fahrzeuge/Fahrzeugpapiere"
+mkdir -p "Fahrzeuge/Unterlagen Kfz-Steuer"
+mkdir -p "Fahrzeuge/Rechnungen Reparatur"
+mkdir -p "Fahrzeuge/Belege zu Unfällen"
+mkdir -p "Fahrzeuge/Mitgliedschaften Automobilclub"
+mkdir -p "Fahrzeuge/TÜV- und ASU-Belege"
 
-mkdir -p &quot;Finanzen und Steuern/Steuererklärungen&quot;
-mkdir -p &quot;Finanzen und Steuern/Steuerbescheide&quot;
-mkdir -p &quot;Finanzen und Steuern/Kontoeröffnungen&quot;
-mkdir -p &quot;Finanzen und Steuern/Kontoauszüge&quot;
-mkdir -p &quot;Finanzen und Steuern/Freistellungsaufträge&quot;
-mkdir -p &quot;Finanzen und Steuern/Vermögenswirksame Leistungen&quot;
-mkdir -p &quot;Finanzen und Steuern/Kreditverträge&quot;
-mkdir -p &quot;Finanzen und Steuern/Aktien&quot;
-mkdir -p &quot;Finanzen und Steuern/Geldanlagen&quot;
+mkdir -p "Finanzen und Steuern/Steuererklärungen"
+mkdir -p "Finanzen und Steuern/Steuerbescheide"
+mkdir -p "Finanzen und Steuern/Kontoeröffnungen"
+mkdir -p "Finanzen und Steuern/Kontoauszüge"
+mkdir -p "Finanzen und Steuern/Freistellungsaufträge"
+mkdir -p "Finanzen und Steuern/Vermögenswirksame Leistungen"
+mkdir -p "Finanzen und Steuern/Kreditverträge"
+mkdir -p "Finanzen und Steuern/Aktien"
+mkdir -p "Finanzen und Steuern/Geldanlagen"
 
-mkdir -p &quot;Gesundheit/Krankenversicherung&quot;
-mkdir -p &quot;Gesundheit/Schreiben Krankenkasse&quot;
-mkdir -p &quot;Gesundheit/Impf- oder Mutterpass&quot;
-mkdir -p &quot;Gesundheit/Auslandskrankenversicherung&quot;
-mkdir -p &quot;Gesundheit/Pflegeversicherung&quot;
-mkdir -p &quot;Gesundheit/Rechnungen zu Behandlungen&quot;
-mkdir -p &quot;Gesundheit/Ärztliche Gutachten&quot;
+mkdir -p "Gesundheit/Krankenversicherung"
+mkdir -p "Gesundheit/Schreiben Krankenkasse"
+mkdir -p "Gesundheit/Impf- oder Mutterpass"
+mkdir -p "Gesundheit/Auslandskrankenversicherung"
+mkdir -p "Gesundheit/Pflegeversicherung"
+mkdir -p "Gesundheit/Rechnungen zu Behandlungen"
+mkdir -p "Gesundheit/Ärztliche Gutachten"
 
-mkdir -p &quot;Persönliche Dokumente/Heirats- und Geburtsurkunden&quot;
-mkdir -p &quot;Persönliche Dokumente/Familienstammbuch&quot;
-mkdir -p &quot;Persönliche Dokumente/Reisepass&quot;
-mkdir -p &quot;Persönliche Dokumente/Meldebestätigungen&quot;
-mkdir -p &quot;Persönliche Dokumente/Lebenslauf&quot;
-mkdir -p &quot;Persönliche Dokumente/Testament&quot;
-mkdir -p &quot;Persönliche Dokumente/Patientenverfügung&quot;
-mkdir -p &quot;Persönliche Dokumente/Vorsorgevollmacht&quot;
-mkdir -p &quot;Persönliche Dokumente/Meldungen zur Sozialversicherung&quot;
+mkdir -p "Persönliche Dokumente/Heirats- und Geburtsurkunden"
+mkdir -p "Persönliche Dokumente/Familienstammbuch"
+mkdir -p "Persönliche Dokumente/Reisepass"
+mkdir -p "Persönliche Dokumente/Meldebestätigungen"
+mkdir -p "Persönliche Dokumente/Lebenslauf"
+mkdir -p "Persönliche Dokumente/Testament"
+mkdir -p "Persönliche Dokumente/Patientenverfügung"
+mkdir -p "Persönliche Dokumente/Vorsorgevollmacht"
+mkdir -p "Persönliche Dokumente/Meldungen zur Sozialversicherung"
 
-mkdir -p &quot;Versicherungen/Versicherungsverträge&quot;
-mkdir -p &quot;Versicherungen/Versicherungsnachträge&quot;
-mkdir -p &quot;Versicherungen/Unterlagen Rentenversicherung&quot;
+mkdir -p "Versicherungen/Versicherungsverträge"
+mkdir -p "Versicherungen/Versicherungsnachträge"
+mkdir -p "Versicherungen/Unterlagen Rentenversicherung"
 
-mkdir -p &quot;Wohnen oder Immobilien/Mietverträge&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Belege für Kaution&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Nebenkostenabrechnungen&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Verträge mit Versorgungsträgern und Telefonanbietern&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Rundfunkbeiträge&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Kaufbelege Wohnungseinrichtung und Elektrogeräte&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Notarielle Verträge und Urkunden&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Grundbuchauszug&quot;
-mkdir -p &quot;Wohnen oder Immobilien/Rechnungen&quot;
+mkdir -p "Wohnen oder Immobilien/Mietverträge"
+mkdir -p "Wohnen oder Immobilien/Belege für Kaution"
+mkdir -p "Wohnen oder Immobilien/Nebenkostenabrechnungen"
+mkdir -p "Wohnen oder Immobilien/Verträge mit Versorgungsträgern und Telefonanbietern"
+mkdir -p "Wohnen oder Immobilien/Rundfunkbeiträge"
+mkdir -p "Wohnen oder Immobilien/Kaufbelege Wohnungseinrichtung und Elektrogeräte"
+mkdir -p "Wohnen oder Immobilien/Notarielle Verträge und Urkunden"
+mkdir -p "Wohnen oder Immobilien/Grundbuchauszug"
+mkdir -p "Wohnen oder Immobilien/Rechnungen"
 
-mkdir -p &quot;Kinder/Geburtsurkunde&quot;
-mkdir -p &quot;Kinder/Impfausweis&quot;
-mkdir -p &quot;Kinder/Zeugnisse&quot;
-mkdir -p &quot;Kinder/Ausbildungsnachweise&quot;
-mkdir -p &quot;Kinder/Hobby&quot;
-mkdir -p &quot;Kinder/Vereine&quot;
+mkdir -p "Kinder/Geburtsurkunde"
+mkdir -p "Kinder/Impfausweis"
+mkdir -p "Kinder/Zeugnisse"
+mkdir -p "Kinder/Ausbildungsnachweise"
+mkdir -p "Kinder/Hobby"
+mkdir -p "Kinder/Vereine"
 
-mkdir -p &quot;Hobby, Freizeit und Sport/Verträge&quot;
-mkdir -p &quot;Hobby, Freizeit und Sport/Kaufbelege&quot;
+mkdir -p "Hobby, Freizeit und Sport/Verträge"
+mkdir -p "Hobby, Freizeit und Sport/Kaufbelege"
 </code></pre>
 </p>
 </details>
@@ -3613,7 +3635,7 @@ mkdir -p &quot;Hobby, Freizeit und Sport/Kaufbelege&quot;
 <h2 id="berlin"><a class="header" href="#berlin">Berlin</a></h2>
 <ul>
 <li>Secret garden - vegan sushi</li>
-<li>Frea - vegan. Zero waste. </li>
+<li>Frea - vegan. Zero waste.</li>
 <li>Kopps - weltbest vegan</li>
 <li>Mana - vegan</li>
 <li>Lucky leek - vegan</li>
@@ -3646,7 +3668,7 @@ mkdir -p &quot;Hobby, Freizeit und Sport/Kaufbelege&quot;
 <h2 id="crete"><a class="header" href="#crete">Crete</a></h2>
 <p>Places of interest:</p>
 <ul>
-<li>San torini: visit the most beautiful island in the world! </li>
+<li>San torini: visit the most beautiful island in the world!</li>
 <li>Heraklion (capital): beautiful old town with a port</li>
 <li>Chania: old town with venetian port</li>
 <li>Matala: great old town with cool flair</li>
@@ -3952,7 +3974,7 @@ Trunk
 Tuell
 </code></pre>
 <footer id="last-change">Last change: 2019-04-18, commit: <a href="https://github.com/dvogt23/notes/commit/669a240">669a240</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="ireland"><a class="header" href="#ireland">Ireland</a></h1>
-<p>A poem on our journey in ireland, the bus driver bud wishes a poem from her adventurers. </p>
+<p>A poem on our journey in ireland, the bus driver bud wishes a poem from her adventurers.</p>
 <blockquote>
 <p>living in the wild like a sheep
 alongside are the cliffs so deep
@@ -4053,7 +4075,7 @@ und hört im Herzen auf zu sein.</p>
 <blockquote>
 <p>Die Größe und den moralischen Fortschritt einer Nation kann man daran messen, wie sie ihre Tiere behandeln.</p>
 </blockquote>
-<p>Bertolt Brecht </p>
+<p>Bertolt Brecht</p>
 <blockquote>
 <p>Reicher Mann und armer Mann standen da und sah’n sich an. Und der arme sagte bleich, wär ich nicht arm, wärst du nicht reich.</p>
 </blockquote>
@@ -4071,17 +4093,17 @@ und hört im Herzen auf zu sein.</p>
 <li>Fuck Anglizismen!</li>
 <li>Denk Dir keine Sätze, die das Prädikat zerteilen, aus.</li>
 <li>Achte auf korekte Orthographie, und Interpunktion</li>
-<li>Meide das Klischee wie der Teufel das Weihwasser. 
-Es ist ein alter Hut. </li>
+<li>Meide das Klischee wie der Teufel das Weihwasser.
+Es ist ein alter Hut.</li>
 <li>Vergleiche sind schlimmer als Klischees.</li>
-<li>Am schlimmsten sind Superlative. 
-Achtens: Halte Aufbau und Stil durch. </li>
+<li>Am schlimmsten sind Superlative.
+Achtens: Halte Aufbau und Stil durch.</li>
 <li>Sei mehr oder weniger spezifisch.</li>
 <li>Kein Mensch mag allgemeine Behauptungen.</li>
-<li>Sei nicht redundant, benutze nicht mehr Wörter als nötig. 
-Das ist nämlich total absolut überflüssig. </li>
+<li>Sei nicht redundant, benutze nicht mehr Wörter als nötig.
+Das ist nämlich total absolut überflüssig.</li>
 <li>Wer braucht rhetorische Fragen?</li>
-<li>Übertreibung ist eine Million mal schlimmer als Untertreibung. 
+<li>Übertreibung ist eine Million mal schlimmer als Untertreibung.
 ​</li>
 </ol>
 <footer id="last-change">Last change: 2019-03-25, commit: <a href="https://github.com/dvogt23/notes/commit/256994d">256994d</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="29-ways-to-stay-creative"><a class="header" href="#29-ways-to-stay-creative">29 ways to stay creative</a></h1>

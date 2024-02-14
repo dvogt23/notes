@@ -197,7 +197,7 @@ repository.</p>
 <li>Push this branch to history-repo
 <code>git push project-history history:main</code></li>
 <li>Reduce size of main repo
-<code>git commit-tree -m &quot;For historic commits, run 'git replace &lt;child-ID&gt; 590f4d3'&quot; &quot;590f4d3~^{tree}&quot; d3bee05dac84c66b7d13f99a5edf790688f51494</code>
+<code>git commit-tree -m "For historic commits, run 'git replace &lt;child-ID&gt; 590f4d3'" "590f4d3~^{tree}" d3bee05dac84c66b7d13f99a5edf790688f51494</code>
 <code>git rebase 590f4d3~ --onto d3bee05  --rebase-merges</code></li>
 <li>Push small size to origin
 <code>git push origin main --force-with-lease</code></li>
@@ -239,7 +239,7 @@ $ cd pcl-examples #make a directory we want to copy folders to
 $ git init #initialize the empty local repo
 $ git remote add origin -f https://github.com/PointCloudLibrary/pcl.git #add the remote origin
 $ git config core.sparsecheckout true #very crucial. this is where we tell git we are checking out specifics
-$ echo &quot;examples/*&quot; &gt;&gt; .git/info/sparse-checkout #recursively checkout examples folder
+$ echo "examples/*" &gt;&gt; .git/info/sparse-checkout #recursively checkout examples folder
 $ git pull --depth=2 origin master #go only 2 depths down the examples directory
 </code></pre>
 <p><strong>Switch to previous branch</strong></p>
