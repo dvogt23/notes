@@ -46,6 +46,34 @@ pluralize(count, "apple")                   # pluralize if count > 1 to apples
 
 ```
 
+### Lambda composition
+Combine lambda blocks together with  `>>` i.e. to create a new one like `TAX_FEE = TAX >> FEE`
+
+```ruby
+# List of our individual pricing rules
+TAX           = ->(val) { val + val*0.05 }
+FEE           = ->(val) { val + 1 }
+PREMIUM       = ->(val) { val + 10 }
+DISCOUNT      = ->(val) { val * 0.90 }
+ROUND_TO_CENT = ->(val) { val.round(2) }
+# One presenter
+PRESENT       = ->(val) { val.to_f }
+
+# Pre-define some rule sets for some pricing scenarios
+REGULAR_SET    = [FEE, TAX, ROUND_TO_CENT, PRESENT]
+PREMIUM_SET    = [FEE, PREMIUM, TAX, ROUND_TO_CENT, PRESENT]
+DISCOUNTED_SET = [FEE, DISCOUNT, TAX, ROUND_TO_CENT, PRESENT]
+```
+
+Now we can define a price calculator:
+
+```ruby
+def apply_rules(rules:, base_price:)
+  rules.inject(:>>).call(base_price)
+end
+```
+
+Source: [get-around.tech](https://getaround.tech/ruby-lambda-composition/)
 ## Object lookup
 
 ```ruby
