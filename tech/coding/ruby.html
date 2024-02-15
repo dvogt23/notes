@@ -206,7 +206,7 @@ time_ago_in_words(recipe.created_at)        # date
 pluralize(count, "apple")                   # pluralize if count &gt; 1 to apples
 
 </code></pre>
-<h3 id="lambda-composition"><a class="header" href="#lambda-composition">Lambda composition</a></h3>
+<h2 id="lambda-composition"><a class="header" href="#lambda-composition">Lambda composition</a></h2>
 <p>Combine lambda blocks together with  <code>&gt;&gt;</code> i.e. to create a new one like <code>TAX_FEE = TAX &gt;&gt; FEE</code></p>
 <pre><code class="language-ruby"># List of our individual pricing rules
 TAX           = -&gt;(val) { val + val*0.05 }
@@ -292,7 +292,7 @@ end
 RegularNamespace.append_strings("1", "2") # =&gt; "12"
 PatchedNamespace.append_strings("1", "2") # =&gt; "1, 2"
 </code></pre>
-<footer id="last-change">Last change: 2024-02-14, commit: <a href="https://github.com/dvogt23/notes/commit/20f0c22">20f0c22</a></footer>
+<footer id="last-change">Last change: 2024-02-15, commit: <a href="https://github.com/dvogt23/notes/commit/0a41ae6">0a41ae6</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
