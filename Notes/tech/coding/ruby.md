@@ -1,7 +1,7 @@
 ---
-id: "tech/coding/ruby.md"
+id: tech/coding/ruby.md
 aliases:
-  - "Ruby"
+  - Ruby
 tags: []
 ---
 
@@ -46,7 +46,7 @@ pluralize(count, "apple")                   # pluralize if count > 1 to apples
 
 ```
 
-### Lambda composition
+## Lambda composition
 Combine lambda blocks together with  `>>` i.e. to create a new one like `TAX_FEE = TAX >> FEE`
 
 ```ruby
@@ -74,6 +74,7 @@ end
 ```
 
 Source: [get-around.tech](https://getaround.tech/ruby-lambda-composition/)
+
 ## Object lookup
 
 ```ruby

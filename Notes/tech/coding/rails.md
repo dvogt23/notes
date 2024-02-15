@@ -1,3 +1,9 @@
+---
+id: rails
+aliases: []
+tags: []
+---
+
 # Rails
 
 Rails is a very cool framework for web-applications and IMO the best for
