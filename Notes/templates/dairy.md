@@ -1,7 +1,7 @@
 ---
-tags: daily, diary
+tags: daily diary
 ---
 ### Todo
 
 ### Log
-- 
+-
