@@ -108,7 +108,7 @@ erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 
 ### Rails ERD
 
-For creating an erd diagram of your db schema, you could create a pdf with: [rails-erd](https://github.com/voormedia/rails-erd) with this command: 
+For creating an erd diagram of your db schema, you could create a pdf with: [rails-erd](https://github.com/voormedia/rails-erd) with this command:
 
 `bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman`
 
@@ -120,7 +120,7 @@ Source: [fastruby.io](https://www.fastruby.io/blog/rails/code-quality/An-introdu
 
 ## RSpec
 ### Testing an array with attributes
- 
+
 ```ruby
 expect(items[0].id).to eql(1)
 expect(items[0].name).to eql('One')
@@ -164,7 +164,7 @@ RSpec::Matchers.define :have_errors_on do |attribute|
        "#{model.class} should have errors on attribute #{attribute.inspect}"
      end
    end
- 
+
    failure_message_for_should_not do |model|
      "#{model.class} should not have an error on attribute #{attribute.inspect}"
    end
@@ -268,8 +268,8 @@ class User
 end
 ```
 - try(:method_name) || default_method
-- Routing constraints 
-	- subdomain 
+- Routing constraints
+	- subdomain
 	- authenticated
 - Routes draw split into files
 - rails generate generator ApiClient
@@ -298,7 +298,7 @@ Create a controller with a method and use a object in view:
 class TodosController < ApplicationController
 
   def new
-   @todo = Todo.new 
+   @todo = Todo.new
   end
 
 end
@@ -362,8 +362,8 @@ private
   end
 
   # permit has_many list
-  def recipe_params  
-    params.require(:recipe).permit(:name, :description, ingredient_ids: [])  
+  def recipe_params
+    params.require(:recipe).permit(:name, :description, ingredient_ids: [])
   end
 
 end
@@ -413,13 +413,13 @@ Render partial for model:
 
 ```ruby
 # View
-<% if recipe.ingredients.any? %>  
-  <p>Ingredients: <%= render recipe.ingredients %></p>  
+<% if recipe.ingredients.any? %>
+  <p>Ingredients: <%= render recipe.ingredients %></p>
 <% end %>
 
 # Now create a new partial _ingredient.html.erb under the app/views/ingredients folder for this to work
 
-<span class="badge"><%= link_to ingredient.name,   
+<span class="badge"><%= link_to ingredient.name, 
                       ingredient_path(ingredient) %>   </span>
 ````
 
@@ -435,8 +435,8 @@ default_scope -> { order(updated_at: :desc) }
 Get just the last 20 entries of a model
 
 ```ruby
-def self.most_recent  
-  order(:created_at).last(20)  
+def self.most_recent
+  order(:created_at).last(20)
 end
 ```
 
@@ -458,12 +458,12 @@ get '/about', to: 'pages#about'
 Nested routes:
 
 ```ruby
-resources :recipes do  
-  resources :comments, only: [:create]  
+resources :recipes do
+  resources :comments, only: [:create]
 end
 
 # Form in view
-<%= form\_for(\[@recipe, @comment\], :html => {class: "form-horizontal",   
+<%= form\_for(\[@recipe, @comment\], :html => {class: "form-horizontal", 
                                                 role: "form"}) do |f| %>
 ````
 
@@ -520,35 +520,35 @@ Test a simple validation:
 require 'test_helper'
 
 class RecipeTest < ActiveSupport::TestCase
-  
+
   def setup
-    @recipe = Recipe.new(name: "vegetable", description: "great vegetable recipe")  
+    @recipe = Recipe.new(name: "vegetable", description: "great vegetable recipe")
   end
-  
+
   test "recipe should be valid" do
     assert @recipe.valid?
-  end  
-  
+  end
+
   test "name should be present" do
     @recipe.name = " "
     assert_not @recipe.valid?
   end
-  
+
   test "description should be present" do
     @recipe.description = " "
     assert_not @recipe.valid?
   end
-  
+
   test "description shouldn't be less than 5 characters" do
     @recipe.description = "a" * 3
     assert_not @recipe.valid?
   end
-  
+
   test "description shouldn't be more than 500 characters" do
     @recipe.description = "a" * 501
     assert_not @recipe.valid?
   end
-  
+
   test "should get recipes show" do
     get recipe_path(@recipe)
     assert_template 'recipes/show'
@@ -556,7 +556,7 @@ class RecipeTest < ActiveSupport::TestCase
     assert_match @recipe.description, response.body
     assert_match @chef.chefname, response.body
   end
-  
+
   test "should get recipes listing" do
     get recipes_path
     assert_template 'recipes/index'
@@ -572,35 +572,35 @@ Test a email validation:
 require 'test_helper'
 
 class ChefTest < ActiveSupport::TestCase
-  
+
   def setup
     @chef = Chef.new(chefname: "mashrur", email: "mashrur@example.com")
   end
-  
+
   test "should be valid" do
     assert @chef.valid?
   end
-  
+
   test "name should be present" do
     @chef.chefname = " "
     assert_not @chef.valid?
   end
-  
+
   test "name should be less than 30 characters" do
     @chef.chefname = "a" * 31
     assert_not @chef.valid?
   end
-  
+
   test "email should be present" do
     @chef.email = " "
     assert_not @chef.valid?
   end
-  
+
   test "email should not be too long" do
     @chef.email = "a" * 245 + "@example.com"
     assert_not @chef.valid?
   end
-  
+
   test "email should accept correct format" do
     valid_emails = %w[user@example.com MASHRUR@gmail.com M.first@yahoo.ca john+smith@co.uk.org]
     valid_emails.each do |valids|
@@ -608,26 +608,26 @@ class ChefTest < ActiveSupport::TestCase
       assert @chef.valid?, "#{valids.inspect} should be valid"
     end
   end
-  
+
   test "should reject invalid addresses" do
     invalid_emails = %w[mashrur@example mashrur@example,com mashrur.name@gmail. joe@bar+foo.com]
     invalid_emails.each do |invalids|
       @chef.email = invalids
       assert_not @chef.valid?, "#{invalids.inspect} should be invalid"
     end
-  end 
-  
+  end
+
   test "email should be unique and case insensitive" do
     duplicate_chef = @chef.dup
     duplicate_chef.email = @chef.email.upcase
     @chef.save
     assert_not duplicate_chef.valid?
   end
-  
+
   test "reject an invalid signup" do
     get signup_path
     assert_no_difference "Chef.count" do
-      post chefs_path, params: { chef: { chefname: " ", 
+      post chefs_path, params: { chef: { chefname: " ",
                                  email: " ", password: "password",
                                     password_confirmation: " " } }
     end
@@ -635,11 +635,11 @@ class ChefTest < ActiveSupport::TestCase
     assert_select 'h2.panel-title'
     assert_select 'div.panel-body'
   end
-  
+
   test "accept valid signup" do
     get signup_path
     assert_difference "Chef.count", 1 do
-      post chefs_path, params: { chef: { chefname: "mashrur", 
+      post chefs_path, params: { chef: { chefname: "mashrur",
                 email: "mashrur@example.com", password: "password",
                               password_confirmation: "password" } }
     end
@@ -647,7 +647,7 @@ class ChefTest < ActiveSupport::TestCase
     assert_template 'chefs/show'
     assert_not flash.empty?
   end
-  
+
 end
 
 # controller
@@ -657,7 +657,7 @@ class Chef < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  
+
 end
 ```
 
@@ -672,7 +672,7 @@ test "email should be lower case before hitting db" do
   mixed_email = "JohN@ExampLe.com"
   @chef.email = mixed_email
   @chef.save
-  assert_equal mixed_email.downcase, @chef.reload.email 
+  assert_equal mixed_email.downcase, @chef.reload.email
 end
 ```
 
@@ -695,7 +695,7 @@ Test
 ```ruby
 def setup
   @chef = Chef.create!(chefname: "mashrur", email: "mashrur@example.com")
-  @recipe = @chef.recipes.build(name: "vegetable", description: "great vegetable recipe")  
+  @recipe = @chef.recipes.build(name: "vegetable", description: "great vegetable recipe")
 end
 
 test "recipe without chef should be invalid" do
@@ -724,16 +724,16 @@ gem 'jquery-rails'
 Render html for each data:
 
 ```ruby
-<%= f.collection_check_boxes :ingredient_ids,   
-                                    Ingredient.all, :id, :name do |cb| %>  
-<% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>  
+<%= f.collection_check_boxes :ingredient_ids, 
+                                    Ingredient.all, :id, :name do |cb| %>
+<% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
       <% end %>
 ````
 
 ### Database
-  
+
 Create migration:
-  
+
 ```ruby
 rails generate migration create_recipes
 
@@ -752,6 +752,6 @@ Many to many association:
 
 ```ruby
 # Model
-has_many :recipe_ingredients  
+has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 ````
