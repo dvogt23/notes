@@ -36,6 +36,19 @@ On arch you have to install openssl-1.0 and run:
 PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig:/usr/lib/pkgconfig rvm install <ruby-version>
 ```
 
+### Merge hashes
+```ruby
+# Turn a collection of hashes into a single one
+
+{ "yellow" => "#FFBEOB" },
+{ "orange" => "#FB5607" },
+{ "pink" => "#FF006E" }
+1. reduce ({},:merge)
+
+#=>“"yellow"=>"#FFBEOB"， "orange"=>"#FB5607"， "pink"=>"#FF006E"｝
+{}.merge(hash1, hash2, hash3) # works as well
+```
+
 ## Useful functions
 Some `ruby` functions:
 
