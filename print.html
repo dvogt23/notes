@@ -1509,6 +1509,17 @@ rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disa
 <p>On arch you have to install openssl-1.0 and run:</p>
 <pre><code class="language-bash">PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig:/usr/lib/pkgconfig rvm install &lt;ruby-version&gt;
 </code></pre>
+<h3 id="merge-hashes"><a class="header" href="#merge-hashes">Merge hashes</a></h3>
+<pre><code class="language-ruby"># Turn a collection of hashes into a single one
+
+{ "yellow" =&gt; "#FFBEOB" },
+{ "orange" =&gt; "#FB5607" },
+{ "pink" =&gt; "#FF006E" }
+1. reduce ({},:merge)
+
+#=&gt;“"yellow"=&gt;"#FFBEOB"， "orange"=&gt;"#FB5607"， "pink"=&gt;"#FF006E"｝
+{}.merge(hash1, hash2, hash3) # works as well
+</code></pre>
 <h2 id="useful-functions"><a class="header" href="#useful-functions">Useful functions</a></h2>
 <p>Some <code>ruby</code> functions:</p>
 <pre><code class="language-ruby">truncate(recipe.description, length: 150)   # truncate
@@ -1602,7 +1613,7 @@ end
 RegularNamespace.append_strings("1", "2") # =&gt; "12"
 PatchedNamespace.append_strings("1", "2") # =&gt; "1, 2"
 </code></pre>
-<footer id="last-change">Last change: 2024-02-15, commit: <a href="https://github.com/dvogt23/notes/commit/0a41ae6">0a41ae6</a></footer><div style="break-before: page; page-break-before: always;"></div><h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
+<footer id="last-change">Last change: 2024-03-19, commit: <a href="https://github.com/dvogt23/notes/commit/529ed57">529ed57</a></footer><div style="break-before: page; page-break-before: always;"></div><h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
 <h3 id="learning"><a class="header" href="#learning">Learning</a></h3>
 <p><strong>TODO:</strong></p>
 <ul>
