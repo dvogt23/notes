@@ -3,7 +3,6 @@
  - Great article about self-hosting architecture [cprimozic](https://cprimozic.net/blog/my-selfhosted-websites-architecture/)
    - modern nginx features with difference modules
    - phost for quick static site self-hosting
-   - plausible for analytics
    - sentry for logging
    - httpbin for api testing
    - send for private file sharing
@@ -13,13 +12,9 @@
  - TODO Note taking [wiz.cn](https://www.wiz.cn)
  - TODO todo management [vikunja](https://vikunja.io/docs/)
  - TODO host an own music streaming [navidrome](https://www.navidrome.org/docs/installation/docker/)
- - TODO Create own wireguard pihole on vs: [wirehole](https://github.com/IAmStoxe/wirehole)
  - TODO Host my own signal proxy
    [Help iran to connect signal](https://signal.org/blog/help-iran-reconnect/)
- - TODO Treafik Wildcard Zertifikat konfigurieren
-    Ultimate docker home server with traefik smarthomebeginner blogpost
 
- - TODO Web analytics Plausible.io
  - TODO SMTP backup Mailcatcher
     Postfix relay config:
 
