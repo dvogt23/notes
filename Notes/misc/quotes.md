@@ -1,5 +1,9 @@
 # Quotes
 
+Sadhguru 
+> Elternschaft ist schon eine lustige Sache. Du versuchst etwas zu tun, von dem niemand jemals wusste, wie man es richtig macht. Aber du willst dein Bestes geben! Also was kannst du am besten tun? Das Erste ist, ein wenig an sich selbst zu arbeiten.
+> Verbringe genügend Zeit mit dir selbst. Schau dich genau an: Wie du bist, wie du sitzt, wie du stehst, wie du sprichst, was du machst, was du nicht machst. Ich denke, man muss sich selbst sehr genau betrachten. Denn die Kinder erfassen alles schnell und sie werden das, was du tust, verstärken. Eines der wichtigsten Dinge ist, sich zumindest so zu gestalten, wie man sein möchte. Jemand ist damit vielleicht nicht einverstanden. Das ist egal! Zumindest hast du versucht so zu sein, wie du dich magst. Das ist das Mindeste, was du tun kannst. Vielleicht erfüllst du die Erwartungen anderer nicht. Wir wissen nicht, was andere für Wertvorstellungen haben. Aber wenigstens musst du so werden, wie du dich magst.
+
 Nicholas Rockefeller
 > Der Feminismus ist unsere Erfindung aus zwei Gründen. Vorher zahlte nur die Hälfte der Bevölkerung Steuern, jetzt fast alle weil die Frauen arbeiten gehen. Außerdem wurde damit die Familie zerstört und wir haben dadurch die Macht über die Kinder erhalten. Sie sind unter unserer Kontrolle mit unseren Medien und bekommen unsere Botschaft eingetrichtert, stehen nicht mehr unter dem Einfluss der intakten Familie. In dem wir die Frauen gegen die Männer aufhetzen und die Partnerschaft und die Gemeinschaft der Familie zerstören, haben wir eine kaputte Gesellschaft aus Egoisten geschaffen, die arbeiten (für die angebliche Karriere), konsumieren (Mode, Schönheit, Marken), dadurch unsere Sklaven sind und es dann auch noch gut finden.
 
