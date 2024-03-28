@@ -97,4 +97,5 @@ tags: []
   - [Quotes](misc/quotes.md)
   - [Wie man gut schreibt?](misc/wie_man_gut_Schreibt.md)
   - [29 ways to stay creative](misc/29ways_to_stay_creative.md)
+  - [simple life](misc/simple_life.md)
   - [Productivity](misc/productivity.md)
