@@ -63,6 +63,8 @@ Source: [utopia](https://utopia.de/ratgeber/sauerteig-ansetzen-gesundes-brot-aus
 
 ## Pizza recipe
 
+Basically you could use each pizza dough calculator on the internet. I actually prefer the oni app with 63% hydration for an home oven. 
+
 **Neapolitan 6pcs:**
 
 24h:
