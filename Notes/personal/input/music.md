@@ -1,61 +1,68 @@
+---
+id: music
+aliases: []
+tags: []
+---
+
 # Music
 
 ## Favorit songs:
 
- - Lydie Auvray - Couscous
- - Egor Kreed - Самая самая
- - Stephane Wrembel - Bistro Fada
- - Adana Twins - Strange
- - La Marina - Cuffin' season (Remix) [feat. Fabolous]
- - Harry Nilsson - One
- - Bill Withers - Lean on Me
- - Nôze - Marabout
- - Coldplay - Hymn for the Weekend
- - Frank Ocean - Pink Matter
- - I Monster - Daydream In Blue
- - Kid Cudi - Releaser
- - Kid Cudi - Swim In The Light
- - Kid Cudi - Frequency
- - Rae Sremmurd - Black Beatles
- - Petit Biscuit - Sunset Lover
- - Jon Bellion - All Time Low
- - Imagine Dragons - Believer
- - Michael Kiwanuka - One More Night
- - Michael Kiwanuka - Love & Hate
- - Michael Kiwanuka - Cold Little Heart
- - Jah Khalib - Ты словно целая вселенная
- - Грибы - Тает лёд
- - Ulrich Tukur & Die Rhythmus Boys - Morphium
- - Anitta - Vai malandra (feat. Tropkillaz & DJ Yuri Martins)
- - Indila - Dernière danse
- - Yves Montand - Bella Ciao
- - Manu Chao - Me Gustas Tu
- - Manu Chao - Bongo Bong
- - Pyotr Ilyich Tchaikovsky - The Seasons, Op. 37a: II. February. Carnival
- - Lluni - King
- - George Davidson - Mariage D'Amour
- - Dendemann - Keine Parolen
- - John Legend - Green Light (feat. André 3000)
- - sean - Mercutio
- - Deichkind - Richtig Gutes Zeug
- - Evelyn Stein - Quiet Resource
- - Zaz - Pourquoi tu joues faux
- - Max Girko - Иди За Второй
- - Zemlyane - The grass near the house
- - Mark Eliyahu - Endless
- - Old Man Canyon - Phantoms and Friends
- - Estelle - American Boy
- - Michael Kiwanuka - Solid Ground
- - RIN - Monica Bellucci
- - Eminem - Marsh
- - MoTrip - Changed - Aus Sing meinen Song, Vol. 7
- - Tima Belorusskih - Одуванчик
- - Omega - Pegao / Me Miro y La Mire (TikTok Hit)
- - Timati - Звездопад
- - Kanye West - Nah Nah Nah
- - Shuggie Otis - Aht Uh Mi Hed
- - Toše Proeski - Nesanica
- - Ensemble Vanya - Russian Cyberfolk Song
- - Zaz - Je veux
- - Gorillaz - Feel Good Inc.
+- Grover Washington Jr - Just the Two of Us
+- Lydie Auvray - Couscous
+- Egor Kreed - Самая самая
+- Stephane Wrembel - Bistro Fada
+- Adana Twins - Strange
+- La Marina - Cuffin' season (Remix) [feat. Fabolous]
+- Harry Nilsson - One
+- Bill Withers - Lean on Me
+- Nôze - Marabout
+- Coldplay - Hymn for the Weekend
+- Frank Ocean - Pink Matter
+- I Monster - Daydream In Blue
+- Kid Cudi - Releaser
+- Kid Cudi - Swim In The Light
+- Kid Cudi - Frequency
+- Rae Sremmurd - Black Beatles
+- Petit Biscuit - Sunset Lover
+- Jon Bellion - All Time Low
+- Imagine Dragons - Believer
+- Michael Kiwanuka - One More Night
+- Michael Kiwanuka - Love & Hate
+- Michael Kiwanuka - Cold Little Heart
+- Jah Khalib - Ты словно целая вселенная
+- Грибы - Тает лёд
+- Ulrich Tukur & Die Rhythmus Boys - Morphium
+- Anitta - Vai malandra (feat. Tropkillaz & DJ Yuri Martins)
+- Indila - Dernière danse
+- Yves Montand - Bella Ciao
+- Manu Chao - Me Gustas Tu
+- Manu Chao - Bongo Bong
+- Pyotr Ilyich Tchaikovsky - The Seasons, Op. 37a: II. February. Carnival
+- Lluni - King
+- George Davidson - Mariage D'Amour
+- Dendemann - Keine Parolen
+- John Legend - Green Light (feat. André 3000)
+- sean - Mercutio
+- Deichkind - Richtig Gutes Zeug
+- Evelyn Stein - Quiet Resource
+- Zaz - Pourquoi tu joues faux
+- Max Girko - Иди За Второй
+- Zemlyane - The grass near the house
+- Mark Eliyahu - Endless
+- Old Man Canyon - Phantoms and Friends
+- Estelle - American Boy
+- Michael Kiwanuka - Solid Ground
+- RIN - Monica Bellucci
+- Eminem - Marsh
+- MoTrip - Changed - Aus Sing meinen Song, Vol. 7
+- Tima Belorusskih - Одуванчик
+- Omega - Pegao / Me Miro y La Mire (TikTok Hit)
+- Timati - Звездопад
+- Kanye West - Nah Nah Nah
+- Shuggie Otis - Aht Uh Mi Hed
+- Toše Proeski - Nesanica
+- Ensemble Vanya - Russian Cyberfolk Song
+- Zaz - Je veux
+- Gorillaz - Feel Good Inc.
 
