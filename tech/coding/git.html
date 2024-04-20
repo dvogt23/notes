@@ -215,6 +215,9 @@ repository.</p>
 <ul>
 <li><a href="https://articles.foletta.org/post/git-under-the-hood/">Under the hood</a></li>
 </ul>
+<h2 id="git-bisect"><a class="header" href="#git-bisect">Git bisect</a></h2>
+<p>Find a bad commit with <code>git bisect</code> just run this command on a commit and mark them as <code>git bisect good/bad</code> checkout another and run again <code>git bisect good/bad</code>.
+<code>git bisect</code> is able to find your first <code>bad</code> commit with i.e. <code>git bisect run bin/rails rspec &lt;FILE&gt;</code> and mark commit <code>good/bad</code> with the exitcode of your command.</p>
 <h2 id="commit-to-an-older-hash"><a class="header" href="#commit-to-an-older-hash">Commit to an older hash</a></h2>
 <p>Run: <code>git-amend.sh &lt;older-hash&gt;</code></p>
 <pre><code class="language-bash git-amend.sh">hash=$1
@@ -260,7 +263,7 @@ git worktree remove ../f_branch_worktree
 <pre><code class="language-bash">git rev-list —all | xargs git grep '&lt;YOUR REGEX&gt;' # regex
 git rev-list —all | xargs git grep -F '&lt;YOUR STRING&gt;' # non-regex
 </code></pre>
-<footer id="last-change">Last change: 2023-03-27, commit: <a href="https://github.com/dvogt23/notes/commit/62fd523">62fd523</a></footer>
+<footer id="last-change">Last change: 2024-04-20, commit: <a href="https://github.com/dvogt23/notes/commit/fafd629">fafd629</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

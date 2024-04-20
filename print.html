@@ -642,6 +642,9 @@ repository.</p>
 <ul>
 <li><a href="https://articles.foletta.org/post/git-under-the-hood/">Under the hood</a></li>
 </ul>
+<h2 id="git-bisect"><a class="header" href="#git-bisect">Git bisect</a></h2>
+<p>Find a bad commit with <code>git bisect</code> just run this command on a commit and mark them as <code>git bisect good/bad</code> checkout another and run again <code>git bisect good/bad</code>.
+<code>git bisect</code> is able to find your first <code>bad</code> commit with i.e. <code>git bisect run bin/rails rspec &lt;FILE&gt;</code> and mark commit <code>good/bad</code> with the exitcode of your command.</p>
 <h2 id="commit-to-an-older-hash"><a class="header" href="#commit-to-an-older-hash">Commit to an older hash</a></h2>
 <p>Run: <code>git-amend.sh &lt;older-hash&gt;</code></p>
 <pre><code class="language-bash git-amend.sh">hash=$1
@@ -687,7 +690,7 @@ git worktree remove ../f_branch_worktree
 <pre><code class="language-bash">git rev-list —all | xargs git grep '&lt;YOUR REGEX&gt;' # regex
 git rev-list —all | xargs git grep -F '&lt;YOUR STRING&gt;' # non-regex
 </code></pre>
-<footer id="last-change">Last change: 2023-03-27, commit: <a href="https://github.com/dvogt23/notes/commit/62fd523">62fd523</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
+<footer id="last-change">Last change: 2024-04-20, commit: <a href="https://github.com/dvogt23/notes/commit/fafd629">fafd629</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
 <h2 id="nextjs-error"><a class="header" href="#nextjs-error">NextJS Error</a></h2>
 <p>If this error occures:</p>
 <pre><code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
@@ -897,6 +900,8 @@ erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 <p>Avoid race conditions with <code>ActiveRecord::Base.transaction do</code> and <code>Model.lock.find(model_id)</code> or <code>my_model_object.lock!</code></p>
 <p>Source: <a href="https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html">fastruby.io</a></p>
 <h2 id="rspec"><a class="header" href="#rspec">RSpec</a></h2>
+<h3 id="bisect-flaky-tests"><a class="header" href="#bisect-flaky-tests">Bisect flaky tests</a></h3>
+<p>with <code>rspec --bisect &lt;file&gt;</code> you could find flaky test setting to re-run it.</p>
 <h3 id="testing-an-array-with-attributes"><a class="header" href="#testing-an-array-with-attributes">Testing an array with attributes</a></h3>
 <pre><code class="language-ruby">expect(items[0].id).to eql(1)
 expect(items[0].name).to eql('One')
@@ -1440,7 +1445,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-02-23, commit: <a href="https://github.com/dvogt23/notes/commit/1ecee1a">1ecee1a</a></footer><div style="break-before: page; page-break-before: always;"></div><h3 id="prevent-useeffect-render-on-mount"><a class="header" href="#prevent-useeffect-render-on-mount">Prevent useEffect render on mount</a></h3>
+<footer id="last-change">Last change: 2024-04-20, commit: <a href="https://github.com/dvogt23/notes/commit/fafd629">fafd629</a></footer><div style="break-before: page; page-break-before: always;"></div><h3 id="prevent-useeffect-render-on-mount"><a class="header" href="#prevent-useeffect-render-on-mount">Prevent useEffect render on mount</a></h3>
 <p>Create a custom useEffect hook</p>
 <pre><code class="language-js">import { DependencyList, EffectCallback, useEffect, useRef } from 'react';
 
