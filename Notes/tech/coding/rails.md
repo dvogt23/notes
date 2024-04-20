@@ -119,6 +119,8 @@ Avoid race conditions with `ActiveRecord::Base.transaction do` and `Model.lock.f
 Source: [fastruby.io](https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html)
 
 ## RSpec
+### Bisect flaky tests
+with `rspec --bisect <file>` you could find flaky test setting to re-run it.
 ### Testing an array with attributes
 
 ```ruby

@@ -37,6 +37,10 @@ Source: [andrewlock.net](https://andrewlock.net/reducing-the-size-of-a-git-repos
 
 - [Under the hood](https://articles.foletta.org/post/git-under-the-hood/)
 
+## Git bisect
+
+Find a bad commit with `git bisect` just run this command on a commit and mark them as `git bisect good/bad` checkout another and run again `git bisect good/bad`. 
+`git bisect` is able to find your first `bad` commit with i.e. `git bisect run bin/rails rspec <FILE>` and mark commit `good/bad` with the exitcode of your command.
 ## Commit to an older hash
 
 Run: `git-amend.sh <older-hash>`
