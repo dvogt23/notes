@@ -23,6 +23,7 @@ tags: []
     - [Kotlin](tech/coding/kotlin.md)
     - [Make](tech/coding/make.md)
     - [Maven](tech/coding/maven.md)
+    - [Projects](tech/coding/projects.md)
     - [Python](tech/coding/python.md)
     - [Rails](tech/coding/rails.md)
     - [React](tech/coding/react.md)
