@@ -1,6 +1,5 @@
 # Coding projects
 In general there are some basic topics, you have to check before start a bigger project/application. These decisions are fundamental for the smooth development of a applicaltion.
-
 ## Timestamp/Date persistance
 How to deal with timestamps i.e. getting from user inputs? Do we wanna be timezone compatible with clients/users in different timezones? How to get timezone from user in my backend requests?
 - persist timestamp and dates always in UTC in your database
