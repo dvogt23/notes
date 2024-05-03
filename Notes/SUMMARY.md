@@ -34,7 +34,7 @@ tags: []
   - [Linux]()
     - [Apps](tech/linux/apps.md)
     - [Arch linux](tech/linux/arch.md)
-    - [Commands](commands.md)
+    - [Commands](tech/linux/commands.md)
   - [Scrum](tech/scrum.md)
   - [Self-hosting]()
     - [Ideas](tech/selfhosting/ideas.md)
