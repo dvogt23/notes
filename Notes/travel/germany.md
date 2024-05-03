@@ -1,5 +1,8 @@
 # Germany
 
+## Münster
+- Marktplatz am Dom
+	- [Scellebelle](https://www.scellebelle.de/markt-muenster/)
 ## Berlin
  - Secret garden - vegan sushi
  - Frea - vegan. Zero waste. 

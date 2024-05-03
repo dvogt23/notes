@@ -8,6 +8,8 @@ tags:
   - programming
 ---
 
+### Articles
+- Using the url as a state management [jacobparis](https://www.jacobparis.com/content/url-as-state-management)
 ### Prevent useEffect render on mount
 
 Create a custom useEffect hook
