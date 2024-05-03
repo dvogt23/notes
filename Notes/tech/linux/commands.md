@@ -21,6 +21,10 @@ To remove LoaderConfigTimeout-[...] variable it turned out enough to press
 Shift+t enough times to set the timeout to 0, plus one more time.
 [Link](https://unix.stackexchange.com/questions/459389/systemd-boot-skips-boot-menu-and-ignores-settings-in-loader-loader-conf)
 
+### Search in .tar.gz files
+```bash
+rg -a -z 'regex'
+```
 ### List open ports
 
 ```
