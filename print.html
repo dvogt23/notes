@@ -2061,6 +2061,9 @@ in the boot menu: to set and unset a new value.
 To remove LoaderConfigTimeout-[…] variable it turned out enough to press
 Shift+t enough times to set the timeout to 0, plus one more time.
 <a href="https://unix.stackexchange.com/questions/459389/systemd-boot-skips-boot-menu-and-ignores-settings-in-loader-loader-conf">Link</a></p>
+<h3 id="check-dns-server-for-dnssec"><a class="header" href="#check-dns-server-for-dnssec">Check dns server for dnssec</a></h3>
+<p>With <code>dig +dnssec kuketz-blog.de @116.203.32.217</code> check for flags, needs to have
+the <code>ad</code> included, for authenticated answer.</p>
 <h3 id="search-in-targz-files"><a class="header" href="#search-in-targz-files">Search in .tar.gz files</a></h3>
 <pre><code class="language-bash">rg -a -z 'regex'
 </code></pre>
@@ -2225,7 +2228,7 @@ cpdf -blacktext in.pdf -o out.pdf  # Convert all text to black color
 is being sent to /dev/null</p>
 <pre><code>cat /dev/urandom | base64 | pv -lbri2 &gt; /dev/null
 </code></pre>
-<footer id="last-change">Last change: 2024-05-03, commit: <a href="https://github.com/dvogt23/notes/commit/8e2cc4f">8e2cc4f</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="scrum"><a class="header" href="#scrum">Scrum</a></h1>
+<footer id="last-change">Last change: 2024-05-04, commit: <a href="https://github.com/dvogt23/notes/commit/5b89fb4">5b89fb4</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="scrum"><a class="header" href="#scrum">Scrum</a></h1>
 <p>Thats the most prefered agile software development method that I mostly worked with in DIFFERENT ways and most of the time, in a bad way (non-productive).</p>
 <h2 id="daily"><a class="header" href="#daily">Daily</a></h2>
 <ul>
