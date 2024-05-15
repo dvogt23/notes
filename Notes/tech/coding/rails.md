@@ -35,7 +35,6 @@ Learning from some youtube guys:
 	 - [Ruby on Rails - Bounded contexts via interface objects](https://blog.eq8.eu/article/rails-bounded-contexts.html)
 	 - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
 	 - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
-
 ### Pattern matching
 
 ```ruby
