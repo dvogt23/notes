@@ -2559,7 +2559,14 @@ Sensoren anlegen:
 <ul>
 <li>Minimum viable secure product <a href="https://mvsp.dev/">mvsp</a></li>
 </ul>
-<footer id="last-change">Last change: 2023-08-18, commit: <a href="https://github.com/dvogt23/notes/commit/64f8ada">64f8ada</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="split-keyboard"><a class="header" href="#split-keyboard">Split keyboard</a></h1>
+<h3 id="yubikey"><a class="header" href="#yubikey">Yubikey</a></h3>
+<p>Best practice guide: https://github.com/drduh/YubiKey-Guide</p>
+<p>Secure password:</p>
+<pre><code>LC_ALL=C tr -dc 'A-Z1-9' &lt; /dev/urandom | \
+  tr -d "1IOS5U" | fold -w 30 | sed "-es/./ /"{1..26..5} | \
+  cut -c2- | tr " " "-" | head -1
+</code></pre>
+<footer id="last-change">Last change: 2024-05-16, commit: <a href="https://github.com/dvogt23/notes/commit/ad8516c">ad8516c</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="split-keyboard"><a class="header" href="#split-keyboard">Split keyboard</a></h1>
 <p>For my first try, I build a ferris sweep with Kailh Low Profile Choc Switches, Blank MBK Choc Low Profile Keycaps and two Elite-Pi controllers from splitkb.com.</p>
 <p>Some more details about my walkthrough this journey and its actual state:</p>
 <ol>
