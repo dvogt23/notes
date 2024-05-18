@@ -188,10 +188,10 @@
 <li>with <code>Index Cond</code> instead of <code>Filter</code> with <code>CreateAt &gt; ?1 OR (CreateAt = ?1 AND Id &gt; ?2)</code>, we can do <code>(CreateAt, Id) &gt; (?1, ?2)</code></li>
 <li>Always use BUFFERS when running an EXPLAIN. It gives some data that may be crucial for the investigation.</li>
 <li>Always, always try to get an Index Cond (called Index range scan in MySQL) instead of a Filter.</li>
-<li>Always, always, always assume PostgreSQL and MySQL will behave differently. Because they do.
-Source: <a href="https://mattermost.com/blog/making-a-postgres-query-1000-times-faster/?utm_source=tldrwebdev">mattermost</a></li>
+<li>Always, always, always assume PostgreSQL and MySQL will behave differently. Because they do.</li>
 </ul>
-<footer id="last-change">Last change: 2024-05-17, commit: <a href="https://github.com/dvogt23/notes/commit/21e9471">21e9471</a></footer>
+<p>Source: <a href="https://mattermost.com/blog/making-a-postgres-query-1000-times-faster">mattermost</a></p>
+<footer id="last-change">Last change: 2024-05-18, commit: <a href="https://github.com/dvogt23/notes/commit/6f4feb6">6f4feb6</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -797,10 +797,10 @@ rm -f $(OBJS) foo</p>
 <li>with <code>Index Cond</code> instead of <code>Filter</code> with <code>CreateAt &gt; ?1 OR (CreateAt = ?1 AND Id &gt; ?2)</code>, we can do <code>(CreateAt, Id) &gt; (?1, ?2)</code></li>
 <li>Always use BUFFERS when running an EXPLAIN. It gives some data that may be crucial for the investigation.</li>
 <li>Always, always try to get an Index Cond (called Index range scan in MySQL) instead of a Filter.</li>
-<li>Always, always, always assume PostgreSQL and MySQL will behave differently. Because they do.
-Source: <a href="https://mattermost.com/blog/making-a-postgres-query-1000-times-faster/?utm_source=tldrwebdev">mattermost</a></li>
+<li>Always, always, always assume PostgreSQL and MySQL will behave differently. Because they do.</li>
 </ul>
-<footer id="last-change">Last change: 2024-05-17, commit: <a href="https://github.com/dvogt23/notes/commit/21e9471">21e9471</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="coding-projects"><a class="header" href="#coding-projects">Coding projects</a></h1>
+<p>Source: <a href="https://mattermost.com/blog/making-a-postgres-query-1000-times-faster">mattermost</a></p>
+<footer id="last-change">Last change: 2024-05-18, commit: <a href="https://github.com/dvogt23/notes/commit/6f4feb6">6f4feb6</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="coding-projects"><a class="header" href="#coding-projects">Coding projects</a></h1>
 <p>In general there are some basic topics, you have to check before start a bigger project/application. These decisions are fundamental for the smooth development of a applicaltion.</p>
 <h2 id="timestampdate-persistance"><a class="header" href="#timestampdate-persistance">Timestamp/Date persistance</a></h2>
 <p>How to deal with timestamps i.e. getting from user inputs? Do we wanna be timezone compatible with clients/users in different timezones? How to get timezone from user in my backend requests?</p>
