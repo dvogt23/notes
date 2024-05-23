@@ -1,5 +1,9 @@
 # Basic
 
+### Books
+- [Structure and Interpretation of Computer Programs](https://web.mit.edu/6.001/6.037/sicp.pdf)
+- [Is Parallel Programming Hard, And, If So, What Can You Do About It?](https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html)
+- [Interactive Linear Algebra](https://services.math.duke.edu/~jdr/ila/index.html)
 ## Atomic design
 
 A programming pattern that divides components into different chemical stages to
