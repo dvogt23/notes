@@ -18,6 +18,7 @@
  - in the japanese quarter, eat in "Eat Tokyo"
  - Gusan
  - Takumi Tonkotsu -Takumi Nidaime- Ramen
+ - Takumi 6th Spicy Tan Tan Men
 
 ## Hamburg
  - Azeitona - vegetarische arabische Küche
