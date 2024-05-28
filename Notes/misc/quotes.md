@@ -23,6 +23,8 @@ Goran Kikic(?)
 
 Leo Tolstoi (Lew Nikolajewitsch Tolstoi)
 
+> Alle glücklichen Familien gleichen einander, jede unglückliche Familie ist auf ihre eigene Weise unglücklich. (1. Zeile Anna Karenina)
+
 > Es gibt Menschen, die ein Stück Land ‚Mein‘ nennen, und dieses Land nie gesehen und betreten haben. Die Menschen trachten im Leben nicht danach zu tun, was sie für gut halten, sondern danach, möglichst viele Dinge ‚Mein‘ zu nennen.
 
 Dont know where I found it.
