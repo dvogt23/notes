@@ -41,6 +41,7 @@ rg -a -z 'regex'
 sudo ss -tulpn
 sudo netstat -tulpn | grep LISTEN
 sudo lsof -i -P -n | grep LISTEN    # process list
+sudo lsof -i -n -P | grep TCP # macOS
 sudo nmap -sT -O localhost # scan localhost
 ```
 ### Find file from iNode Number
