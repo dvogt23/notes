@@ -120,3 +120,19 @@ zerrupfen und untermengen.
  - Prise Pfeffer
  - Schnittlauch nach Bedarf
 
+## Pfannkuchen
+
+FÜR DEN TEIG (15 Stk.)
+375 g Weizenmehl (Type 405)
+3 - 4½ EL Zucker
+3 TL Backpulver
+1½ Prisen Salz
+3 Eier (Gr. M)
+300 ml Milch
+
+
+
+
+
+
+
