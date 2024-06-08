@@ -1,7 +1,7 @@
 # Ideas
 
 - Great article about self-hosting architecture [cprimozic](https://cprimozic.net/blog/my-selfhosted-websites-architecture/)
-  - modern nginx features with difference modules
+  - modern nginx features with different modules
   - phost for quick static site self-hosting
   - sentry for logging
   - httpbin for api testing

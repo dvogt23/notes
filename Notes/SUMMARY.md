@@ -37,7 +37,7 @@ tags: []
     - [Arch linux](tech/linux/arch.md)
     - [Commands](tech/linux/commands.md)
   - [Scrum](tech/scrum.md)
-  - [Self-hosting]()
+  - [Self-hosting](tech/selfhosting/index.md)
     - [Ideas](tech/selfhosting/ideas.md)
   - [Smart-Home]()
     - [KNX](tech/smarthome/knx.md)
