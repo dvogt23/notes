@@ -7,16 +7,13 @@
 - 
 
 **Places**
- - Drouwenerzand Park
-    Nice park for kids with all-you-can-eat
-   
- - Giethorn
-    Is called the dutch venice
-
+ - Drouwenerzand Park - Nice park for kids with all-you-can-eat
+ - Giethorn - Is called the dutch venice
  - Camping in castricum (Gemüsehaus)
    [Geversduin](https://www.campinggeversduin.de/mieten)
  - Texel [Bundgalow 165](https://www.vredelusttexel.nl/de/verblijf/accommodatie-item/81/Bungalow-165)
  - legendary beer [Trappist Westvleteren](https://www.trappistwestvleteren.be)
+ - [warbeek](https://waarbeek.de/) All-inclusive Freizeitpark
 
 ## Amersfoort
 - Bastion Hotel ⭐️⭐️⭐️⭐️

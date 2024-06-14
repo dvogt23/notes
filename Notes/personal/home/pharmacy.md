@@ -1,6 +1,6 @@
 # Pharmacy
 
-Our home pharmacy list should always be present:
+Our home pharmacy list should always be available:
 
 - Antimückenspray 
   - Autan

@@ -9,6 +9,7 @@ tags: []
 ## Vitamins
 
 - [https://www.lavita.com](https://www.lavita.com) Great juice for the daily vitamin balance
+- Vitamin D should be taken orally as an oil and in combination with calcium and vitamin K2.
 
 ## Best summary of good food practice
 
@@ -52,3 +53,22 @@ Moderate Mengen Kaffee oder koffeinhaltigen Tee können Sie zur Flüssigkeitszuf
 Viele machen sich um Ihre Wasserzufuhr wenig Gedanken. Mit wie viel Wasser am Tag fühlen Sie sich wohl? 1,5 bis 2 Liter pro Tag sind ein guter Richtwert.
 
 Source: LaVita Newsletter Jun 2024
+
+## Daily goals for a healthy feeling
+
+**Gesunde Ernährung im Alltag – Top-Tipps**
+- Starten Sie mit drei festen Mahlzeiten pro Tag – mit Pausen von jeweils 4 Stunden.
+- Essen Sie zu einer Mahlzeit Obst (z. B. Frühstück) und zu den anderen beiden Mahlzeiten Gemüse.
+- Freunden Sie sich mit Hülsenfrüchten an: Essen Sie mehrmals pro Woche eine Handvoll.
+- Täglich eine Handvoll Nüsse – im Müsli, im Salat oder als Topping.
+- Optimieren Sie Ihre Mikronährstoffzufuhr, wenn Sie es nicht immer schaffen, ausgewogen zu essen oder wenn Sie durch Belastungen oder Medikamenteneinnahme einen erhöhten Bedarf haben.
+
+**Psychisch**
+- Führen Sie eine Morgenroutine ein: Diese Zeit am Morgen gilt allein Ihren Interessen und Bedürfnissen.
+- Tragen Sie Ihre Hobbys fest in den Terminkalender mit ein.
+- Belohnen Sie sich für gemeisterte, schwierige Aufgaben und gönnen Sie sich aktiv Pausen.
+- Fördern Sie positive soziale Kontakte: Verbringen Sie wöchentlich Zeit mit Personen, die Ihnen Energie schenken und Sie inspirieren.
+- Achten Sie auch hier auf eine gesunde Ernährung und gute Mikronährstoffzufuhr: Biotin, Jod, Kupfer, Magnesium, Vitamin C und viele B-Vitamine tragen zu einer normalen Funktion des Nervensystems bei und die B-Vitamine unterstützen auch die normale psychische Funktion.
+
+Source: LaVita Newsletter Jun 2024
+
