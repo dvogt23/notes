@@ -3,7 +3,6 @@ id: music
 aliases: []
 tags: []
 ---
-
 # Music
 
 ## Favorit songs:

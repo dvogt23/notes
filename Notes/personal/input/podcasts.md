@@ -4,9 +4,6 @@ aliases:
   - "Podcasts"
 tags: []
 ---
-
-# Podcasts
-
 **My list of interesting podcasts:**
 
 - Zeit Verbrechen

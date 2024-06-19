@@ -4,7 +4,6 @@ aliases:
   - "Books"
 tags: []
 ---
-
 # Books
 
 Here is a list of books I read in the past, after school. My favorit genre are non-fiction books and biographies.
