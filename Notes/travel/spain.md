@@ -6,3 +6,6 @@
 
 ## Tenerife
 - Lago Martiánez - Puerto de la Cruz
+
+## Gran canaria
+- Amadores Beach Club
