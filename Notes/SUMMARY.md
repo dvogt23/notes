@@ -2,6 +2,7 @@
 id: SUMMARY
 aliases: []
 tags: []
+sticker: lucide//sticky-note
 ---
 
 # Summary
