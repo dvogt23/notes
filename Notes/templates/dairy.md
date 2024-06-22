@@ -5,7 +5,7 @@ tags: daily diary
 - [ ] 
 ```tasks
 description regex does not match /^\s*$/
-scheduled before today
+scheduled before tomorrow
 not done
 path does not include {{query.file.path}}
 ```
