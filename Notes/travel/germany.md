@@ -14,11 +14,11 @@
  - Mis Kebap Kottbusser Tor
 
 ## Düsseldorf
-
  - in the japanese quarter, eat in "Eat Tokyo"
  - Gusan
  - Takumi Tonkotsu -Takumi Nidaime- Ramen
  - Takumi 6th Spicy Tan Tan Men
+ - Jenka - russian kitchen
 
 ## Hamburg
  - Azeitona - vegetarische arabische Küche
@@ -27,5 +27,4 @@
  - BATU Noodle Society
 
 ## Fürth
-
  - Naples by Matteo (Napolitan Pizza)
