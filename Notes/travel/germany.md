@@ -28,3 +28,11 @@
 
 ## Fürth
  - Naples by Matteo (Napolitan Pizza)
+
+## Füssen
+- Lechfall
+- Baumkronenpfad
+- Tegelbergbahn/Rohrkopfhütte
+- Sommerrodelbahn/Kneippfad
+- Schloss Schwanstein/Hohen Schwangau
+- Schwansee 
