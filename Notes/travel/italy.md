@@ -1,10 +1,8 @@
-# Italy
-
 ## Tuscany
 
 - San Gimignano, Gelateria Dondoli (Safran ice cream)
-- Spiagge bianche, Vada (white beach) !!! somehow dangerous !!!
-
+- Molino del prato in Volterra https://www.booking.com/Share-4zmW24
+- Volterra - great small old village
 ### Bed & breakfast
 
  - [Re: Fernweh nach Italien: Anders reisen nach der Pandemie](https://www.arte.tv/de/videos/100292-004-A/re-fernweh-nach-italien/) -> [Suzanne Simons and Fabio Firli](https://pillowandpepper.com/en/italien/toskana/follonico)
