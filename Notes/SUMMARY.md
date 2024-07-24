@@ -10,6 +10,7 @@ sticker: lucide//sticky-note
 - [Knowledge](./README.md)
 
 - [Tech]()
+  - [AI](./tech/ai.md)
   - [Apps]()
     - [Pass](tech/app/pass.md)
     - [Vim](tech/app/vim.md)
