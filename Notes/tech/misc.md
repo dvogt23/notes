@@ -316,6 +316,7 @@ Found an good article about, how handle the custom sortation of entires in sql d
 ### OWASP 10 most critical security issues for web applications
 
 Some notes of: [OWASP Top 10 - heise](https://www.heise.de/news/Online-Workshop-OWASP-Top-10-Sicherheitsluecken-in-Webanwendungen-vermeiden-5988383.html) from [Tobias Glemser](https://owasp.org/www-project-juice-shop/)
+Authentication: [OWASP Authentication Cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
 **Content:**
 

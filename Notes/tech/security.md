@@ -3,7 +3,6 @@ id: security
 aliases: []
 tags: []
 ---
-
 # Security
 
 Interest things for security in general:
