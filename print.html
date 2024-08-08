@@ -199,6 +199,125 @@ lists by people who also record stuff on GitHub.</p>
 <ul>
 <li><a href="https://www.perplexity.ai/">perplexity.ai</a></li>
 </ul>
+<h2 id="block-ai-crawler-on-your-website"><a class="header" href="#block-ai-crawler-on-your-website">Block ai crawler on your website</a></h2>
+<p>Add some files to your root dir to block ai web crawler from your website.</p>
+<p>Add <code>robots.txt</code> with this content:</p>
+<pre><code>User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: AwarioRssBot
+Disallow: /
+
+User-agent: AwarioSmartBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GoogleOther
+
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: Meltwater
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: peer39_crawler
+Disallow: /
+
+User-agent: peer39_crawler/1.0
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: PiplBot
+Disallow: /
+
+User-agent: scoop.it
+Disallow: /
+
+User-agent: Seekr
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+</code></pre>
+<p>Add <code>.htaccess</code> with this content:</p>
+<pre><code>Order Allow,Deny
+
+# Anthropic Claude - https://docs.anthropic.com/en/api/ip-addresses
+Deny from 160.79.104.0/23
+Deny from 2607:6bc0::/48
+
+# OpenAI ChatGPT - https://platform.openai.com/docs/plugins/bot/ip-egress-ranges
+Deny from 23.98.142.176/28
+Deny from 40.84.180.224/28
+Deny from 13.65.240.240/28
+Deny from 20.161.75.208/28
+Deny from 52.225.75.208/28
+Deny from 52.156.77.144/28
+Deny from 40.84.180.64/28
+  
+Allow from all
+</code></pre>
+<p>Source: <a href="https://anreiter.at/ki-bots-auf-eigener-website-blockieren/">anreiter.at</a></p>
 <h2 id="prompts"><a class="header" href="#prompts">Prompts</a></h2>
 <ul>
 <li>colouring template (Malvorlage)</li>
@@ -226,7 +345,7 @@ lists by people who also record stuff on GitHub.</p>
 	- Be as concise as possible. 50 characters max.
 	- Do not add any issues numeration nor explain your output.
 </code></pre>
-<footer id="last-change">Last change: 2024-07-24, commit: <a href="https://github.com/dvogt23/notes/commit/cfb8914">cfb8914</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="pass-"><a class="header" href="#pass-">Pass 🔐</a></h1>
+<footer id="last-change">Last change: 2024-08-08, commit: <a href="https://github.com/dvogt23/notes/commit/5d33821">5d33821</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="pass-"><a class="header" href="#pass-">Pass 🔐</a></h1>
 <p>Favorite app on phone, also on terminal is <a href="https://www.passwordstore.org/">pass</a>.</p>
 <h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
 <p><strong>SSH key import on iPhone fails</strong> <a href="https://github.com/mssun/passforios/issues/218">issue</a>
