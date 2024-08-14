@@ -10,5 +10,3 @@ https://4comprehension.com/kotlins-java-util-optional-equivalents/
     ?.let { ...  }      // map()
     ?.takeIf { ...  }   // filter()
     ?: 42               // orElseGet()
-
-### next
