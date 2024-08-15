@@ -72,3 +72,22 @@ Source: LaVita Newsletter Jun 2024
 
 Source: LaVita Newsletter Jun 2024
 
+## Recommendation for healthy heart
+
+| Lebensmittel                  |  Menge                                    | Sorten                                                                           | Zu Vermeiden                                            |
+| ----------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **Obst**                      | 3–5 Portionen pro Tag                     | Alle zuckerarmen Obstsorten wie Beeren, Clementinen, Grapefruit, Kiwi, Nektarine | Gezuckerte Obstkonserven und Obstmus, kandierte Früchte |
+|                               |                                           | Nur in Maßen zuckerreiche Sorten: Ananas, Banane, Birne, Honigmelone, Mango      |                                                         |
+| **Gemüse**                    | Mind. 4 Portionen pro Tag                 | Fast alle Gemüsesorten, insb. Feldsalat, Grünkohl, Knoblauch, Spinat, Rote Bete  | Mais, Gemüsekonserven (salzreich)                       |
+| **Hülsenfrüchte**             | Mehrmals pro Woche, mind. 300 Gramm       | Alle Sorten, egal ob getrocknet, aus der Dose oder Tiefkühlware                  | Gezuckerte Hülsenfrüchte                                |
+| **Brot, Getreide & Beilagen** | 4 Portionen pro Tag                       | Vollkornbrot und -brötchen, Haferflocken, Müsli ohne Zucker, Vollkornnudeln      | Weiß- und Toastbrot, Zwieback, Weizenbrötchen, Pommes   |
+| **Nüsse & Samen**             | 30–40 g pro Tag                           | Naturbelassene Mandeln, Walnüsse, Cashewnüsse, Kürbiskerne, Lein- und Chia-Samen | Gesalzene Nüsse, gebrannte Mandeln                      |
+| **Fette & Öle**               | 2 EL pro Tag                              | Olivenöl, Rapsöl, Walnussöl, Hanföl, Leinöl                                      | Schweine- und Gänseschmalz, Palmfett, Sonnenblumenöl    |
+| **Fisch & Meeresfrüchte**     | 2 Portionen pro Woche                     | Fisch (frisch oder TK); insbesondere wie Lachs, Makrele, Hering                  | Fisch in Mayonnaise oder Sahne eingelegt                |
+| **Eier**                      | Mehrmals pro Woche                        |                                                                                  |                                                         |
+| **Milch & Milchprodukte**     | 250 g pro Tag                             | Milch (1,5 % Fett), Buttermilch, Speisequark, Naturjoghurt, Kefir                | Mayonnaise, Sahne, Schmand, gesüßte Fertigprodukte      |
+| **Käse**                      | 2 Scheiben (50–60 g) pro Tag              | Käse bis 45 % Fett i. Tr.: Harzer Käse, körniger Frischkäse, Schnittkäse         |                                                         |
+| **Fleisch & Wurstwaren**      | Max. 1–2 kleine Portionen pro Woche       | Mageres Fleisch wie Putenbrust, Hühnerfleisch                                    | Rotes Fleisch, Schweinefleisch, alle Wurstwaren         |
+| **Snacks & Süßigkeiten**      | Selten, maximal 1 kleine Handvoll pro Tag | Mind. 70%ige Zartbitterschokolade, Obst, Haferkekse                              | Süßigkeiten, süße Backwaren, süße Milchprodukte, Chips  |
+| **Getränke**                  | 1,5–2 Liter pro Tag                       | Wasser, ungezuckerter Kräutertee                                                 | Milchmixgetränke, Alkohol, Fruchtsaft, Softdrinks       |
+Source: LaVita Newsletter August 2024
