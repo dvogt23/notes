@@ -90,4 +90,5 @@ Source: LaVita Newsletter Jun 2024
 | **Fleisch & Wurstwaren**      | Max. 1–2 kleine Portionen pro Woche       | Mageres Fleisch wie Putenbrust, Hühnerfleisch                                    | Rotes Fleisch, Schweinefleisch, alle Wurstwaren         |
 | **Snacks & Süßigkeiten**      | Selten, maximal 1 kleine Handvoll pro Tag | Mind. 70%ige Zartbitterschokolade, Obst, Haferkekse                              | Süßigkeiten, süße Backwaren, süße Milchprodukte, Chips  |
 | **Getränke**                  | 1,5–2 Liter pro Tag                       | Wasser, ungezuckerter Kräutertee                                                 | Milchmixgetränke, Alkohol, Fruchtsaft, Softdrinks       |
+
 Source: LaVita Newsletter August 2024
