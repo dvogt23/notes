@@ -18,6 +18,10 @@
 - Slide/Prasentation [sli.dev](https://sli.dev/)
 - Multi device for geeks [flipper zero](https://flipperzero.one/)
 
+### Trackers
+- series & films: [serializd](https://www.serializd.com/) / [letterboxd](https://letterboxd.com/)
+- books: [oku](https://oku.club/) / [goodreads](https://www.goodreads.com/)
+
 ### Nix
 
 Articles
