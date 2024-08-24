@@ -2231,10 +2231,13 @@ sudo journalctl -p 3 -xb
 <h3 id="10-backup-the-system"><a class="header" href="#10-backup-the-system">10. Backup the system</a></h3>
 <pre><code>sudo rsync -aAXvP --delete --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude=/lost+found --exclude=/home/.ecryptfs / /mnt/backupDestination/
 </code></pre>
-<footer id="last-change">Last change: 2021-05-04, commit: <a href="https://github.com/dvogt23/notes/commit/c8020f8">c8020f8</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="linux-commands"><a class="header" href="#linux-commands">Linux commands</a></h1>
-<p>@linux @bash</p>
+<footer id="last-change">Last change: 2021-05-04, commit: <a href="https://github.com/dvogt23/notes/commit/c8020f8">c8020f8</a></footer><div style="break-before: page; page-break-before: always;"></div><p>@linux @bash</p>
 <h3 id="useful-oneliners"><a class="header" href="#useful-oneliners">Useful oneliners</a></h3>
 <p>Show dir sizes: <code>du -hs */ | sort -hr | head</code></p>
+<h3 id="show-ssh-key-ids"><a class="header" href="#show-ssh-key-ids">Show ssh key ids</a></h3>
+<pre><code class="language-bash">for file in $(fd -e pub); do ssh-keygen -lf $file &amp;&amp; echo $file; done
+for file in $(fd -e pub); do ssh-keygen -l -E md5 -f $file &amp;&amp; echo $file; done
+</code></pre>
 <h3 id="a-one-liner-version-incrementer"><a class="header" href="#a-one-liner-version-incrementer">A one-liner version incrementer</a></h3>
 <pre><code class="language-bash">inc_version() {
     awk -F. -vOFS=. '{ $ver++; while(ver++&lt;NF) $ver=0; print $0 }' ver=$1
@@ -2415,7 +2418,7 @@ cpdf -blacktext in.pdf -o out.pdf  # Convert all text to black color
 is being sent to /dev/null</p>
 <pre><code>cat /dev/urandom | base64 | pv -lbri2 &gt; /dev/null
 </code></pre>
-<footer id="last-change">Last change: 2024-05-29, commit: <a href="https://github.com/dvogt23/notes/commit/16bc547">16bc547</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="scrum"><a class="header" href="#scrum">Scrum</a></h1>
+<footer id="last-change">Last change: 2024-08-24, commit: <a href="https://github.com/dvogt23/notes/commit/faccbb2">faccbb2</a></footer><div style="break-before: page; page-break-before: always;"></div><h1 id="scrum"><a class="header" href="#scrum">Scrum</a></h1>
 <p>Thats the most prefered agile software development method that I mostly worked with in DIFFERENT ways and most of the time, in a bad way (non-productive).</p>
 <h2 id="daily"><a class="header" href="#daily">Daily</a></h2>
 <ul>

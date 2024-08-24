@@ -180,10 +180,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="linux-commands"><a class="header" href="#linux-commands">Linux commands</a></h1>
-<p>@linux @bash</p>
+                        <p>@linux @bash</p>
 <h3 id="useful-oneliners"><a class="header" href="#useful-oneliners">Useful oneliners</a></h3>
 <p>Show dir sizes: <code>du -hs */ | sort -hr | head</code></p>
+<h3 id="show-ssh-key-ids"><a class="header" href="#show-ssh-key-ids">Show ssh key ids</a></h3>
+<pre><code class="language-bash">for file in $(fd -e pub); do ssh-keygen -lf $file &amp;&amp; echo $file; done
+for file in $(fd -e pub); do ssh-keygen -l -E md5 -f $file &amp;&amp; echo $file; done
+</code></pre>
 <h3 id="a-one-liner-version-incrementer"><a class="header" href="#a-one-liner-version-incrementer">A one-liner version incrementer</a></h3>
 <pre><code class="language-bash">inc_version() {
     awk -F. -vOFS=. '{ $ver++; while(ver++&lt;NF) $ver=0; print $0 }' ver=$1
@@ -364,7 +367,7 @@ cpdf -blacktext in.pdf -o out.pdf  # Convert all text to black color
 is being sent to /dev/null</p>
 <pre><code>cat /dev/urandom | base64 | pv -lbri2 &gt; /dev/null
 </code></pre>
-<footer id="last-change">Last change: 2024-05-29, commit: <a href="https://github.com/dvogt23/notes/commit/16bc547">16bc547</a></footer>
+<footer id="last-change">Last change: 2024-08-24, commit: <a href="https://github.com/dvogt23/notes/commit/faccbb2">faccbb2</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
