@@ -117,6 +117,78 @@ Avoid race conditions with `ActiveRecord::Base.transaction do` and `Model.lock.f
 
 Source: [fastruby.io](https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html)
 
+### Migration from sidekiq to solid_queue
+```bash
+Step 1: Update Gemfile
+# Remove Sidekiq
+# gem 'sidekiq'
+
+# Add Solid Queue
+gem 'solid_ queue'
+
+Step 2: Run bundle install
+# $ bundle install
+
+Step 3: Generate Solid Queue installation files
+# $ rails generate solid_queue: install
+
+Step 4: Run migrations
+# $ rails db:migrate
+
+Step 5: Update config/application.rb
+# Rails.application.configure do 
+#	config.active_job.queue_adapter = :solid_queue
+# end
+
+Step 6: Remove Sidekiq initializer
+# Delete or comment out config/initializers/sidekiq.rb
+
+Step 7: Update worker process command in Profile or deployment scripts
+# Old: worker: bundle exec sidekiq
+# New: worker: bundle exec rails solid_queue: start
+
+Step 8: Remove Redis configuration related to Sidekiq
+# Check config/redis.yml or any Redis initializers
+
+Step 9: Update any Sidekiq-specific code in your jobs
+
+Before:
+# class MyJob
+# include Sidekiq: :Worker
+# def perform(args)
+#  job logic
+# end
+# end
+
+After:
+# class MyJob < ApplicationJob
+# queue_as: default def perform(args)
+# job logic
+# end
+
+Step 10: Update any Sidekiq-specific API calls
+
+# Before: Sidekiq:: Client.push( 'class' => MyJob,
+# After: MyJob. perform_later (1, 2, 3)
+
+Step 11: Set up Mission Control (optional)
+
+# In Gemfile:
+gem 'mission_control-jobs'
+
+# In config/routes.rb:
+Rails.application.routes.draw do
+	mount MissionControl:: Jobs:: Engine, at: "/jobs" 
+end
+
+Step 12: Remove any Sidekiq web UI routes
+
+# Delete or comment out in config/routes.rb:
+
+# require 'sidekiq/web'
+# mount Sidekiq:: Web => '/sidekiq'
+```
+
 ## RSpec
 ### Bisect flaky tests
 with `rspec --bisect <file>` you could find flaky test setting to re-run it.
