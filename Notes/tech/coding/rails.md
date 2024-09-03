@@ -130,7 +130,7 @@ Step 2: Run bundle install
 # $ bundle install
 
 Step 3: Generate Solid Queue installation files
-# $ rails generate solid_queue: install
+# $ rails generate solid_queue:install
 
 Step 4: Run migrations
 # $ rails db:migrate
@@ -178,7 +178,7 @@ gem 'mission_control-jobs'
 
 # In config/routes.rb:
 Rails.application.routes.draw do
-	mount MissionControl:: Jobs:: Engine, at: "/jobs" 
+	mount MissionControl::Jobs::Engine, at: "/jobs" 
 end
 
 Step 12: Remove any Sidekiq web UI routes
