@@ -298,7 +298,7 @@ Step 2: Run bundle install
 # $ bundle install
 
 Step 3: Generate Solid Queue installation files
-# $ rails generate solid_queue: install
+# $ rails generate solid_queue:install
 
 Step 4: Run migrations
 # $ rails db:migrate
@@ -346,7 +346,7 @@ gem 'mission_control-jobs'
 
 # In config/routes.rb:
 Rails.application.routes.draw do
-	mount MissionControl:: Jobs:: Engine, at: "/jobs" 
+	mount MissionControl::Jobs::Engine, at: "/jobs" 
 end
 
 Step 12: Remove any Sidekiq web UI routes
@@ -902,7 +902,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-08-28, commit: <a href="https://github.com/dvogt23/notes/commit/cb41463">cb41463</a></footer>
+<footer id="last-change">Last change: 2024-09-03, commit: <a href="https://github.com/dvogt23/notes/commit/f4a567a">f4a567a</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
