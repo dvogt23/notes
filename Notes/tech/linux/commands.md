@@ -11,6 +11,14 @@ Show dir sizes: `du -hs */ | sort -hr | head`
 for file in $(fd -e pub); do ssh-keygen -lf $file && echo $file; done
 for file in $(fd -e pub); do ssh-keygen -l -E md5 -f $file && echo $file; done
 ```
+
+### ENV via ssh forward
+```bash
+export MYVAR=test
+ssh myhost "export MYVAR='$MYVAR' && echo $MYVAR"
+# test
+```
+
 ### A one-liner version incrementer
 ```bash
 inc_version() {
