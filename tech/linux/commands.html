@@ -187,6 +187,11 @@
 <pre><code class="language-bash">for file in $(fd -e pub); do ssh-keygen -lf $file &amp;&amp; echo $file; done
 for file in $(fd -e pub); do ssh-keygen -l -E md5 -f $file &amp;&amp; echo $file; done
 </code></pre>
+<h3 id="env-via-ssh-forward"><a class="header" href="#env-via-ssh-forward">ENV via ssh forward</a></h3>
+<pre><code class="language-bash">export MYVAR=test
+ssh myhost "export MYVAR='$MYVAR' &amp;&amp; echo $MYVAR"
+# test
+</code></pre>
 <h3 id="a-one-liner-version-incrementer"><a class="header" href="#a-one-liner-version-incrementer">A one-liner version incrementer</a></h3>
 <pre><code class="language-bash">inc_version() {
     awk -F. -vOFS=. '{ $ver++; while(ver++&lt;NF) $ver=0; print $0 }' ver=$1
@@ -367,7 +372,7 @@ cpdf -blacktext in.pdf -o out.pdf  # Convert all text to black color
 is being sent to /dev/null</p>
 <pre><code>cat /dev/urandom | base64 | pv -lbri2 &gt; /dev/null
 </code></pre>
-<footer id="last-change">Last change: 2024-08-24, commit: <a href="https://github.com/dvogt23/notes/commit/faccbb2">faccbb2</a></footer>
+<footer id="last-change">Last change: 2024-09-12, commit: <a href="https://github.com/dvogt23/notes/commit/986c710">986c710</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
