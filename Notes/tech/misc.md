@@ -279,6 +279,23 @@ http {
 
 Source: [Nice nginx features for developers](https://alex.dzyoba.com/blog/nginx-features-for-developers/)
 
+**Compressed response**
+
+Using with `curl -H 'Accept-encoding: gzip' localhost:8080/ping | gunzip -` or `curl --compressed https://ashishb.net`.
+
+Allow `Accept-encoding: gzip` with config:
+```
+http { 
+	... 
+	server { 
+		... 
+		gzip on; 
+		gzip_min_length 1000; 
+		... 
+	} 
+}
+```
+Source: [ashishb.net](https://ashishb.net/all/always-support-compressed-response-in-an-api-service/)
 ### FLoC blocking
 
 Block FLoC within traefik:

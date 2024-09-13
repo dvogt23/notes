@@ -189,6 +189,112 @@ Step 12: Remove any Sidekiq web UI routes
 # mount Sidekiq:: Web => '/sidekiq'
 ```
 
+###  Responsible monkeypatch
+Here's the list of rules I try to follow:
+1. Wrap the patch in a module with an obvious name and use `Module#prepend` to apply it
+2. Make sure you're patching the right thing
+3. Limit the patch's surface area
+4. Give yourself escape hatches
+5. Over-communicate
+
+```ruby
+# ActionView's date_select helper provides the option to "discard" certain
+# fields. Discarded fields are (confusingly) still rendered to the page
+# using hidden inputs, i.e. <input type="hidden" />. This patch adds an
+# additional option to the date_select helper that allows the caller to
+# skip rendering the chosen fields altogether. For example, to render all
+# but the year field, you might have this in one of your views:
+#
+# date_select(:date_of_birth, order: [:month, :day])
+#
+# or, equivalently:
+#
+# date_select(:date_of_birth, discard_year: true)
+#
+# To avoid rendering the year field altogether, set :render_discarded to
+# false:
+#
+# date_select(:date_of_birth, discard_year: true, render_discarded: false)
+#
+# This patch assumes the #build_hidden method exists on
+# ActionView::Helpers::DateTimeSelector and accepts two arguments.
+#
+module RenderDiscardedMonkeypatch
+  class << self
+    EXPIRATION_DATE = Date.new(2021, 8, 15)
+
+    def apply_patch
+      if Date.today > EXPIRATION_DATE
+        puts "WARNING: Please re-evaluate whether or not the ActionView "\
+          "date_select patch present in #{__FILE__} is still necessary."
+      end
+
+      const = find_const
+      mtd = find_method(const)
+
+      # make sure the class we want to patch exists;
+      # make sure the #build_hidden method exists and accepts exactly
+      # two arguments
+      unless const && mtd && mtd.arity == 2
+        raise "Could not find class or method when patching "\
+          "ActionView's date_select helper. Please investigate."
+      end
+
+      # if rails has been upgraded, make sure this patch is still
+      # necessary
+      unless rails_version_ok?
+        puts "WARNING: It looks like Rails has been upgraded since "\
+          "ActionView's date_select helper was monkeypatched in "\
+          "#{__FILE__}. Please re-evaluate the patch."
+      end
+
+      # actually apply the patch
+      const.prepend(InstanceMethods)
+    end
+
+    private
+
+    def find_const
+      Kernel.const_get('ActionView::Helpers::DateTimeSelector')
+    rescue NameError
+      # return nil if the constant doesn't exist
+    end
+
+    def find_method(const)
+      return unless const
+      const.instance_method(:build_hidden)
+    rescue NameError
+      # return nil if the method doesn't exist
+    end
+
+    def rails_version_ok?
+      Rails::VERSION::MAJOR == 6 && Rails::VERSION::MINOR == 1
+    end
+  end
+
+  module InstanceMethods
+    # :render_discarded is an additional option you can pass to the
+    # date_select helper in your views. Use it to avoid rendering
+    # "discarded" fields, i.e. fields marked as discarded or simply
+    # not included in date_select's :order array. For example,
+    # specifying order: [:day, :month] will cause the helper to
+    # "discard" the :year field. Discarding a field renders it as a
+    # hidden input. Set :render_discarded to false to avoid rendering
+    # it altogether.
+    def build_hidden(type, value)
+      if @options.fetch(:render_discarded, true)
+        super
+      else
+        ''
+      end
+    end
+  end
+end
+
+RenderDiscardedMonkeypatch.apply_patch
+```
+
+Source: [appsignal/blog](https://blog.appsignal.com/2021/08/24/responsible-monkeypatching-in-ruby.html)
 ## RSpec
 ### Bisect flaky tests
 with `rspec --bisect <file>` you could find flaky test setting to re-run it.
