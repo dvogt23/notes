@@ -1157,6 +1157,111 @@ Step 12: Remove any Sidekiq web UI routes
 # require 'sidekiq/web'
 # mount Sidekiq:: Web =&gt; '/sidekiq'
 </code></pre>
+<h3 id="responsible-monkeypatch"><a class="header" href="#responsible-monkeypatch">Responsible monkeypatch</a></h3>
+<p>Here’s the list of rules I try to follow:</p>
+<ol>
+<li>Wrap the patch in a module with an obvious name and use <code>Module#prepend</code> to apply it</li>
+<li>Make sure you’re patching the right thing</li>
+<li>Limit the patch’s surface area</li>
+<li>Give yourself escape hatches</li>
+<li>Over-communicate</li>
+</ol>
+<pre><code class="language-ruby"># ActionView's date_select helper provides the option to "discard" certain
+# fields. Discarded fields are (confusingly) still rendered to the page
+# using hidden inputs, i.e. &lt;input type="hidden" /&gt;. This patch adds an
+# additional option to the date_select helper that allows the caller to
+# skip rendering the chosen fields altogether. For example, to render all
+# but the year field, you might have this in one of your views:
+#
+# date_select(:date_of_birth, order: [:month, :day])
+#
+# or, equivalently:
+#
+# date_select(:date_of_birth, discard_year: true)
+#
+# To avoid rendering the year field altogether, set :render_discarded to
+# false:
+#
+# date_select(:date_of_birth, discard_year: true, render_discarded: false)
+#
+# This patch assumes the #build_hidden method exists on
+# ActionView::Helpers::DateTimeSelector and accepts two arguments.
+#
+module RenderDiscardedMonkeypatch
+  class &lt;&lt; self
+    EXPIRATION_DATE = Date.new(2021, 8, 15)
+
+    def apply_patch
+      if Date.today &gt; EXPIRATION_DATE
+        puts "WARNING: Please re-evaluate whether or not the ActionView "\
+          "date_select patch present in #{__FILE__} is still necessary."
+      end
+
+      const = find_const
+      mtd = find_method(const)
+
+      # make sure the class we want to patch exists;
+      # make sure the #build_hidden method exists and accepts exactly
+      # two arguments
+      unless const &amp;&amp; mtd &amp;&amp; mtd.arity == 2
+        raise "Could not find class or method when patching "\
+          "ActionView's date_select helper. Please investigate."
+      end
+
+      # if rails has been upgraded, make sure this patch is still
+      # necessary
+      unless rails_version_ok?
+        puts "WARNING: It looks like Rails has been upgraded since "\
+          "ActionView's date_select helper was monkeypatched in "\
+          "#{__FILE__}. Please re-evaluate the patch."
+      end
+
+      # actually apply the patch
+      const.prepend(InstanceMethods)
+    end
+
+    private
+
+    def find_const
+      Kernel.const_get('ActionView::Helpers::DateTimeSelector')
+    rescue NameError
+      # return nil if the constant doesn't exist
+    end
+
+    def find_method(const)
+      return unless const
+      const.instance_method(:build_hidden)
+    rescue NameError
+      # return nil if the method doesn't exist
+    end
+
+    def rails_version_ok?
+      Rails::VERSION::MAJOR == 6 &amp;&amp; Rails::VERSION::MINOR == 1
+    end
+  end
+
+  module InstanceMethods
+    # :render_discarded is an additional option you can pass to the
+    # date_select helper in your views. Use it to avoid rendering
+    # "discarded" fields, i.e. fields marked as discarded or simply
+    # not included in date_select's :order array. For example,
+    # specifying order: [:day, :month] will cause the helper to
+    # "discard" the :year field. Discarding a field renders it as a
+    # hidden input. Set :render_discarded to false to avoid rendering
+    # it altogether.
+    def build_hidden(type, value)
+      if @options.fetch(:render_discarded, true)
+        super
+      else
+        ''
+      end
+    end
+  end
+end
+
+RenderDiscardedMonkeypatch.apply_patch
+</code></pre>
+<p>Source: <a href="https://blog.appsignal.com/2021/08/24/responsible-monkeypatching-in-ruby.html">appsignal/blog</a></p>
 <h2 id="rspec"><a class="header" href="#rspec">RSpec</a></h2>
 <h3 id="bisect-flaky-tests"><a class="header" href="#bisect-flaky-tests">Bisect flaky tests</a></h3>
 <p>with <code>rspec --bisect &lt;file&gt;</code> you could find flaky test setting to re-run it.</p>
@@ -1703,7 +1808,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-09-03, commit: <a href="https://github.com/dvogt23/notes/commit/f4a567a">f4a567a</a></footer><div style="break-before: page; page-break-before: always;"></div><h3 id="articles-4"><a class="header" href="#articles-4">Articles</a></h3>
+<footer id="last-change">Last change: 2024-09-13, commit: <a href="https://github.com/dvogt23/notes/commit/f371d14">f371d14</a></footer><div style="break-before: page; page-break-before: always;"></div><h3 id="articles-4"><a class="header" href="#articles-4">Articles</a></h3>
 <ul>
 <li>Using the url as a state management <a href="https://www.jacobparis.com/content/url-as-state-management">jacobparis</a></li>
 </ul>
@@ -3117,6 +3222,20 @@ http {
 }
 </code></pre>
 <p>Source: <a href="https://alex.dzyoba.com/blog/nginx-features-for-developers/">Nice nginx features for developers</a></p>
+<p><strong>Compressed response</strong></p>
+<p>Using with <code>curl -H 'Accept-encoding: gzip' localhost:8080/ping | gunzip -</code> or <code>curl --compressed https://ashishb.net</code>.</p>
+<p>Allow <code>Accept-encoding: gzip</code> with config:</p>
+<pre><code>http { 
+	... 
+	server { 
+		... 
+		gzip on; 
+		gzip_min_length 1000; 
+		... 
+	} 
+}
+</code></pre>
+<p>Source: <a href="https://ashishb.net/all/always-support-compressed-response-in-an-api-service/">ashishb.net</a></p>
 <h3 id="floc-blocking"><a class="header" href="#floc-blocking">FLoC blocking</a></h3>
 <p>Block FLoC within traefik:</p>
 <pre><code># traefik.toml
@@ -3233,7 +3352,7 @@ Authentication: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authenti
 <li>Iron Sky (Film)</li>
 </ul>
 <pre><code>
-&lt;footer id="last-change"&gt;Last change: 2024-08-20, commit: &lt;a href="https://github.com/dvogt23/notes/commit/8e90778"&gt;8e90778&lt;/a&gt;&lt;/footer&gt;</code></pre>
+&lt;footer id="last-change"&gt;Last change: 2024-09-13, commit: &lt;a href="https://github.com/dvogt23/notes/commit/f371d14"&gt;f371d14&lt;/a&gt;&lt;/footer&gt;</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="favorit-songs"><a class="header" href="#favorit-songs">Favorit songs:</a></h2>
 <ul>
 <li>Grover Washington Jr - Just the Two of Us</li>

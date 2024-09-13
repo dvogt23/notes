@@ -404,6 +404,20 @@ http {
 }
 </code></pre>
 <p>Source: <a href="https://alex.dzyoba.com/blog/nginx-features-for-developers/">Nice nginx features for developers</a></p>
+<p><strong>Compressed response</strong></p>
+<p>Using with <code>curl -H 'Accept-encoding: gzip' localhost:8080/ping | gunzip -</code> or <code>curl --compressed https://ashishb.net</code>.</p>
+<p>Allow <code>Accept-encoding: gzip</code> with config:</p>
+<pre><code>http { 
+	... 
+	server { 
+		... 
+		gzip on; 
+		gzip_min_length 1000; 
+		... 
+	} 
+}
+</code></pre>
+<p>Source: <a href="https://ashishb.net/all/always-support-compressed-response-in-an-api-service/">ashishb.net</a></p>
 <h3 id="floc-blocking"><a class="header" href="#floc-blocking">FLoC blocking</a></h3>
 <p>Block FLoC within traefik:</p>
 <pre><code># traefik.toml
@@ -520,7 +534,7 @@ Authentication: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authenti
 <li>Iron Sky (Film)</li>
 </ul>
 <pre><code>
-&lt;footer id="last-change"&gt;Last change: 2024-08-20, commit: &lt;a href="https://github.com/dvogt23/notes/commit/8e90778"&gt;8e90778&lt;/a&gt;&lt;/footer&gt;</code></pre>
+&lt;footer id="last-change"&gt;Last change: 2024-09-13, commit: &lt;a href="https://github.com/dvogt23/notes/commit/f371d14"&gt;f371d14&lt;/a&gt;&lt;/footer&gt;</code></pre>
 
                     </main>
 
