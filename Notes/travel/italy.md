@@ -9,6 +9,7 @@ tags: []
 - San Gimignano, Gelateria Dondoli (Safran ice cream)
 - Molino del prato in Volterra https://www.booking.com/Share-4zmW24
 - Volterra - great small old village
+- Vinci - village birthplace of da vinci
 
 ### Bed & breakfast
 
