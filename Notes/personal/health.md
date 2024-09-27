@@ -11,6 +11,17 @@ tags: []
 - [https://www.lavita.com](https://www.lavita.com) Great juice for the daily vitamin balance
 - Vitamin D should be taken orally as an oil and in combination with calcium and vitamin K2.
 
+## Drug dealer vs. doctor
+
+> If your doctor prescribes you medication without first asking about ...
+>  - your diet
+>  - your sleep
+>  - your exercise routine
+>  - your water consumption
+>  - whether you have any structural issues
+>  - the stress in your life
+>  Then you don't have a doctor, you have a drug dealer.
+
 ## Best summary of good food practice
 
 1. Die ganze Farbpalette
