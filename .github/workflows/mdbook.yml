@@ -31,6 +31,8 @@ jobs:
           mdbook-version: 'latest'
       - name: Install mdbook-yml-header # drop yml frontmatter
         run: command -v mdbook-yml-header || cargo install mdbook-yml-header
+      - name: Install callouts # add callouts
+        run: command -v mdbook-callouts || cargo install mdbook-callouts
       - name: Install mdbook-last-changed # add footer with last changed and commit hash
         run: command -v mdbook-last-changed || cargo install mdbook-last-changed
       - name: Install mdbook-tailor # style images
