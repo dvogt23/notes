@@ -454,7 +454,7 @@ gpg --quick-add-key $KEYID cv25519 encrypt 1y
 <p>Security is a team sport, and accelerating SFI isn’t just job number one for our security teams – it’s everyone’s top priority and our customers’ greatest need.
 If you’re faced with the tradeoff between security and another priority, your answer is clear: Do security. In some cases, this will mean prioritizing security above other things we do, such as releasing new features or providing ongoing support for legacy systems. This is key to advancing both our platform quality and capability such that we can protect the digital estates of our customers and build a safer world for all. - Satya</p>
 </blockquote>
-<p>Source: <a href="https://blogs.microsoft.com/blog/2024/05/03/prioritizing-security-above-all-else/">Microsoft Blog</a></p>
+<p>Source: <a href="https://blogs.microsoft.com/blog/2024/05/03/prioritizing-security-above-all-else/">Microsoft(😆) Blog</a></p>
 <h2 id="passwords"><a class="header" href="#passwords">Passwords</a></h2>
 <h3 id="rotation"><a class="header" href="#rotation">Rotation</a></h3>
 <div class="mdbook-callouts mdbook-callouts-warning">
@@ -464,17 +464,28 @@ If you’re faced with the tradeoff between security and another priority, your 
 </p>
 <p>A security policy to rotate passwords is a security finding in audits as NIST and BSI classified it.</p>
 </div>
-<p><strong>NIST SP 800-63 Digital Identity Guidelines</strong>
-3. Authenticator and Verifier Requirements
+<p><strong>NIST SP 800-63 Digital Identity Guidelines</strong></p>
+<ol start="3">
+<li>Authenticator and Verifier Requirements
 3.1.1.2 Password Verifiers
-1. […]
-6. 1. Verifiers and CSPs <strong>SHALL NOT</strong> require users to change passwords periodically. However, verifiers <strong>SHALL</strong> force a change if there is evidence of compromise of the authenticator.
-Source: <a href="https://pages.nist.gov/800-63-4/sp800-63b/authenticators/#password">nist</a></p>
-<p><strong>ORP.4 Identitäts- und Berechtigungsmanagement</strong>
-4. ORP.4.A23 Regelung für passwortverarbeitende Anwendungen und ITSysteme (B) [IT-Betrieb]
-IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des Passworts auffordern.
-Source: <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-GS-Kompendium_Einzel_PDFs_2023/02_ORP_Organisation_und_Personal/ORP_4_Identitaets_und_Berechtigungsmanagement_Editon_2023.pdf?__blob=publicationFile&amp;v=3">BSI</a></p>
-<footer id="last-change">Last change: 2024-09-27, commit: <a href="https://github.com/dvogt23/notes/commit/f2199a5">f2199a5</a></footer>
+<ol>
+<li>[…]</li>
+<li>
+<ol>
+<li>Verifiers and CSPs <strong>SHALL NOT</strong> require users to change passwords periodically. However, verifiers <strong>SHALL</strong> force a change if there is evidence of compromise of the authenticator.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>Source: <a href="https://pages.nist.gov/800-63-4/sp800-63b/authenticators/#password">nist</a></p>
+<p><strong>ORP.4 Identitäts- und Berechtigungsmanagement</strong></p>
+<ol start="4">
+<li>ORP.4.A23 Regelung für passwortverarbeitende Anwendungen und ITSysteme (B) [IT-Betrieb]
+IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des Passworts auffordern.</li>
+</ol>
+<p>Source: <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-GS-Kompendium_Einzel_PDFs_2023/02_ORP_Organisation_und_Personal/ORP_4_Identitaets_und_Berechtigungsmanagement_Editon_2023.pdf?__blob=publicationFile&amp;v=3">BSI</a></p>
+<footer id="last-change">Last change: 2024-09-28, commit: <a href="https://github.com/dvogt23/notes/commit/cb2dc2a">cb2dc2a</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
