@@ -3,14 +3,21 @@ id: commands
 aliases: []
 tags: []
 ---
-
-# Linux commands
-
 @linux @bash
-
 ### Useful oneliners
-
 Show dir sizes: `du -hs */ | sort -hr | head`
+### Show ssh key ids
+```bash
+for file in $(fd -e pub); do ssh-keygen -lf $file && echo $file; done
+for file in $(fd -e pub); do ssh-keygen -l -E md5 -f $file && echo $file; done
+```
+
+### ENV via ssh forward
+```bash
+export MYVAR=test
+ssh myhost "export MYVAR='$MYVAR' && echo $MYVAR"
+# test
+```
 
 ### A one-liner version incrementer
 ```bash
@@ -19,18 +26,15 @@ inc_version() {
 }
 ```
 Source: https://gir.st/blog/inc-version.htm
-
 ### Reset efivars in bootmenu (bootctl)
 To remove LoaderEntryDefault-[...] variable it was enough to press d key twice
 in the boot menu: to set and unset a new value.
 To remove LoaderConfigTimeout-[...] variable it turned out enough to press
 Shift+t enough times to set the timeout to 0, plus one more time.
 [Link](https://unix.stackexchange.com/questions/459389/systemd-boot-skips-boot-menu-and-ignores-settings-in-loader-loader-conf)
-
 ### Check dns server for dnssec
 With `dig +dnssec kuketz-blog.de @116.203.32.217` check for flags, needs to have
 the `ad` included, for authenticated answer.
-
 ### Search in .tar.gz files
 ```bash
 rg -a -z 'regex'

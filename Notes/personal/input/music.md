@@ -3,8 +3,6 @@ id: music
 aliases: []
 tags: []
 ---
-# Music
-
 ## Favorit songs:
 
 - Grover Washington Jr - Just the Two of Us
