@@ -14,6 +14,7 @@
  - Mis Kebap Kottbusser Tor
 
 ## Düsseldorf
+ - Vabali - Wellnes & Spa
  - in the japanese quarter, eat in "Eat Tokyo"
  - Gusan
  - Takumi Tonkotsu -Takumi Nidaime- Ramen
