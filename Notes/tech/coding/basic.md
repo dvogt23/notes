@@ -21,6 +21,10 @@ Source: [Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
 At the linux kernel guideline are some good advices: [The linux kernel - coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#linux-kernel-coding-style)
 Google have some [guidelines](https://google.github.io/styleguide/) for some languages as well. Use positive booleans for better readability, like described [here | Google Code health](https://testing.googleblog.com/search/label/Code%20Health)
 
+## Principles
+
+- [YAGNI](https://en.m.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+	- stop thinking about future possible mutation of your actual requirements, just let it simple
 ## Code review
 
 - Be kind! People are more receptive to feedback if you assume competence and treat them with respect. 
