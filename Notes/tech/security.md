@@ -15,6 +15,8 @@ Interest things for security in general:
 Best practice guide: https://github.com/drduh/YubiKey-Guide
 Another great guide: https://yubikey.jms1.info
 
+- [ ] [Securing Git with SSH and FIDO security keys](https://developers.yubico.com/SSH/Securing_git_with_SSH_and_FIDO2.html)
+
 Secure password:
 ```
 LC_ALL=C tr -dc 'A-Z1-9' < /dev/urandom | \
