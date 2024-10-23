@@ -33,8 +33,11 @@
 
 ## Texel
 
+Take a winter jacket including hood outside the summer months.
+
 Some point-of-interests for kids:
 
+- Del Mare Natuureiland - Great place to be and chill to inspect on several birds
 - [Manege Elzenhof](https://goo.gl/maps/CS8agzNPzU18NPft5) ⭐️⭐️⭐️⭐️⭐️
 - [Texel Sheep Farm Schapenboerderij](https://goo.gl/maps/iygrHmdKNoPPk32m9) ⭐️⭐️⭐️⭐️⭐️
 - [Ferienpark De Krim swim/kidsplaces](https://goo.gl/maps/4a8avoSJX9EnoTSN6) ⭐️⭐️⭐️⭐️
@@ -42,7 +45,7 @@ Some point-of-interests for kids:
 - [Leuchtturm Vuurtoren](https://goo.gl/maps/mwfyJTH4B53MkA897) ⭐️⭐️⭐️⭐️
 - [Sommeltjespad](https://goo.gl/maps/2ShJh95q1DuTFeiW6) ⭐️⭐️⭐️⭐️
 - [Ecomare](https://goo.gl/maps/gcvBBAmMxpAx2Z3E7) ⭐️⭐️⭐️
-
+- Isola Bella - very good italian restaurant 
 ## Harleem
 
 - [I Fratelli](https://www.ifratellihaarlem.nl/) italian
