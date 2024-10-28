@@ -4,7 +4,6 @@
 - very rare rest places on highways
 - the kids have no headgear on very cold days in winter
 - no bakeries for breakfasts outside of city centrum (book breakfast in hotel or buy something in the evening for the next morning)
-- 
 
 **Places**
  - Drouwenerzand Park - Nice park for kids with all-you-can-eat
