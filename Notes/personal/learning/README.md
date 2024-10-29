@@ -24,6 +24,7 @@ Some of my solutions: [Github/CodeChallanges](https://github.com/dvogt23/CodeCha
 ## Speaking languages
 
  - learn german as russian [learngerman.dw.com](https://learngerman.dw.com/ru/overview#)
+ - japanese [tofugu](https://www.tofugu.com/learn-japanese/)
 
 ## Spaced repetition
 

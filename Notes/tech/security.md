@@ -9,6 +9,7 @@ Interest things for security in general:
 
 **Articles:**
  - Minimum viable secure product [mvsp](https://mvsp.dev/)
+ - Secure your VPS [basic#Secure your VPS](tech/linux/basic.md)
 
 ## Yubikey
 
@@ -52,7 +53,6 @@ gpg --quick-add-key $KEYID cv25519 encrypt 1y
 > If you’re faced with the tradeoff between security and another priority, your answer is clear: Do security. In some cases, this will mean prioritizing security above other things we do, such as releasing new features or providing ongoing support for legacy systems. This is key to advancing both our platform quality and capability such that we can protect the digital estates of our customers and build a safer world for all. - Satya
 
 Source: [Microsoft(😆) Blog](https://blogs.microsoft.com/blog/2024/05/03/prioritizing-security-above-all-else/)
-
 ## Passwords
 
 ### Rotation

@@ -105,6 +105,23 @@ erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 [[ -n "$specfiles" ]] && (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
 ```
 
+### before_action wrapper
+```ruby
+class User::LikesController < ApplicationController
+  abort_without_feature :like
+  must_have_feature :like
+
+  requires_feature :like
+end
+
+# app/controllers/concerns/requires_feature.rb
+module RequiresFeature
+  def requires_feature(name, from: :user, **)
+    before_action(-> { head :bad_request unless Flipper.enabled?(name, Current.public_send(from)) }, **)
+  end
+end
+```
+Source: [buttondown](https://buttondown.com/kaspth/archive/clear-up-your-rails-controllers-with/)
 ### Rails ERD
 
 For creating an erd diagram of your db schema, you could create a pdf with: [rails-erd](https://github.com/voormedia/rails-erd) with this command:

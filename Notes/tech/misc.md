@@ -74,6 +74,24 @@ cat myfile.yml | yq e '.. | select(. == "*") | {(path | join(".")): .} '
 gzip -cd rails.log.gz | sed -re 's/(\"password\"=>)(\"(.*)\",)/\1\"[FILTERed]",/g' | sed -re 's/(\"password_confirmation\"=>)(\"(.*)\")/\1\"[FILTERed]"/g' | gzip > rails.tmp
 ```
 
+### Link text on a website
+
+Use this syntax to link to specific text:
+```
+https://example.com/page.html#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
+```
+i.e. [this](https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=without%20relying%20on%20the%20presence%20of%20IDs)
+```
+# highlight
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=without%20relying%20on%20the%20presence%20of%20IDs
+
+# multiple texts
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=using%20particular&text=it%20allows
+
+# fragments
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=using%20particular,don't%20control
+```
+Source: [alfy.blog](https://alfy.blog/2024/10/19/linking-directly-to-web-page-content.html)
 ### Ed cheatsheet
 
 Navigating
