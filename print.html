@@ -5596,6 +5596,22 @@ erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 
 [[ -n "$specfiles" ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
 </code></pre>
+<h3 id="before_action-wrapper"><a class="header" href="#before_action-wrapper">before_action wrapper</a></h3>
+<pre><code class="language-ruby">class User::LikesController &lt; ApplicationController
+  abort_without_feature :like
+  must_have_feature :like
+
+  requires_feature :like
+end
+
+# app/controllers/concerns/requires_feature.rb
+module RequiresFeature
+  def requires_feature(name, from: :user, **)
+    before_action(-&gt; { head :bad_request unless Flipper.enabled?(name, Current.public_send(from)) }, **)
+  end
+end
+</code></pre>
+<p>Source: <a href="https://buttondown.com/kaspth/archive/clear-up-your-rails-controllers-with/">buttondown</a></p>
 <h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
 <p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command:</p>
 <p><code>bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman</code></p>
@@ -6323,7 +6339,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-10-02, commit: <a href="https://github.com/dvogt23/notes/commit/f21761c">f21761c</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: 2024-10-29, commit: <a href="https://github.com/dvogt23/notes/commit/bf12e84">bf12e84</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -8046,7 +8062,93 @@ const value = SizeSpecificValue[sizeFromApi] || SizeSpecificValue.default
 <p>Use btrfs on your root (<code>/</code>) volume. But at least make /home xfs.
 And have backups. <a href="https://www.borgbackup.org/">borg backup is good</a>.</p>
 <p>Source: <a href="https://fy.blackhats.net.au/blog/2024-08-13-linux-filesystems/">blackhats.net.au</a></p>
-<footer id="last-change">Last change: 2024-10-02, commit: <a href="https://github.com/dvogt23/notes/commit/f21761c">f21761c</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<h2 id="secure-your-vps"><a class="header" href="#secure-your-vps">Secure your VPS</a></h2>
+<ol>
+<li>Updated your server’s software to the latest version</li>
+</ol>
+<pre><code>$ sudo apt update 
+$ sudo apt upgrade 
+
+$ sudo adduser username
+
+$ sudo usermod -aG sudo username
+
+$ su - username
+$ sudo whoami
+</code></pre>
+<ol start="2">
+<li>Disabled password authentication and set up a more secure key-based authentication mechanism</li>
+</ol>
+<pre><code>$ ssh-keygen -t ed25519 -C "email@example.com"
+
+
+$ ssh-copy-id -i ~/.ssh/ed25519.pub username@12.34.56.78
+
+$ ssh -i ~/.ssh/ed25519 -o PasswordAuthentication=no username@12.34.56.78
+
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/ed25519
+
+$ ssh username@12.34.56.78
+
+alias ssh-vps='ssh username@12.34.56.78'
+
+$ source ~/.zhsrc
+</code></pre>
+<ol start="3">
+<li>Added a firewall to control access to your server’s ports</li>
+</ol>
+<pre><code>$ ssh username@12.34.56.78
+
+$ sudo vim /etc/ssh/sshd_config
+
+PermitRootLogin no
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+
+$ sudo service sshd reload
+
+$ ssh root@12.34.56.78
+</code></pre>
+<ol start="4">
+<li>Installed Fail2Ban to automatically block IP addresses making unauthorised connection attempts</li>
+</ol>
+<pre><code>$ sudo apt install ufw
+$ sudo ufw status verbose
+$ sudo ufw disable
+$ sudo ufw app list
+$ sudo ufw allow 'OpenSSH'
+$ sudo ufw show added
+ufw allow OpenSSH
+$ sudo ufw default deny incoming 
+$ sudo ufw default allow outgoing
+$ sudo ufw allow 'Nginx Full'
+$ sudo ufw enable
+$ sudo ufw status verbose
+</code></pre>
+<ol start="5">
+<li>Configured automatic security upgrades and patches</li>
+</ol>
+<pre><code>$ sudo apt install fail2ban
+$ sudo systemctl status fail2ban.service
+○ fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
+       Docs: man:fail2ban(1)
+$ cd /etc/fail2ban
+$ sudo cp jail.conf jail.local
+$ sudo vim jail.local
+[sshd]
+enabled = true
+mode = aggressive
+...
+$ sudo systemctl enable fail2ban
+$ sudo systemctl start fail2ban
+$ sudo systemctl status fail2ban
+</code></pre>
+<p>Source: <a href="https://www.kkyri.com/p/how-to-secure-your-new-vps-a-step-by-step-guide">kkyrie</a></p>
+<footer id="last-change">Last change: 2024-10-29, commit: <a href="https://github.com/dvogt23/notes/commit/bf12e84">bf12e84</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -11008,6 +11110,7 @@ Sensoren anlegen:
 <p><strong>Articles:</strong></p>
 <ul>
 <li>Minimum viable secure product <a href="https://mvsp.dev/">mvsp</a></li>
+<li>Secure your VPS <a href="tech/tech/linux/basic.html">basic#Secure your VPS</a></li>
 </ul>
 <h2 id="yubikey"><a class="header" href="#yubikey">Yubikey</a></h2>
 <p>Best practice guide: https://github.com/drduh/YubiKey-Guide
@@ -11075,7 +11178,7 @@ If you’re faced with the tradeoff between security and another priority, your 
 IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des Passworts auffordern.</li>
 </ol>
 <p>Source: <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-GS-Kompendium_Einzel_PDFs_2023/02_ORP_Organisation_und_Personal/ORP_4_Identitaets_und_Berechtigungsmanagement_Editon_2023.pdf?__blob=publicationFile&amp;v=3">BSI</a></p>
-<footer id="last-change">Last change: 2024-10-18, commit: <a href="https://github.com/dvogt23/notes/commit/accaded">accaded</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: 2024-10-29, commit: <a href="https://github.com/dvogt23/notes/commit/bf12e84">bf12e84</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -11639,6 +11742,21 @@ make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-right
 <h3 id="replace-passwords-in-gz-logile"><a class="header" href="#replace-passwords-in-gz-logile">Replace passwords in <code>gz</code> logile</a></h3>
 <pre><code class="language-bash">gzip -cd rails.log.gz | sed -re 's/(\"password\"=&gt;)(\"(.*)\",)/\1\"[FILTERed]",/g' | sed -re 's/(\"password_confirmation\"=&gt;)(\"(.*)\")/\1\"[FILTERed]"/g' | gzip &gt; rails.tmp
 </code></pre>
+<h3 id="link-text-on-a-website"><a class="header" href="#link-text-on-a-website">Link text on a website</a></h3>
+<p>Use this syntax to link to specific text:</p>
+<pre><code>https://example.com/page.html#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
+</code></pre>
+<p>i.e. <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=without%20relying%20on%20the%20presence%20of%20IDs">this</a></p>
+<pre><code># highlight
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=without%20relying%20on%20the%20presence%20of%20IDs
+
+# multiple texts
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=using%20particular&amp;text=it%20allows
+
+# fragments
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=using%20particular,don't%20control
+</code></pre>
+<p>Source: <a href="https://alfy.blog/2024/10/19/linking-directly-to-web-page-content.html">alfy.blog</a></p>
 <h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
 <p>Navigating</p>
 <pre><code>Line number: go to that line and print it.
@@ -11935,7 +12053,7 @@ Authentication: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authenti
 <li>Iron Sky (Film)</li>
 </ul>
 <pre><code>
-&lt;footer id="last-change"&gt;Last change: 2024-10-02, commit: &lt;a href="https://github.com/dvogt23/notes/commit/f21761c"&gt;f21761c&lt;/a&gt;&lt;/footer&gt;</code></pre>
+&lt;footer id="last-change"&gt;Last change: 2024-10-29, commit: &lt;a href="https://github.com/dvogt23/notes/commit/bf12e84"&gt;bf12e84&lt;/a&gt;&lt;/footer&gt;</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
@@ -17283,6 +17401,7 @@ Verbringe genügend Zeit mit dir selbst. Schau dich genau an: Wie du bist, wie d
 <h2 id="speaking-languages"><a class="header" href="#speaking-languages">Speaking languages</a></h2>
 <ul>
 <li>learn german as russian <a href="https://learngerman.dw.com/ru/overview#">learngerman.dw.com</a></li>
+<li>japanese <a href="https://www.tofugu.com/learn-japanese/">tofugu</a></li>
 </ul>
 <h2 id="spaced-repetition"><a class="header" href="#spaced-repetition">Spaced repetition</a></h2>
 <blockquote>

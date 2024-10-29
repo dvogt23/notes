@@ -475,6 +475,21 @@
 <h3 id="replace-passwords-in-gz-logile"><a class="header" href="#replace-passwords-in-gz-logile">Replace passwords in <code>gz</code> logile</a></h3>
 <pre><code class="language-bash">gzip -cd rails.log.gz | sed -re 's/(\"password\"=&gt;)(\"(.*)\",)/\1\"[FILTERed]",/g' | sed -re 's/(\"password_confirmation\"=&gt;)(\"(.*)\")/\1\"[FILTERed]"/g' | gzip &gt; rails.tmp
 </code></pre>
+<h3 id="link-text-on-a-website"><a class="header" href="#link-text-on-a-website">Link text on a website</a></h3>
+<p>Use this syntax to link to specific text:</p>
+<pre><code>https://example.com/page.html#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
+</code></pre>
+<p>i.e. <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=without%20relying%20on%20the%20presence%20of%20IDs">this</a></p>
+<pre><code># highlight
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=without%20relying%20on%20the%20presence%20of%20IDs
+
+# multiple texts
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=using%20particular&amp;text=it%20allows
+
+# fragments
+https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments#:~:text=using%20particular,don't%20control
+</code></pre>
+<p>Source: <a href="https://alfy.blog/2024/10/19/linking-directly-to-web-page-content.html">alfy.blog</a></p>
 <h3 id="ed-cheatsheet"><a class="header" href="#ed-cheatsheet">Ed cheatsheet</a></h3>
 <p>Navigating</p>
 <pre><code>Line number: go to that line and print it.
@@ -771,7 +786,7 @@ Authentication: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authenti
 <li>Iron Sky (Film)</li>
 </ul>
 <pre><code>
-&lt;footer id="last-change"&gt;Last change: 2024-10-02, commit: &lt;a href="https://github.com/dvogt23/notes/commit/f21761c"&gt;f21761c&lt;/a&gt;&lt;/footer&gt;</code></pre>
+&lt;footer id="last-change"&gt;Last change: 2024-10-29, commit: &lt;a href="https://github.com/dvogt23/notes/commit/bf12e84"&gt;bf12e84&lt;/a&gt;&lt;/footer&gt;</code></pre>
 
                     </main>
 

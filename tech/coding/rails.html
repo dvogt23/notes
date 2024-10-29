@@ -517,6 +517,22 @@ erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 
 [[ -n "$specfiles" ]] &amp;&amp; (TEST_COVERAGE=true bundle exec rspec "$specfiles" || exit 1)
 </code></pre>
+<h3 id="before_action-wrapper"><a class="header" href="#before_action-wrapper">before_action wrapper</a></h3>
+<pre><code class="language-ruby">class User::LikesController &lt; ApplicationController
+  abort_without_feature :like
+  must_have_feature :like
+
+  requires_feature :like
+end
+
+# app/controllers/concerns/requires_feature.rb
+module RequiresFeature
+  def requires_feature(name, from: :user, **)
+    before_action(-&gt; { head :bad_request unless Flipper.enabled?(name, Current.public_send(from)) }, **)
+  end
+end
+</code></pre>
+<p>Source: <a href="https://buttondown.com/kaspth/archive/clear-up-your-rails-controllers-with/">buttondown</a></p>
 <h3 id="rails-erd"><a class="header" href="#rails-erd">Rails ERD</a></h3>
 <p>For creating an erd diagram of your db schema, you could create a pdf with: <a href="https://github.com/voormedia/rails-erd">rails-erd</a> with this command:</p>
 <p><code>bundle exec rails erd attributes=foreign_keys,primary_keys,timestamps,content notation=bachman</code></p>
@@ -1244,7 +1260,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-10-02, commit: <a href="https://github.com/dvogt23/notes/commit/f21761c">f21761c</a></footer>
+<footer id="last-change">Last change: 2024-10-29, commit: <a href="https://github.com/dvogt23/notes/commit/bf12e84">bf12e84</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

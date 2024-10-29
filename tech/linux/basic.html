@@ -429,7 +429,93 @@
 <p>Use btrfs on your root (<code>/</code>) volume. But at least make /home xfs.
 And have backups. <a href="https://www.borgbackup.org/">borg backup is good</a>.</p>
 <p>Source: <a href="https://fy.blackhats.net.au/blog/2024-08-13-linux-filesystems/">blackhats.net.au</a></p>
-<footer id="last-change">Last change: 2024-10-02, commit: <a href="https://github.com/dvogt23/notes/commit/f21761c">f21761c</a></footer>
+<h2 id="secure-your-vps"><a class="header" href="#secure-your-vps">Secure your VPS</a></h2>
+<ol>
+<li>Updated your server’s software to the latest version</li>
+</ol>
+<pre><code>$ sudo apt update 
+$ sudo apt upgrade 
+
+$ sudo adduser username
+
+$ sudo usermod -aG sudo username
+
+$ su - username
+$ sudo whoami
+</code></pre>
+<ol start="2">
+<li>Disabled password authentication and set up a more secure key-based authentication mechanism</li>
+</ol>
+<pre><code>$ ssh-keygen -t ed25519 -C "email@example.com"
+
+
+$ ssh-copy-id -i ~/.ssh/ed25519.pub username@12.34.56.78
+
+$ ssh -i ~/.ssh/ed25519 -o PasswordAuthentication=no username@12.34.56.78
+
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/ed25519
+
+$ ssh username@12.34.56.78
+
+alias ssh-vps='ssh username@12.34.56.78'
+
+$ source ~/.zhsrc
+</code></pre>
+<ol start="3">
+<li>Added a firewall to control access to your server’s ports</li>
+</ol>
+<pre><code>$ ssh username@12.34.56.78
+
+$ sudo vim /etc/ssh/sshd_config
+
+PermitRootLogin no
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+
+$ sudo service sshd reload
+
+$ ssh root@12.34.56.78
+</code></pre>
+<ol start="4">
+<li>Installed Fail2Ban to automatically block IP addresses making unauthorised connection attempts</li>
+</ol>
+<pre><code>$ sudo apt install ufw
+$ sudo ufw status verbose
+$ sudo ufw disable
+$ sudo ufw app list
+$ sudo ufw allow 'OpenSSH'
+$ sudo ufw show added
+ufw allow OpenSSH
+$ sudo ufw default deny incoming 
+$ sudo ufw default allow outgoing
+$ sudo ufw allow 'Nginx Full'
+$ sudo ufw enable
+$ sudo ufw status verbose
+</code></pre>
+<ol start="5">
+<li>Configured automatic security upgrades and patches</li>
+</ol>
+<pre><code>$ sudo apt install fail2ban
+$ sudo systemctl status fail2ban.service
+○ fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
+       Docs: man:fail2ban(1)
+$ cd /etc/fail2ban
+$ sudo cp jail.conf jail.local
+$ sudo vim jail.local
+[sshd]
+enabled = true
+mode = aggressive
+...
+$ sudo systemctl enable fail2ban
+$ sudo systemctl start fail2ban
+$ sudo systemctl status fail2ban
+</code></pre>
+<p>Source: <a href="https://www.kkyri.com/p/how-to-secure-your-new-vps-a-step-by-step-guide">kkyrie</a></p>
+<footer id="last-change">Last change: 2024-10-29, commit: <a href="https://github.com/dvogt23/notes/commit/bf12e84">bf12e84</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
