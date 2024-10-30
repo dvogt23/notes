@@ -9,7 +9,7 @@ Interest things for security in general:
 
 **Articles:**
  - Minimum viable secure product [mvsp](https://mvsp.dev/)
- - Secure your VPS [basic#Secure your VPS](tech/linux/basic.md)
+ - Secure your VPS [basic#Secure your VPS](linux/basic.md#secure-your-vps)
 
 ## Yubikey
 

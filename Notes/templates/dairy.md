@@ -10,6 +10,9 @@ not done
 path does not include {{query.file.path}}
 sort by due
 sort by function task.file.path
+
+hide postpone button
+hide backlink
 ```
 ### Log
 - 

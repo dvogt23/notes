@@ -8,6 +8,7 @@ Some interesting blog posts:
 
 - [Vim for advanced users](https://thevaluable.dev/vim-advanced/)
 - [History and effective use of Vim](https://begriffs.com/posts/2019-07-19-history-use-vim.html)
+- Seems kinda good for macOS [kindavim.app](https://kindavim.app)
 
 ### Copilot (docker)
 
