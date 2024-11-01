@@ -17,6 +17,7 @@
 - AirDrop [snapdrop](https://snapdrop.net/)
 - Slide/Prasentation [sli.dev](https://sli.dev/)
 - Multi device for geeks [flipper zero](https://flipperzero.one/)
+- regex prime check `^.?$|^(..+?)\1+$` [explain](https://illya.sh/the-codeumentary-blog/regular-expression-check-if-number-is-prime/)
 
 ### Trackers
 - series & films: [serializd](https://www.serializd.com/) / [letterboxd](https://letterboxd.com/)

@@ -13,6 +13,7 @@ sort by function task.file.path
 
 hide postpone button
 hide backlink
+hide task count
 ```
 ### Log
 - 
