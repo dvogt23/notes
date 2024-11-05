@@ -483,6 +483,52 @@ end
 end
 </code></pre>
 <p>Source: <a href="https://fly.io/ruby-dispatch/pattern-matching-on-ruby-objects/">fly.io</a></p>
+<h3 id="colorize-logger"><a class="header" href="#colorize-logger">Colorize logger</a></h3>
+<pre><code class="language-ruby">module ColorizedLogger
+  COLOR_CODES = {
+    debug:   "\e[36m",  # Cyan
+    info:    "\e[32m",  # Green
+    warn:    "\e[33m",  # Yellow
+    error:   "\e[31m",  # Red
+    fatal:   "\e[35m",  # Magenta
+    unknown: "\e[37m"   # White (or terminal default)
+  }.freeze
+
+  RESET = "\e[0m"
+
+  def debug(progname = nil, &amp;block)
+    super(colorize(:debug, progname, &amp;block))
+  end
+
+  def info(progname = nil, &amp;block)
+    super(colorize(:info, progname, &amp;block))
+  end
+
+  def warn(progname = nil, &amp;block)
+    super(colorize(:warn, progname, &amp;block))
+  end
+
+  def error(progname = nil, &amp;block)
+    super(colorize(:error, progname, &amp;block))
+  end
+
+  def fatal(progname = nil, &amp;block)
+    super(colorize(:fatal, progname, &amp;block))
+  end
+
+  def unknown(progname = nil, &amp;block)
+    super(colorize(:unknown, progname, &amp;block))
+  end
+
+  private
+
+  def colorize(level, message, &amp;block)
+    "#{COLOR_CODES[level]}#{message || (block &amp;&amp; block.call)}#{RESET}"
+  end
+end
+
+Rails.logger.extend(ColorizedLogger)
+</code></pre>
 <h3 id="test-coverage-pre-commit-hook"><a class="header" href="#test-coverage-pre-commit-hook">Test coverage pre-commit hook</a></h3>
 <p>To get an positive exit code for pre-commit hook integration you have to add this to your spec config:</p>
 <pre><code class="language-ruby"># spec/spec_helper.rb
@@ -1260,7 +1306,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-10-29, commit: <a href="https://github.com/dvogt23/notes/commit/bf12e84">bf12e84</a></footer>
+<footer id="last-change">Last change: 2024-11-05, commit: <a href="https://github.com/dvogt23/notes/commit/65fbffa">65fbffa</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
