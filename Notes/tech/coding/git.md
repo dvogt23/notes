@@ -34,15 +34,14 @@ d3bee05dac84c66b7d13f99a5edf790688f51494`
 Source: [andrewlock.net](https://andrewlock.net/reducing-the-size-of-a-git-repository-with-git-replace/)
 
 ## Articles
-
 - [Under the hood](https://articles.foletta.org/post/git-under-the-hood/)
-
+## Tools
+- [git-spice](https://github.com/abhinav/git-spice) - stack branches, keep update
 ## Git bisect
 
 Find a bad commit with `git bisect` just run this command on a commit and mark them as `git bisect good/bad` checkout another and run again `git bisect good/bad`. 
 `git bisect` is able to find your first `bad` commit with i.e. `git bisect run bin/rails rspec <FILE>` and mark commit `good/bad` with the exitcode of your command.
 ## Commit to an older hash
-
 Run: `git-amend.sh <older-hash>`
 
 ```bash git-amend.sh
@@ -54,7 +53,6 @@ GIT_EDITOR=true git rebase -i --autosquash $hash^
 ```
 
 ## Ignoring bulk change commits with git blame (>git 2.23)
-
 Ignore revs after bulk changes (ie style, format) in git blame:
 
 ```sh
@@ -65,7 +63,6 @@ git config --global blame.ignoreRevsFile .git-blame-ignore-revs # set file as de
 Source: [moxio](https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame)
 
 ## Highly recommended
-
 The usage of aliases from git plugin/oh-my-zsh: [git-plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh) zsh-load: [zinit](https://github.com/dvogt23/dotfiles/blob/master/zsh/.zshrc#L40)
 
 Here are some git commands, that I NOT used daily. Mainly i use the zsh git plugin with all the useful short commands

@@ -16,6 +16,12 @@ Interest things for security in general:
 Best practice guide: https://github.com/drduh/YubiKey-Guide
 Another great guide: https://yubikey.jms1.info
 
+> [!Warning]
+> There is a vulnerability about yubi keys:
+> - [a-trust](https://www.a-trust.at/de/%C3%BCber_uns/newsbereich/20240905_de_post.html)
+> - [ninjalab.io](https://ninjalab.io/wp-content/uploads/2024/09/20240903_eucleak.pdf)
+> - [yubico](https://www.yubico.com/support/security-advisories/ysa-2024-03/)
+
 - [ ] [Securing Git with SSH and FIDO security keys](https://developers.yubico.com/SSH/Securing_git_with_SSH_and_FIDO2.html)
 
 Secure password:
