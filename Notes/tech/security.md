@@ -81,3 +81,17 @@ Source: [nist](https://pages.nist.gov/800-63-4/sp800-63b/authenticators/#passwor
 	IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des Passworts auffordern.
 	
 Source: [BSI](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-GS-Kompendium_Einzel_PDFs_2023/02_ORP_Organisation_und_Personal/ORP_4_Identitaets_und_Berechtigungsmanagement_Editon_2023.pdf?__blob=publicationFile&v=3)
+
+## Pentest
+
+### Polyglot files
+With a polyglot file, you re able to compromise a file upload with restricted file-types.
+```bash
+cat beispiel.pdf beispiel.zip > polyglot-pdf.zip
+```
+This zip file, will be recognized as a pdf file:
+```bash
+$ file polyglot-pdf.zip
+polyglot-pdf.zip: PDF document, [...]
+```
+If a backend just checks the `content-type` its still `PDF`. So if you download this file and get original file as `.zip` file and extract it, you will get the pdf & zip file included there.
