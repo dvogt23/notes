@@ -481,7 +481,17 @@ If you’re faced with the tradeoff between security and another priority, your 
 IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des Passworts auffordern.</li>
 </ol>
 <p>Source: <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-GS-Kompendium_Einzel_PDFs_2023/02_ORP_Organisation_und_Personal/ORP_4_Identitaets_und_Berechtigungsmanagement_Editon_2023.pdf?__blob=publicationFile&amp;v=3">BSI</a></p>
-<footer id="last-change">Last change: 2024-11-11, commit: <a href="https://github.com/dvogt23/notes/commit/45e647a">45e647a</a></footer>
+<h2 id="pentest"><a class="header" href="#pentest">Pentest</a></h2>
+<h3 id="polyglot-files"><a class="header" href="#polyglot-files">Polyglot files</a></h3>
+<p>With a polyglot file, you re able to compromise a file upload with restricted file-types.</p>
+<pre><code class="language-bash">cat beispiel.pdf beispiel.zip &gt; polyglot-pdf.zip
+</code></pre>
+<p>This zip file, will be recognized as a pdf file:</p>
+<pre><code class="language-bash">$ file polyglot-pdf.zip
+polyglot-pdf.zip: PDF document, [...]
+</code></pre>
+<p>If a backend just checks the <code>content-type</code> its still <code>PDF</code>. So if you download this file and get original file as <code>.zip</code> file and extract it, you will get the pdf &amp; zip file included there.</p>
+<footer id="last-change">Last change: 2024-11-15, commit: <a href="https://github.com/dvogt23/notes/commit/e3be6f1">e3be6f1</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
