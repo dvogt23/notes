@@ -11,5 +11,7 @@ What and when you should log something to your logfiles. Make a strategy about l
 Its always a good idea to start with an international translation files on your project. Its easy to looking for a phrase in your application and on the other hand its easy to add another language to your application, in case someone join your project with a different language. A great feature I saw on an project, to have a backend portal you get a possibility to edit you translations life for your keys.
 ## Licenses
 If you are planning to create a business, you must verify your licenses and dependencies to ensure they comply.
+## Wording
+Create a list of terms that defines a particular aspect of a use-case to ensure all participants are referring to it in the same manner during conversations.
 ## ...
 [...]

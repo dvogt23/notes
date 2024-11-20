@@ -14,6 +14,9 @@ Some interesting ressources for the programming language ruby.
  - [I love ruby](https://i-love-ruby.gitlab.io/#_getting_started)
  - [ruby science](https://thoughtbot.com/ruby-science/introduction.html)
 
+## Interesting
+- [operators](https://www.visualmode.dev/ruby-operators)
+
 ## RVM SSL errors
 
 Install again with:
