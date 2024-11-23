@@ -19,6 +19,7 @@
 - Multi device for geeks [flipper zero](https://flipperzero.one/)
 - regex prime check `^.?$|^(..+?)\1+$` [explain](https://illya.sh/the-codeumentary-blog/regular-expression-check-if-number-is-prime/)
 - paste over cli `curl -T example.yml -H "Content-Type: text/yaml" https://api.pastes.dev/post`
+- [photopea](https://www.photopea.com/) - Photoshop online (free)
 
 ### Trackers
 - series & films: [serializd](https://www.serializd.com/) / [letterboxd](https://letterboxd.com/)
