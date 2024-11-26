@@ -406,6 +406,7 @@
 <h2 id="interesting"><a class="header" href="#interesting">Interesting</a></h2>
 <ul>
 <li><a href="https://www.visualmode.dev/ruby-operators">operators</a></li>
+<li><a href="https://dev.to/baweaver/understanding-ruby-triple-equals-2p9c">understanding ruby</a></li>
 </ul>
 <h2 id="rvm-ssl-errors"><a class="header" href="#rvm-ssl-errors">RVM SSL errors</a></h2>
 <p>Install again with:</p>
@@ -438,6 +439,15 @@ rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disa
 time_ago_in_words(recipe.created_at)        # date
 pluralize(count, "apple")                   # pluralize if count &gt; 1 to apples
 
+</code></pre>
+<h2 id="scripting"><a class="header" href="#scripting">Scripting</a></h2>
+<pre><code class="language-bash">require 'bundler/inline'
+gemfile do
+source 'https://rubygems.org'
+gem 'sqlite3'
+end
+# write ruby code below
+...
 </code></pre>
 <h2 id="lambda-composition"><a class="header" href="#lambda-composition">Lambda composition</a></h2>
 <p>Combine lambda blocks together with  <code>&gt;&gt;</code> i.e. to create a new one like <code>TAX_FEE = TAX &gt;&gt; FEE</code></p>
@@ -498,6 +508,18 @@ IP_REGEX = /
 # =&gt; true
 </code></pre>
 <p>Source: <a href="https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15">dev.to/baweaver</a></p>
+<p>Case for array items:</p>
+<pre><code class="language-ruby">def process (input)
+	case input
+	in []
+		:empty
+	in [*] if input.all?(Order)
+		:has_only_orders
+	in [*] if input.all? (Payment)
+		:has_only_payments
+	else
+end
+</code></pre>
 <h2 id="refinement"><a class="header" href="#refinement">Refinement</a></h2>
 <p>Extend/overwrite string behavior in module (specific scope)</p>
 <pre><code class="language-ruby">module PatchedString
@@ -525,7 +547,7 @@ end
 RegularNamespace.append_strings("1", "2") # =&gt; "12"
 PatchedNamespace.append_strings("1", "2") # =&gt; "1, 2"
 </code></pre>
-<footer id="last-change">Last change: 2024-11-20, commit: <a href="https://github.com/dvogt23/notes/commit/dd7eca7">dd7eca7</a></footer>
+<footer id="last-change">Last change: 2024-11-26, commit: <a href="https://github.com/dvogt23/notes/commit/604ba3c">604ba3c</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -5831,6 +5831,13 @@ RenderDiscardedMonkeypatch.apply_patch
 <h2 id="rspec"><a class="header" href="#rspec">RSpec</a></h2>
 <h3 id="bisect-flaky-tests"><a class="header" href="#bisect-flaky-tests">Bisect flaky tests</a></h3>
 <p>with <code>rspec --bisect &lt;file&gt;</code> you could find flaky test setting to re-run it.</p>
+<div class="mdbook-callouts mdbook-callouts-hint">
+<p class="mdbook-callouts-title">
+  <span class="mdbook-callouts-icon"></span>
+  hint
+</p>
+</div>
+<p>If <code>rspec</code> exits with <code>1</code> if suite passes, try <code>untilpass() { until "$@"; do :; done }</code> and run it with <code>untilpass rspec ...</code></p>
 <h3 id="testing-an-array-with-attributes"><a class="header" href="#testing-an-array-with-attributes">Testing an array with attributes</a></h3>
 <pre><code class="language-ruby">expect(items[0].id).to eql(1)
 expect(items[0].name).to eql('One')
@@ -6374,7 +6381,7 @@ rails db:migrate
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
 </code></pre>
-<footer id="last-change">Last change: 2024-11-05, commit: <a href="https://github.com/dvogt23/notes/commit/65fbffa">65fbffa</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: 2024-11-26, commit: <a href="https://github.com/dvogt23/notes/commit/604ba3c">604ba3c</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -6911,6 +6918,7 @@ export const LinkComponent = ({ variant = 'primary', children, ...props }: Props
 <h2 id="interesting"><a class="header" href="#interesting">Interesting</a></h2>
 <ul>
 <li><a href="https://www.visualmode.dev/ruby-operators">operators</a></li>
+<li><a href="https://dev.to/baweaver/understanding-ruby-triple-equals-2p9c">understanding ruby</a></li>
 </ul>
 <h2 id="rvm-ssl-errors"><a class="header" href="#rvm-ssl-errors">RVM SSL errors</a></h2>
 <p>Install again with:</p>
@@ -6943,6 +6951,15 @@ rvm reinstall "ruby-3.0.0" --with-openssl-dir=`brew --prefix openssl@1.1` --disa
 time_ago_in_words(recipe.created_at)        # date
 pluralize(count, "apple")                   # pluralize if count &gt; 1 to apples
 
+</code></pre>
+<h2 id="scripting"><a class="header" href="#scripting">Scripting</a></h2>
+<pre><code class="language-bash">require 'bundler/inline'
+gemfile do
+source 'https://rubygems.org'
+gem 'sqlite3'
+end
+# write ruby code below
+...
 </code></pre>
 <h2 id="lambda-composition"><a class="header" href="#lambda-composition">Lambda composition</a></h2>
 <p>Combine lambda blocks together with  <code>&gt;&gt;</code> i.e. to create a new one like <code>TAX_FEE = TAX &gt;&gt; FEE</code></p>
@@ -7003,6 +7020,18 @@ IP_REGEX = /
 # =&gt; true
 </code></pre>
 <p>Source: <a href="https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15">dev.to/baweaver</a></p>
+<p>Case for array items:</p>
+<pre><code class="language-ruby">def process (input)
+	case input
+	in []
+		:empty
+	in [*] if input.all?(Order)
+		:has_only_orders
+	in [*] if input.all? (Payment)
+		:has_only_payments
+	else
+end
+</code></pre>
 <h2 id="refinement"><a class="header" href="#refinement">Refinement</a></h2>
 <p>Extend/overwrite string behavior in module (specific scope)</p>
 <pre><code class="language-ruby">module PatchedString
@@ -7030,7 +7059,7 @@ end
 RegularNamespace.append_strings("1", "2") # =&gt; "12"
 PatchedNamespace.append_strings("1", "2") # =&gt; "1, 2"
 </code></pre>
-<footer id="last-change">Last change: 2024-11-20, commit: <a href="https://github.com/dvogt23/notes/commit/dd7eca7">dd7eca7</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: 2024-11-26, commit: <a href="https://github.com/dvogt23/notes/commit/604ba3c">604ba3c</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
   margin-bottom: 16px;
