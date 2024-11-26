@@ -16,6 +16,7 @@ Some interesting ressources for the programming language ruby.
 
 ## Interesting
 - [operators](https://www.visualmode.dev/ruby-operators)
+- [understanding ruby](https://dev.to/baweaver/understanding-ruby-triple-equals-2p9c)
 
 ## RVM SSL errors
 
@@ -61,6 +62,17 @@ truncate(recipe.description, length: 150)   # truncate
 time_ago_in_words(recipe.created_at)        # date
 pluralize(count, "apple")                   # pluralize if count > 1 to apples
 
+```
+
+## Scripting
+```bash
+require 'bundler/inline'
+gemfile do
+source 'https://rubygems.org'
+gem 'sqlite3'
+end
+# write ruby code below
+...
 ```
 
 ## Lambda composition
@@ -134,6 +146,20 @@ IP_REGEX = /
 # => true
 ```
 Source: [dev.to/baweaver](https://dev.to/baweaver/pattern-matching-interfaces-in-ruby-1b15)
+
+Case for array items:
+```ruby
+def process (input)
+	case input
+	in []
+		:empty
+	in [*] if input.all?(Order)
+		:has_only_orders
+	in [*] if input.all? (Payment)
+		:has_only_payments
+	else
+end
+```
 
 ## Refinement
 
