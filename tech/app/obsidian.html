@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Vim - Knowledge book</title>
+        <title>Obsidian - Knowledge book</title>
 
 
         <!-- Custom HTML head -->
@@ -396,173 +396,117 @@
   --color-pink: #d53984;
 }
 </style>
-<h1 id="vimneovim-"><a class="header" href="#vimneovim-">VIM/NEOVIM 💓</a></h1>
-<p>Some useful keybindings and many more for my favorite editor.</p>
-<h3 id="articles"><a class="header" href="#articles">Articles</a></h3>
-<p>Some interesting blog posts:</p>
+<h1 id="obsidian"><a class="header" href="#obsidian">Obsidian</a></h1>
+<p>A collection of obsidian specific styling and configurations, that Im using in my vault.</p>
+<h4 id="checkboxes"><a class="header" href="#checkboxes">Checkboxes</a></h4>
+<pre><code>- [ ] Unchecked
+- [X] Checked
+- [-] Dropped
+- [&gt;] Forward
+- [D] Date
+- [?] Question
+- [/] Half Done
+- [+] Add
+- [R] Research
+- [!] Important
+- [i] Idea
+- [B] Brainstorm
+- [P] Pro
+- [C] Con
+- [Q] Quote
+- [N] Note
+- [b] Bookmark
+- [I] Information
+- [p] Paraphrase
+- [L] Location
+- [E] Example
+- [A] Answer
+- [r] Reward
+- [c] Choice
+- [d] Doing
+- [T] Time
+- [@] Character / Person
+- [t] Talk
+- [O] Outline / Plot
+- [~] Conflict
+- [W] World
+- [f] Clue / Find
+- [F] Foreshadow
+- [H] Favorite / Health
+- [&amp;] Symbolism
+- [s] Secret
+- [x] Regular
+</code></pre>
 <ul>
-<li><a href="https://thevaluable.dev/vim-advanced/">Vim for advanced users</a></li>
-<li><a href="https://begriffs.com/posts/2019-07-19-history-use-vim.html">History and effective use of Vim</a></li>
-<li>Seems kinda good for macOS <a href="https://kindavim.app">kindavim.app</a></li>
+<li><input disabled="" type="checkbox"/>
+Unchecked</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Checked</li>
+<li>[-] Dropped</li>
+<li>[&gt;] Forward</li>
+<li>[D] Date</li>
+<li>[?] Question</li>
+<li>[/] Half Done</li>
+<li>[+] Add</li>
+<li>[R] Research</li>
+<li>[!] Important</li>
+<li>[i] Idea</li>
+<li>[B] Brainstorm</li>
+<li>[P] Pro</li>
+<li>[C] Con</li>
+<li>[Q] Quote</li>
+<li>[N] Note</li>
+<li>[b] Bookmark</li>
+<li>[I] Information</li>
+<li>[p] Paraphrase</li>
+<li>[L] Location</li>
+<li>[E] Example</li>
+<li>[A] Answer</li>
+<li>[r] Reward</li>
+<li>[c] Choice</li>
+<li>[d] Doing</li>
+<li>[T] Time</li>
+<li>[@] Character / Person</li>
+<li>[t] Talk</li>
+<li>[O] Outline / Plot</li>
+<li>[~] Conflict</li>
+<li>[W] World</li>
+<li>[f] Clue / Find</li>
+<li>[F] Foreshadow</li>
+<li>[H] Favorite / Health</li>
+<li>[&amp;] Symbolism</li>
+<li>[s] Secret</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Regular</li>
 </ul>
-<h3 id="copilot-docker"><a class="header" href="#copilot-docker">Copilot (docker)</a></h3>
-<p>If you wanna try copilot:</p>
-<pre><code class="language-bash">docker run --name copilotcontainer -it debian:sid-slim
-
-apt update &amp;&amp; apt upgrade -y
-
-apt install -y neovim nodejs git
-
-git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
-
-vim
-
-# Now in vim type:
-# :Copilot setup
-# And then hit enter
-# The plugin will display a token.
-# Open a browser and paste the code on https://github.com/login/device
-# After a few moments, the plugin will finish the setup
-# Now exit vim
-# Exit the container
-
-docker commit copilotcontainer copilot
-
-docker rm copilotcontainer
-
-## All done
-
-# From now on, you can use the copilot container with:
-# docker run --rm -it copilot
-</code></pre>
-<p>Source: <a href="https://www.gibney.org/copilot_vim_docker">gibney</a></p>
-<h3 id="settings"><a class="header" href="#settings">Settings</a></h3>
-<ul>
-<li>TypeScript environment
-Great article to this topic from <a href="https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c">Jose Alvarez | medium</a></li>
-<li>Lua config
-Different stuff from <a href="https://oroques.dev/notes/neovim-init/">oroques</a> <a href="https://icyphox.sh/blog/nvim-lua/">icyphox</a></li>
-</ul>
-<h3 id="print-mapping"><a class="header" href="#print-mapping">Print mapping</a></h3>
-<pre><code>:redir! &gt; vim_keys.txt
-:silent verbose map
-:redir END
-</code></pre>
-<h3 id="generate-random-secure-string"><a class="header" href="#generate-random-secure-string">Generate random secure string</a></h3>
-<p><code>:r! openssl rand -base64 12</code></p>
-<h3 id="format-json"><a class="header" href="#format-json">Format json</a></h3>
-<p>Reformat json with <code>:%!jq .</code></p>
-<h3 id="macro"><a class="header" href="#macro">Macro</a></h3>
-<p>If you record a macro with <code>qa</code> and forget something, just with <code>qA</code> you could append some keystrokes to your macro.</p>
-<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
-<h3 id="registers"><a class="header" href="#registers">Registers</a></h3>
-<p>To put a register in insert mode, just do <code>CTRL+R &lt;register&gt;</code></p>
-<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
-<h3 id="global-command"><a class="header" href="#global-command">Global command</a></h3>
-<p>To delete lines with a pattern:</p>
-<pre><code class="language-vim">" delete line
-:g/useless/d
-
-" make line lowercase
-:g/useless/norm gu$
-</code></pre>
-<p>Source: <a href="https://thevaluable.dev/vim-advanced/">A vim guide for advanced user</a></p>
-<h3 id="completion"><a class="header" href="#completion">Completion</a></h3>
-<p>In insert mode:</p>
-<pre><code>ctrl+x ctrl+f     complete filenames
-ctrl+x ctrl+l     complete lines
-ctrl+r &lt;register&gt; insert text from register (i.e.: . for last text [ctrl+a])
-</code></pre>
-<h3 id="visual-mode"><a class="header" href="#visual-mode">Visual mode</a></h3>
-<p>Selects the previous visual</p>
-<pre><code>gv
-</code></pre>
-<p>Go to other end of visual block</p>
-<pre><code>v_o/v_0
-</code></pre>
-<p>Increment numbers</p>
-<pre><code>CTRL-A    inc by one
-g CTRL-A  inc by sequence
-2g CTRL-A inc two by sequence
-</code></pre>
-<p>Blockwise motion</p>
-<pre><code>d2j         delete 2 lines
-d&lt;CRL-V&gt;2j  delete 2 chars in that column
-</code></pre>
-<h2 id="ex-commands"><a class="header" href="#ex-commands">Ex commands</a></h2>
-<p>Run command for regex</p>
-<pre><code>:g/regex/ex
-</code></pre>
-<p>Run comman in norm mode</p>
-<pre><code>:g/regex/norm f dw
-</code></pre>
-<p>Source:
-<a href="https://www.hillelwayne.com/post/intermediate-vim/">hillelwayne/intermediate-vim</a></p>
-<h3 id="commands-in-insert-mode"><a class="header" href="#commands-in-insert-mode">Commands in insert mode</a></h3>
-<pre><code>Ctrl-h - delete back one character (just like Backspace)
-Ctrl-w - delete back one word
-Ctrl-u - delete back to the start of line or the start of current insert
-</code></pre>
-<p>Talking about Insert mode - did you know that you can paste yanked text without moving to Normal mode?
-You can do that with</p>
-<pre><code>Ctrl-r 0
-</code></pre>
-<p>Source: [Jovica - Mastering Vim Quickly #127]</p>
-<h3 id="vim-and-shell"><a class="header" href="#vim-and-shell">Vim and shell</a></h3>
-<p>Run command from vim</p>
-<pre><code>:!{cmd}
-</code></pre>
-<p>Read output form command</p>
-<pre><code>:r !{cmd}
-</code></pre>
-<p>insert output on line 3:</p>
-<pre><code>:3read !curl --silent ifconfig.me
-</code></pre>
-<p>write as input to command</p>
-<pre><code>:[range]write !{cmd}
-:'&lt;,'&gt;write !python
-</code></pre>
-<p>Source: <a href="https://vimways.org/2019/vim-and-the-shell/">vim and the shell</a></p>
-<h2 id="splits"><a class="header" href="#splits">Splits</a></h2>
-<p>Splits are very useful i.e. in vimdiff. So here some keybindings.<br />
-Source: <a href="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally">thoughbot.com</a><br />
-Help: <code>:help splits</code> &amp; <code>:help CRTL-W</code></p>
-<h3 id="more-natural-splits-opening"><a class="header" href="#more-natural-splits-opening">More natural splits opening</a></h3>
-<p>Open new split panes to right and bottom, which feels more natural than Vim’s default:</p>
-<pre><code>set splitbelow
-set splitright
-</code></pre>
-<h3 id="resizing-splits"><a class="header" href="#resizing-splits">Resizing splits</a></h3>
-<p>Vim’s defaults are useful for changing split shapes:</p>
-<pre><code>"Max out the height of the current split
-ctrl + w _
-
-"Max out the width of the current split
-ctrl + w |
-
-"Normalize all split sizes, which is very handy when resizing terminal
-ctrl + w =
-</code></pre>
-<h3 id="more-split-manipulation"><a class="header" href="#more-split-manipulation">More split manipulation</a></h3>
-<pre><code>"Swap top/bottom or left/right split
-Ctrl+W R
-
-"Break out current window into a new tabview
-Ctrl+W T
-
-"Close every window in the current tabview but the current one
-Ctrl+W o
-</code></pre>
-<footer id="last-change">Last change: 2024-10-30, commit: <a href="https://github.com/dvogt23/notes/commit/9518bf4">9518bf4</a></footer>
+<h4 id="admonitions"><a class="header" href="#admonitions">Admonitions</a></h4>
+<blockquote>
+<p>[!recite|color-blue]
+test</p>
+</blockquote>
+<h4 id="callouts"><a class="header" href="#callouts">Callouts</a></h4>
+<div class="mdbook-callouts mdbook-callouts-question">
+<p class="mdbook-callouts-title">
+  <span class="mdbook-callouts-icon"></span>
+  can callouts be nested?
+</p>
+<blockquote>
+<p>[!todo] Yes!, they can.</p>
+<blockquote>
+<p>[!example] You can even use multiple layers of nesting.</p>
+</blockquote>
+</blockquote>
+</div>
+<footer id="last-change">Last change: 2024-11-26, commit: <a href="https://github.com/dvogt23/notes/commit/604ba3c">604ba3c</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../tech/app/pass.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../tech/app/vim.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../tech/app/obsidian.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../tech/app/firefox.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -572,11 +516,11 @@ Ctrl+W o
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../tech/app/pass.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../tech/app/vim.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../tech/app/obsidian.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../tech/app/firefox.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
