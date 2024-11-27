@@ -14,6 +14,7 @@ sticker: lucide//sticky-note
   - [Apps]()
     - [Pass](tech/app/pass.md)
     - [Vim](tech/app/vim.md)
+    - [Obsidian](tech/app/obsidian.md)
     - [Firefox](tech/app/firefox.md)
   - [Coding]()
     - [Bash](tech/coding/bash.md)
