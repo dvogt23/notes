@@ -11,6 +11,11 @@ tags: []
 - [https://www.lavita.com](https://www.lavita.com) Great juice for the daily vitamin balance
 - Vitamin D should be taken orally as an oil and in combination with calcium and vitamin K2.
 
+## ePA
+
+- besser der Nutzung widersprechen, nach der Aussage von Herr Lauterbach bei der Digital Health Conference des Bitkom [heise](https://www.heise.de/news/Lauterbach-zu-Gesundheitsdaten-Google-Meta-und-OpenAI-melden-Interesse-an-10179936.html)
+- die Zugriffe auf diese Daten wird bis 2030 nicht protokolliert [mdr](https://www.mdr.de/nachrichten/deutschland/gesellschaft/elektronische-patientenakte-sicherheit-widerspruch-102.html)
+
 ## Drug dealer vs. doctor
 
 > If your doctor prescribes you medication without first asking about ...
