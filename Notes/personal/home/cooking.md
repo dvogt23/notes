@@ -1,6 +1,16 @@
 # Cooking
 
-## Brot backen
+## Pasta
+
+For cooking pasta with the half of the energy, you could do it with the Dario Bressanini method. Just boil the water, turn off the stove and put the pasta into the pot for 12 minutes. It works cause pasta needs just 80°C for cooking.
+
+## Recipes
+
+- [Bread](#Bread)
+- [Pizza recipe](#Pizza%20recipe)
+- [Egg salad](#Egg%20salad)
+- [Pancakes](#Pancakes)
+### Bread
 
 Sauerteig:
 
@@ -61,7 +71,7 @@ Brot:
 
 Source: [utopia](https://utopia.de/ratgeber/sauerteig-ansetzen-gesundes-brot-aus-eigener-herstellung/)
 
-## Pizza recipe
+### Pizza recipe
 
 Basically you could use each pizza dough calculator on the internet. I actually prefer the oni app with 63% hydration for an home oven. 
 
@@ -110,7 +120,7 @@ vorheizen. Tomaten, Salz und Olivenöl mit den Händen zu einer stückigen Soße
 zerdrü- cken. Basilikum waschen, trockenschütteln, etwa 2/3 der Blätt- chen grob
 zerrupfen und untermengen.
 
-## Egg salad
+### Egg salad
 
  - 10 Eier
  - 250 gr. Mayo
@@ -120,7 +130,7 @@ zerrupfen und untermengen.
  - Prise Pfeffer
  - Schnittlauch nach Bedarf
 
-## Pfannkuchen
+### Pancakes
 
 FÜR DEN TEIG (15 Stk.)
 - 375 g Weizenmehl (Type 405)
