@@ -1,5 +1,17 @@
 # Bash
 
+### Hash maps
+```bash
+# -A means associative array (hashmap)
+# -r means read-only
+declare -A -r FLY_REGIONS=(
+  ["a100-40gb"]="ord"
+  ["a100-80gb"]="mia"
+  ["l40s"]="ord"
+)
+```
+Source: [xeiaso](https://xeiaso.net/notes/2024/bash-hashmap/)
+
 Some bash file recommendations:
 
 ```bash
