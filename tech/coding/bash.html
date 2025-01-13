@@ -397,6 +397,16 @@
 }
 </style>
 <h1 id="bash"><a class="header" href="#bash">Bash</a></h1>
+<h3 id="hash-maps"><a class="header" href="#hash-maps">Hash maps</a></h3>
+<pre><code class="language-bash"># -A means associative array (hashmap)
+# -r means read-only
+declare -A -r FLY_REGIONS=(
+  ["a100-40gb"]="ord"
+  ["a100-80gb"]="mia"
+  ["l40s"]="ord"
+)
+</code></pre>
+<p>Source: <a href="https://xeiaso.net/notes/2024/bash-hashmap/">xeiaso</a></p>
 <p>Some bash file recommendations:</p>
 <pre><code class="language-bash">#!/usr/bin/env bash
 
@@ -526,7 +536,7 @@ msg "- flag: ${flag}"
 msg "- param: ${param}"
 msg "- arguments: ${args[*]-}"
 </code></pre>
-<footer id="last-change">Last change: 2023-08-08, commit: <a href="https://github.com/dvogt23/notes/commit/8d67336">8d67336</a></footer>
+<footer id="last-change">Last change: 2025-01-13, commit: <a href="https://github.com/dvogt23/notes/commit/d848757">d848757</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
