@@ -6,22 +6,23 @@ tags: []
 ---
 **My list of interesting podcasts:**
 
+- Ungescriptet - Ben Berndt
 - Was bisher geschah - Geschichtspodcast
 - Alles Geschichte - History von radioWissen
+- Jasmin Kosubek
+- Alternativlos
+- Betreutes Fühlen
+- Gemischtes Hack
 - Darknet dairies
 - Zeit Verbrechen
 - SWR2 Wissen
 - Daily Quarks
 - Hotel Matze
 - Fest & Flauschig
-- Gemischtes Hack
 - The Joe Rogan experience
 - Eine Stunde history
 - 100 Sekunden Wissen
 - Das Ziel ist im Weg
-- Betreutes Fühlen
-- In extremen Köpfen
-- Alternativlos
 - Grenzgänger
 
 **History of podcast listening:**
