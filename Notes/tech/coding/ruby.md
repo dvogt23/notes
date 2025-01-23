@@ -13,6 +13,7 @@ Some interesting ressources for the programming language ruby.
 
  - [I love ruby](https://i-love-ruby.gitlab.io/#_getting_started)
  - [ruby science](https://thoughtbot.com/ruby-science/introduction.html)
+ - [poignant into ruby](https://poignant.guide/)
 
 ## Interesting
 - [operators](https://www.visualmode.dev/ruby-operators)
