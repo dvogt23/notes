@@ -4,6 +4,11 @@
 
 For cooking pasta with the half of the energy, you could do it with the Dario Bressanini method. Just boil the water, turn off the stove and put the pasta into the pot for 12 minutes. It works cause pasta needs just 80°C for cooking.
 
+## Eggs
+
+Prefer to eat 2-4 eggs a day, but take care of the yolk, dont boil or fry it. Just stir it under...
+
+---
 ## Recipes
 
 - [Bread](#Bread)
