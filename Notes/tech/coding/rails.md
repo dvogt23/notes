@@ -23,6 +23,7 @@ Learning from some youtube guys:
 
 ## Articles
 
+- Rails Performance [Article 1](https://henry.bearblog.dev/beginners-guide-to-ruby-on-rails-performance-part-1), [Article 2](https://henry.bearblog.dev/beginners-guide-to-ruby-on-rails-performance-part-2)
 - Great note collection from [corsego](https://blog.corsego.com/)
   - devise, hotwire, turbo, darkmode, basics, views
 - Some great articles about coding [johnnunemaker](https://www.johnnunemaker.com/)

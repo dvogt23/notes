@@ -35,6 +35,7 @@ Source: [andrewlock.net](https://andrewlock.net/reducing-the-size-of-a-git-repos
 
 ## Articles
 - [Under the hood](https://articles.foletta.org/post/git-under-the-hood/)
+- [How git core devs configure git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
 ## Tools
 - [git-spice](https://github.com/abhinav/git-spice) - stack branches, keep update
 ## Git bisect

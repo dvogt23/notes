@@ -1,9 +1,9 @@
+## Articles
+- [Chatbots Are Cheating on Their Benchmark Tests](https://www.theatlantic.com/technology/archive/2025/03/chatbots-benchmark-tests/681929/)
 ## Chat bots
-
 - [phind.com](https://www.phind.com)
 - [abbey](https://abbey.us.ai/) - summarize anything
 ## Search engine
-
 - [perplexity.ai](https://www.perplexity.ai/)
 
 ## Block ai crawler on your website

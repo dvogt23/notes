@@ -34,6 +34,7 @@ sticker: lucide//sticky-note
     - [React](tech/coding/react.md)
     - [Ruby](tech/coding/ruby.md)
     - [Rust](tech/coding/rust.md)
+    - [SQL](tech/coding/sql.md)
     - [TypeScript](tech/coding/typescript.md)
   - [Equipment](tech/equipment.md)
   - [Linux]()
