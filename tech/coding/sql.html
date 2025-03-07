@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Rust - Knowledge book</title>
+        <title>SQL - Knowledge book</title>
 
 
         <!-- Custom HTML head -->
@@ -396,57 +396,20 @@
   --color-pink: #d53984;
 }
 </style>
-<h2 id="rust-notes"><a class="header" href="#rust-notes">Rust notes</a></h2>
-<h3 id="learning"><a class="header" href="#learning">Learning</a></h3>
-<p><strong>TODO:</strong></p>
+<h1 id="interesting"><a class="header" href="#interesting">Interesting</a></h1>
 <ul>
-<li>wasm tutorial -&gt; <a href="https://training.linuxfoundation.org/announcements/using-web-assembly-written-in-rust-on-the-server-side/">linuxfoundation</a></li>
-<li>Crossplatform desktop app -&gt; <a href="https://css-tricks.com/how-i-built-a-cross-platform-desktop-application-with-svelte-redis-and-rust/">css-tricks</a></li>
+<li><a href="https://use-the-index-luke.com/">use the index luke</a></li>
 </ul>
-<h3 id="wrapper-types"><a class="header" href="#wrapper-types">Wrapper types</a></h3>
-<p><strong>Box</strong> This abstraction is a low cost abstraction for dynamic allocation. If you want to allocate some memory on the heap and safely pass a pointer to that memory around, this is ideal.</p>
-<p><strong>Rc</strong> is a reference counted pointer for multiple owning.</p>
-<p>Source: <a href="https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/">Wrapper types</a></p>
-<h3 id="articles"><a class="header" href="#articles">Articles</a></h3>
-<ul>
-<li>Some nice tipps &amp; tricks from <a href="https://federicoterzi.com/blog/12-rust-tips-and-tricks-you-might-not-know-yet/">federicoterzi</a></li>
-<li>Great google book for learning rust in 3 days (android) <a href="https://google.github.io/comprehensive-rust">google</a></li>
-</ul>
-<h2 id="error-handling"><a class="header" href="#error-handling">Error handling</a></h2>
-<p>Rusts result type is a great construct for creating error chains, something like:</p>
-<pre><pre class="playground"><code class="language-rust edition2018"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>fn read_config_file(path: &amp;str)
-    -&gt; Result&lt;String, ConfigFileError&gt; {
-    std::fs::read_to_string(path)
-        .map_err(ConfigFileError::ReadError)
-}
-
-fn parse_config_file(file: String) 
-    -&gt; Result&lt;i32, ConfigFileError&gt; {
-    file.parse()
-        .map_err(ConfigFileError::ParseError)
-}
-
-fn work_with_config_file(path: &amp;str) 
-    -&gt; Result&lt;i32, ConfigFileError&gt; {
-    // No ? required at all - just directly return
-    // the Result, since the types match!
-    read_config_file(path).and_then(parse_config_file)
-    // .and_then(something_else).and_then(even_more_things) ....
-}
-<span class="boring">}</span></code></pre></pre>
-<p>Source: <a href="https://naiveai.hashnode.dev/rust-result-cool">naiveai</a>, <a href="https://blog.burntsushi.net/rust-error-handling/">bruntsushi</a></p>
-<footer id="last-change">Last change: 2023-12-19, commit: <a href="https://github.com/dvogt23/notes/commit/950328d">950328d</a></footer>
+<footer id="last-change">Last change: 2025-03-07, commit: <a href="https://github.com/dvogt23/notes/commit/e0fd894">e0fd894</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../tech/coding/ruby.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../tech/coding/rust.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../tech/coding/sql.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../tech/coding/typescript.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -456,11 +419,11 @@ fn work_with_config_file(path: &amp;str)
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../tech/coding/ruby.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../tech/coding/rust.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../tech/coding/sql.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../tech/coding/typescript.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
