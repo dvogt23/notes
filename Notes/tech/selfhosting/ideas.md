@@ -5,6 +5,9 @@
   - phost for quick static site self-hosting
   - sentry for logging
   - httpbin for api testing
+  - plane.so for project processing
+  - nocodb for database with no-code
+  - docmost - document/knowledge management
   - send for private file sharing
   - munin for monitoring
   - google cloud archive coldline for backup
