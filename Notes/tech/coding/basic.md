@@ -20,7 +20,6 @@ Source: [Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
 
 At the linux kernel guideline are some good advices: [The linux kernel - coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#linux-kernel-coding-style)
 Google have some [guidelines](https://google.github.io/styleguide/) for some languages as well. Use positive booleans for better readability, like described [here | Google Code health](https://testing.googleblog.com/search/label/Code%20Health)
-
 ## Principles
 
 - [YAGNI](https://en.m.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
@@ -40,3 +39,9 @@ Google have some [guidelines](https://google.github.io/styleguide/) for some lan
 - Consider [marking low priority comments with severity](https://google.github.io/eng-practices/review/reviewer/comments.html#label-comment-severity) like _Nit_, _Optional_, or _FYI_ to help the author prioritize the important ones.
 
 Source: [Google testing blog](https://testing.googleblog.com/2023/08/testing-on-toilet-presents.html)
+
+Review concerns:
+- Force you to think about scalability, not just functionality.
+- Push you to write code that’s maintainable, not just clever.
+- Teach you to plan for edge cases and failures, because they **_will_** happen.
+Source: [manager-i-hated](https://www.blog4ems.com/p/the-manager-i-hated)
