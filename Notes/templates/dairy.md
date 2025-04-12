@@ -3,9 +3,7 @@ tags: daily diary
 ---
 ### Todo
 - [ ] 
-
-> [!todo]+ Rolling TODO
-> ```tasks
+```tasks
 description regex does not match /^\s*$/
 (scheduled on or before today) OR (due on or before today)
 not done
@@ -16,6 +14,8 @@ sort by urgency
 sort by function task.file.path
 hide postpone button
 hide backlink
-hide task count```
+hide task count
+```
+
 ### Log
 - 
