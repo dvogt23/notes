@@ -7,7 +7,7 @@
 
 **Places**
  - Drouwenerzand Park - Nice park for kids with all-you-can-eat
- - Giethorn - Is called the dutch venice
+ - Giethorn - called the dutch venice
  - Camping in castricum (Gemüsehaus)
    [Geversduin](https://www.campinggeversduin.de/mieten)
  - Texel [Bundgalow 165](https://www.vredelusttexel.nl/de/verblijf/accommodatie-item/81/Bungalow-165)
