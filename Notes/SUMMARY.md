@@ -98,6 +98,7 @@ sticker: lucide//sticky-note
     - [Netherland](travel/netherland.md)
     - [Portugal](travel/portugal.md)
     - [Spain](travel/spain.md)
+    - [Vietnam](travel/vietnam.md)
 
 - [Misc]()
   - [Arts](misc/arts.md)
