@@ -6,7 +6,7 @@ tags: []
 ---
 **My list of interesting podcasts:**
 
-- Ungescriptet - Ben Berndt
+- Ungeskriptet - Ben Berndt
 - Was bisher geschah - Geschichtspodcast
 - Alles Geschichte - History von radioWissen
 - Jasmin Kosubek
@@ -25,8 +25,13 @@ tags: []
 - Das Ziel ist im Weg
 - Grenzgänger
 
-**History of podcast listening:**
+**History of podcast listening (only interesting one):**
 
+- [Tim Gabel - PROF. DR. FICHTNER: Die Wahrheit über E-Autos und Batterien](https://open.spotify.com/episode/165hhcwXAgysTDzMsU25xa?si=63bd37b146ba43dd)
+- [ungeskriptet - # Warum geht es uns schlecht, obwohl wir alles haben? (Trauma-Therapeut Gopal Norbert Klein)](https://open.spotify.com/episode/78P5wWayXlDo5NVsWanYZJ?si=675b79c053c548ad)
+- [ungeskriptet - Liebscher & Bracht: Warum werden sie vom System bekämpft?](https://open.spotify.com/episode/06LZddmUkv8cIVP5yxoKAe?si=754d91c965a64585)
+- [ungeskriptet - # So wird unsere Heimat ruiniert | ex-CDU Politikerin spricht Klartext! (Sylvia Pantel)](https://open.spotify.com/episode/2hdBV5rKCqX8YVDKARrvEk?si=489299a0484d49a4)
+- [ungeskriptet - Der Bundestag ist nur Fassade (Joana Cotar)](https://open.spotify.com/episode/5oAZwhNnCuS5ZznD5sq7BE?si=f348390a02454cab)
 - [Hazel & Thomas Gast: Usus Mango](https://youtu.be/ExbLAF2kzGw)
 	 - Elke Heidenreich eine gute Produzentin beim WDR
 	 - Die Ernsthaftigkeit Deutschlands den Rassismus zu bekämpfen mit der AFD im Bundestag und einer #metoo Bewegung ohne einer Konsequenz für jemanden
@@ -37,8 +42,4 @@ tags: []
    derjenige etwas schlimmes/traumatisches erlebt hat und daraus Kraft gezogen hat. Es reicht bewiesenermaßen auch jemand der an dich
    glaubt und dich in deinem Vorhaben unterstützt. Es muss zum Erfolg nicht etwas negatives widerfahren sein... (eigene Zusammenfassung des
        Dialogs der beiden Hosts)
-- [ungeskriptet - # Warum geht es uns schlecht, obwohl wir alles haben? (Trauma-Therapeut Gopal Norbert Klein)](https://open.spotify.com/episode/78P5wWayXlDo5NVsWanYZJ?si=675b79c053c548ad)
-- [ungeskriptet - Liebscher & Bracht: Warum werden sie vom System bekämpft?](https://open.spotify.com/episode/06LZddmUkv8cIVP5yxoKAe?si=754d91c965a64585)
-- [ungeskriptet - # So wird unsere Heimat ruiniert | ex-CDU Politikerin spricht Klartext! (Sylvia Pantel)](https://open.spotify.com/episode/2hdBV5rKCqX8YVDKARrvEk?si=489299a0484d49a4)
-- [ungeskriptet - Der Bundestag ist nur Fassade (Joana Cotar)](https://open.spotify.com/episode/5oAZwhNnCuS5ZznD5sq7BE?si=f348390a02454cab)
 
