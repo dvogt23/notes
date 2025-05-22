@@ -80,6 +80,9 @@ Source: [utopia](https://utopia.de/ratgeber/sauerteig-ansetzen-gesundes-brot-aus
 
 Basically you could use each pizza dough calculator on the internet. I actually prefer the oni app with 63% hydration for an home oven.
 
+> [!NOTE] Remeber
+> Use a fresh and durable yeast! Check it in warm water with some sugar, it should foam.
+
 Links:
 - good description [hendricius/pizza-dough](https://github.com/hendricius/pizza-dough)
 
