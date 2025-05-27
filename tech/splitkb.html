@@ -45,6 +45,17 @@
         <script src="../toc.js"></script>
     </head>
     <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
     <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
@@ -122,7 +133,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -425,13 +436,17 @@ make CONVERT_TO=kb2040 ferris/sweep:default:uf2-split-right
 </ol>
 <p>After flashing your have a running ferris sweep split keyboard, which you must now learn to love. Take a lot of time to get to know each other …</p>
 <p>Play around with the configurator and create your own <code>keymap.json</code> file. If you ready to learn, print your keymap <a href="https://caksoylar.github.io/keymap-drawer">here</a> and start typing.</p>
+<p>Articles:</p>
+<ul>
+<li><a href="https://oppi.li/posts/programming_on_34_keys/">oppi - ferricy</a></li>
+</ul>
 <p>Tools:</p>
 <ul>
 <li><a href="https://www.keybr.com">keybr.com</a></li>
 <li>https://monkeytype.com/</li>
 </ul>
 <p><img src="../images/splitkb.png" alt="mykeyboard" /></p>
-<footer id="last-change">Last change: 2023-05-12, commit: <a href="https://github.com/dvogt23/notes/commit/a27326f">a27326f</a></footer>
+<footer id="last-change">Last change: 2025-05-27, commit: <a href="https://github.com/dvogt23/notes/commit/c93de33">c93de33</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
