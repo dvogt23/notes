@@ -27,6 +27,9 @@ After flashing your have a running ferris sweep split keyboard, which you must n
 
 Play around with the configurator and create your own `keymap.json` file. If you ready to learn, print your keymap [here](https://caksoylar.github.io/keymap-drawer) and start typing.
 
+Articles:
+- [oppi - ferricy](https://oppi.li/posts/programming_on_34_keys/)
+
 Tools:
  - [keybr.com](https://www.keybr.com)
  - https://monkeytype.com/
