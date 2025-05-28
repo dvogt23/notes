@@ -7,6 +7,10 @@
  - wasm tutorial -> [linuxfoundation](https://training.linuxfoundation.org/announcements/using-web-assembly-written-in-rust-on-the-server-side/)
  - Crossplatform desktop app -> [css-tricks](https://css-tricks.com/how-i-built-a-cross-platform-desktop-application-with-svelte-redis-and-rust/)
 
+## Great rewrites
+
+Fish Nushell Ripgrep Fd Bat Eza Zoxide Xh Zellij Gitui du-dust dua starship yazi hyperfine evil-helix bacon cargo-info fselect ncspot rusty-man delta ripgrep-all tokei wiki-tui just mask mprocs presenterm kondo bob-nvim https://github.com/jdx/mise espanso
+
 ### Wrapper types
 
 **Box** This abstraction is a low cost abstraction for dynamic allocation. If you want to allocate some memory on the heap and safely pass a pointer to that memory around, this is ideal.
