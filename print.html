@@ -11839,8 +11839,10 @@ Sensoren anlegen:
 <li>Secure your VPS <a href="tech/linux/basic.html#secure-your-vps">basic#Secure your VPS</a></li>
 </ul>
 <h2 id="yubikey"><a class="header" href="#yubikey">Yubikey</a></h2>
-<p>Best practice guide: https://github.com/drduh/YubiKey-Guide
-Another great guide: https://yubikey.jms1.info</p>
+<ul>
+<li>Best practice guide: <a href="https://github.com/drduh/YubiKey-Guide">https://github.com/drduh/YubiKey-Guide</a></li>
+<li>Another great guide: <a href="https://yubikey.jms1.info">https://yubikey.jms1.info</a></li>
+</ul>
 <div class="mdbook-callouts mdbook-callouts-warning">
 <p class="mdbook-callouts-title">
   <span class="mdbook-callouts-icon"></span>
@@ -11880,6 +11882,20 @@ gpg --quick-add-key $KEYID ed25519 sign 1y
 gpg --quick-add-key $KEYID ed25519 auth 1y
 gpg --quick-add-key $KEYID cv25519 encrypt 1y
 </code></pre>
+<h2 id="bitwarden-desktop---ssh-key-management"><a class="header" href="#bitwarden-desktop---ssh-key-management">Bitwarden Desktop - ssh key management</a></h2>
+<p>doc: <a href="https://bitwarden.com/help/ssh-agent/#tab-browser-extension-3PjpTaCCPSpz3hcsQ5sznu">https://bitwarden.com/help/ssh-agent</a></p>
+<p><strong>TLDR;</strong></p>
+<ol>
+<li>Open <strong><em>bitwarden desktop - settings</em></strong> and activate <strong>Enable SSH-Agent</strong></li>
+<li>Create a <code>ssh key</code> entry in bitwarden <em>(its enough to paste the private key content)</em>
+<ol>
+<li><code>\cat id_ed25519 | pbcopy</code></li>
+</ol>
+</li>
+<li>Set env var export <code>SSH_AUTH_SOCK=/Users/&lt;user&gt;/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock</code> (needs to be present for your shell, so add it to your <code>.zshrc</code>)</li>
+<li>Edit your <code>.ssh/config</code> and adjust <code>IdentityFile ~/.ssh/id_ed25519.pub</code> to use the <code>.pub</code> keyfile for reference the private-key of your ssh key agent</li>
+</ol>
+<p>To list all available ssh keys, use <code>ssh-add -L</code></p>
 <h2 id="security-quote"><a class="header" href="#security-quote">Security quote</a></h2>
 <blockquote>
 <p>Security is a team sport, and accelerating SFI isn’t just job number one for our security teams – it’s everyone’s top priority and our customers’ greatest need.
@@ -11926,7 +11942,7 @@ IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des 
 polyglot-pdf.zip: PDF document, [...]
 </code></pre>
 <p>If a backend just checks the <code>content-type</code> its still <code>PDF</code>. So if you download this file and get original file as <code>.zip</code> file and extract it, you will get the pdf &amp; zip file included there.</p>
-<footer id="last-change">Last change: 2024-11-15, commit: <a href="https://github.com/dvogt23/notes/commit/e3be6f1">e3be6f1</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: 2025-06-05, commit: <a href="https://github.com/dvogt23/notes/commit/1ff003f">1ff003f</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
   padding: 8px 16px;
   margin-bottom: 16px;
