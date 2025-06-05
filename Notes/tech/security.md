@@ -13,8 +13,8 @@ Interest things for security in general:
 
 ## Yubikey
 
-Best practice guide: https://github.com/drduh/YubiKey-Guide
-Another great guide: https://yubikey.jms1.info
+- Best practice guide: [https://github.com/drduh/YubiKey-Guide](https://github.com/drduh/YubiKey-Guide)
+- Another great guide: [https://yubikey.jms1.info](https://yubikey.jms1.info)
 
 > [!Warning]
 > There is a vulnerability about yubi keys:
@@ -52,6 +52,18 @@ gpg --quick-add-key $KEYID ed25519 sign 1y
 gpg --quick-add-key $KEYID ed25519 auth 1y
 gpg --quick-add-key $KEYID cv25519 encrypt 1y
 ```
+
+## Bitwarden Desktop - ssh key management
+doc: [https://bitwarden.com/help/ssh-agent](https://bitwarden.com/help/ssh-agent/#tab-browser-extension-3PjpTaCCPSpz3hcsQ5sznu)  
+
+**TLDR;**
+1. Open **_bitwarden desktop - settings_** and activate **Enable SSH-Agent**
+2. Create a `ssh key` entry in bitwarden _(its enough to paste the private key content)_
+	1. `\cat id_ed25519 | pbcopy`
+3. Set env var export `SSH_AUTH_SOCK=/Users/<user>/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock` (needs to be present for your shell, so add it to your `.zshrc`)
+4. Edit your `.ssh/config` and adjust `IdentityFile ~/.ssh/id_ed25519.pub` to use the `.pub` keyfile for reference the private-key of your ssh key agent
+
+To list all available ssh keys, use `ssh-add -L`
 
 ## Security quote
 
