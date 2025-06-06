@@ -35,3 +35,19 @@ Some of my favourite tools and routines I using in my development environment.
 - Store on [nextcloud](https://nextcloud.com/de/)
 - App sync with WebDAV [obisidian](https://obsidian.md/)
 
+### Postmortem
+A tool for summarize a critical situation in collaboration with all involved people.
+
+Main lessons:
+
+1. Maintain critical equipment proactively
+2. Avoid panic and act deliberately under pressure
+3. Use mistakes to improve systems and personal skills
+4. Failures often compound, so minimize risks early
+5. Decision-making under stress can and should be practiced
+
+Great example of using personal experience to showcase technical and soft skills.
+
+Source:
+- [danielputtick](https://www.danielputtick.com/writing/mapbox-postmortem-interview.html)
+- [freecodecamp](https://www.freecodecamp.org/news/what-is-a-software-post-mortem/)
