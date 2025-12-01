@@ -26,9 +26,9 @@ jobs:
           restore-keys: ${{ runner.os }}-cargo-
 
       - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v1
+        uses: peaceiris/actions-mdbook@v2
         with:
-          mdbook-version: 'latest'
+          mdbook-version: '0.4.10'
       - name: Install mdbook-yml-header # drop yml frontmatter
         run: command -v mdbook-yml-header || cargo install mdbook-yml-header
       - name: Install callouts # add callouts
