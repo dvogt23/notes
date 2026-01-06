@@ -112,3 +112,13 @@ Source: LaVita Newsletter Jun 2024
 
 Source: LaVita Newsletter August 2024
 
+### Japanese Habits
+
+- **Kaizen (Continuous Improvement)** – Commit to a tiny, 1% improvement daily. Do one small, non-intimidating action consistently, like reading one page or doing one push-up, to build unstressful momentum.
+- **Ikigai (Reason for Being)** – Identify your purpose by reflecting on what you love, are good at, what the world needs, and what you can be paid for. Let this intersection guide your daily choices.
+- **Hara Hachi Bu (80% Full)** – Stop eating when you feel about 80% full. Eat slowly and mindfully to avoid overloading your body and maintain stable energy.
+- **Shinrin-Yoku (Forest Bathing)** – Immerse yourself in nature without distractions. Take slow walks, breathe deeply, and leave your phone behind to calm your nervous system.
+- **Wabi-Sabi (Perfect Imperfection)** – Actively appreciate imperfection and transience. See beauty in flaws, wear, and repairs in objects and yourself, releasing the need for perfection.
+- **Gaman (Dignified Endurance)** – Face difficulties with quiet resilience. Acknowledge hardship without being consumed by it, focusing on dignified perseverance and self-efficacy.
+- **Omoiyari (Compassionate Consideration)** – Practice empathetic foresight. Be attentively kind through small gestures—like speaking softly or being mindful of others—to build a considerate environment.
+- **Kintsugi (Golden Repair)** – Embrace your breaks and repairs. View past wounds, failures, and flaws not as sources of shame, but as golden seams that add to your unique strength and history.
