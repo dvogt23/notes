@@ -12,6 +12,7 @@
  - [Sudho 2](http://sadhu-restaurant.com/) indish
  - India Club - indisch
  - Mis Kebap Kottbusser Tor
+ - Oase, Warschauer Str. 25 (Falafel, Halloumi, Schwarma)
 
 ## Düsseldorf
  - Vabali - Wellnes & Spa
