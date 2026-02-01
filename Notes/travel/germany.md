@@ -21,6 +21,7 @@
  - Takumi Tonkotsu -Takumi Nidaime- Ramen
  - Takumi 6th Spicy Tan Tan Men
  - Jenka - russian kitchen
+ - Seasons Hotpot Halal
 
 ## Hamburg
  - Azeitona - vegetarische arabische Küche
