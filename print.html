@@ -40,7 +40,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-413a8f99.js";
+            window.path_to_searchindex_js = "searchindex-7257e0cf.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-4c0ee820.js"></script>
@@ -1170,6 +1170,7 @@ mvp-prototyping and beyond.</p>
 <a href="https://github.com/StephenFiser/simple-pm/tree/episode-1">simple-pm</a></li>
 <li>Best practises <a href="https://youtu.be/vw7PlBvLq9k">Semicolon&amp;Sons - Best practises I</a>
 Passing ruby data to javaScript</li>
+<li>[[rails-learnhotwire|Rails learnhotwire.com]]</li>
 </ul>
 <h2 id="articles-4"><a class="header" href="#articles-4">Articles</a></h2>
 <ul>
@@ -1224,6 +1225,26 @@ Passing ruby data to javaScript</li>
 <li><strong><a href="https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMHqPGsrhxfiJAcfVOdf0xpXwWDuU_M-2IpD55EAhUJZklkH7e4sNcYaNgCjNCtOMG1MVJkyLFTPmr9Vr-Aneby6XOzF4dE7HCTlJkWWavSv4q_MCbDjZrA0oo_qQH31h01x2_l6xyhEcpIJFwo1Euc6zAH1QRi-CdfB6W8lPSwdh/4db/8KnHeuGCQNej8NxWHmaDtg/h191/h001.MXp5XC9c6imfTDe27FkA9-QrVkF58mrU9sfEN8djo7M">view_component</a></strong> - _“A framework for building reusable, testable &amp; encapsulated view components in Ruby on Rails.”</li>
 </ul>
 <p>Source: <a href="https://x.com/pkayokay/status/1878778796192735708?utm_source=shortrubynews&amp;utm_medium=newsletter&amp;utm_campaign=short-ruby-newsletter-edition-119&amp;_bhlid=9a072f4bee0135a3ff54fc1d7a49c2cc6ff23c7b">x/pkayokay</a> / <a href="https://newsletter.shortruby.com/p/edition-119?utm_campaign=short-ruby-newsletter-edition-119&amp;utm_medium=newsletter&amp;utm_source=shortrubynews">shortruby#119</a></p>
+<h3 id="useful-commands"><a class="header" href="#useful-commands">Useful commands</a></h3>
+<ul>
+<li>console in binding.pry mode, you could check the call trace with</li>
+</ul>
+<pre><code class="language-ruby">caller
+</code></pre>
+<h3 id="update-readonly-model"><a class="header" href="#update-readonly-model">Update readonly Model</a></h3>
+<pre><code class="language-ruby"># overwrite method before update objects
+Model.class_eval do
+   def readonly?
+     false
+   end
+end
+# or try this :)
+Model.class_eval do
+    def self.readonly_attributes
+      []
+    end
+end
+</code></pre>
 <h3 id="pattern-matching"><a class="header" href="#pattern-matching">Pattern matching</a></h3>
 <pre><code class="language-ruby">def extract(**data)
   case data
@@ -1371,7 +1392,7 @@ Step 4: Run migrations
 # $ rails db:migrate
 
 Step 5: Update config/application.rb
-# Rails.application.configure do 
+# Rails.application.configure do
 #	config.active_job.queue_adapter = :solid_queue
 # end
 
@@ -1413,7 +1434,7 @@ gem 'mission_control-jobs'
 
 # In config/routes.rb:
 Rails.application.routes.draw do
-	mount MissionControl::Jobs::Engine, at: "/jobs" 
+	mount MissionControl::Jobs::Engine, at: "/jobs"
 end
 
 Step 12: Remove any Sidekiq web UI routes
@@ -3952,9 +3973,16 @@ Authentication: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authenti
 <li>The Luck of Barry Lyndon</li>
 <li>Das trunkene Schiff</li>
 <li>The Invisible Man</li>
-<li>Der Spieler</li>
+<li>Der Spieler by Dostojewski, Fedor M.</li>
 <li>Das Schneckenhaus by Mustafa Khalifa</li>
+<li>Jeff Olson - Der kleine Vorsprung</li>
+<li>Alexander Puschkin - Erzählungen</li>
+<li>Vladimir Nabokow - Die Kunst des Lesens</li>
 </ul>
+<h3 id="2025"><a class="header" href="#2025">2025</a></h3>
+<p><strong>Die Hände meines Vaters: Eine russische Familiengeschichte</strong>
+by Irina Scherbakowa
+ISBN: 978-3426301333 ⭐ ⭐ ⭐</p>
 <h3 id="2024"><a class="header" href="#2024">2024</a></h3>
 <p><strong>Trotzdem Ja zum Leben sagen: Ein Psychologe erlebt das Konzentrationslager</strong>
 by Viktor E. Frankl
