@@ -11,15 +11,16 @@ mvp-prototyping and beyond.
 
 ## Curriculum
 
- - [Full Stack Ruby on Rails | theodinproject](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
+- [Full Stack Ruby on Rails | theodinproject](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
 
 Learning from some youtube guys:
 
- - [Video](https://www.youtube.com/watch?v=8i5JFLfbWkE) Source: [Projekt](https://github.com/justalever/projekt)
- - [Video](https://www.youtube.com/watch?v=u2o_new-T0o&t=555s) Source:
-   [simple-pm](https://github.com/StephenFiser/simple-pm/tree/episode-1)
- - Best practises [Semicolon&Sons - Best practises I](https://youtu.be/vw7PlBvLq9k)
-   Passing ruby data to javaScript
+- [Video](https://www.youtube.com/watch?v=8i5JFLfbWkE) Source: [Projekt](https://github.com/justalever/projekt)
+- [Video](https://www.youtube.com/watch?v=u2o_new-T0o&t=555s) Source:
+  [simple-pm](https://github.com/StephenFiser/simple-pm/tree/episode-1)
+- Best practises [Semicolon&Sons - Best practises I](https://youtu.be/vw7PlBvLq9k)
+  Passing ruby data to javaScript
+- [[rails-learnhotwire|Rails learnhotwire.com]]
 
 ## Articles
 
@@ -31,40 +32,63 @@ Learning from some youtube guys:
 - Great summary about encryption in rails7 [corsego](https://blog.corsego.com/encrypted-credentials)
 - [ActiveRecord Mistakes that slow down your app](https://www.speedshop.co/2019/01/10/three-activerecord-mistakes.html#where-means-filtering-is-done-by-the-database)
 - Modularisation (Monolith):
-	 - [Deconstructing the Monolith](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
-	 - [The Modular Monolith: Rails Architecture | by Dan Manges | Medium](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
-	 - [Ruby on Rails - Bounded contexts via interface objects](https://blog.eq8.eu/article/rails-bounded-contexts.html)
-	 - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
-	 - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
+  - [Deconstructing the Monolith](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
+  - [The Modular Monolith: Rails Architecture | by Dan Manges | Medium](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)
+  - [Ruby on Rails - Bounded contexts via interface objects](https://blog.eq8.eu/article/rails-bounded-contexts.html)
+  - [Enforcing Modularity inside a Rails Monolith | by Thomas Pagram | The Airtasker Tribe | Medium](https://medium.com/airtribe/enforcing-modularity-inside-a-rails-monolith-f856adb54e1d)
+  - [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk)
 
 ### Useful gems for your rails project
 
-- **[active_link_to](https://link.mail.beehiiv.com/ss/c/u001.HofDA2EBVdlNxfKzF5PEfU54EOWufvdf_9Fvv0HBpXiBGyoDZaRkOyHx84oCgP0z36jDTd8DScOKHK_j5AMNGOk2o7PeHY-GbxOKi4_srKhm3Aij89Nq-ctZ33aUldvYI5TKhsOh5TfgvmWto2YeJGvSAMau7L57QtSGQ8PE4-T2zXwpLyHkiOfD-iPhn2rN/4db/8KnHeuGCQNej8NxWHmaDtg/h161/h001.VKvOmN9ukZ5sjRS7_8bpckiToG1vPctNX7twz0AYqGA)** - _"Helpful method when you need to add some logic that figures out if the link (or more often navigation item) is selected based on the current page or other arbitrary condition"_
-- **[avo](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMFzsRiH5NxAbAQcfrTvG7KsTugOisHoZGEqnrnpej34FstRQAhSmo6_3Oq5oWUPurJk3d3rDGiYH99CDB1KB9XlCrQHJY-P4B1CLRrg40AkTWQAF4dHs25_fBDGGCsRyp0M7vBjWRmh3YPHEeGGfEqs/4db/8KnHeuGCQNej8NxWHmaDtg/h162/h001.BoWPwKTRN3TrxeHZEYUeRTIK8CCVfIO-QxEdbr9ZHXc)** - _"Avo is a very custom Content Management System for Ruby on Rails that saves engineers and teams months of development time by building user interfaces and logic using configuration rather than traditional coding; When configuration is not enough, you can fallback to familiar Ruby on Rails code."_
-- **[brakeman](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMHLPYWG_L58_j4cfSqg_ix2bhCIRFHI2g5xkjJzpSVS4GOrVBB_g88eSGy-hswCXcpvxeEXCjKvOzsD4cSgqeJPIhvV69z_6-RGqz7dFbboctvmgNQfoA7LcTx4nigqf5ss2YoseGpoTR5rfClYiGpWdfX0eE6skBLnEn3UXA8Hv/4db/8KnHeuGCQNej8NxWHmaDtg/h163/h001.N18s8mUTcXJWktW9qLc_zqO-Iit-LqNv4hFGFSIeDXY)** - _"Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis."_
-- **[bundler-audit](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMAJTrFSaHta6ay6iaOSRvBPkdlHvwYNrLwk5R2qD6q4RNL-DZbbiTMANu8_MPyxN8lf_vjFxyPo9H_17reET-KxGfK879bbcGCbW3J4AKYjxr5-RpCb9tBCq7dMfvy-6398fhnLwcY_puKgJ9IKxQuM3ihh_iyahZ6wu0NuVU4No/4db/8KnHeuGCQNej8NxWHmaDtg/h164/h001.SsX-0aDrG8Pi0lR_YgHROtOY6xr3ajMQMioP9jUl4qk)** - _"bundler-audit provides patch-level verification for Bundled apps."_
-- **[database_consistency](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMMFvC58PMvBEL9ZeWHYY1e1zSsoqJHf69qhOwLCXq90nvs1sSJ60ikD69negU2-R2KedX0rG5XgoFfgn17PYna7oBdTtjJdU6mXs92ybh-oYSfV1_C_ZtKhKGmOAdNbVuigCYzavnu_v4-kSjbGh4TDTcKupgDPEP0nCMYualfnJ/4db/8KnHeuGCQNej8NxWHmaDtg/h165/h001.OY02avfRvLKZ4_JTL8-som5lRAQVJ6MJnwmLTG7ouA8)** - _"Provide an easy way to check the consistency of the database constraints with the application validations."_
-- **[devise](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMI-lsrOwV5iq_s0qJI5tWSIOk6hDONBhPPkZqFSGgwJv2pFEkZuHekbROmQ9VW-jB86aSmmD5uELzgv3UXPbTC0zTE4Qu-qSeozsZYUHu0xMzgcomGUzIwXlvPHqp1BHHa1UyNV7OLM7XO4z8GEIr68E0lvQ5gVrcrHdey4NY3di/4db/8KnHeuGCQNej8NxWHmaDtg/h166/h001.byos13A8ZQmr79xC2TBbpORhPXJVeCGEbEtkNPe14c0)** - _"Flexible authentication solution for Rails with Warden"_
-- **[interactor](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMImJqe80LDgRbBdsz4x668FT1q8B8ow8xtOxAcw5J6lgDMBukZ9DPhsDQ3xRdQEkJTIfawfmyUWj7BOGpp65s7UPRsy-8DLeK6gRJ1Q2NyWGJwl3QxIoQmciGTGPDZFOSh2IlHcC4RxvL_UcAoFf9TnIEhM7z1DzgeEGOlWQGRMu/4db/8KnHeuGCQNej8NxWHmaDtg/h174/h001.ZYaSoprWFhtGXZlmyEKD5EwXqFjP4Cgp-ez_CyP723M)** - _"Interactor provides a common interface for performing complex user interactions."_
-- **[local_time](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMFn3P70Q1O4EJm9H4k4rkMqCLACabRkKJMQT2H6mUl2D6dUklqbn9pdh8y0JmkRNqXoMYeHh-LBnlMBIMKkRVj8P-NQo2aXVL5tpws31pxko68L0VHBl-R7gajT49WwUcQBlkIzjd_uCsEmYmL-30OFMBjgWxn-sU_NWKL2OIgvc/4db/8KnHeuGCQNej8NxWHmaDtg/h175/h001.1PnurRVzYSQnGn4T19fDrncmdZ_nk6G6xMBSQR2BfJE)** - _"Rails engine for cache-friendly, client-side local time"_
-- **[meta-tags](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMCsV9BBCuzIfFwnGpKCGx4B6GySoW-xF_WHbV-MAEafWt-2dmApoFQ4rCf-s295vfCKft8dbhiZdvuXyH_jJiNUT785Hejj2tqOqTyflemOBzTn2dzGz4Qwrei0jq6n5diuVQqhtKakDyYdx2YEB7vVLVWmg-nmgkCG7JoXtKjza/4db/8KnHeuGCQNej8NxWHmaDtg/h176/h001.NIh5kE7I_vn4lyVoHAsM1en9dkpj13Ib6zbIFkfFMpk)** - _"Search Engine Optimization (SEO) plugin for Ruby on Rails applications."_
-- **[minitest](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLd0WMMqfzehqetT_Fyv2yPPNM5V3THAdoYrpY2b_wZigmS_JBlfW3Px5GQ4imgG0InH8qelesKKH-zg0Rj8Vvi6TADhML0TIriWkdz931f21nxpT5V7cGzXkCg0eHJ5gCdejoupOl5em_68HItBvGx0O5KLChDpNxw_4URDxAPR/4db/8KnHeuGCQNej8NxWHmaDtg/h177/h001.CRQKUHGVp7DSc4-qbONrp8K2spwwhso-JAV70snlhEQ)** - _"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking"_
-- **[nocheckout](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLuLEUjxfDE9ATWslQr-i4sm7g5zTZQCHZf2pl4LFkrcY3jGVXJgKTtBs1tC_IQhjtYRgCYYvdXcMeSkVrCWCYNM1Eo6ljo5W9jLkJs5oAfXahTwpM0kHvfMVClhy5aU53LYuiQzwwBWTeVm1N0OEx3U6bHv3efFsKjDDl2k-LGb/4db/8KnHeuGCQNej8NxWHmaDtg/h178/h001.j8eiVx5o00U_glYmMJDlO_ne4F4Sl4A5uLZVU2dy9rw)** - _"Rails controllers for Stripe Checkout Sessions and Webhooks"_
-- **[nopassword](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMBvM4DiQ-AX57Lqxzx2H8I4xfdseH_dcHgXpYGbp-g-C5HguYIUqKyl4gnWOJ0iRUhJXPxLk2wdUFURkxDYhubup7EB61vTcELEv6q0BueINgSDQBa7q9ZWqy6wgSNRU2uickioAcZMbg6XvClaN-Mom_ndcO0_8y6JjgFuyb7T0/4db/8KnHeuGCQNej8NxWHmaDtg/h179/h001.5caPffiY9CNOTOwiq3mRv9mOEM9LQ8VSX1SClhT2X-U)** - _"NoPassword is a toolkit that makes it easy to implement temporary, secure login codes initiated from peoples' web browsers so they can login to Rails applications via email, SMS, CLI, QR Codes, or any other side-channel."_
-- **[og](https://link.mail.beehiiv.com/ss/c/u001.Tuw4pyl3dUE7P9jrHEbWpiUsK_eg9M50m0o46dtYgjcBSTdgCu0DojfAdneL0TdfpsmRj831ews0Ymm-Ao8pjyWs-vkLAKiWH9Dhaf0zp5VaojtOs_9oI0LescjPaQ8XCvRHw6WyZ1KKSCRbukDQh-09wt2a7Cxa-pQz934HEXM/4db/8KnHeuGCQNej8NxWHmaDtg/h180/h001.k9mSgi3boquLji9XYUbO_7a1ILqqojXbzowj1vnRjJo)** - _"Object Graph (Og) is a state of the art ORM system. Og serializes standard Ruby objects to Mysql, Postgres, Sqlite, KirbyBase, Filesystem and more."_
-- **[omniauth-oauth2](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMAlIVy8nBldhpVfrb-_TBx9dxksZ3jbZpE3hYVWBONMC3yuKajdTHpt1XNdibhVHqMuWU5D2oaK15TDO212vhYouiAIDsL-vknGKHkmtZsF7RkrIS1GFVcG0gZnmy32NCbOlc95xu-A7hJ7kun029Z5sWw-AgjMO9AMq_DPLkKoU/4db/8KnHeuGCQNej8NxWHmaDtg/h181/h001.UVR7OGlTg5hDrBwtvvqkjvqPiDeyk9z8KlnwTh7MBfI)** - _"An abstract OAuth2 strategy for OmniAuth."_
-- **[overmind](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMNebR6y-5XulAu34Bq_zYL5PPgDn_TXV9su5jSkhvJa0BTni9mtVyeDC8XiK29iOHpJ41W4tt3IHxFvcaVX60zcZErNO1KtY2yxZdp9TVm66JT1ylCO8QZWMRXKq9txGyezOkgF4wV81-SB0rU3-z6h1t--L1_oA8-vokKAglCro/4db/8KnHeuGCQNej8NxWHmaDtg/h182/h001.688-OdDvozaGEEPpzTykTiu3V5p2F2nS61iG7tTlSso)** - _"Overmind is a process manager for Procfile-based applications and tmux."_
-- **[pagy](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMOjrW4kxccUbYjfIs9N5PGPMq6wlL6eYLbFzQSGROu9AgSu2GCNnpDbm2B3og6Hn8H3qtSu40KuxrXLx34PY0pGPtEtSOIiYCWsv_ciPmaawySHoY2bdLNihKXzpuF9FhXdrihL_NDj0yiBhaCv-17s/4db/8KnHeuGCQNej8NxWHmaDtg/h183/h001.jzLmpFr_1B_PeqKCex0sHoO1Hsz2PJAAUFXZM41T6xY)** - _"Agnostic pagination in plain ruby. It does it all. Better."_
-- **[phlex](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLe1aCgzGYXudC0IftX3LC1Y0Zg21nzQ59GIgBOfrikilDuF51vWMvAgVzluZSSbtAJhjojS_iHxr0HTaOrGsMWt7S5dEUpihKX9DvtbOFmD24KORluHyPEmKeu6zPYWW4tpCqHPwX979-TlfeO9Raste4iIN7RmTMAv7Pxwc7ay/4db/8KnHeuGCQNej8NxWHmaDtg/h184/h001.tRUSyTtfPkCJDyFlhUfP5a0tA359tanUWcQIATqzaIE)** - _"A high-performance view framework optimised for fun."_
-- **[pundit](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMKKe-cuP0A5wlbPWGLWvFYuEqKFYGPr-ScS3GS6obxBTiT0KogHicfJdqFn6uoiY457hXRurMSPBycoxQTM4-0al7F86S_7u5PNsJ78Eq64FYgGI5lAqHxu0C7EFu4Frb8ERW2FMY8-ovrvyvouCxXQ/4db/8KnHeuGCQNej8NxWHmaDtg/h185/h001.sb87HF6ayDuk-yNFWEKfpUIDp5IHwzGOrAeAdxBmr5s)** - _"Object oriented authorization for Rails applications"_
-- **[ransack](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMDz72pf4EXU-WtEskfjWDzzr3fBKFpMtEki5kKGAfdU043q2roqaR2Hr1HTjwzDTp2PF_zryvCEcO79PAxeb92Tr9gw74NZmwlImB6UidClCvHpafzNW5OGSn33Ofy31yc_bxXmNidJZmaGZk_K45cf7IHJkDxxMvDjUf-oflz4t/4db/8KnHeuGCQNej8NxWHmaDtg/h186/h001.WkZVp5mpOCA74Rq9oMADhGor-Ksz1BDLhdgh7nGuolA)** - _"Ransack is the successor to the MetaSearch gem. It improves and expands upon MetaSearch's functionality, but does not have a 100%-compatible API."_
-- **[strong_migrations](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMGc3VtxQY5xeg-TchXPbXjF9jmLz0Wj9mW3Tkuy3suSzosnnJ4rTnHfiOO0rbbZxWuf7EmHfllMWfyMuY3W1e0qVXJxrcAnNfpSF_iKuas99X-GCYDVjhz33mCt1Veuwm4wbhdrmTUrmYg4jrn7027lmTpXSBTz_oJ6ta8kZEcVa/4db/8KnHeuGCQNej8NxWHmaDtg/h187/h001.aIk-GV28HB2MUXDj-z6vcCRsmFEFAZnwHvuZDDuKW20)** - _"Catch unsafe migrations in development"_
-- **[stylecheck](https://link.mail.beehiiv.com/ss/c/u001.Tuw4pyl3dUE7P9jrHEbWpiUsK_eg9M50m0o46dtYgje0GRGCO7e_Er-7XC7OiZ80MPltlP7XxSsrHoaPeEtO-Q8eQT02piVmlI9v7s2PgxYoyUPYQ_h3z8SzqMip4mqV9eJcJhFkuFYnS6Kz_aCeh9uvQ1Mj4_hfMvlJXz9CPCEA00-3iw2uu1l3G4glTiRq/4db/8KnHeuGCQNej8NxWHmaDtg/h188/h001.qG36xNkSB7sFcssA1lWvbPwRBeyQkpbI3KD_xwLdyx8)** - _"Runs code style check on Ruby and SCSS files."_
-- **[superform](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLuLEUjxfDE9ATWslQr-i4u6_6rusa0WFhETgKVsE2J1B4OTkVVq_2O91Gd0Owm1Efr4Yz0ai1fjwuZ9JDEEauc3sFbe_otQgtJmsK9gh_c7Qb-AwkWwlh0Htw7IL6V0pLND90KOafJMhmpYEgTCuZyjKtpvb_UqGOdtucK4ZKhP/4db/8KnHeuGCQNej8NxWHmaDtg/h189/h001.XipPbOeH7jp2-RrSD_8R9ebfzXKqoB3YxbBJA-cwnSE)** - _"A better way to customize and build forms for your Rails application"_
-- **[superview](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLuLEUjxfDE9ATWslQr-i4sv4AqlkeawNvfWl6fsrNr3iSJ8wlronN7G_1oGk5xDTTOgZyvm1xxZ4wzb9rVug3ZiTfAukco5fFbbr7VOBPj7iyjxtv16aeNUrRmaNSnAXSsFyS7GKCsJJNYsPFYoIbDG8pVqXbXd_bIBP0MhFh4R/4db/8KnHeuGCQNej8NxWHmaDtg/h190/h001.OB1qBJaq9Z1IE5jBq0pMQJ4zU4usNHFSO2swRPpu0Q0)** - _"Build Rails applications entirely out of Phlex components."_
-- **[view_component](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMHqPGsrhxfiJAcfVOdf0xpXwWDuU_M-2IpD55EAhUJZklkH7e4sNcYaNgCjNCtOMG1MVJkyLFTPmr9Vr-Aneby6XOzF4dE7HCTlJkWWavSv4q_MCbDjZrA0oo_qQH31h01x2_l6xyhEcpIJFwo1Euc6zAH1QRi-CdfB6W8lPSwdh/4db/8KnHeuGCQNej8NxWHmaDtg/h191/h001.MXp5XC9c6imfTDe27FkA9-QrVkF58mrU9sfEN8djo7M)** - _"A framework for building reusable, testable & encapsulated view components in Ruby on Rails."
+- **[active_link_to](https://link.mail.beehiiv.com/ss/c/u001.HofDA2EBVdlNxfKzF5PEfU54EOWufvdf_9Fvv0HBpXiBGyoDZaRkOyHx84oCgP0z36jDTd8DScOKHK_j5AMNGOk2o7PeHY-GbxOKi4_srKhm3Aij89Nq-ctZ33aUldvYI5TKhsOh5TfgvmWto2YeJGvSAMau7L57QtSGQ8PE4-T2zXwpLyHkiOfD-iPhn2rN/4db/8KnHeuGCQNej8NxWHmaDtg/h161/h001.VKvOmN9ukZ5sjRS7_8bpckiToG1vPctNX7twz0AYqGA)** - *"Helpful method when you need to add some logic that figures out if the link (or more often navigation item) is selected based on the current page or other arbitrary condition"*
+- **[avo](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMFzsRiH5NxAbAQcfrTvG7KsTugOisHoZGEqnrnpej34FstRQAhSmo6_3Oq5oWUPurJk3d3rDGiYH99CDB1KB9XlCrQHJY-P4B1CLRrg40AkTWQAF4dHs25_fBDGGCsRyp0M7vBjWRmh3YPHEeGGfEqs/4db/8KnHeuGCQNej8NxWHmaDtg/h162/h001.BoWPwKTRN3TrxeHZEYUeRTIK8CCVfIO-QxEdbr9ZHXc)** - *"Avo is a very custom Content Management System for Ruby on Rails that saves engineers and teams months of development time by building user interfaces and logic using configuration rather than traditional coding; When configuration is not enough, you can fallback to familiar Ruby on Rails code."*
+- **[brakeman](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMHLPYWG_L58_j4cfSqg_ix2bhCIRFHI2g5xkjJzpSVS4GOrVBB_g88eSGy-hswCXcpvxeEXCjKvOzsD4cSgqeJPIhvV69z_6-RGqz7dFbboctvmgNQfoA7LcTx4nigqf5ss2YoseGpoTR5rfClYiGpWdfX0eE6skBLnEn3UXA8Hv/4db/8KnHeuGCQNej8NxWHmaDtg/h163/h001.N18s8mUTcXJWktW9qLc_zqO-Iit-LqNv4hFGFSIeDXY)** - *"Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis."*
+- **[bundler-audit](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMAJTrFSaHta6ay6iaOSRvBPkdlHvwYNrLwk5R2qD6q4RNL-DZbbiTMANu8_MPyxN8lf_vjFxyPo9H_17reET-KxGfK879bbcGCbW3J4AKYjxr5-RpCb9tBCq7dMfvy-6398fhnLwcY_puKgJ9IKxQuM3ihh_iyahZ6wu0NuVU4No/4db/8KnHeuGCQNej8NxWHmaDtg/h164/h001.SsX-0aDrG8Pi0lR_YgHROtOY6xr3ajMQMioP9jUl4qk)** - *"bundler-audit provides patch-level verification for Bundled apps."*
+- **[database_consistency](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMMFvC58PMvBEL9ZeWHYY1e1zSsoqJHf69qhOwLCXq90nvs1sSJ60ikD69negU2-R2KedX0rG5XgoFfgn17PYna7oBdTtjJdU6mXs92ybh-oYSfV1_C_ZtKhKGmOAdNbVuigCYzavnu_v4-kSjbGh4TDTcKupgDPEP0nCMYualfnJ/4db/8KnHeuGCQNej8NxWHmaDtg/h165/h001.OY02avfRvLKZ4_JTL8-som5lRAQVJ6MJnwmLTG7ouA8)** - *"Provide an easy way to check the consistency of the database constraints with the application validations."*
+- **[devise](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMI-lsrOwV5iq_s0qJI5tWSIOk6hDONBhPPkZqFSGgwJv2pFEkZuHekbROmQ9VW-jB86aSmmD5uELzgv3UXPbTC0zTE4Qu-qSeozsZYUHu0xMzgcomGUzIwXlvPHqp1BHHa1UyNV7OLM7XO4z8GEIr68E0lvQ5gVrcrHdey4NY3di/4db/8KnHeuGCQNej8NxWHmaDtg/h166/h001.byos13A8ZQmr79xC2TBbpORhPXJVeCGEbEtkNPe14c0)** - *"Flexible authentication solution for Rails with Warden"*
+- **[interactor](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMImJqe80LDgRbBdsz4x668FT1q8B8ow8xtOxAcw5J6lgDMBukZ9DPhsDQ3xRdQEkJTIfawfmyUWj7BOGpp65s7UPRsy-8DLeK6gRJ1Q2NyWGJwl3QxIoQmciGTGPDZFOSh2IlHcC4RxvL_UcAoFf9TnIEhM7z1DzgeEGOlWQGRMu/4db/8KnHeuGCQNej8NxWHmaDtg/h174/h001.ZYaSoprWFhtGXZlmyEKD5EwXqFjP4Cgp-ez_CyP723M)** - *"Interactor provides a common interface for performing complex user interactions."*
+- **[local_time](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMFn3P70Q1O4EJm9H4k4rkMqCLACabRkKJMQT2H6mUl2D6dUklqbn9pdh8y0JmkRNqXoMYeHh-LBnlMBIMKkRVj8P-NQo2aXVL5tpws31pxko68L0VHBl-R7gajT49WwUcQBlkIzjd_uCsEmYmL-30OFMBjgWxn-sU_NWKL2OIgvc/4db/8KnHeuGCQNej8NxWHmaDtg/h175/h001.1PnurRVzYSQnGn4T19fDrncmdZ_nk6G6xMBSQR2BfJE)** - *"Rails engine for cache-friendly, client-side local time"*
+- **[meta-tags](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMCsV9BBCuzIfFwnGpKCGx4B6GySoW-xF_WHbV-MAEafWt-2dmApoFQ4rCf-s295vfCKft8dbhiZdvuXyH_jJiNUT785Hejj2tqOqTyflemOBzTn2dzGz4Qwrei0jq6n5diuVQqhtKakDyYdx2YEB7vVLVWmg-nmgkCG7JoXtKjza/4db/8KnHeuGCQNej8NxWHmaDtg/h176/h001.NIh5kE7I_vn4lyVoHAsM1en9dkpj13Ib6zbIFkfFMpk)** - *"Search Engine Optimization (SEO) plugin for Ruby on Rails applications."*
+- **[minitest](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLd0WMMqfzehqetT_Fyv2yPPNM5V3THAdoYrpY2b_wZigmS_JBlfW3Px5GQ4imgG0InH8qelesKKH-zg0Rj8Vvi6TADhML0TIriWkdz931f21nxpT5V7cGzXkCg0eHJ5gCdejoupOl5em_68HItBvGx0O5KLChDpNxw_4URDxAPR/4db/8KnHeuGCQNej8NxWHmaDtg/h177/h001.CRQKUHGVp7DSc4-qbONrp8K2spwwhso-JAV70snlhEQ)** - *"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking"*
+- **[nocheckout](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLuLEUjxfDE9ATWslQr-i4sm7g5zTZQCHZf2pl4LFkrcY3jGVXJgKTtBs1tC_IQhjtYRgCYYvdXcMeSkVrCWCYNM1Eo6ljo5W9jLkJs5oAfXahTwpM0kHvfMVClhy5aU53LYuiQzwwBWTeVm1N0OEx3U6bHv3efFsKjDDl2k-LGb/4db/8KnHeuGCQNej8NxWHmaDtg/h178/h001.j8eiVx5o00U_glYmMJDlO_ne4F4Sl4A5uLZVU2dy9rw)** - *"Rails controllers for Stripe Checkout Sessions and Webhooks"*
+- **[nopassword](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMBvM4DiQ-AX57Lqxzx2H8I4xfdseH_dcHgXpYGbp-g-C5HguYIUqKyl4gnWOJ0iRUhJXPxLk2wdUFURkxDYhubup7EB61vTcELEv6q0BueINgSDQBa7q9ZWqy6wgSNRU2uickioAcZMbg6XvClaN-Mom_ndcO0_8y6JjgFuyb7T0/4db/8KnHeuGCQNej8NxWHmaDtg/h179/h001.5caPffiY9CNOTOwiq3mRv9mOEM9LQ8VSX1SClhT2X-U)** - *"NoPassword is a toolkit that makes it easy to implement temporary, secure login codes initiated from peoples' web browsers so they can login to Rails applications via email, SMS, CLI, QR Codes, or any other side-channel."*
+- **[og](https://link.mail.beehiiv.com/ss/c/u001.Tuw4pyl3dUE7P9jrHEbWpiUsK_eg9M50m0o46dtYgjcBSTdgCu0DojfAdneL0TdfpsmRj831ews0Ymm-Ao8pjyWs-vkLAKiWH9Dhaf0zp5VaojtOs_9oI0LescjPaQ8XCvRHw6WyZ1KKSCRbukDQh-09wt2a7Cxa-pQz934HEXM/4db/8KnHeuGCQNej8NxWHmaDtg/h180/h001.k9mSgi3boquLji9XYUbO_7a1ILqqojXbzowj1vnRjJo)** - *"Object Graph (Og) is a state of the art ORM system. Og serializes standard Ruby objects to Mysql, Postgres, Sqlite, KirbyBase, Filesystem and more."*
+- **[omniauth-oauth2](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMAlIVy8nBldhpVfrb-_TBx9dxksZ3jbZpE3hYVWBONMC3yuKajdTHpt1XNdibhVHqMuWU5D2oaK15TDO212vhYouiAIDsL-vknGKHkmtZsF7RkrIS1GFVcG0gZnmy32NCbOlc95xu-A7hJ7kun029Z5sWw-AgjMO9AMq_DPLkKoU/4db/8KnHeuGCQNej8NxWHmaDtg/h181/h001.UVR7OGlTg5hDrBwtvvqkjvqPiDeyk9z8KlnwTh7MBfI)** - *"An abstract OAuth2 strategy for OmniAuth."*
+- **[overmind](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMNebR6y-5XulAu34Bq_zYL5PPgDn_TXV9su5jSkhvJa0BTni9mtVyeDC8XiK29iOHpJ41W4tt3IHxFvcaVX60zcZErNO1KtY2yxZdp9TVm66JT1ylCO8QZWMRXKq9txGyezOkgF4wV81-SB0rU3-z6h1t--L1_oA8-vokKAglCro/4db/8KnHeuGCQNej8NxWHmaDtg/h182/h001.688-OdDvozaGEEPpzTykTiu3V5p2F2nS61iG7tTlSso)** - *"Overmind is a process manager for Procfile-based applications and tmux."*
+- **[pagy](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMOjrW4kxccUbYjfIs9N5PGPMq6wlL6eYLbFzQSGROu9AgSu2GCNnpDbm2B3og6Hn8H3qtSu40KuxrXLx34PY0pGPtEtSOIiYCWsv_ciPmaawySHoY2bdLNihKXzpuF9FhXdrihL_NDj0yiBhaCv-17s/4db/8KnHeuGCQNej8NxWHmaDtg/h183/h001.jzLmpFr_1B_PeqKCex0sHoO1Hsz2PJAAUFXZM41T6xY)** - *"Agnostic pagination in plain ruby. It does it all. Better."*
+- **[phlex](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLe1aCgzGYXudC0IftX3LC1Y0Zg21nzQ59GIgBOfrikilDuF51vWMvAgVzluZSSbtAJhjojS_iHxr0HTaOrGsMWt7S5dEUpihKX9DvtbOFmD24KORluHyPEmKeu6zPYWW4tpCqHPwX979-TlfeO9Raste4iIN7RmTMAv7Pxwc7ay/4db/8KnHeuGCQNej8NxWHmaDtg/h184/h001.tRUSyTtfPkCJDyFlhUfP5a0tA359tanUWcQIATqzaIE)** - *"A high-performance view framework optimised for fun."*
+- **[pundit](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMKKe-cuP0A5wlbPWGLWvFYuEqKFYGPr-ScS3GS6obxBTiT0KogHicfJdqFn6uoiY457hXRurMSPBycoxQTM4-0al7F86S_7u5PNsJ78Eq64FYgGI5lAqHxu0C7EFu4Frb8ERW2FMY8-ovrvyvouCxXQ/4db/8KnHeuGCQNej8NxWHmaDtg/h185/h001.sb87HF6ayDuk-yNFWEKfpUIDp5IHwzGOrAeAdxBmr5s)** - *"Object oriented authorization for Rails applications"*
+- **[ransack](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMDz72pf4EXU-WtEskfjWDzzr3fBKFpMtEki5kKGAfdU043q2roqaR2Hr1HTjwzDTp2PF_zryvCEcO79PAxeb92Tr9gw74NZmwlImB6UidClCvHpafzNW5OGSn33Ofy31yc_bxXmNidJZmaGZk_K45cf7IHJkDxxMvDjUf-oflz4t/4db/8KnHeuGCQNej8NxWHmaDtg/h186/h001.WkZVp5mpOCA74Rq9oMADhGor-Ksz1BDLhdgh7nGuolA)** - *"Ransack is the successor to the MetaSearch gem. It improves and expands upon MetaSearch's functionality, but does not have a 100%-compatible API."*
+- **[strong_migrations](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMGc3VtxQY5xeg-TchXPbXjF9jmLz0Wj9mW3Tkuy3suSzosnnJ4rTnHfiOO0rbbZxWuf7EmHfllMWfyMuY3W1e0qVXJxrcAnNfpSF_iKuas99X-GCYDVjhz33mCt1Veuwm4wbhdrmTUrmYg4jrn7027lmTpXSBTz_oJ6ta8kZEcVa/4db/8KnHeuGCQNej8NxWHmaDtg/h187/h001.aIk-GV28HB2MUXDj-z6vcCRsmFEFAZnwHvuZDDuKW20)** - *"Catch unsafe migrations in development"*
+- **[stylecheck](https://link.mail.beehiiv.com/ss/c/u001.Tuw4pyl3dUE7P9jrHEbWpiUsK_eg9M50m0o46dtYgje0GRGCO7e_Er-7XC7OiZ80MPltlP7XxSsrHoaPeEtO-Q8eQT02piVmlI9v7s2PgxYoyUPYQ_h3z8SzqMip4mqV9eJcJhFkuFYnS6Kz_aCeh9uvQ1Mj4_hfMvlJXz9CPCEA00-3iw2uu1l3G4glTiRq/4db/8KnHeuGCQNej8NxWHmaDtg/h188/h001.qG36xNkSB7sFcssA1lWvbPwRBeyQkpbI3KD_xwLdyx8)** - *"Runs code style check on Ruby and SCSS files."*
+- **[superform](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLuLEUjxfDE9ATWslQr-i4u6_6rusa0WFhETgKVsE2J1B4OTkVVq_2O91Gd0Owm1Efr4Yz0ai1fjwuZ9JDEEauc3sFbe_otQgtJmsK9gh_c7Qb-AwkWwlh0Htw7IL6V0pLND90KOafJMhmpYEgTCuZyjKtpvb_UqGOdtucK4ZKhP/4db/8KnHeuGCQNej8NxWHmaDtg/h189/h001.XipPbOeH7jp2-RrSD_8R9ebfzXKqoB3YxbBJA-cwnSE)** - *"A better way to customize and build forms for your Rails application"*
+- **[superview](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMLuLEUjxfDE9ATWslQr-i4sv4AqlkeawNvfWl6fsrNr3iSJ8wlronN7G_1oGk5xDTTOgZyvm1xxZ4wzb9rVug3ZiTfAukco5fFbbr7VOBPj7iyjxtv16aeNUrRmaNSnAXSsFyS7GKCsJJNYsPFYoIbDG8pVqXbXd_bIBP0MhFh4R/4db/8KnHeuGCQNej8NxWHmaDtg/h190/h001.OB1qBJaq9Z1IE5jBq0pMQJ4zU4usNHFSO2swRPpu0Q0)** - *"Build Rails applications entirely out of Phlex components."*
+- **[view_component](https://link.mail.beehiiv.com/ss/c/u001.TKJLQEijx_WLldl-_xqpMHqPGsrhxfiJAcfVOdf0xpXwWDuU_M-2IpD55EAhUJZklkH7e4sNcYaNgCjNCtOMG1MVJkyLFTPmr9Vr-Aneby6XOzF4dE7HCTlJkWWavSv4q_MCbDjZrA0oo_qQH31h01x2_l6xyhEcpIJFwo1Euc6zAH1QRi-CdfB6W8lPSwdh/4db/8KnHeuGCQNej8NxWHmaDtg/h191/h001.MXp5XC9c6imfTDe27FkA9-QrVkF58mrU9sfEN8djo7M)** - \_"A framework for building reusable, testable & encapsulated view components in Ruby on Rails."
 
 Source: [x/pkayokay](https://x.com/pkayokay/status/1878778796192735708?utm_source=shortrubynews&utm_medium=newsletter&utm_campaign=short-ruby-newsletter-edition-119&_bhlid=9a072f4bee0135a3ff54fc1d7a49c2cc6ff23c7b) / [shortruby#119](https://newsletter.shortruby.com/p/edition-119?utm_campaign=short-ruby-newsletter-edition-119&utm_medium=newsletter&utm_source=shortrubynews)
+
+### Useful commands
+- console in binding.pry mode, you could check the call trace with
+```ruby
+caller
+```
+
+### Update readonly Model
+
+```ruby
+# overwrite method before update objects
+Model.class_eval do
+   def readonly?
+     false
+   end
+end
+# or try this :)
+Model.class_eval do
+    def self.readonly_attributes
+      []
+    end
+end
+```
 
 ### Pattern matching
 
@@ -96,9 +120,11 @@ def matcher(**data)
   end
 end
 ```
+
 Source: [fly.io](https://fly.io/ruby-dispatch/pattern-matching-on-ruby-objects/)
 
 ### Colorize logger
+
 ```ruby
 module ColorizedLogger
   COLOR_CODES = {
@@ -145,9 +171,11 @@ end
 
 Rails.logger.extend(ColorizedLogger)
 ```
+
 ### Test coverage pre-commit hook
 
 To get an positive exit code for pre-commit hook integration you have to add this to your spec config:
+
 ```ruby
 # spec/spec_helper.rb
 RSpec.configure do |config|
@@ -176,6 +204,7 @@ RSpec.configure do |config|
 ```
 
 Pre-commit hook:
+
 ```bash
 files=$(git --no-pager diff --name-only --cached --diff-filter=AM)
 erbfiles=$(echo "$files" | grep -e '\.html.erb$')
@@ -185,6 +214,7 @@ erbfiles=$(echo "$files" | grep -e '\.html.erb$')
 ```
 
 ### before_action wrapper
+
 ```ruby
 class User::LikesController < ApplicationController
   abort_without_feature :like
@@ -200,7 +230,9 @@ module RequiresFeature
   end
 end
 ```
+
 Source: [buttondown](https://buttondown.com/kaspth/archive/clear-up-your-rails-controllers-with/)
+
 ### Rails ERD
 
 For creating an erd diagram of your db schema, you could create a pdf with: [rails-erd](https://github.com/voormedia/rails-erd) with this command:
@@ -214,6 +246,7 @@ Avoid race conditions with `ActiveRecord::Base.transaction do` and `Model.lock.f
 Source: [fastruby.io](https://www.fastruby.io/blog/rails/code-quality/An-introduction-to-race-condition.html)
 
 ### Migration from sidekiq to solid_queue
+
 ```bash
 Step 1: Update Gemfile
 # Remove Sidekiq
@@ -232,7 +265,7 @@ Step 4: Run migrations
 # $ rails db:migrate
 
 Step 5: Update config/application.rb
-# Rails.application.configure do 
+# Rails.application.configure do
 #	config.active_job.queue_adapter = :solid_queue
 # end
 
@@ -274,7 +307,7 @@ gem 'mission_control-jobs'
 
 # In config/routes.rb:
 Rails.application.routes.draw do
-	mount MissionControl::Jobs::Engine, at: "/jobs" 
+	mount MissionControl::Jobs::Engine, at: "/jobs"
 end
 
 Step 12: Remove any Sidekiq web UI routes
@@ -285,8 +318,10 @@ Step 12: Remove any Sidekiq web UI routes
 # mount Sidekiq:: Web => '/sidekiq'
 ```
 
-###  Responsible monkeypatch
+### Responsible monkeypatch
+
 Here's the list of rules I try to follow:
+
 1. Wrap the patch in a module with an obvious name and use `Module#prepend` to apply it
 2. Make sure you're patching the right thing
 3. Limit the patch's surface area
@@ -391,11 +426,16 @@ RenderDiscardedMonkeypatch.apply_patch
 ```
 
 Source: [appsignal/blog](https://blog.appsignal.com/2021/08/24/responsible-monkeypatching-in-ruby.html)
+
 ## RSpec
+
 ### Bisect flaky tests
+
 with `rspec --bisect <file>` you could find flaky test setting to re-run it.
+
 > [!Hint]
-If `rspec` exits with `1` if suite passes, try `untilpass() { until "$@"; do :; done }` and run it with `untilpass rspec ...`
+> If `rspec` exits with `1` if suite passes, try `untilpass() { until "$@"; do :; done }` and run it with `untilpass rspec ...`
+
 ### Testing an array with attributes
 
 ```ruby
@@ -412,6 +452,7 @@ expect(items).to match_array([
   have_attributes(id: 2, name: 'Two'),
 ])
 ```
+
 Source: [benpickles](https://www.benpickles.com/articles/73-testing-an-array-of-objects-with-rspec-have_attributes)
 
 ### Custom matcher
@@ -476,6 +517,7 @@ end
 
 ConsumerClass.new(DataClass({first_name: "Bill", last_name: "...", ...}))
 ```
+
 Links: [Polyfill - Data gem](https://github.com/saturnflyer/polyfill-data)
 
 ## RSpec factory trait & transient
@@ -504,6 +546,7 @@ end
 # usage
 let!(:user) { create(:user, :with_book, title: 'Ruby') }
 ```
+
 Source: [dev.to/n350071](https://dev.to/n350071/rspec-factorybot-transient-trait-with-argument-2djd)
 
 ## RailsWorld2023
@@ -511,31 +554,34 @@ Source: [dev.to/n350071](https://dev.to/n350071/rspec-factorybot-transient-trait
 Some notes on talks:
 
 - Turbo morphing
-	- new feature for keep scrolling position on whole dom body change
+  - new feature for keep scrolling position on whole dom body change
 - no-build / bun
-	- key goal to eliminate build time for frontend stuff, ship as code
+  - key goal to eliminate build time for frontend stuff, ship as code
 - if assignment block
-	```ruby
-	def test
-	  42
-	end
-	if a = test
-		puts "Assign #{a}"
-	else
-	  puts "Nil is return"
-	end
-	```
+  ```ruby
+  def test
+    42
+  end
+  if a = test
+  	puts "Assign #{a}"
+  else
+    puts "Nil is return"
+  end
+  ```
 - Class.method(:name).source_location
-	- get code location of a method
+  - get code location of a method
 - Model attribute strict_loading prohibit loading relations
 - Migration add_column :virtual
+
 ```ruby
 create_table :users do |t|
   t.numeric :height_cm
   t.virtual :height_in, type: :numeric, as: 'height_cm / 2.54', stored: true
 end
 ```
+
 - Model with_options relations
+
 ```ruby
 class User
   with_options dependent: :destroy do |options|
@@ -544,10 +590,11 @@ class User
   end
 end
 ```
+
 - try(:method_name) || default_method
 - Routing constraints
-	- subdomain
-	- authenticated
+  - subdomain
+  - authenticated
 - Routes draw split into files
 - rails generate generator ApiClient
 - String truncate_words with omission
@@ -562,6 +609,7 @@ Some notes while doing the [udamy course](https://www.udemy.com/course/pro-ruby-
 ### Basics
 
 Render plain text:
+
 ```ruby
 def hello
   render plain: "hello world!"
@@ -698,7 +746,7 @@ Render partial for model:
 
 <span class="badge"><%= link_to ingredient.name, 
                       ingredient_path(ingredient) %>   </span>
-````
+```
 
 ### Model
 
@@ -742,7 +790,7 @@ end
 # Form in view
 <%= form\_for(\[@recipe, @comment\], :html => {class: "form-horizontal", 
                                                 role: "form"}) do |f| %>
-````
+```
 
 ### Links
 
@@ -956,6 +1004,7 @@ end
 Create a association and test it:
 
 Association
+
 ```ruby
 # chef model
 validates :chef_id, presence: true
@@ -969,6 +1018,7 @@ has_many :recipes, dependent: :destroy
 ```
 
 Test
+
 ```ruby
 def setup
   @chef = Chef.create!(chefname: "mashrur", email: "mashrur@example.com")
@@ -981,7 +1031,7 @@ test "recipe without chef should be invalid" do
 end
 ```
 
-###  Styling
+### Styling
 
 Add `bootstrap` to project (good html/css tutorial [link](https://learn.shayhowe.com/html-css/)):
 
@@ -998,6 +1048,7 @@ gem 'jquery-rails'
 ```
 
 ### Views
+
 Render html for each data:
 
 ```ruby
@@ -1005,7 +1056,7 @@ Render html for each data:
                                     Ingredient.all, :id, :name do |cb| %>
 <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
       <% end %>
-````
+```
 
 ### Database
 
@@ -1031,4 +1082,4 @@ Many to many association:
 # Model
 has_many :recipe_ingredients
 has_many :recipes, through: :recipe_ingredients
-````
+```
