@@ -68,7 +68,9 @@ Learning from some youtube guys:
 Source: [x/pkayokay](https://x.com/pkayokay/status/1878778796192735708?utm_source=shortrubynews&utm_medium=newsletter&utm_campaign=short-ruby-newsletter-edition-119&_bhlid=9a072f4bee0135a3ff54fc1d7a49c2cc6ff23c7b) / [shortruby#119](https://newsletter.shortruby.com/p/edition-119?utm_campaign=short-ruby-newsletter-edition-119&utm_medium=newsletter&utm_source=shortrubynews)
 
 ### Useful commands
+
 - console in binding.pry mode, you could check the call trace with
+
 ```ruby
 caller
 ```
