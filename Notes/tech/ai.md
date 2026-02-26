@@ -13,6 +13,92 @@ tags: []
 - [phind.com](https://www.phind.com)
 - [abbey](https://abbey.us.ai/) - summarize anything
 
+## Claude
+
+- Audit session: `claude logs --last-session
+- Security settings:
+	- **Always place** deny rules first, then specific allow rules. This principle follows the "deny by default" logic used in network firewalls.
+	- Documentation: [claude#settings](https://code.claude.com/docs/en/settings)
+		```json:~/.claude/settings.json
+	     "security": {
+		    "prompt_injection_protection": true,
+		    "max_file_read_size_mb": 10
+		  },
+		  "permissions": {
+		    "deny": [
+		      "Read(./.env)",
+		      "Read(./.env.local)",
+		      "Read(./.env.development)",
+		      "Read(./.env.production)",
+		      "Read(./.env.staging)",
+		      "Read(./.envrc)",
+		      "Read(./.secrets)",
+		      "Read(./.secret)",
+		      "Read(./.vault)",
+		      "Read(./**/.env)",
+		      "Read(./**/.env.local)",
+		      "Read(./**/.env.development)",
+		      "Read(./**/.env.production)",
+		      "Read(./**/.env.staging)",
+		      "Read(./**/.envrc)",
+		      "Read(./**/secrets/**)",
+		      "Read(./**/credentials.json)",
+		      "Read(./**/.credentials/**)",
+		      "Write(./.env)",
+		      "Write(./.env.local)",
+		      "Write(./.env.development)",
+		      "Write(./.env.production)",
+		      "Write(./.env.staging)",
+		      "Write(./.envrc)",
+		      "Edit(./.env)",
+		      "Edit(./.env.local)",
+		      "Edit(./.env.development)",
+		      "Edit(./.env.production)",
+		      "Edit(./.env.staging)",
+		      "Edit(./.envrc)",
+		      "Bash(cat .env:*)",
+		      "Bash(cat .envrc:*)",
+		      "Bash(head .env:*)",
+		      "Bash(tail .env:*)",
+		      "Bash(less .env:*)",
+		      "Bash(more .env:*)",
+		      "Bash(git push --force:*)",
+		      "Bash(git push -f:*)",
+		      "Bash(git reset --hard:*)",
+		      "Bash(git clean -f:*)",
+		      "Bash(git checkout .:*)",
+		      "Bash(rm -rf:*)",
+		      "Bash(rm -r:*)",
+		      "Bash(gcloud compute instances delete:*)",
+		      "Bash(gcloud container clusters delete:*)",
+		      "Bash(gcloud dataproc batches delete:*)",
+		      "Bash(gcloud dataproc clusters delete:*)",
+		      "Bash(gcloud dataproc jobs delete:*)",
+		      "Bash(gcloud functions delete:*)",
+		      "Bash(gcloud iam service-accounts delete:*)",
+		      "Bash(gcloud projects delete:*)",
+		      "Bash(gcloud pubsub subscriptions delete:*)",
+		      "Bash(gcloud pubsub topics delete:*)",
+		      "Bash(gcloud run services delete:*)",
+		      "Bash(gcloud scheduler jobs delete:*)",
+		      "Bash(gcloud secrets delete:*)",
+		      "Bash(gcloud sql instances delete:*)",
+		      "Bash(gcloud storage rm:*)",
+		      "Bash(gcloud workflows delete:*)",
+		      "Bash(terraform destroy:*)",
+		      "Bash(bq rm:*)"
+		    ],
+		    "allow": [
+		      "Read(./**)",
+		      "Write(./**)",
+		      "Edit(./**)",
+		      "Read(~/.claude/**)",
+		      "Read(~/.claude/skills/**)",
+		      "Read(~/.claude/brands/**)"
+		    ],
+		    "defaultMode": "default"
+		  }
+		```
 ## Search engine
 
 - [perplexity.ai](https://www.perplexity.ai/)
