@@ -20,11 +20,23 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - Alexander Puschkin - Erzählungen
  - Vladimir Nabokow - Die Kunst des Lesens
 
-
 ### 2025
 **Die Hände meines Vaters: Eine russische Familiengeschichte**
 by Irina Scherbakowa
 ISBN: 978-3426301333 ⭐ ⭐ ⭐ 
+
+****Die Prinzipien des Wohlstands: Denke und investiere wie ein Milliardär****
+by Florian Homm
+ISBN: 978-3959725675 ⭐ ⭐ ⭐ ⭐
+> Ein weiterer wertvoller Indikator ist der Beneish-M-Score, der die Gewinnqualität misst und eine Einschätzung gibt, ob die Unternehmensbilanz manipuliert ist oder nicht. Die empirisch belegte Treffer-Wahrscheinlichkeit des Tools liegt bei 76 Prozent. Ein Wert größer als -2,22 weist auf eine mögliche Manipulation der Bilanzen hin.
+> Ebenfalls möchten wir uns den Piotroski-F-Score anschauen. Dieser Score ist ein Analyse-Tool, mit dessen Hilfe man unterbewertete und werthaltige Aktien von wertzerstörenden Aktien unterscheiden kann. Entscheidungsgrundlage bilden neun Kennzahlen, welche in die Untergruppen Profitabilität, Finanzierung und Effizienz eingeteilt werden können. 
+> Eine empfohlene Aufteilung ist 70 Prozent in Industriestaaten und die restlichen 30 Prozent in Schwellenländer. Eine Aufteilung nach dem Bruttoinlandsprodukt (BIP) würde sogar eine Gewichtung von etwa 60 Prozent Industriestaaten und 40 Prozent Schwellenländer ergeben:
+> -   iShares Core MSCI World UCITS ETF,
+> -   Xtrackers MSCI Emerging Markets UCITS ETF.
+> Anleger, die nur einen ETF in ihr Depot aufnehmen und auf jährliches Rebalancing verzichten möchten, können auf folgenden ETF zurück-greifen:
+> Der MSCI All Countries World Index (ACWI) enthält Aktien der 3.000 größten börsengehandelten Unternehmen aus insgesamt
+> 50 Ländern. Anders als beim Industrieländer-Index MSCI World sind beim All Countries auch Unternehmen aus 27 Schwellenländern wie China, Südkorea oder Mexiko repräsentiert.
+> [[personal/learning/finance|finance]]
 ### 2024
 
 **Trotzdem Ja zum Leben sagen: Ein Psychologe erlebt das Konzentrationslager**
