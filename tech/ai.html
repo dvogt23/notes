@@ -39,7 +39,7 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-a2a3d50d.js";
+            window.path_to_searchindex_js = "../searchindex-4ba42b88.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-4c0ee820.js"></script>
@@ -189,6 +189,96 @@
 <ul>
 <li><a href="https://www.phind.com">phind.com</a></li>
 <li><a href="https://abbey.us.ai/">abbey</a> - summarize anything</li>
+</ul>
+<h2 id="claude"><a class="header" href="#claude">Claude</a></h2>
+<ul>
+<li>Audit session: `claude logs –last-session</li>
+<li>Security settings:
+<ul>
+<li><strong>Always place</strong> deny rules first, then specific allow rules. This principle follows the “deny by default” logic used in network firewalls.</li>
+<li>Documentation: <a href="https://code.claude.com/docs/en/settings">claude#settings</a>
+<pre><code class="language-json:~/.claude/settings.json"> "security": {
+    "prompt_injection_protection": true,
+    "max_file_read_size_mb": 10
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.local)",
+      "Read(./.env.development)",
+      "Read(./.env.production)",
+      "Read(./.env.staging)",
+      "Read(./.envrc)",
+      "Read(./.secrets)",
+      "Read(./.secret)",
+      "Read(./.vault)",
+      "Read(./**/.env)",
+      "Read(./**/.env.local)",
+      "Read(./**/.env.development)",
+      "Read(./**/.env.production)",
+      "Read(./**/.env.staging)",
+      "Read(./**/.envrc)",
+      "Read(./**/secrets/**)",
+      "Read(./**/credentials.json)",
+      "Read(./**/.credentials/**)",
+      "Write(./.env)",
+      "Write(./.env.local)",
+      "Write(./.env.development)",
+      "Write(./.env.production)",
+      "Write(./.env.staging)",
+      "Write(./.envrc)",
+      "Edit(./.env)",
+      "Edit(./.env.local)",
+      "Edit(./.env.development)",
+      "Edit(./.env.production)",
+      "Edit(./.env.staging)",
+      "Edit(./.envrc)",
+      "Bash(cat .env:*)",
+      "Bash(cat .envrc:*)",
+      "Bash(head .env:*)",
+      "Bash(tail .env:*)",
+      "Bash(less .env:*)",
+      "Bash(more .env:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)",
+      "Bash(git checkout .:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rm -r:*)",
+      "Bash(gcloud compute instances delete:*)",
+      "Bash(gcloud container clusters delete:*)",
+      "Bash(gcloud dataproc batches delete:*)",
+      "Bash(gcloud dataproc clusters delete:*)",
+      "Bash(gcloud dataproc jobs delete:*)",
+      "Bash(gcloud functions delete:*)",
+      "Bash(gcloud iam service-accounts delete:*)",
+      "Bash(gcloud projects delete:*)",
+      "Bash(gcloud pubsub subscriptions delete:*)",
+      "Bash(gcloud pubsub topics delete:*)",
+      "Bash(gcloud run services delete:*)",
+      "Bash(gcloud scheduler jobs delete:*)",
+      "Bash(gcloud secrets delete:*)",
+      "Bash(gcloud sql instances delete:*)",
+      "Bash(gcloud storage rm:*)",
+      "Bash(gcloud workflows delete:*)",
+      "Bash(terraform destroy:*)",
+      "Bash(bq rm:*)"
+    ],
+    "allow": [
+      "Read(./**)",
+      "Write(./**)",
+      "Edit(./**)",
+      "Read(~/.claude/**)",
+      "Read(~/.claude/skills/**)",
+      "Read(~/.claude/brands/**)"
+    ],
+    "defaultMode": "default"
+  }
+</code></pre>
+</li>
+</ul>
+</li>
 </ul>
 <h2 id="search-engine"><a class="header" href="#search-engine">Search engine</a></h2>
 <ul>
