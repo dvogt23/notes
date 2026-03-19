@@ -7,6 +7,7 @@ tags: []
 ## Articles
 
 - [Chatbots Are Cheating on Their Benchmark Tests](https://www.theatlantic.com/technology/archive/2025/03/chatbots-benchmark-tests/681929/)
+- [MicroGPT explained](https://growingswe.com/blog/microgpt)
 
 ## Chat bots
 
