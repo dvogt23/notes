@@ -14,12 +14,15 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - The Luck of Barry Lyndon
  - Das trunkene Schiff
  - The Invisible Man
- - Der Spieler by Dostojewski, Fedor M.
  - Das Schneckenhaus by Mustafa Khalifa
  - Jeff Olson - Der kleine Vorsprung
  - Alexander Puschkin - Erzählungen
  - Vladimir Nabokow - Die Kunst des Lesens
 
+### 2026
+**Der Spieler**
+by Fjodor M. Dostojewskij (Ü: Swetlana Geier) ISBN: 978-3-10-015410-1⭐⭐⭐
+Kompakter Roman über Spielsucht in deutschen Casinos. 
 ### 2025
 **Die Hände meines Vaters: Eine russische Familiengeschichte**
 by Irina Scherbakowa
