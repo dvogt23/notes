@@ -1,4 +1,6 @@
 # General
+## Interesting
+- [LawOfSoftwareEngineering](https://lawsofsoftwareengineering.com/)
 ## Software development workflow
 
 Some of my favourite tools and routines I using in my development environment.

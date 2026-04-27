@@ -1,4 +1,9 @@
 # Quotes
+François de La Rochefoucauld
+>Almost all our faults are more pardonable than the methods we resort to hide them.
+
+Unknown
+> Gehe nicht zu einer Schlammschlacht mit einem Schwein. Beide werden schmutzig und nur dem Schwein gefällt es.
 
 Sadhguru 
 > Elternschaft ist schon eine lustige Sache. Du versuchst etwas zu tun, von dem niemand jemals wusste, wie man es richtig macht. Aber du willst dein Bestes geben! Also was kannst du am besten tun? Das Erste ist, ein wenig an sich selbst zu arbeiten.

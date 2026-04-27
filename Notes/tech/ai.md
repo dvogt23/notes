@@ -4,10 +4,14 @@ aliases: []
 tags: []
 ---
 
-## Articles
+## Interesting
 
 - [Chatbots Are Cheating on Their Benchmark Tests](https://www.theatlantic.com/technology/archive/2025/03/chatbots-benchmark-tests/681929/)
 - [MicroGPT explained](https://growingswe.com/blog/microgpt)
+- [Karpathy-Skills](https://github.com/forrestchang/andrej-karpathy-skills)
+- [Personal AI Agent - frona](https://github.com/fronalabs/frona)
+- [Paperclip - AI company](https://github.com/paperclipai/paperclip)
+- [Skills - dot-skills](https://github.com/pproenca/dot-skills)
 
 ## Chat bots
 
