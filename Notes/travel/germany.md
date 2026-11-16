@@ -21,7 +21,6 @@
  - Takumi Tonkotsu -Takumi Nidaime- Ramen
  - Takumi 6th Spicy Tan Tan Men
  - Jenka - russian kitchen
- - Seasons Hotpot Halal
 
 ## Hamburg
  - Azeitona - vegetarische arabische Küche
@@ -39,3 +38,19 @@
 - Sommerrodelbahn/Kneippfad
 - Schloss Schwanstein/Hohen Schwangau
 - Schwansee 
+
+# Süden
+- Bayrischzell - [Tannerhof](https://natur-hotel-tannerhof.de/de/winter)
+
+## Winterberg
+- schöner Spielplatz: [Bullenwiese](https://maps.app.goo.gl/ReDfXzuQHTCXVWJQ8)
+- Wanderweg für Kinder: [Fabelhafte Elfensteig](https://maps.app.goo.gl/mCe3mczAT4XKeqCR8)
+- großer centerparcs Spielplatz: [Aventura - Der Spielberg](https://maps.app.goo.gl/yZynjpgeKP9rmUpA7)
+
+## Lübeck
+- Ramen - [Yume](https://maps.app.goo.gl/NneXCLo8M6DC6Ls79)
+- [Günter Grass Haus](https://maps.app.goo.gl/zPuK9zFdyGZcrhWC6)
+	- Helme Heine Ausstellung (Kinder)
+- Emilienstraße 19, 23558 Lübeck
+- Timmerndorfer Strand
+	- Niendorf - [Hafeneck](https://maps.app.goo.gl/7dwsLd2sqWeD95GJ8)

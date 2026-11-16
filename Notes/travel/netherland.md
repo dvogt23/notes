@@ -14,6 +14,7 @@
  - legendary beer [Trappist Westvleteren](https://www.trappistwestvleteren.be)
  - [warbeek](https://waarbeek.de/) All-inclusive Freizeitpark
  - [Pony city](https://www.ponyparkcity.nl)
+ - [kleineWolf](https://www.kleinewolf.nl/de/) - Camping
 
 ## Amersfoort
 - Bastion Hotel ⭐️⭐️⭐️⭐️

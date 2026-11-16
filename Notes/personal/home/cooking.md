@@ -15,6 +15,7 @@ Prefer to eat 2-4 eggs a day, but take care of the yolk, dont boil or fry it. Ju
 - [Pizza recipe](#Pizza%20recipe)
 - [Egg salad](#Egg%20salad)
 - [Pancakes](#Pancakes)
+- [Blini](#blini)
 ### Bread
 
 Sauerteig:
@@ -151,9 +152,21 @@ FÜR DEN TEIG (15 Stk.)
 - 3 Eier (Gr. M)
 - 300 ml Milch
 
+## Blini
+Teig
+- 4 Stück Eier
+- 200 g Mehl
+- 500 g Milch
+- 50 g Zucker
+- 75 g Öl
+- 1 Prise Salz
 
+## 🧇 Buchweizen-Quark-Waffeln
 
-
-
-
+## Zutaten
+- 250 g Magerquark
+- 2 Eier
+- 1 TL Backpulver
+- 1 TL Kokosöl
+- 80 g Buchweizenmehl
 

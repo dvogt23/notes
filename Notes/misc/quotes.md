@@ -1,4 +1,5 @@
 # Quotes
+
 François de La Rochefoucauld
 >Almost all our faults are more pardonable than the methods we resort to hide them.
 
@@ -75,3 +76,6 @@ Albert Einstein
 G. Michael Hopf
 
 >Hard times create strong men, strong men create good times, good times create weak men, and weak men create hard times
+
+Tony Robbins
+>The secret to living is giving.

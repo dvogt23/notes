@@ -20,6 +20,7 @@ tags: []
 
 ## Claude
 
+- "Follow ASD-STE100" Sprachkonvention für [Simplified Technical English](https://en.wikipedia.org/wiki/Simplified_Technical_English)
 - Audit session: `claude logs --last-session
 - Security settings:
 	- **Always place** deny rules first, then specific allow rules. This principle follows the "deny by default" logic used in network firewalls.

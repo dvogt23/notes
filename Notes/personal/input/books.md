@@ -20,6 +20,20 @@ Here is a list of books I read in the past, after school. My favorit genre are n
  - Vladimir Nabokow - Die Kunst des Lesens
 
 ### 2026
+**Der Sieger bleibt allein**
+by Paulo Coelho (Ü: Maralde Meyer-Minnemann) ISBN: 978-3-257-24080-1 ⭐⭐⭐
+Spannender Roman über die dunkle Seite der Liebe und Besessenheit in der Glamourwelt an der französischen Côte d'Azur.
+
+»Niemand kann einen anderen Menschen retten, indem er ihm die Hand reicht; man rettet jemanden nur, indem man ihm zeigt, dass es sich lohnt, um Hilfe zu bitten.«
+
+»Das Leben ist ein ständiger Kampf zwischen dem, was wir tun möchten, und dem, was wir tun müssen.«
+
+»Die Liebe, die uns ebenso oft zerstört, wie sie uns erlöst.« (Aus dem Klappentext)
+
+»Manchmal ist die größte Tapferkeit, die wir aufbringen können, die, aufzugeben – nicht, weil wir verloren haben, sondern weil wir erkannt haben, dass wir nicht auf dem richtigen Weg sind.«
+
+»Erfolg ist nur ein vorübergehender Zustand, der uns davon abhält, nach dem wirklichen Sinn des Lebens zu suchen.«
+
 **Der Spieler**
 by Fjodor M. Dostojewskij (Ü: Swetlana Geier) ISBN: 978-3-10-015410-1⭐⭐⭐
 Kompakter Roman über Spielsucht in deutschen Casinos. 
